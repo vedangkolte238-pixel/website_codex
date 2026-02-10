@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Vectors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.vector-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Vectors</h1>
+    <p>Basic data structure for storing multiple values in R</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+A vector is the most basic data structure in R.
+It stores multiple values of the same data type.
+</p>
+
+<h2>Creating Vectors</h2>
+<p>
+Vectors are created using the <strong>c()</strong> function.
+</p>
+<code>
+numbers <- c(1, 2, 3, 4, 5)
+names <- c("A", "B", "C")
+logical_values <- c(TRUE, FALSE, TRUE)
+</code>
+
+<h2>Vector Data Types</h2>
+<p>
+All elements in a vector must be of the same data type.
+</p>
+<code>
+mixed <- c(1, "R", TRUE)
+mixed
+</code>
+
+<h2>Accessing Vector Elements</h2>
+<p>
+Elements can be accessed using index positions.
+</p>
+<code>
+numbers <- c(10, 20, 30, 40)
+numbers[1]
+numbers[2:3]
+</code>
+
+<h2>Modifying Vectors</h2>
+<p>
+You can modify vector elements by assigning new values.
+</p>
+<code>
+numbers[1] <- 100
+numbers
+</code>
+
+<h2>Vector Operations</h2>
+<p>
+R performs element-wise operations on vectors.
+</p>
+<code>
+a <- c(1, 2, 3)
+b <- c(4, 5, 6)
+
+a + b
+a * b
+</code>
+
+<h2>Vector Functions</h2>
+<p>
+R provides many built-in functions for vectors.
+</p>
+<code>
+sum(numbers)
+mean(numbers)
+length(numbers)
+max(numbers)
+min(numbers)
+</code>
+
+<h2>Sequences and Repetition</h2>
+<p>
+Vectors can be created using sequences and repetition.
+</p>
+<code>
+seq(1, 10, by = 2)
+rep(5, times = 4)
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Vectors are the foundation of R programming.
+Understanding vectors is essential before working with
+lists, matrices, and data frames.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

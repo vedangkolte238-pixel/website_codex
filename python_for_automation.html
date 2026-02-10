@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python for Automation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python for Automation</h1>
+    <p>Automating Tasks Using Python</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Python is widely used for automation because of its simplicity and powerful libraries.  
+Automation helps save time by performing repetitive tasks automatically.
+</p>
+
+<h2>1. File Automation (os and shutil)</h2>
+<code>
+import os
+import shutil
+
+# Create a new folder
+os.makedirs("backup_folder", exist_ok=True)
+
+# Copy a file to the new folder
+shutil.copy("example.txt", "backup_folder/example.txt")
+
+print("File backed up successfully.")
+</code>
+<div class="output">
+Output:<br>
+File backed up successfully.
+</div>
+
+<h2>2. Web Automation (selenium)</h2>
+<code>
+# Install selenium: pip install selenium
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+driver.get("https://www.python.org")
+
+print("Page title:", driver.title)
+driver.quit()
+</code>
+<div class="output">
+Output:<br>
+Page title: Welcome to Python.org
+</div>
+
+<h2>3. Excel Automation (openpyxl)</h2>
+<code>
+# Install openpyxl: pip install openpyxl
+import openpyxl
+
+wb = openpyxl.Workbook()
+sheet = wb.active
+sheet["A1"] = "Name"
+sheet["B1"] = "Age"
+
+sheet.append(["Alice", 25])
+sheet.append(["Bob", 30])
+
+wb.save("example.xlsx")
+print("Excel file created successfully.")
+</code>
+<div class="output">
+Output:<br>
+Excel file created successfully.
+</div>
+
+<h2>4. Email Automation (smtplib)</h2>
+<code>
+import smtplib
+
+sender = "youremail@example.com"
+receiver = "receiver@example.com"
+password = "yourpassword"
+
+message = """\
+Subject: Test Email
+Hello, this is an automated email from Python."""
+
+with smtplib.SMTP("smtp.gmail.com", 587) as server:
+    server.starttls()
+    server.login(sender, password)
+    server.sendmail(sender, receiver, message)
+
+print("Email sent successfully.")
+</code>
+<div class="output">
+Output:<br>
+Email sent successfully.
+</div>
+
+<h2>Conclusion</h2>
+<p>
+Python automation can handle files, web browsing, Excel, emails, and much more.  
+Using libraries like <code>os</code>, <code>shutil</code>, <code>selenium</code>, <code>openpyxl</code>, and <code>smtplib</code>, you can automate almost any repetitive task efficiently.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Factors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.factor-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Factors</h1>
+    <p>Handling categorical data efficiently in R programming</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Factors are used to store categorical data in R.
+They are important for statistical modeling and data analysis.
+</p>
+
+<h2>Creating Factors</h2>
+<p>
+Factors are created using the <strong>factor()</strong> function.
+</p>
+<code>
+gender <- factor(c("Male", "Female", "Male", "Female"))
+gender
+</code>
+
+<h2>Levels of a Factor</h2>
+<p>
+Levels represent unique categories in a factor.
+</p>
+<code>
+levels(gender)
+</code>
+
+<h2>Checking Factor Structure</h2>
+<p>
+You can check the structure of a factor.
+</p>
+<code>
+str(gender)
+class(gender)
+</code>
+
+<h2>Changing Levels</h2>
+<p>
+Levels can be renamed or reordered.
+</p>
+<code>
+levels(gender) <- c("F", "M")
+gender
+</code>
+
+<h2>Ordered Factors</h2>
+<p>
+Ordered factors have a meaningful order.
+</p>
+<code>
+rating <- factor(c("Low", "Medium", "High"),
+                 levels = c("Low", "Medium", "High"),
+                 ordered = TRUE)
+rating
+</code>
+
+<h2>Converting Factors</h2>
+<p>
+Factors can be converted to other data types.
+</p>
+<code>
+as.character(gender)
+as.numeric(gender)
+</code>
+
+<h2>Why Use Factors</h2>
+<ul class="factor-list">
+    <li>Efficient storage of categorical data</li>
+    <li>Required for statistical models</li>
+    <li>Helps in data grouping and analysis</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Factors are essential when working with categorical data in R.
+Understanding them improves data handling and analysis accuracy.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

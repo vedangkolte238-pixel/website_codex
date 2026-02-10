@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ruby Data Types</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fe0000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #fe0000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ruby Data Types</h1>
+    <p>Understanding Ruby's Core Data Types</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Ruby is dynamically typed, meaning variables don’t need an explicit type declaration. 
+Data types are inferred from the value assigned. Here are the main Ruby data types.
+</p>
+
+<h2>Numeric Types</h2>
+<p>Used for integer and floating-point numbers.</p>
+<code>
+# Integer
+a = 10
+b = -5
+
+# Float
+c = 3.14
+d = -0.99
+</code>
+
+<h2>String</h2>
+<p>Represents sequences of characters.</p>
+<code>
+name = "Alice"
+greeting = 'Hello, world!'
+puts "#{greeting}, #{name}"
+</code>
+
+<h2>Symbol</h2>
+<p>Immutable, reusable identifier used as keys or constants.</p>
+<code>
+status = :active
+puts status
+</code>
+
+<h2>Boolean</h2>
+<p>Represents truth values: <code>true</code> or <code>false</code>.</p>
+<code>
+is_active = true
+is_admin = false
+</code>
+
+<h2>Nil</h2>
+<p>Represents the absence of a value (<code>nil</code>).</p>
+<code>
+data = nil
+puts data.nil?   # true
+</code>
+
+<h2>Array</h2>
+<p>Ordered collection of objects.</p>
+<code>
+numbers = [1, 2, 3, 4]
+fruits = ["Apple", "Banana", "Cherry"]
+</code>
+
+<h2>Hash</h2>
+<p>Key-value pairs, similar to dictionaries.</p>
+<code>
+person = { "name" => "Alice", "age" => 25 }
+puts person["name"]  # Alice
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Understanding Ruby’s data types is essential for writing effective programs.
+Everything in Ruby is an object, so methods and properties can be used on all data types.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Ruby Learning Website</p>
+</footer>
+
+</body>
+</html>

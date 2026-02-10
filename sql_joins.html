@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Joins</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.join-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SQL Joins</h1>
+    <p>Combine data from multiple tables</p>
+</header>
+
+<section>
+
+    <h2>What are SQL Joins?</h2>
+    <p>
+        SQL joins are used to combine rows from two or more tables based on a related column.
+        They help retrieve meaningful data from multiple tables together.
+    </p>
+
+    <h2>1. INNER JOIN</h2>
+    <p>
+        Returns only the matching records from both tables.
+    </p>
+    <code>
+SELECT students.name, courses.course_name
+FROM students
+INNER JOIN courses
+ON students.course_id = courses.course_id;
+    </code>
+
+    <h2>2. LEFT JOIN</h2>
+    <p>
+        Returns all records from the left table and matching records from the right table.
+    </p>
+    <code>
+SELECT students.name, courses.course_name
+FROM students
+LEFT JOIN courses
+ON students.course_id = courses.course_id;
+    </code>
+
+    <h2>3. RIGHT JOIN</h2>
+    <p>
+        Returns all records from the right table and matching records from the left table.
+    </p>
+    <code>
+SELECT students.name, courses.course_name
+FROM students
+RIGHT JOIN courses
+ON students.course_id = courses.course_id;
+    </code>
+
+    <h2>4. FULL JOIN</h2>
+    <p>
+        Returns all records when there is a match in either table.
+    </p>
+    <code>
+SELECT students.name, courses.course_name
+FROM students
+FULL JOIN courses
+ON students.course_id = courses.course_id;
+    </code>
+
+    <h2>5. SELF JOIN</h2>
+    <p>
+        A table is joined with itself.
+    </p>
+    <code>
+SELECT A.name AS Employee, B.name AS Manager
+FROM employees A, employees B
+WHERE A.manager_id = B.emp_id;
+    </code>
+
+    <h2>Conclusion</h2>
+    <p>
+        SQL joins are essential for working with relational databases.
+        Understanding joins helps in writing efficient and meaningful queries.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

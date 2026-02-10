@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rust Installation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #000000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Rust Installation</h1>
+    <p>Setting Up Rust on Your System</p>
+</header>
+
+<section>
+
+<h2>Installing Rust Using rustup</h2>
+<p>
+The recommended way to install Rust is via <strong>rustup</strong>, which manages Rust versions and associated tools.
+</p>
+
+<h2>Windows</h2>
+<ul>
+    <li>Download and run the <a href="https://rustup.rs/" target="_blank">rustup installer</a>.</li>
+    <li>Follow the prompts and ensure the option to add Rust to PATH is selected.</li>
+    <li>Open Command Prompt and verify installation: <code>rustc --version</code></li>
+</ul>
+
+<h2>macOS</h2>
+<ul>
+    <li>Open Terminal.</li>
+    <li>Run the command: <code>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</code></li>
+    <li>Follow the instructions to add Rust to PATH.</li>
+    <li>Verify installation: <code>rustc --version</code></li>
+</ul>
+
+<h2>Linux</h2>
+<ul>
+    <li>Open Terminal.</li>
+    <li>Run: <code>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</code></li>
+    <li>Follow instructions to configure PATH.</li>
+    <li>Verify installation: <code>rustc --version</code></li>
+</ul>
+
+<h2>Updating Rust</h2>
+<p>
+To keep Rust up-to-date, use:
+</p>
+<code>
+rustup update
+</code>
+
+<h2>Uninstalling Rust</h2>
+<p>
+If needed, Rust can be uninstalled with:
+</p>
+<code>
+rustup self uninstall
+</code>
+
+<h2>Testing Rust</h2>
+<code>
+fn main() {
+    println!("Hello, Rust!");
+}
+</code>
+<p>Save as <code>main.rs</code> and run:</p>
+<code>
+rustc main.rs
+./main
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Using rustup ensures you always have the latest Rust version and access to tools like Cargo. 
+This setup is essential for developing Rust applications efficiently.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Rust Learning Website</p>
+</footer>
+
+</body>
+</html>

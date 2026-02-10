@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pandas Visualization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #130654;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #130654;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            margin-top: 15px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Pandas Visualization</h1>
+    <p>Creating Simple Plots with Pandas</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Pandas integrates with Matplotlib to provide simple plotting capabilities directly from Series and DataFrames.
+You can quickly visualize data for analysis and insights.
+</p>
+
+<h2>Basic Plotting</h2>
+<code>
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {'Month': ['Jan', 'Feb', 'Mar', 'Apr'],
+        'Sales': [2500, 3000, 2800, 3500]}
+df = pd.DataFrame(data)
+
+# Line plot
+df.plot(x='Month', y='Sales', kind='line', title='Monthly Sales')
+plt.show()
+</code>
+
+<h2>Other Plot Types</h2>
+<code>
+# Bar plot
+df.plot(x='Month', y='Sales', kind='bar', title='Monthly Sales')
+plt.show()
+
+# Horizontal bar
+df.plot(x='Month', y='Sales', kind='barh', title='Monthly Sales')
+plt.show()
+
+# Pie chart (using Series)
+df['Sales'].plot(kind='pie', labels=df['Month'], autopct='%1.1f%%', title='Sales Distribution')
+plt.show()
+
+# Histogram
+df['Sales'].plot(kind='hist', bins=4, title='Sales Histogram')
+plt.show()
+</code>
+
+<h2>Customizing Plots</h2>
+<code>
+# Line plot with style
+df.plot(x='Month', y='Sales', kind='line', color='green', linestyle='--', marker='o', title='Monthly Sales')
+plt.xlabel('Month')
+plt.ylabel('Sales Amount')
+plt.grid(True)
+plt.show()
+</code>
+
+<h2>Applications</h2>
+<ul>
+    <li>Quick data visualization for analysis and insights</li>
+    <li>Checking trends, distributions, and comparisons</li>
+    <li>Preparing charts for reports and presentations</li>
+    <li>Exploratory Data Analysis (EDA) before modeling</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Pandas’ plotting features make it easy to visualize Series and DataFrame data.
+For more advanced visualization, Pandas works seamlessly with Matplotlib, Seaborn, and Plotly.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Pandas Learning Website</p>
+</footer>
+
+</body>
+</html>

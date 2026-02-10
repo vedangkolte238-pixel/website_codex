@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rust Collections</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #000000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Rust Collections</h1>
+    <p>Working with Groups of Data</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Rust provides several standard collection types for storing and managing groups of values. 
+Common collections include <strong>Vector</strong>, <strong>String</strong>, <strong>HashMap</strong>, and <strong>HashSet</strong>.
+</p>
+
+<h2>Vectors (Vec)</h2>
+<p>Vectors are resizable arrays.</p>
+<code>
+fn main() {
+    let mut numbers: Vec<i32> = Vec::new();
+    numbers.push(10);
+    numbers.push(20);
+    numbers.push(30);
+
+    for num in &numbers {
+        println!("{}", num);
+    }
+
+    println!("Second element: {}", numbers[1]);
+}
+</code>
+
+<h2>Strings</h2>
+<p>Rust has two main string types: <code>String</code> (growable, heap-allocated) and <code>&str</code> (string slice).</p>
+<code>
+fn main() {
+    let mut s = String::from("Hello");
+    s.push_str(", Rust!");
+    println!("{}", s);
+
+    let slice: &str = &s[0..5];
+    println!("Slice: {}", slice);
+}
+</code>
+
+<h2>HashMap</h2>
+<p>HashMap stores key-value pairs.</p>
+<code>
+use std::collections::HashMap;
+
+fn main() {
+    let mut scores = HashMap::new();
+    scores.insert("Alice", 50);
+    scores.insert("Bob", 60);
+
+    for (key, value) in &scores {
+        println!("{}: {}", key, value);
+    }
+
+    println!("Alice's score: {}", scores.get("Alice").unwrap());
+}
+</code>
+
+<h2>HashSet</h2>
+<p>HashSet stores unique values without duplicates.</p>
+<code>
+use std::collections::HashSet;
+
+fn main() {
+    let mut fruits = HashSet::new();
+    fruits.insert("Apple");
+    fruits.insert("Banana");
+    fruits.insert("Apple"); // duplicate ignored
+
+    for fruit in &fruits {
+        println!("{}", fruit);
+    }
+}
+</code>
+
+<h2>Applications</h2>
+<ul>
+    <li>Storing ordered or unordered collections of data</li>
+    <li>Counting frequencies or removing duplicates</li>
+    <li>Associating keys with values (like a dictionary)</li>
+    <li>Efficiently iterating and searching datasets</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Rust’s standard collections provide powerful and efficient ways to manage groups of values while adhering to ownership and borrowing rules. 
+Choosing the right collection type is important for performance and correctness.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Rust Learning Website</p>
+</footer>
+
+</body>
+</html>

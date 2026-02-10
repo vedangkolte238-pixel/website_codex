@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Basic Syntax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.syntax-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Basic Syntax</h1>
+    <p>Fundamental rules and structure of the R programming language</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+R syntax is simple and easy to read. It is case-sensitive and mainly used for
+data analysis, statistics, and visualization.
+</p>
+
+<h2>Comments in R</h2>
+<p>
+Comments are used to explain code and are ignored by R during execution.
+</p>
+<code>
+# This is a single-line comment in R
+</code>
+
+<h2>Printing Output</h2>
+<p>
+You can display output using the <strong>print()</strong> function or by directly typing the variable name.
+</p>
+<code>
+print("Hello, R")
+x <- 10
+x
+</code>
+
+<h2>Variables in R</h2>
+<p>
+Variables store data values. R uses assignment operators to assign values.
+</p>
+<ul class="syntax-list">
+    <li><strong>&lt;-</strong> (recommended)</li>
+    <li><strong>=</strong></li>
+</ul>
+<code>
+a <- 5
+b = 10
+</code>
+
+<h2>Data Types (Basic)</h2>
+<p>
+R supports different types of data.
+</p>
+<code>
+x <- 10        # numeric
+y <- "R"       # character
+z <- TRUE      # logical
+</code>
+
+<h2>Basic Arithmetic Operations</h2>
+<p>
+R supports standard mathematical operations.
+</p>
+<code>
+a <- 10
+b <- 3
+
+a + b
+a - b
+a * b
+a / b
+a %% b
+</code>
+
+<h2>Functions in R</h2>
+<p>
+Functions perform specific tasks. R has many built-in functions.
+</p>
+<code>
+sqrt(16)
+sum(1, 2, 3, 4)
+mean(c(10, 20, 30))
+</code>
+
+<h2>Vectors (Basic)</h2>
+<p>
+A vector is a collection of values of the same data type.
+</p>
+<code>
+numbers <- c(1, 2, 3, 4, 5)
+names <- c("A", "B", "C")
+</code>
+
+<h2>Using the Help System</h2>
+<p>
+R provides a built-in help system to understand functions.
+</p>
+<code>
+?mean
+help(sum)
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Understanding R basic syntax is essential before moving to data structures,
+control statements, and advanced data analysis concepts.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

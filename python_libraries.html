@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Libraries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Libraries</h1>
+    <p>Popular Libraries with Examples and Output</p>
+</header>
+
+<section>
+
+<h2>What are Python Libraries?</h2>
+<p>
+Libraries are collections of pre-written code that help perform specific tasks without rewriting code from scratch. Python has a rich ecosystem of libraries for data science, web development, automation, and more.
+</p>
+
+<h2>1. NumPy</h2>
+<p>Used for numerical computations and arrays.</p>
+<code>
+import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+print(arr)
+print("Sum:", np.sum(arr))
+</code>
+<div class="output">
+Output:<br>
+[1 2 3 4]<br>
+Sum: 10
+</div>
+
+<h2>2. Pandas</h2>
+<p>Used for data manipulation and analysis.</p>
+<code>
+import pandas as pd
+
+data = {"Name": ["Alice", "Bob"], "Age": [25, 30]}
+df = pd.DataFrame(data)
+print(df)
+</code>
+<div class="output">
+Output:<br>
+   Name  Age<br>
+0 Alice  25<br>
+1   Bob  30
+</div>
+
+<h2>3. Matplotlib</h2>
+<p>Used for data visualization.</p>
+<code>
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3]
+y = [2, 4, 6]
+
+plt.plot(x, y)
+plt.title("Simple Plot")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show()
+</code>
+
+<h2>4. Seaborn</h2>
+<p>Used for statistical data visualization.</p>
+<code>
+import seaborn as sns
+import pandas as pd
+
+data = pd.DataFrame({"x":[1,2,3,4], "y":[4,3,2,1]})
+sns.lineplot(data=data, x="x", y="y")
+</code>
+
+<h2>5. Requests</h2>
+<p>Used for sending HTTP requests.</p>
+<code>
+import requests
+
+response = requests.get("https://api.github.com")
+print(response.status_code)
+print(response.headers["Content-Type"])
+</code>
+<div class="output">
+Output:<br>
+200<br>
+application/json; charset=utf-8
+</div>
+
+<h2>6. OS</h2>
+<p>Used for interacting with the operating system.</p>
+<code>
+import os
+
+print("Current Directory:", os.getcwd())
+print("List of files:", os.listdir())
+</code>
+<div class="output">
+Output:<br>
+Current Directory: C:\Your\Current\Directory<br>
+List of files: ['example.txt', 'script.py', ...]
+</div>
+
+<h2>Conclusion</h2>
+<p>
+Python libraries save time, simplify coding, and allow you to perform complex tasks efficiently. Learning popular libraries is essential for Python development and data science.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

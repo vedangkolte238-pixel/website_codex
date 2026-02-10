@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Functions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.function-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Functions</h1>
+    <p>Reusable blocks of code in R programming</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+A function in R is a reusable block of code that performs a specific task.
+Functions help reduce repetition and make programs easier to manage.
+</p>
+
+<h2>Built-in Functions</h2>
+<p>
+R provides many built-in functions for common operations.
+</p>
+<code>
+sqrt(25)
+sum(10, 20, 30)
+mean(c(5, 10, 15))
+</code>
+
+<h2>User-Defined Functions</h2>
+<p>
+You can create your own functions using the <strong>function</strong> keyword.
+</p>
+<code>
+add_numbers <- function(a, b) {
+  result <- a + b
+  return(result)
+}
+
+add_numbers(5, 3)
+</code>
+
+<h2>Function Without Return</h2>
+<p>
+If no return statement is used, R returns the last evaluated expression.
+</p>
+<code>
+square <- function(x) {
+  x * x
+}
+
+square(4)
+</code>
+
+<h2>Function Arguments</h2>
+<p>
+Functions can accept one or more arguments.
+</p>
+<code>
+multiply <- function(a, b, c) {
+  a * b * c
+}
+
+multiply(2, 3, 4)
+</code>
+
+<h2>Default Arguments</h2>
+<p>
+Default values can be assigned to function parameters.
+</p>
+<code>
+greet <- function(name = "User") {
+  paste("Hello", name)
+}
+
+greet()
+greet("R Programmer")
+</code>
+
+<h2>Anonymous Functions</h2>
+<p>
+Functions without names are called anonymous functions.
+</p>
+<code>
+result <- (function(x, y) {
+  x + y
+})(4, 6)
+
+result
+</code>
+
+<h2>Passing Functions as Arguments</h2>
+<p>
+Functions can be passed as arguments to other functions.
+</p>
+<code>
+apply_function <- function(x, func) {
+  func(x)
+}
+
+apply_function(9, sqrt)
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Functions are a core concept in R programming.
+They improve code readability, reusability, and structure.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

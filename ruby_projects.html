@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ruby Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fe0000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #fe0000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ruby Projects</h1>
+    <p>Practice and Build with Ruby</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Applying Ruby in real-world projects helps solidify concepts and gain practical experience. 
+Projects can range from small scripts to web applications and automation tools.
+</p>
+
+<h2>Project Ideas</h2>
+<ul>
+    <li><strong>Calculator:</strong> Build a command-line calculator supporting basic arithmetic.</li>
+    <li><strong>To-Do List App:</strong> Manage tasks with add, delete, and mark as completed features.</li>
+    <li><strong>Web Scraper:</strong> Extract information from websites using the <code>nokogiri</code> gem.</li>
+    <li><strong>Banking System:</strong> Simulate accounts, deposits, withdrawals, and balance tracking.</li>
+    <li><strong>Simple Blog:</strong> Create a web application using <code>Sinatra</code> or <code>Rails</code>.</li>
+    <li><strong>Quiz Game:</strong> Develop a command-line quiz that tracks scores and provides feedback.</li>
+</ul>
+
+<h2>Tips for Ruby Projects</h2>
+<ul>
+    <li>Start small, then gradually add features.</li>
+    <li>Follow Ruby conventions and write clean, readable code.</li>
+    <li>Use gems to speed up development but understand their purpose.</li>
+    <li>Test your code using <code>RSpec</code> or simple unit tests.</li>
+    <li>Use version control (like Git) to track changes and manage projects.</li>
+</ul>
+
+<h2>Example: Simple To-Do List</h2>
+<code>
+tasks = []
+
+loop do
+  puts "Enter a task (or 'exit' to quit):"
+  input = gets.chomp
+  break if input.downcase == "exit"
+  tasks << input
+end
+
+puts "Your tasks:"
+tasks.each_with_index { |task, i| puts "#{i+1}. #{task}" }
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Working on Ruby projects helps reinforce programming concepts, introduces practical problem-solving, and builds a portfolio for future development opportunities.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Ruby Learning Website</p>
+</footer>
+
+</body>
+</html>

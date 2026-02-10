@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Advanced Concepts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.advanced-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SQL Advanced Concepts</h1>
+    <p>Advanced techniques for efficient and complex database operations</p>
+</header>
+
+<section>
+
+    <h2>1. Subqueries and Nested Queries</h2>
+    <p>
+        Use queries inside other queries to filter, compute, or join data in complex ways.
+    </p>
+    <code>
+SELECT name
+FROM employees
+WHERE salary &gt; (SELECT AVG(salary) FROM employees);
+    </code>
+
+    <h2>2. Indexing</h2>
+    <p>
+        Indexes improve query performance by allowing fast lookups on large tables.
+    </p>
+    <code>
+CREATE INDEX idx_emp_name
+ON employees(name);
+    </code>
+
+    <h2>3. Views</h2>
+    <p>
+        Virtual tables based on queries. Simplify complex joins and hide sensitive columns.
+    </p>
+    <code>
+CREATE VIEW active_employees AS
+SELECT emp_id, name, department
+FROM employees
+WHERE status='Active';
+    </code>
+
+    <h2>4. Transactions</h2>
+    <p>
+        Group multiple queries into a single unit. Ensures ACID properties.
+    </p>
+    <code>
+BEGIN TRANSACTION;
+
+UPDATE accounts SET balance = balance - 500 WHERE account_id = 1;
+UPDATE accounts SET balance = balance + 500 WHERE account_id = 2;
+
+COMMIT;
+    </code>
+
+    <h2>5. Stored Procedures</h2>
+    <p>
+        Predefined SQL scripts that perform specific tasks. Helps reuse logic.
+    </p>
+    <code>
+CREATE PROCEDURE IncreaseSalary(emp INT, amount DECIMAL)
+BEGIN
+    UPDATE employees SET salary = salary + amount WHERE emp_id = emp;
+END;
+    </code>
+
+    <h2>6. Triggers</h2>
+    <p>
+        Automatic actions that fire on INSERT, UPDATE, or DELETE events.
+    </p>
+    <code>
+CREATE TRIGGER trg_after_insert
+AFTER INSERT ON employees
+FOR EACH ROW
+BEGIN
+    INSERT INTO logs(emp_id, action) VALUES (NEW.emp_id, 'Inserted');
+END;
+    </code>
+
+    <h2>7. CTE (Common Table Expressions)</h2>
+    <p>
+        Temporary result sets that can be referenced within a SELECT, INSERT, UPDATE, or DELETE statement.
+    </p>
+    <code>
+WITH DeptCount AS (
+    SELECT department, COUNT(*) AS num_emp
+    FROM employees
+    GROUP BY department
+)
+SELECT * FROM DeptCount WHERE num_emp &gt; 5;
+    </code>
+
+    <h2>8. Window Functions</h2>
+    <p>
+        Perform calculations across a set of rows related to the current row without collapsing the result.
+    </p>
+    <code>
+SELECT name, salary,
+       RANK() OVER (PARTITION BY department ORDER BY salary DESC) AS dept_rank
+FROM employees;
+    </code>
+
+    <h2>Conclusion</h2>
+    <p>
+        SQL advanced concepts allow for optimized queries, better performance, and complex operations.
+        Mastering these concepts helps build efficient and scalable databases.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

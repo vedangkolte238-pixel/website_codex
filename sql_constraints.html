@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Constraints</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.constraint-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SQL Constraints</h1>
+    <p>Rules to maintain data accuracy and integrity</p>
+</header>
+
+<section>
+
+    <h2>What are SQL Constraints?</h2>
+    <p>
+        SQL constraints are rules applied to table columns to ensure valid and reliable data.
+        They restrict the type of data that can be stored in a column.
+    </p>
+
+    <h2>1. NOT NULL</h2>
+    <p>
+        Ensures that a column cannot have NULL values.
+    </p>
+    <code>
+CREATE TABLE students (
+    id INT NOT NULL,
+    name VARCHAR(50) NOT NULL
+);
+    </code>
+
+    <h2>2. UNIQUE</h2>
+    <p>
+        Ensures all values in a column are unique.
+    </p>
+    <code>
+CREATE TABLE users (
+    email VARCHAR(100) UNIQUE
+);
+    </code>
+
+    <h2>3. PRIMARY KEY</h2>
+    <p>
+        Uniquely identifies each record in a table.
+    </p>
+    <code>
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(50)
+);
+    </code>
+
+    <h2>4. FOREIGN KEY</h2>
+    <p>
+        Creates a link between two tables.
+    </p>
+    <code>
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+    </code>
+
+    <h2>5. CHECK</h2>
+    <p>
+        Ensures that values meet a specific condition.
+    </p>
+    <code>
+CREATE TABLE products (
+    price DECIMAL(10,2) CHECK (price > 0)
+);
+    </code>
+
+    <h2>6. DEFAULT</h2>
+    <p>
+        Assigns a default value if no value is provided.
+    </p>
+    <code>
+CREATE TABLE accounts (
+    status VARCHAR(20) DEFAULT 'Active'
+);
+    </code>
+
+    <h2>Conclusion</h2>
+    <p>
+        SQL constraints help maintain data integrity and consistency.
+        They are essential for designing reliable databases.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

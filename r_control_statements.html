@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Control Statements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.control-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Control Statements</h1>
+    <p>Decision making and looping in R programming</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Control statements are used to control the flow of execution of a program.
+They help in decision making and repeating tasks.
+</p>
+
+<h2>1. if Statement</h2>
+<p>
+Executes a block of code if a condition is TRUE.
+</p>
+<code>
+x <- 10
+
+if (x > 5) {
+  print("x is greater than 5")
+}
+</code>
+
+<h2>2. if...else Statement</h2>
+<p>
+Provides an alternative block when the condition is FALSE.
+</p>
+<code>
+x <- 3
+
+if (x > 5) {
+  print("x is greater than 5")
+} else {
+  print("x is less than or equal to 5")
+}
+</code>
+
+<h2>3. if...else if...else</h2>
+<p>
+Used to check multiple conditions.
+</p>
+<code>
+marks <- 75
+
+if (marks >= 90) {
+  print("Grade A")
+} else if (marks >= 60) {
+  print("Grade B")
+} else {
+  print("Grade C")
+}
+</code>
+
+<h2>4. switch Statement</h2>
+<p>
+Selects one option from multiple choices.
+</p>
+<code>
+choice <- 2
+
+result <- switch(choice,
+                 "Apple",
+                 "Banana",
+                 "Mango")
+print(result)
+</code>
+
+<h2>5. for Loop</h2>
+<p>
+Used to repeat a block of code for a fixed number of times.
+</p>
+<code>
+for (i in 1:5) {
+  print(i)
+}
+</code>
+
+<h2>6. while Loop</h2>
+<p>
+Executes code as long as the condition is TRUE.
+</p>
+<code>
+i <- 1
+while (i <= 5) {
+  print(i)
+  i <- i + 1
+}
+</code>
+
+<h2>7. repeat Loop</h2>
+<p>
+Repeats execution until a break condition is met.
+</p>
+<code>
+i <- 1
+repeat {
+  print(i)
+  i <- i + 1
+  if (i > 5) {
+    break
+  }
+}
+</code>
+
+<h2>8. break and next</h2>
+<p>
+<strong>break</strong> exits the loop, and <strong>next</strong> skips the current iteration.
+</p>
+<code>
+for (i in 1:5) {
+  if (i == 3) {
+    next
+  }
+  print(i)
+}
+</code>
+
+<h2>Summary</h2>
+<ul class="control-list">
+    <li>if, if-else for decision making</li>
+    <li>switch for multiple conditions</li>
+    <li>for, while, repeat loops</li>
+    <li>break and next for loop control</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Control statements are the backbone of logical programming in R.
+They allow programs to respond dynamically to different conditions.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

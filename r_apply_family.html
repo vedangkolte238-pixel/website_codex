@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Apply Functions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.apply-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Apply Functions</h1>
+    <p>Efficient ways to apply functions on data structures in R</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Apply functions in R are used to perform operations on elements of vectors, lists, matrices, and data frames efficiently.
+They reduce the need for explicit loops.
+</p>
+
+<h2>apply()</h2>
+<p>
+Used to apply a function over the rows or columns of a matrix or array.
+</p>
+<code>
+mat <- matrix(1:9, nrow = 3)
+apply(mat, 1, sum)  # sum of rows
+apply(mat, 2, sum)  # sum of columns
+</code>
+
+<h2>lapply()</h2>
+<p>
+Applies a function to each element of a list and returns a list.
+</p>
+<code>
+my_list <- list(a = 1:5, b = 6:10)
+lapply(my_list, sum)
+</code>
+
+<h2>sapply()</h2>
+<p>
+Similar to <strong>lapply()</strong> but tries to simplify the result (vector, matrix, etc.).
+</p>
+<code>
+sapply(my_list, sum)
+</code>
+
+<h2>vapply()</h2>
+<p>
+A safer version of <strong>sapply()</strong> where you define the output type.
+</p>
+<code>
+vapply(my_list, sum, numeric(1))
+</code>
+
+<h2>tapply()</h2>
+<p>
+Applies a function over subsets of a vector defined by a factor or grouping variable.
+</p>
+<code>
+values <- c(5, 10, 15, 20)
+groups <- factor(c("A", "A", "B", "B"))
+tapply(values, groups, sum)
+</code>
+
+<h2>mapply()</h2>
+<p>
+Applies a function to multiple arguments in parallel.
+</p>
+<code>
+a <- 1:5
+b <- 6:10
+mapply(sum, a, b)
+</code>
+
+<h2>rapply()</h2>
+<p>
+Recursively applies a function to elements of a list.
+</p>
+<code>
+nested_list <- list(a = 1:2, b = list(c = 3:4))
+rapply(nested_list, sum)
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Apply functions are essential for writing concise and efficient R code.
+They are faster and more readable than using traditional loops for data operations.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

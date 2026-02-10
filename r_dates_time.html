@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Dates and Times</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.datetime-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Dates and Times</h1>
+    <p>Working with dates and time data in R programming</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+R provides specialized classes and functions to handle dates and times.
+These are essential for time series analysis, scheduling, and data logging.
+</p>
+
+<h2>Creating Dates</h2>
+<p>
+Use the <strong>as.Date()</strong> function to create date objects.
+</p>
+<code>
+date1 <- as.Date("2026-01-01")
+date2 <- as.Date("2025-12-31")
+date1
+date2
+</code>
+
+<h2>Creating Times</h2>
+<p>
+Use <strong>POSIXct</strong> or <strong>POSIXlt</strong> for date-time objects.
+</p>
+<code>
+datetime1 <- as.POSIXct("2026-01-01 15:30:00")
+datetime2 <- as.POSIXlt("2026-01-01 15:30:00")
+datetime1
+datetime2
+</code>
+
+<h2>Getting Current Date and Time</h2>
+<p>
+Use <strong>Sys.Date()</strong> and <strong>Sys.time()</strong>.
+</p>
+<code>
+today <- Sys.Date()
+now <- Sys.time()
+today
+now
+</code>
+
+<h2>Extracting Date Components</h2>
+<p>
+Extract year, month, and day from date or datetime objects.
+</p>
+<code>
+format(today, "%Y")   # Year
+format(today, "%m")   # Month
+format(today, "%d")   # Day
+
+datetime1$hour
+datetime1$min
+datetime1$sec
+</code>
+
+<h2>Date Arithmetic</h2>
+<p>
+You can add or subtract dates.
+</p>
+<code>
+date1 - date2         # Difference in days
+date1 + 5             # Add 5 days
+</code>
+
+<h2>Formatting Dates</h2>
+<p>
+Change the appearance of dates using <strong>format()</strong>.
+</p>
+<code>
+format(today, "%d-%m-%Y")
+format(today, "%A, %B %d, %Y")
+</code>
+
+<h2>Useful Date Functions</h2>
+<ul class="datetime-list">
+    <li><strong>Sys.Date()</strong> – current date</li>
+    <li><strong>Sys.time()</strong> – current date-time</li>
+    <li><strong>as.Date()</strong> – convert string to date</li>
+    <li><strong>as.POSIXct()</strong>, <strong>as.POSIXlt()</strong> – convert string to datetime</li>
+    <li><strong>format()</strong> – format date or datetime</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Dates and times are crucial for time-dependent data analysis.
+R provides flexible tools to create, manipulate, and format them efficiently.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

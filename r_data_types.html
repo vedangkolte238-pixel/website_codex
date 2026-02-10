@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Data Types</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.type-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Data Types</h1>
+    <p>Understanding different types of data in R programming</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Data types define the kind of value a variable can store.  
+R supports several basic and advanced data types used in data analysis.
+</p>
+
+<h2>1. Numeric</h2>
+<p>
+Numeric data types store numbers, including decimals.
+</p>
+<code>
+x <- 10
+y <- 3.14
+typeof(x)
+</code>
+
+<h2>2. Integer</h2>
+<p>
+Integers are whole numbers. In R, integers are created using <strong>L</strong>.
+</p>
+<code>
+a <- 5L
+b <- 100L
+typeof(a)
+</code>
+
+<h2>3. Character</h2>
+<p>
+Character data types store text or strings.
+</p>
+<code>
+name <- "R Programming"
+city <- 'Pune'
+typeof(name)
+</code>
+
+<h2>4. Logical</h2>
+<p>
+Logical data types store boolean values: TRUE or FALSE.
+</p>
+<code>
+isValid <- TRUE
+isAdult <- FALSE
+typeof(isValid)
+</code>
+
+<h2>5. Complex</h2>
+<p>
+Complex data types store complex numbers.
+</p>
+<code>
+z <- 2 + 3i
+typeof(z)
+</code>
+
+<h2>6. Raw</h2>
+<p>
+Raw data type is used to store raw bytes.
+</p>
+<code>
+r <- charToRaw("R")
+r
+</code>
+
+<h2>Checking Data Type</h2>
+<p>
+You can check the data type of a variable using built-in functions.
+</p>
+<code>
+class(x)
+typeof(y)
+is.numeric(x)
+is.character(name)
+</code>
+
+<h2>Type Conversion</h2>
+<p>
+R allows conversion from one data type to another.
+</p>
+<code>
+num <- 10
+as.character(num)
+as.numeric("25")
+as.integer(7.8)
+</code>
+
+<h2>Summary</h2>
+<ul class="type-list">
+    <li>Numeric – decimal values</li>
+    <li>Integer – whole numbers</li>
+    <li>Character – text data</li>
+    <li>Logical – TRUE/FALSE</li>
+    <li>Complex – complex numbers</li>
+    <li>Raw – raw bytes</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Understanding R data types helps in writing correct programs and performing
+accurate data analysis.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

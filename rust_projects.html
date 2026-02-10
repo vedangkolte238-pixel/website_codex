@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rust Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #000000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Rust Projects</h1>
+    <p>Hands-On Rust Applications</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Working on projects in Rust helps solidify your understanding of ownership, borrowing, types, and error handling. 
+Projects range from command-line tools to full applications using Cargo.
+</p>
+
+<h2>Project Ideas</h2>
+<ul>
+    <li><strong>Command-Line Calculator:</strong> Supports arithmetic operations with proper error handling.</li>
+    <li><strong>Todo List App:</strong> Save tasks to a file, read them, and mark as complete.</li>
+    <li><strong>File Organizer:</strong> Automatically sort files in directories based on extension or date.</li>
+    <li><strong>Simple Web Server:</strong> Use <code>hyper</code> or <code>actix-web</code> to create a minimal web server.</li>
+    <li><strong>Guessing Game:</strong> Generate random numbers and let the user guess with feedback.</li>
+    <li><strong>JSON Parser:</strong> Read JSON files and extract or modify data.</li>
+</ul>
+
+<h2>Tips for Rust Projects</h2>
+<ul>
+    <li>Use <code>cargo new project_name</code> to create a new project.</li>
+    <li>Break functionality into functions and modules.</li>
+    <li>Leverage Rust’s type system for safety and clarity.</li>
+    <li>Handle errors with <code>Result</code> and <code>Option</code> instead of panicking.</li>
+    <li>Test your code with <code>cargo test</code> to ensure correctness.</li>
+</ul>
+
+<h2>Example: Simple Guessing Game</h2>
+<code>
+use std::io;
+use rand::Rng;
+use std::cmp::Ordering;
+
+fn main() {
+    let secret = rand::thread_rng().gen_range(1..101);
+
+    println!("Guess the number between 1 and 100:");
+
+    loop {
+        let mut guess = String::new();
+        io::stdin().read_line(&mut guess).expect("Failed to read line");
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
+        match guess.cmp(&secret) {
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("Too big!"),
+            Ordering::Equal => {
+                println!("You guessed it!");
+                break;
+            }
+        }
+    }
+}
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Rust projects allow you to practice core language features, explore safe concurrency, and build useful tools.
+Starting small and gradually increasing complexity is the best way to gain confidence in Rust programming.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Rust Learning Website</p>
+</footer>
+
+</body>
+</html>

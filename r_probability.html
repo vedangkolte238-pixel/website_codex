@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Probability</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.prob-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Probability</h1>
+    <p>Working with probability distributions in R</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Probability functions in R allow you to calculate probabilities, densities, quantiles, and generate random numbers for different statistical distributions.
+</p>
+
+<h2>Common Probability Functions</h2>
+<ul class="prob-list">
+    <li><strong>d</strong> – density function</li>
+    <li><strong>p</strong> – cumulative distribution function</li>
+    <li><strong>q</strong> – quantile function</li>
+    <li><strong>r</strong> – random generation</li>
+</ul>
+
+<h2>Normal Distribution</h2>
+<code>
+# Density
+dnorm(1, mean = 0, sd = 1)
+
+# Cumulative probability
+pnorm(1, mean = 0, sd = 1)
+
+# Quantile
+qnorm(0.95, mean = 0, sd = 1)
+
+# Random numbers
+rnorm(5, mean = 0, sd = 1)
+</code>
+
+<h2>Binomial Distribution</h2>
+<code>
+# Density / Probability Mass
+dbinom(3, size = 10, prob = 0.5)
+
+# Cumulative probability
+pbinom(3, size = 10, prob = 0.5)
+
+# Quantile
+qbinom(0.8, size = 10, prob = 0.5)
+
+# Random numbers
+rbinom(5, size = 10, prob = 0.5)
+</code>
+
+<h2>Poisson Distribution</h2>
+<code>
+# Density
+dpois(2, lambda = 3)
+
+# Cumulative probability
+ppois(2, lambda = 3)
+
+# Quantile
+qpois(0.9, lambda = 3)
+
+# Random numbers
+rpois(5, lambda = 3)
+</code>
+
+<h2>Other Distributions</h2>
+<ul class="prob-list">
+    <li>Exponential: <code>dexp(), pexp(), qexp(), rexp()</code></li>
+    <li>Uniform: <code>dunif(), punif(), qunif(), runif()</code></li>
+    <li>t-Distribution: <code>dt(), pt(), qt(), rt()</code></li>
+    <li>Chi-Square: <code>dchisq(), pchisq(), qchisq(), rchisq()</code></li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+R provides a wide variety of probability functions for statistical modeling and simulations.  
+Understanding these functions is essential for analyzing random events and distributions.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

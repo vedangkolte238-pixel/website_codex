@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rust Enums</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #000000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Rust Enums</h1>
+    <p>Defining a Type with Multiple Variants</p>
+</header>
+
+<section>
+
+<h2>What is an Enum?</h2>
+<p>
+An <strong>enum</strong> in Rust is a type that can have one of several possible variants.
+Enums are useful for modeling data that can take on a limited set of values.
+</p>
+
+<h2>Basic Enum Example</h2>
+<code>
+enum Direction {
+    Up,
+    Down,
+    Left,
+    Right,
+}
+
+fn main() {
+    let move1 = Direction::Up;
+
+    match move1 {
+        Direction::Up => println!("Moving up"),
+        Direction::Down => println!("Moving down"),
+        Direction::Left => println!("Moving left"),
+        Direction::Right => println!("Moving right"),
+    }
+}
+</code>
+
+<h2>Enums with Data</h2>
+<p>Variants can also hold associated data:</p>
+<code>
+enum Message {
+    Quit,
+    Move { x: i32, y: i32 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
+}
+
+fn main() {
+    let msg = Message::Move { x: 10, y: 20 };
+
+    match msg {
+        Message::Quit => println!("Quit"),
+        Message::Move { x, y } => println!("Move to ({}, {})", x, y),
+        Message::Write(text) => println!("Text: {}", text),
+        Message::ChangeColor(r, g, b) => println!("Color: ({}, {}, {})", r, g, b),
+    }
+}
+</code>
+
+<h2>Applications</h2>
+<ul>
+    <li>Representing a fixed set of choices (like states, directions, commands)</li>
+    <li>Safe pattern matching on different data types</li>
+    <li>Modeling complex data structures like AST nodes or messages</li>
+    <li>Combining with structs for more structured data</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Enums in Rust provide a powerful way to define types with multiple variants, enabling clear, safe, and expressive code. 
+When combined with pattern matching, they are a cornerstone of idiomatic Rust programming.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Rust Learning Website</p>
+</footer>
+
+</body>
+</html>

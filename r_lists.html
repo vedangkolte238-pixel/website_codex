@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Lists</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.list-points li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Lists</h1>
+    <p>Flexible data structure to store different types of elements</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+A list in R is a collection of elements that can be of different data types.
+It is one of the most flexible data structures in R.
+</p>
+
+<h2>Creating a List</h2>
+<p>
+Lists are created using the <strong>list()</strong> function.
+</p>
+<code>
+my_list <- list(
+  number = 10,
+  text = "R Programming",
+  logical = TRUE,
+  vector = c(1, 2, 3)
+)
+my_list
+</code>
+
+<h2>Accessing List Elements</h2>
+<p>
+Elements in a list can be accessed in different ways.
+</p>
+<code>
+my_list$number
+my_list[[2]]
+my_list["text"]
+</code>
+
+<h2>Modifying List Elements</h2>
+<p>
+You can modify existing elements or add new ones.
+</p>
+<code>
+my_list$number <- 50
+my_list$new_value <- "Data Science"
+my_list
+</code>
+
+<h2>Removing List Elements</h2>
+<p>
+Elements can be removed by assigning NULL.
+</p>
+<code>
+my_list$text <- NULL
+my_list
+</code>
+
+<h2>Nested Lists</h2>
+<p>
+A list can contain another list inside it.
+</p>
+<code>
+nested_list <- list(
+  a = 1,
+  b = list(x = 10, y = 20)
+)
+nested_list
+</code>
+
+<h2>List Functions</h2>
+<p>
+R provides built-in functions to work with lists.
+</p>
+<code>
+length(my_list)
+names(my_list)
+str(my_list)
+</code>
+
+<h2>Converting Lists</h2>
+<p>
+Lists can be converted to other data structures.
+</p>
+<code>
+unlist(my_list)
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Lists are powerful and flexible.
+They are widely used in R to store complex data and results.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

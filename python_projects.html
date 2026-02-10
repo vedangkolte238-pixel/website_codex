@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        ul.project-list li {
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Projects for Learning</h1>
+    <p>Ideas and Examples for Your Python Website Section</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+This section lists practical Python projects you can showcase on your website.  
+Projects are divided into categories like GUI apps, Web apps, Automation, and Data analysis.
+</p>
+
+<h2>1. GUI Projects (Tkinter)</h2>
+<ul class="project-list">
+    <li>
+        <strong>Simple Calculator</strong>  
+        <code>
+import tkinter as tk
+
+def add():
+    result.set(int(num1.get()) + int(num2.get()))
+
+window = tk.Tk()
+window.title("Calculator")
+
+num1 = tk.Entry(window)
+num1.pack()
+num2 = tk.Entry(window)
+num2.pack()
+result = tk.StringVar()
+tk.Label(window, textvariable=result).pack()
+tk.Button(window, text="Add", command=add).pack()
+window.mainloop()
+        </code>
+    </li>
+    <li>
+        <strong>To-Do List App</strong>  
+        Description: Add, delete, and mark tasks as done using a Tkinter listbox.
+    </li>
+</ul>
+
+<h2>2. Web Projects (Flask/Django)</h2>
+<ul class="project-list">
+    <li>
+        <strong>Personal Portfolio Website</strong>  
+        Description: Use Flask to create a personal website with home, about, and projects pages.
+    </li>
+    <li>
+        <strong>Blog Platform</strong>  
+        Description: Build a blog where users can add, edit, and delete posts with Django.
+    </li>
+</ul>
+
+<h2>3. Automation Projects</h2>
+<ul class="project-list">
+    <li>
+        <strong>File Organizer</strong>  
+        Description: Automatically sort files into folders by type using <code>os</code> and <code>shutil</code>.
+    </li>
+    <li>
+        <strong>Email Automation</strong>  
+        Description: Send automated emails to multiple recipients using <code>smtplib</code>.
+    </li>
+    <li>
+        <strong>Web Scraper</strong>  
+        Description: Scrape website data using <code>requests</code> and <code>BeautifulSoup</code>.
+    </li>
+</ul>
+
+<h2>4. Data Projects</h2>
+<ul class="project-list">
+    <li>
+        <strong>CSV Analyzer</strong>  
+        Description: Read, filter, and analyze CSV files using <code>pandas</code>.
+    </li>
+    <li>
+        <strong>Weather Dashboard</strong>  
+        Description: Fetch weather data from a public API and display it in a readable format.
+    </li>
+</ul>
+
+<h2>5. Networking & API Projects</h2>
+<ul class="project-list">
+    <li>
+        <strong>Chat Application</strong>  
+        Description: Create a client-server chat app using <code>socket</code>.
+    </li>
+    <li>
+        <strong>API Data Viewer</strong>  
+        Description: Fetch data from an API (like GitHub or OpenWeather) and display it using Tkinter.
+    </li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+These projects are suitable for beginners to intermediate learners.  
+You can showcase them on your website with **screenshots, code snippets, and live demos** to demonstrate your Python skills.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Operators</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.operator-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Operators</h1>
+    <p>Operators used to perform operations in R programming</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Operators are symbols that perform operations on variables and values.
+R provides different types of operators for mathematical and logical tasks.
+</p>
+
+<h2>1. Arithmetic Operators</h2>
+<p>
+Used to perform mathematical calculations.
+</p>
+<code>
+a <- 10
+b <- 3
+
+a + b   # Addition
+a - b   # Subtraction
+a * b   # Multiplication
+a / b   # Division
+a %% b  # Modulus
+a ^ b   # Exponent
+</code>
+
+<h2>2. Relational Operators</h2>
+<p>
+Used to compare two values and return TRUE or FALSE.
+</p>
+<code>
+a <- 10
+b <- 5
+
+a == b
+a != b
+a > b
+a < b
+a >= b
+a <= b
+</code>
+
+<h2>3. Logical Operators</h2>
+<p>
+Used to combine logical expressions.
+</p>
+<code>
+x <- TRUE
+y <- FALSE
+
+x & y
+x | y
+!x
+</code>
+
+<h2>4. Assignment Operators</h2>
+<p>
+Used to assign values to variables.
+</p>
+<code>
+a <- 5
+b = 10
+c <<- 15
+</code>
+
+<h2>5. Miscellaneous Operators</h2>
+<p>
+Used for special purposes in R.
+</p>
+<code>
+x <- 1:5
+y <- c(2, 4, 6, 8, 10)
+
+x %in% y
+x %/% 2
+</code>
+
+<h2>Operator Precedence</h2>
+<p>
+Operator precedence defines the order in which operations are performed.
+</p>
+<code>
+result <- 5 + 2 * 3
+result
+</code>
+
+<h2>Summary</h2>
+<ul class="operator-list">
+    <li>Arithmetic operators for calculations</li>
+    <li>Relational operators for comparisons</li>
+    <li>Logical operators for conditions</li>
+    <li>Assignment operators for value assignment</li>
+    <li>Miscellaneous operators for special operations</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Understanding R operators is essential for writing logical and efficient programs.
+They are heavily used in data analysis and conditional operations.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

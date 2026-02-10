@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Strings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.string-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Strings</h1>
+    <p>Working with text data in R programming</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Strings in R are sequences of characters.
+They are commonly used to store names, messages, and textual data.
+</p>
+
+<h2>Creating Strings</h2>
+<p>
+Strings are created using single or double quotes.
+</p>
+<code>
+name <- "R Programming"
+message <- 'Welcome to R'
+name
+message
+</code>
+
+<h2>String Length</h2>
+<p>
+Use <strong>nchar()</strong> to find the length of a string.
+</p>
+<code>
+text <- "Data Science"
+nchar(text)
+</code>
+
+<h2>Combining Strings</h2>
+<p>
+Use <strong>paste()</strong> or <strong>paste0()</strong> to combine strings.
+</p>
+<code>
+first <- "Hello"
+second <- "World"
+
+paste(first, second)
+paste0(first, second)
+</code>
+
+<h2>Changing Case</h2>
+<p>
+R provides functions to change string case.
+</p>
+<code>
+text <- "R Language"
+
+toupper(text)
+tolower(text)
+</code>
+
+<h2>Substring</h2>
+<p>
+Extract part of a string using <strong>substr()</strong>.
+</p>
+<code>
+text <- "Programming"
+substr(text, 1, 4)
+</code>
+
+<h2>Replacing Text</h2>
+<p>
+Use <strong>gsub()</strong> to replace characters or words.
+</p>
+<code>
+sentence <- "I love Java"
+gsub("Java", "R", sentence)
+</code>
+
+<h2>Splitting Strings</h2>
+<p>
+Use <strong>strsplit()</strong> to split a string.
+</p>
+<code>
+text <- "R is powerful"
+strsplit(text, " ")
+</code>
+
+<h2>Common String Functions</h2>
+<ul class="string-list">
+    <li><strong>nchar()</strong> – length of string</li>
+    <li><strong>paste()</strong> – combine strings</li>
+    <li><strong>substr()</strong> – extract substring</li>
+    <li><strong>gsub()</strong> – replace text</li>
+    <li><strong>strsplit()</strong> – split strings</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+String handling is an important part of data cleaning and analysis in R.
+Mastering string functions helps work with real-world datasets effectively.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

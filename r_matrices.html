@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Matrices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.matrix-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Matrices</h1>
+    <p>Two-dimensional data structure in R programming</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+A matrix in R is a two-dimensional data structure that stores elements
+of the same data type arranged in rows and columns.
+</p>
+
+<h2>Creating a Matrix</h2>
+<p>
+Matrices are created using the <strong>matrix()</strong> function.
+</p>
+<code>
+m <- matrix(c(1, 2, 3, 4, 5, 6),
+            nrow = 2,
+            ncol = 3)
+m
+</code>
+
+<h2>Matrix by Rows</h2>
+<p>
+You can fill a matrix row-wise using the <strong>byrow</strong> parameter.
+</p>
+<code>
+m_row <- matrix(c(1, 2, 3, 4, 5, 6),
+                nrow = 2,
+                byrow = TRUE)
+m_row
+</code>
+
+<h2>Accessing Matrix Elements</h2>
+<p>
+Elements are accessed using row and column indices.
+</p>
+<code>
+m[1, 2]
+m[, 1]
+m[2, ]
+</code>
+
+<h2>Modifying Matrix Elements</h2>
+<p>
+You can modify matrix values by assigning new values.
+</p>
+<code>
+m[1, 1] <- 100
+m
+</code>
+
+<h2>Matrix Operations</h2>
+<p>
+R supports element-wise matrix operations.
+</p>
+<code>
+a <- matrix(c(1, 2, 3, 4), nrow = 2)
+b <- matrix(c(5, 6, 7, 8), nrow = 2)
+
+a + b
+a * b
+</code>
+
+<h2>Matrix Multiplication</h2>
+<p>
+Matrix multiplication uses the <strong>%*%</strong> operator.
+</p>
+<code>
+x <- matrix(c(1, 2, 3, 4), nrow = 2)
+y <- matrix(c(5, 6, 7, 8), nrow = 2)
+
+x %*% y
+</code>
+
+<h2>Matrix Functions</h2>
+<p>
+Common functions used with matrices.
+</p>
+<code>
+dim(m)
+nrow(m)
+ncol(m)
+t(m)
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Matrices are useful for mathematical and statistical operations in R.
+They form the basis for advanced data analysis techniques.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

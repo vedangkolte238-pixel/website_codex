@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Performance Tuning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.tuning-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SQL Performance Tuning</h1>
+    <p>Optimizing queries and database performance</p>
+</header>
+
+<section>
+
+    <h2>What is SQL Performance Tuning?</h2>
+    <p>
+        SQL performance tuning involves improving the efficiency of queries, reducing execution time,
+        and optimizing database operations for better performance.
+    </p>
+
+    <h2>1. Use Indexes</h2>
+    <p>
+        Indexes speed up data retrieval by avoiding full table scans.
+    </p>
+    <code>
+CREATE INDEX idx_emp_name
+ON employees(name);
+    </code>
+
+    <h2>2. Optimize Queries</h2>
+    <p>
+        Avoid SELECT *, use proper WHERE clauses, and minimize joins if possible.
+    </p>
+    <code>
+-- Instead of
+SELECT * FROM employees;
+
+-- Use
+SELECT name, department FROM employees WHERE status='Active';
+    </code>
+
+    <h2>3. Use Joins Efficiently</h2>
+    <p>
+        Use INNER JOIN instead of OUTER JOIN if possible, and join on indexed columns.
+    </p>
+    <code>
+SELECT e.name, d.dept_name
+FROM employees e
+INNER JOIN departments d ON e.dept_id = d.dept_id;
+    </code>
+
+    <h2>4. Avoid Unnecessary Calculations</h2>
+    <p>
+        Precompute values or use indexed computed columns rather than calculating in queries repeatedly.
+    </p>
+
+    <h2>5. Use EXPLAIN Plan</h2>
+    <p>
+        Analyze query execution plans to identify bottlenecks.
+    </p>
+    <code>
+EXPLAIN SELECT name FROM employees WHERE department='HR';
+    </code>
+
+    <h2>6. Partition Large Tables</h2>
+    <p>
+        Break large tables into partitions to reduce query scan time and improve performance.
+    </p>
+
+    <h2>7. Properly Use Transactions</h2>
+    <p>
+        Keep transactions short to reduce locking and blocking issues.
+    </p>
+
+    <h2>8. Optimize Database Schema</h2>
+    <p>
+        Normalize tables to remove redundancy, but denormalize selectively for performance-critical queries.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        SQL performance tuning improves query speed, reduces resource usage, and ensures responsive applications.
+        Regular monitoring and query optimization are essential for large databases.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

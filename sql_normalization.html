@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Normalization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.normalization-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SQL Normalization</h1>
+    <p>Organizing tables to reduce redundancy and improve integrity</p>
+</header>
+
+<section>
+
+    <h2>What is Normalization?</h2>
+    <p>
+        Normalization is the process of organizing database tables and their relationships.
+        It reduces data redundancy and ensures data integrity.
+    </p>
+
+    <h2>Benefits of Normalization</h2>
+    <ul class="normalization-list">
+        <li>Eliminates duplicate data</li>
+        <li>Reduces data anomalies</li>
+        <li>Improves database consistency</li>
+        <li>Optimizes storage</li>
+    </ul>
+
+    <h2>1. First Normal Form (1NF)</h2>
+    <p>
+        Ensures that each column contains atomic (indivisible) values and each row is unique.
+    </p>
+    <code>
+-- Example table not in 1NF
+Student_Courses
++----+---------+------------------+
+| ID | Name    | Courses          |
++----+---------+------------------+
+| 1  | Alice   | Math, Science    |
+| 2  | Bob     | English          |
++----+---------+------------------+
+
+-- After 1NF
++----+---------+--------+
+| ID | Name    | Course |
++----+---------+--------+
+| 1  | Alice   | Math   |
+| 1  | Alice   | Science|
+| 2  | Bob     | English|
++----+---------+--------+
+    </code>
+
+    <h2>2. Second Normal Form (2NF)</h2>
+    <p>
+        Achieved when the table is in 1NF and all non-key columns are fully dependent on the primary key.
+    </p>
+    <code>
+-- Remove partial dependency
+Student_Courses
++----+---------+--------+ Instructor |
++----+---------+--------+------------+
+| 1  | Alice   | Math   | Mr. A      |
+| 1  | Alice   | Science| Mr. B      |
+
+-- Split into two tables
+Students
++----+---------+
+| ID | Name    |
++----+---------+
+
+Courses
++--------+------------+
+| Course | Instructor |
++--------+------------+
+    </code>
+
+    <h2>3. Third Normal Form (3NF)</h2>
+    <p>
+        Achieved when the table is in 2NF and all non-key columns are not transitively dependent on the primary key.
+    </p>
+    <code>
+-- Avoid transitive dependency
+Employees
++----+--------+ DeptName | DeptLocation |
++----+--------+----------+--------------+
+
+-- Split into
+Employees
++----+--------+ DeptID |
++----+--------+--------+
+
+Departments
++--------+----------+--------------+
+| DeptID | DeptName | DeptLocation |
++--------+----------+--------------+
+    </code>
+
+    <h2>Conclusion</h2>
+    <p>
+        Normalization organizes data to minimize redundancy and maintain integrity.
+        Most databases are normalized up to 3NF for efficiency and clarity.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

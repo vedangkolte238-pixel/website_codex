@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ruby Classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fe0000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #fe0000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ruby Classes</h1>
+    <p>Object-Oriented Programming in Ruby</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+A class in Ruby is a blueprint for creating objects. It defines properties (variables) and behaviors (methods)
+that objects created from the class can use.
+</p>
+
+<h2>Defining a Class</h2>
+<code>
+class Person
+end
+</code>
+
+<h2>Creating Objects</h2>
+<code>
+person1 = Person.new
+person2 = Person.new
+</code>
+
+<h2>Initialize Method</h2>
+<p>
+The <code>initialize</code> method runs automatically when a new object is created.
+</p>
+<code>
+class Person
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
+end
+
+p1 = Person.new("Alice", 25)
+</code>
+
+<h2>Instance Variables</h2>
+<p>
+Instance variables start with <code>@</code> and store object-specific data.
+</p>
+<code>
+puts @name
+puts @age
+</code>
+
+<h2>Instance Methods</h2>
+<code>
+class Person
+  def greet
+    puts "Hello, my name is #{@name}"
+  end
+end
+
+p1.greet
+</code>
+
+<h2>Accessors</h2>
+<p>
+Ruby provides shortcuts to create getter and setter methods.
+</p>
+<code>
+class Person
+  attr_accessor :name, :age
+end
+
+p1 = Person.new
+p1.name = "Bob"
+p1.age = 30
+puts p1.name
+</code>
+
+<h2>Inheritance</h2>
+<code>
+class Student < Person
+  def study
+    puts "Studying..."
+  end
+end
+
+s = Student.new
+s.study
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Classes form the foundation of object-oriented programming in Ruby. They help organize code, promote reuse,
+and make applications easier to maintain.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Ruby Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Regression</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.regression-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Regression</h1>
+    <p>Performing linear and multiple regression analysis in R</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Regression analysis in R is used to understand relationships between dependent and independent variables.  
+R provides built-in functions for simple linear regression, multiple regression, and model evaluation.
+</p>
+
+<h2>Simple Linear Regression</h2>
+<code>
+# Sample data
+x <- c(1, 2, 3, 4, 5)
+y <- c(2, 4, 5, 4, 5)
+
+# Fit linear model
+model <- lm(y ~ x)
+summary(model)
+
+# Predict new values
+predict(model, data.frame(x = c(6,7)))
+</code>
+
+<h2>Multiple Linear Regression</h2>
+<code>
+# Sample data
+data <- data.frame(
+  y = c(5, 7, 9, 11, 13),
+  x1 = c(1, 2, 3, 4, 5),
+  x2 = c(2, 1, 4, 3, 5)
+)
+
+# Fit multiple regression
+model <- lm(y ~ x1 + x2, data = data)
+summary(model)
+</code>
+
+<h2>Plotting Regression Line</h2>
+<code>
+plot(x, y, main="Simple Linear Regression")
+abline(model, col="red")
+</code>
+
+<h2>Residual Analysis</h2>
+<code>
+# Residuals
+res <- residuals(model)
+res
+
+# Plot residuals
+plot(res, main="Residuals Plot")
+abline(h=0, col="blue")
+</code>
+
+<h2>Checking Model Assumptions</h2>
+<p>
+Use diagnostic plots to check linearity, homoscedasticity, and normality of residuals.
+</p>
+<code>
+par(mfrow=c(2,2))
+plot(model)
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Regression analysis in R helps quantify relationships between variables and make predictions.  
+Understanding regression is essential for statistical modeling and data analysis.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

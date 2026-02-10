@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Basics Complete Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1f2d3d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #1f2d3d;
+            margin-top: 35px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Basics</h1>
+    <p>Complete Explanation with Examples and Output</p>
+</header>
+
+<section>
+
+<h2>1. Python Variables</h2>
+<p>Variables are used to store data values. Python does not require variable type declaration.</p>
+<code>
+x = 10
+name = "Python"
+print(x)
+print(name)
+</code>
+<div class="output">
+Output:<br>
+10<br>
+Python
+</div>
+
+<h2>2. Python Operators</h2>
+
+<h3>Arithmetic Operators</h3>
+<code>
+a = 10
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a % b)
+</code>
+<div class="output">
+Output:<br>
+13<br>
+7<br>
+30<br>
+3.3333333333333335<br>
+1
+</div>
+
+<h3>Assignment Operators</h3>
+<code>
+x = 5
+x += 3
+print(x)
+</code>
+<div class="output">
+Output:<br>
+8
+</div>
+
+<h3>Relational (Comparison) Operators</h3>
+<code>
+a = 10
+b = 5
+print(a > b)
+print(a == b)
+print(a != b)
+</code>
+<div class="output">
+Output:<br>
+True<br>
+False<br>
+True
+</div>
+
+<h3>Logical Operators</h3>
+<code>
+a = True
+b = False
+print(a and b)
+print(a or b)
+print(not a)
+</code>
+<div class="output">
+Output:<br>
+False<br>
+True<br>
+False
+</div>
+
+<h3>Bitwise Operators</h3>
+<code>
+a = 5   # 101
+b = 3   # 011
+print(a & b)
+print(a | b)
+print(a ^ b)
+</code>
+<div class="output">
+Output:<br>
+1<br>
+7<br>
+6
+</div>
+
+<h3>Membership Operators</h3>
+<code>
+nums = [1, 2, 3, 4]
+print(3 in nums)
+print(10 not in nums)
+</code>
+<div class="output">
+Output:<br>
+True<br>
+True
+</div>
+
+<h3>Identity Operators</h3>
+<code>
+a = 10
+b = 10
+print(a is b)
+print(a is not b)
+</code>
+<div class="output">
+Output:<br>
+True<br>
+False
+</div>
+
+<h2>3. Conditional Statements</h2>
+
+<h3>If Statement</h3>
+<code>
+age = 20
+if age >= 18:
+    print("Eligible to vote")
+</code>
+<div class="output">
+Output:<br>
+Eligible to vote
+</div>
+
+<h3>If-Else Statement</h3>
+<code>
+age = 16
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+</code>
+<div class="output">
+Output:<br>
+Minor
+</div>
+
+<h3>If-Elif-Else Statement</h3>
+<code>
+marks = 72
+if marks >= 90:
+    print("Grade A")
+elif marks >= 60:
+    print("Grade B")
+else:
+    print("Grade C")
+</code>
+<div class="output">
+Output:<br>
+Grade B
+</div>
+
+<h2>4. Loops</h2>
+
+<h3>For Loop</h3>
+<code>
+for i in range(1, 6):
+    print(i)
+</code>
+<div class="output">
+Output:<br>
+1 2 3 4 5
+</div>
+
+<h3>While Loop</h3>
+<code>
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+</code>
+<div class="output">
+Output:<br>
+1 2 3 4 5
+</div>
+
+<h2>5. Functions</h2>
+<p>Functions are reusable blocks of code.</p>
+<code>
+def add(a, b):
+    return a + b
+
+print(add(3, 5))
+</code>
+<div class="output">
+Output:<br>
+8
+</div>
+
+<h2>6. Comments</h2>
+<code>
+# This is a single-line comment
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Python basics include variables, operators, conditions, loops, and functions.
+Understanding these concepts builds a strong foundation for advanced Python programming.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

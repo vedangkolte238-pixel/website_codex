@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ruby Exception Handling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fe0000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #fe0000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ruby Exception Handling</h1>
+    <p>Handling Errors Safely in Ruby</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Exception handling allows a program to deal with runtime errors gracefully instead of crashing.
+Ruby provides a clean and readable way to handle errors using <strong>begin</strong> and <strong>rescue</strong>.
+</p>
+
+<h2>Basic Exception Handling</h2>
+<code>
+begin
+  result = 10 / 0
+rescue
+  puts "An error occurred"
+end
+</code>
+
+<h2>Rescuing Specific Exceptions</h2>
+<code>
+begin
+  num = Integer("abc")
+rescue ArgumentError
+  puts "Invalid number format"
+end
+</code>
+
+<h2>Using Else</h2>
+<p>
+The <code>else</code> block runs only if no exception occurs.
+</p>
+<code>
+begin
+  result = 10 / 2
+rescue ZeroDivisionError
+  puts "Cannot divide by zero"
+else
+  puts "Result is #{result}"
+end
+</code>
+
+<h2>Ensure Block</h2>
+<p>
+The <code>ensure</code> block always runs, whether an exception occurs or not.
+</p>
+<code>
+begin
+  file = File.open("test.txt")
+  puts file.read
+rescue
+  puts "File error"
+ensure
+  file.close if file
+end
+</code>
+
+<h2>Raising Exceptions</h2>
+<p>
+You can manually raise an exception using <code>raise</code>.
+</p>
+<code>
+def check_age(age)
+  raise "Age must be positive" if age < 0
+  puts "Age is valid"
+end
+
+check_age(-5)
+</code>
+
+<h2>Retry Keyword</h2>
+<p>
+The <code>retry</code> keyword retries the code inside the <code>begin</code> block.
+</p>
+<code>
+attempts = 0
+
+begin
+  attempts += 1
+  puts "Attempt #{attempts}"
+  raise "Error"
+rescue
+  retry if attempts < 3
+end
+</code>
+
+<h2>Common Ruby Exceptions</h2>
+<ul>
+    <li>StandardError</li>
+    <li>ArgumentError</li>
+    <li>NoMethodError</li>
+    <li>TypeError</li>
+    <li>ZeroDivisionError</li>
+    <li>IOError</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Proper exception handling makes Ruby applications more reliable and user-friendly.
+Using specific exceptions and cleanup logic ensures clean and predictable behavior.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Ruby Learning Website</p>
+</footer>
+
+</body>
+</html>

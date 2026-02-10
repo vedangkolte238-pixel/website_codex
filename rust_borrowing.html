@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rust Borrowing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #000000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Rust Borrowing</h1>
+    <p>Accessing Data Without Taking Ownership</p>
+</header>
+
+<section>
+
+<h2>What is Borrowing?</h2>
+<p>
+Borrowing in Rust allows a function or variable to access a value without taking ownership of it. 
+This prevents unnecessary copying and ensures memory safety.
+</p>
+
+<h2>Immutable Borrowing</h2>
+<code>
+fn main() {
+    let s = String::from("Hello");
+
+    // Borrow s immutably
+    let len = calculate_length(&s);
+
+    println!("The length of '{}' is {}", s, len);
+}
+
+fn calculate_length(s: &String) -> usize {
+    s.len()
+}
+</code>
+<p>Here, <code>&s</code> creates an immutable reference, allowing read-only access to <code>s</code> without transferring ownership.</p>
+
+<h2>Mutable Borrowing</h2>
+<code>
+fn main() {
+    let mut s = String::from("Hello");
+
+    // Borrow s mutably
+    change(&mut s);
+
+    println!("{}", s);
+}
+
+fn change(some_string: &mut String) {
+    some_string.push_str(", World!");
+}
+</code>
+<p>Using <code>&mut s</code>, we can modify the original value through the reference. Only one mutable reference is allowed at a time.</p>
+
+<h2>Rules of Borrowing</h2>
+<ul>
+    <li>You can have multiple immutable references to a value simultaneously.</li>
+    <li>Only one mutable reference is allowed at a time.</li>
+    <li>Mutable and immutable references cannot coexist in the same scope.</li>
+    <li>References must always be valid for the duration of use.</li>
+</ul>
+
+<h2>Applications</h2>
+<ul>
+    <li>Safe access to values without transferring ownership</li>
+    <li>Efficient memory usage</li>
+    <li>Preventing dangling references and data races</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Borrowing is a core concept in Rust that allows safe and efficient access to data. 
+Understanding immutable and mutable borrowing is essential for writing safe Rust programs that adhere to the ownership model.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Rust Learning Website</p>
+</footer>
+
+</body>
+</html>

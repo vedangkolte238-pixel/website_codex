@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Data Manipulation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.manipulation-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Data Manipulation</h1>
+    <p>Techniques to modify, summarize, and manage data in R</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Data manipulation in R involves transforming data to make it suitable for analysis.  
+Common tasks include filtering, selecting, arranging, summarizing, and combining datasets.
+</p>
+
+<h2>Selecting Columns</h2>
+<p>
+Use the <strong>dplyr</strong> package to select specific columns.
+</p>
+<code>
+library(dplyr)
+
+data <- data.frame(
+  id = 1:5,
+  name = c("Amit", "Neha", "Ravi", "Sita", "Anil"),
+  score = c(90, 85, 78, 92, 88)
+)
+
+select(data, name, score)
+</code>
+
+<h2>Filtering Rows</h2>
+<p>
+Filter rows based on conditions using <strong>filter()</strong>.
+</p>
+<code>
+filter(data, score > 85)
+filter(data, name == "Neha")
+</code>
+
+<h2>Arranging Data</h2>
+<p>
+Sort data by column values using <strong>arrange()</strong>.
+</p>
+<code>
+arrange(data, score)       # ascending
+arrange(data, desc(score)) # descending
+</code>
+
+<h2>Adding or Modifying Columns</h2>
+<p>
+Use <strong>mutate()</strong> to create or modify columns.
+</p>
+<code>
+data <- mutate(data, grade = ifelse(score >= 90, "A", "B"))
+data
+</code>
+
+<h2>Summarizing Data</h2>
+<p>
+Use <strong>summarise()</strong> to get aggregate information.
+</p>
+<code>
+summarise(data, avg_score = mean(score), max_score = max(score))
+</code>
+
+<h2>Grouping Data</h2>
+<p>
+Group data by a factor or column using <strong>group_by()</strong> and summarize.
+</p>
+<code>
+grouped <- data %>%
+  group_by(grade) %>%
+  summarise(count = n(), avg_score = mean(score))
+grouped
+</code>
+
+<h2>Combining Datasets</h2>
+<p>
+Use <strong>bind_rows()</strong> or <strong>merge()</strong> to combine datasets.
+</p>
+<code>
+new_data <- data.frame(id = 6, name = "Rohit", score = 91, grade = "A")
+combined <- bind_rows(data, new_data)
+combined
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Data manipulation is a crucial step before analysis.  
+The <strong>dplyr</strong> package makes these operations fast, readable, and efficient.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

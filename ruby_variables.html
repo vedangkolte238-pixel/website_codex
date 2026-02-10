@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ruby Variables</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fe0000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #fe0000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #fe0000;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ruby Variables</h1>
+    <p>Storing and Using Data in Ruby</p>
+</header>
+
+<section>
+
+<h2>What are Variables?</h2>
+<p>
+Variables in Ruby are used to store values which can be referenced and manipulated throughout the program.
+Ruby is dynamically typed, so variable types are inferred automatically.
+</p>
+
+<h2>Variable Naming Rules</h2>
+<ul>
+    <li>Names must begin with a lowercase letter or underscore (_).</li>
+    <li>Names can contain letters, numbers, and underscores.</li>
+    <li>Case-sensitive: <code>name</code> and <code>Name</code> are different variables.</li>
+    <li>Cannot use reserved keywords (like <code>def</code>, <code>class</code>, etc.).</li>
+</ul>
+
+<h2>Variable Types</h2>
+<ul>
+    <li><strong>Local variables:</strong> start with a lowercase letter or underscore <code>name = "Alice"</code></li>
+    <li><strong>Instance variables:</strong> start with @ <code>@age = 25</code></li>
+    <li><strong>Class variables:</strong> start with @@ <code>@@count = 0</code></li>
+    <li><strong>Global variables:</strong> start with $ <code>$app_name = "RubyApp"</code></li>
+    <li><strong>Constants:</strong> start with an uppercase letter <code>PI = 3.14</code></li>
+</ul>
+
+<h2>Examples</h2>
+<code>
+# Local variable
+name = "Alice"
+age = 30
+
+# Instance variable
+@city = "New York"
+
+# Class variable
+@@users_count = 0
+
+# Global variable
+$app_name = "MyRubyApp"
+
+# Constant
+PI = 3.14159
+
+puts "Name: #{name}, Age: #{age}, City: #{@city}, App: #{$app_name}, PI: #{PI}"
+</code>
+
+<h2>Variable Scope</h2>
+<ul>
+    <li>Local variables are accessible only within the block or method they are defined in.</li>
+    <li>Instance variables are accessible within the object they belong to.</li>
+    <li>Class variables are shared across all instances of a class.</li>
+    <li>Global variables are accessible from anywhere in the program.</li>
+    <li>Constants are accessible throughout the program but can be changed with a warning.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Variables are fundamental in Ruby for storing and manipulating data. 
+Understanding variable types and scope helps in writing clean and maintainable code.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Ruby Learning Website</p>
+</footer>
+
+</body>
+</html>

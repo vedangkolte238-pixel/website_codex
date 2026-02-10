@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Data Cleaning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.cleaning-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Data Cleaning</h1>
+    <p>Techniques to prepare data for analysis in R</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Data cleaning is the process of detecting and correcting errors or inconsistencies in datasets.
+It ensures accurate analysis and reliable results in R.
+</p>
+
+<h2>Handling Missing Values</h2>
+<p>
+Use functions like <strong>is.na()</strong> and <strong>na.omit()</strong> to handle missing data.
+</p>
+<code>
+data <- data.frame(
+  id = 1:5,
+  score = c(90, NA, 85, NA, 95)
+)
+
+# Check missing values
+is.na(data$score)
+
+# Remove rows with missing values
+clean_data <- na.omit(data)
+clean_data
+</code>
+
+<h2>Replacing Missing Values</h2>
+<p>
+You can replace missing values with mean, median, or custom values.
+</p>
+<code>
+data$score[is.na(data$score)] <- mean(data$score, na.rm = TRUE)
+data
+</code>
+
+<h2>Removing Duplicates</h2>
+<p>
+Use <strong>duplicated()</strong> and <strong>unique()</strong> to handle duplicate rows.
+</p>
+<code>
+data <- data.frame(
+  id = c(1, 2, 2, 3),
+  score = c(90, 85, 85, 95)
+)
+
+unique(data)
+</code>
+
+<h2>Trimming Whitespace</h2>
+<p>
+Use <strong>trimws()</strong> to remove extra spaces from character columns.
+</p>
+<code>
+text <- c("  R Programming  ", " Data Science ")
+trimws(text)
+</code>
+
+<h2>Converting Data Types</h2>
+<p>
+Ensure each column has the correct type using <strong>as.numeric()</strong>, <strong>as.character()</strong>, etc.
+</p>
+<code>
+data$score <- as.numeric(data$score)
+data$id <- as.character(data$id)
+str(data)
+</code>
+
+<h2>Renaming Columns</h2>
+<p>
+Use <strong>colnames()</strong> to rename column names.
+</p>
+<code>
+colnames(data) <- c("ID", "Score")
+data
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Data cleaning is a crucial step before analysis.
+Using R functions efficiently ensures datasets are accurate, consistent, and ready for further processing.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

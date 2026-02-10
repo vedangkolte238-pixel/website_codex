@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ruby Collections</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fe0000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #fe0000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ruby Collections</h1>
+    <p>Working with Arrays, Hashes, and Ranges</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Ruby provides several collection types for storing and organizing multiple values, including <strong>Arrays</strong>, <strong>Hashes</strong>, <strong>Ranges</strong>, and <strong>Sets</strong>.
+</p>
+
+<h2>Arrays</h2>
+<p>Arrays are ordered collections of objects.</p>
+<code>
+# Creating arrays
+fruits = ["Apple", "Banana", "Cherry"]
+
+# Accessing elements
+puts fruits[0]    # Apple
+
+# Adding elements
+fruits << "Orange"
+
+# Iterating
+fruits.each do |fruit|
+  puts fruit
+end
+</code>
+
+<h2>Hashes</h2>
+<p>Hashes store key-value pairs.</p>
+<code>
+# Creating a hash
+person = { "name" => "Alice", "age" => 25, "city" => "New York" }
+
+# Accessing values
+puts person["name"]   # Alice
+
+# Adding a new key
+person["country"] = "USA"
+
+# Iterating
+person.each do |key, value|
+  puts "#{key}: #{value}"
+end
+</code>
+
+<h2>Ranges</h2>
+<p>Ranges represent a sequence of values.</p>
+<code>
+# Numeric range
+numbers = (1..5).to_a   # [1,2,3,4,5]
+
+# Alphabetic range
+letters = ("a".."e").to_a   # ["a","b","c","d","e"]
+
+# Iterating
+numbers.each { |n| puts n }
+</code>
+
+<h2>Set</h2>
+<p>Sets are collections of unique elements (require 'set').</p>
+<code>
+require 'set'
+
+unique_numbers = Set.new([1,2,2,3,4])
+unique_numbers.add(5)
+unique_numbers.each { |n| puts n }
+</code>
+
+<h2>Applications</h2>
+<ul>
+    <li>Storing lists of values with arrays</li>
+    <li>Mapping keys to values using hashes</li>
+    <li>Creating ranges for iteration and sequences</li>
+    <li>Ensuring uniqueness with sets</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Ruby collections provide flexible and powerful ways to store and manipulate multiple values efficiently. 
+Choosing the right collection type depends on the problem and required operations.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Ruby Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Basic Statistics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.stats-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Basic Statistics</h1>
+    <p>Fundamental statistical functions in R</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+R provides built-in functions to perform basic statistical analysis on datasets.
+These functions are essential for understanding data distribution and relationships.
+</p>
+
+<h2>Mean, Median, Mode</h2>
+<code>
+data <- c(5, 10, 15, 10, 20, 15, 25)
+
+# Mean
+mean(data)
+
+# Median
+median(data)
+
+# Mode (using table)
+mode_val <- names(sort(table(data), decreasing=TRUE))[1]
+mode_val
+</code>
+
+<h2>Variance and Standard Deviation</h2>
+<code>
+# Variance
+var(data)
+
+# Standard Deviation
+sd(data)
+</code>
+
+<h2>Summary Statistics</h2>
+<code>
+summary(data)
+</code>
+
+<h2>Minimum and Maximum</h2>
+<code>
+min(data)
+max(data)
+</code>
+
+<h2>Quantiles</h2>
+<code>
+quantile(data, probs = c(0.25, 0.5, 0.75))
+</code>
+
+<h2>Range</h2>
+<code>
+range(data)
+diff(range(data))  # difference between max and min
+</code>
+
+<h2>Correlation</h2>
+<code>
+x <- c(1, 2, 3, 4, 5)
+y <- c(2, 4, 6, 8, 10)
+
+cor(x, y)
+</code>
+
+<h2>Covariance</h2>
+<code>
+cov(x, y)
+</code>
+
+<h2>Conclusion</h2>
+<p>
+These basic statistical functions in R help summarize and understand data efficiently.  
+They are the foundation for more advanced statistical analysis.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ruby Modules</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fe0000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #fe0000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ruby Modules</h1>
+    <p>Reusable Code Containers in Ruby</p>
+</header>
+
+<section>
+
+<h2>What is a Module?</h2>
+<p>
+A <strong>module</strong> in Ruby is a collection of methods, constants, and class variables that can be mixed into classes. 
+Modules provide namespaces and support mixins, allowing code reuse without using inheritance.
+</p>
+
+<h2>Defining a Module</h2>
+<code>
+module Greetings
+  def say_hello(name)
+    puts "Hello, #{name}!"
+  end
+
+  def say_goodbye(name)
+    puts "Goodbye, #{name}!"
+  end
+end
+</code>
+
+<h2>Including a Module in a Class</h2>
+<code>
+class Person
+  include Greetings
+end
+
+p = Person.new
+p.say_hello("Alice")
+p.say_goodbye("Alice")
+</code>
+
+<h2>Module as a Namespace</h2>
+<p>Modules can also be used to group related classes and constants to avoid name conflicts.</p>
+<code>
+module MathTools
+  PI = 3.14159
+
+  class Circle
+    def self.area(radius)
+      PI * radius * radius
+    end
+  end
+end
+
+puts MathTools::Circle.area(5)
+</code>
+
+<h2>Key Points</h2>
+<ul>
+    <li>Modules cannot be instantiated like classes.</li>
+    <li>They are used with <code>include</code>, <code>extend</code>, or <code>prepend</code>.</li>
+    <li>Support code reuse without inheritance.</li>
+    <li>Provide namespaces to avoid conflicts.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Modules are a powerful feature in Ruby for organizing code, sharing functionality across classes, and maintaining clean namespaces.
+Mixins allow classes to use module methods without creating rigid inheritance hierarchies.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Ruby Learning Website</p>
+</footer>
+
+</body>
+</html>

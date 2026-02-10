@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Data Visualization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.vis-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Data Visualization</h1>
+    <p>Creating charts, graphs, and plots using R</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Data visualization in R helps in understanding data patterns and trends.
+R provides built-in plotting functions and powerful packages like <strong>ggplot2</strong> for advanced visualization.
+</p>
+
+<h2>Basic Plot</h2>
+<p>
+Use the <strong>plot()</strong> function for simple graphs.
+</p>
+<code>
+x <- 1:10
+y <- c(2,5,7,3,8,6,9,4,10,7)
+
+plot(x, y, type = "b", col = "blue", xlab = "X-Axis", ylab = "Y-Axis", main = "Basic Plot")
+</code>
+
+<h2>Bar Plot</h2>
+<code>
+counts <- c(10, 20, 15, 30)
+names <- c("A", "B", "C", "D")
+barplot(counts, names.arg = names, col = "purple", main = "Bar Plot Example")
+</code>
+
+<h2>Histogram</h2>
+<code>
+data <- c(5, 10, 15, 10, 20, 15, 25, 10)
+hist(data, col = "orange", main = "Histogram Example", xlab = "Values", ylab = "Frequency")
+</code>
+
+<h2>Boxplot</h2>
+<code>
+scores <- c(85, 90, 78, 92, 88)
+boxplot(scores, col = "green", main = "Boxplot Example", ylab = "Scores")
+</code>
+
+<h2>Pie Chart</h2>
+<code>
+values <- c(30, 20, 25, 25)
+labels <- c("A", "B", "C", "D")
+pie(values, labels = labels, col = rainbow(4), main = "Pie Chart Example")
+</code>
+
+<h2>Advanced Plots with ggplot2</h2>
+<p>
+The <strong>ggplot2</strong> package provides flexible and powerful plotting.
+</p>
+<code>
+library(ggplot2)
+
+data <- data.frame(
+  category = c("A", "B", "C"),
+  values = c(10, 20, 15)
+)
+
+ggplot(data, aes(x = category, y = values, fill = category)) +
+  geom_bar(stat = "identity") +
+  ggtitle("Bar Plot with ggplot2")
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Data visualization is crucial for interpreting data and presenting results.  
+R provides both simple and advanced tools to create meaningful visualizations for analysis.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

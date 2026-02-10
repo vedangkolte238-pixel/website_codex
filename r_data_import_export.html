@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Data Import and Export</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.data-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Data Import and Export</h1>
+    <p>Working with external data files in R</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Importing and exporting data is essential for data analysis in R.
+You can read and write data in formats like CSV, Excel, and text files.
+</p>
+
+<h2>Importing CSV Files</h2>
+<p>
+Use <strong>read.csv()</strong> to import CSV files.
+</p>
+<code>
+data <- read.csv("data.csv", header = TRUE, sep = ",")
+head(data)
+</code>
+
+<h2>Importing Text Files</h2>
+<p>
+Use <strong>read.table()</strong> for general text files.
+</p>
+<code>
+data <- read.table("data.txt", header = TRUE, sep = "\t")
+head(data)
+</code>
+
+<h2>Importing Excel Files</h2>
+<p>
+Use the <strong>readxl</strong> package to read Excel files.
+</p>
+<code>
+library(readxl)
+data <- read_excel("data.xlsx", sheet = 1)
+head(data)
+</code>
+
+<h2>Exporting Data to CSV</h2>
+<p>
+Use <strong>write.csv()</strong> to save data to CSV format.
+</p>
+<code>
+write.csv(data, "output.csv", row.names = FALSE)
+</code>
+
+<h2>Exporting Data to Text Files</h2>
+<p>
+Use <strong>write.table()</strong> to save data as a text file.
+</p>
+<code>
+write.table(data, "output.txt", sep = "\t", row.names = FALSE)
+</code>
+
+<h2>Exporting Data to Excel</h2>
+<p>
+Use the <strong>writexl</strong> package to export Excel files.
+</p>
+<code>
+library(writexl)
+write_xlsx(data, "output.xlsx")
+</code>
+
+<h2>Other Useful Functions</h2>
+<ul class="data-list">
+    <li><strong>file.choose()</strong> – Opens a file dialog to select files interactively.</li>
+    <li><strong>readRDS()/saveRDS()</strong> – For saving R objects in binary format.</li>
+    <li><strong>read.table()</strong> – Flexible function for reading various text files.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+R provides multiple functions and packages for importing and exporting data.
+Understanding these methods is crucial for working with real-world datasets.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

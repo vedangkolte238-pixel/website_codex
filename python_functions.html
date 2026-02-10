@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Functions – Basics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Functions</h1>
+    <p>Complete Explanation with Examples and Output</p>
+</header>
+
+<section>
+
+<h2>What is a Function?</h2>
+<p>
+A function is a block of reusable code that performs a specific task.
+Functions help make programs modular, readable, and maintainable.
+</p>
+
+<h2>Defining a Function</h2>
+<code>
+def greet():
+    print("Hello, World!")
+</code>
+
+<h2>Calling a Function</h2>
+<code>
+greet()
+</code>
+<div class="output">
+Output:<br>
+Hello, World!
+</div>
+
+<h2>Function with Parameters</h2>
+<code>
+def greet(name):
+    print("Hello,", name)
+
+greet("Alice")
+greet("Bob")
+</code>
+<div class="output">
+Output:<br>
+Hello, Alice<br>
+Hello, Bob
+</div>
+
+<h2>Function with Default Parameters</h2>
+<code>
+def greet(name="Guest"):
+    print("Hello,", name)
+
+greet()
+greet("Charlie")
+</code>
+<div class="output">
+Output:<br>
+Hello, Guest<br>
+Hello, Charlie
+</div>
+
+<h2>Function with Return Value</h2>
+<code>
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)
+</code>
+<div class="output">
+Output:<br>
+8
+</div>
+
+<h2>Function with Multiple Return Values</h2>
+<code>
+def arithmetic(a, b):
+    return a+b, a-b, a*b
+
+sum_val, diff_val, prod_val = arithmetic(10, 5)
+print(sum_val)
+print(diff_val)
+print(prod_val)
+</code>
+<div class="output">
+Output:<br>
+15<br>
+5<br>
+50
+</div>
+
+<h2>Lambda Functions (Anonymous Functions)</h2>
+<code>
+square = lambda x: x**2
+print(square(6))
+</code>
+<div class="output">
+Output:<br>
+36
+</div>
+
+<h2>Why Use Functions?</h2>
+<ul>
+    <li>Reusability – write once, use many times</li>
+    <li>Modularity – organize code into separate blocks</li>
+    <li>Readability – easy to understand and maintain</li>
+    <li>Efficiency – reduces code duplication</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Functions are a core part of Python programming.
+Mastering functions allows you to write clean, modular, and efficient code.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

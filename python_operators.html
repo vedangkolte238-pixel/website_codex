@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Operators in Detail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Operators</h1>
+    <p>Complete Explanation with Examples and Output</p>
+</header>
+
+<section>
+
+<h2>What are Operators?</h2>
+<p>
+Operators are symbols used to perform operations on values and variables.
+Python provides many types of operators to handle different kinds of operations.
+</p>
+
+<h2>1. Arithmetic Operators</h2>
+<p>Used to perform mathematical calculations.</p>
+<ul>
+    <li>+ (Addition)</li>
+    <li>- (Subtraction)</li>
+    <li>* (Multiplication)</li>
+    <li>/ (Division)</li>
+    <li>% (Modulus)</li>
+    <li>// (Floor Division)</li>
+    <li>** (Exponentiation)</li>
+</ul>
+<code>
+a = 10
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a % b)
+print(a // b)
+print(a ** b)
+</code>
+<div class="output">
+Output:<br>
+13<br>
+7<br>
+30<br>
+3.3333333333333335<br>
+1<br>
+3<br>
+1000
+</div>
+
+<h2>2. Assignment Operators</h2>
+<p>Used to assign values to variables.</p>
+<ul>
+    <li>=</li>
+    <li>+=</li>
+    <li>-=</li>
+    <li>*=</li>
+    <li>/=</li>
+    <li>%=</li>
+</ul>
+<code>
+x = 5
+x += 3
+x *= 2
+print(x)
+</code>
+<div class="output">
+Output:<br>
+16
+</div>
+
+<h2>3. Relational (Comparison) Operators</h2>
+<p>Used to compare two values. Result is True or False.</p>
+<ul>
+    <li>==</li>
+    <li>!=</li>
+    <li>&gt;</li>
+    <li>&lt;</li>
+    <li>&gt;=</li>
+    <li>&lt;=</li>
+</ul>
+<code>
+a = 10
+b = 5
+print(a > b)
+print(a < b)
+print(a == b)
+print(a != b)
+</code>
+<div class="output">
+Output:<br>
+True<br>
+False<br>
+False<br>
+True
+</div>
+
+<h2>4. Logical Operators</h2>
+<p>Used to combine conditional expressions.</p>
+<ul>
+    <li>and</li>
+    <li>or</li>
+    <li>not</li>
+</ul>
+<code>
+a = True
+b = False
+print(a and b)
+print(a or b)
+print(not a)
+</code>
+<div class="output">
+Output:<br>
+False<br>
+True<br>
+False
+</div>
+
+<h2>5. Bitwise Operators</h2>
+<p>Operate on binary numbers.</p>
+<ul>
+    <li>&amp; (AND)</li>
+    <li>| (OR)</li>
+    <li>^ (XOR)</li>
+    <li>~ (NOT)</li>
+    <li>&lt;&lt; (Left Shift)</li>
+    <li>&gt;&gt; (Right Shift)</li>
+</ul>
+<code>
+a = 5   # 101
+b = 3   # 011
+print(a & b)
+print(a | b)
+print(a ^ b)
+print(~a)
+print(a << 1)
+print(a >> 1)
+</code>
+<div class="output">
+Output:<br>
+1<br>
+7<br>
+6<br>
+-6<br>
+10<br>
+2
+</div>
+
+<h2>6. Membership Operators</h2>
+<p>Used to check whether a value exists in a sequence.</p>
+<ul>
+    <li>in</li>
+    <li>not in</li>
+</ul>
+<code>
+data = [1, 2, 3, 4]
+print(3 in data)
+print(10 not in data)
+</code>
+<div class="output">
+Output:<br>
+True<br>
+True
+</div>
+
+<h2>7. Identity Operators</h2>
+<p>Used to compare memory locations of objects.</p>
+<ul>
+    <li>is</li>
+    <li>is not</li>
+</ul>
+<code>
+a = 10
+b = 10
+print(a is b)
+print(a is not b)
+</code>
+<div class="output">
+Output:<br>
+True<br>
+False
+</div>
+
+<h2>Conclusion</h2>
+<p>
+Python operators are essential for performing calculations, comparisons,
+and logical decisions. Mastering operators helps in writing efficient
+and meaningful Python programs.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

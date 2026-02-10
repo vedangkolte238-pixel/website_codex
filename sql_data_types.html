@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Data Types</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.type-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SQL Data Types</h1>
+    <p>Understand how data is stored in databases</p>
+</header>
+
+<section>
+
+    <h2>What are SQL Data Types?</h2>
+    <p>
+        SQL data types define the type of data that can be stored in a table column.
+        Choosing the correct data type helps in saving storage space and improving performance.
+    </p>
+
+    <h2>1. Numeric Data Types</h2>
+    <p>Used to store numbers.</p>
+    <ul class="type-list">
+        <li><strong>INT</strong> – Stores whole numbers</li>
+        <li><strong>SMALLINT</strong> – Stores smaller range integers</li>
+        <li><strong>BIGINT</strong> – Stores very large integers</li>
+        <li><strong>DECIMAL(p,s)</strong> – Stores exact decimal values</li>
+        <li><strong>FLOAT</strong> – Stores approximate decimal values</li>
+    </ul>
+
+    <h2>2. Character / String Data Types</h2>
+    <p>Used to store text or characters.</p>
+    <ul class="type-list">
+        <li><strong>CHAR(n)</strong> – Fixed-length string</li>
+        <li><strong>VARCHAR(n)</strong> – Variable-length string</li>
+        <li><strong>TEXT</strong> – Large text data</li>
+    </ul>
+
+    <h2>3. Date and Time Data Types</h2>
+    <p>Used to store date and time values.</p>
+    <ul class="type-list">
+        <li><strong>DATE</strong> – Stores date (YYYY-MM-DD)</li>
+        <li><strong>TIME</strong> – Stores time (HH:MM:SS)</li>
+        <li><strong>DATETIME</strong> – Stores date and time</li>
+        <li><strong>TIMESTAMP</strong> – Stores timestamp value</li>
+    </ul>
+
+    <h2>4. Boolean Data Types</h2>
+    <p>Used to store true or false values.</p>
+    <ul class="type-list">
+        <li><strong>BOOLEAN</strong> – Stores TRUE or FALSE</li>
+    </ul>
+
+    <h2>5. Binary Data Types</h2>
+    <p>Used to store binary data such as images or files.</p>
+    <ul class="type-list">
+        <li><strong>BINARY</strong></li>
+        <li><strong>VARBINARY</strong></li>
+        <li><strong>BLOB</strong></li>
+    </ul>
+
+    <h2>Example: Using Data Types</h2>
+    <code>
+CREATE TABLE employees (
+    emp_id INT,
+    emp_name VARCHAR(50),
+    salary DECIMAL(10,2),
+    join_date DATE,
+    is_active BOOLEAN
+);
+    </code>
+
+    <h2>Conclusion</h2>
+    <p>
+        SQL data types are the foundation of database design.
+        Understanding them helps you create efficient and reliable database tables.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

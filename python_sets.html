@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Set – Basics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Set</h1>
+    <p>Complete Explanation with Examples and Output</p>
+</header>
+
+<section>
+
+<h2>What is a Set?</h2>
+<p>
+A set is a collection of unique elements in Python. 
+Sets are unordered, mutable, and do not allow duplicate values.
+</p>
+
+<h2>Creating a Set</h2>
+<code>
+numbers = {10, 20, 30, 40}
+print(numbers)
+</code>
+<div class="output">
+Output:<br>
+{10, 20, 30, 40}
+</div>
+
+<h2>Set Does Not Allow Duplicates</h2>
+<code>
+data = {1, 2, 2, 3, 3}
+print(data)
+</code>
+<div class="output">
+Output:<br>
+{1, 2, 3}
+</div>
+
+<h2>Accessing Set Elements</h2>
+<p>
+Since sets are unordered, you cannot access elements by index.
+Use loops to iterate through set elements.
+</p>
+<code>
+for item in numbers:
+    print(item)
+</code>
+<div class="output">
+Output:<br>
+10<br>
+20<br>
+30<br>
+40
+</div>
+
+<h2>Adding Elements to a Set</h2>
+<h3>add()</h3>
+<code>
+numbers.add(50)
+print(numbers)
+</code>
+<div class="output">
+Output:<br>
+{10, 20, 30, 40, 50}
+</div>
+
+<h3>update()</h3>
+<code>
+numbers.update([60, 70])
+print(numbers)
+</code>
+<div class="output">
+Output:<br>
+{10, 20, 30, 40, 50, 60, 70}
+</div>
+
+<h2>Removing Elements from a Set</h2>
+<h3>remove()</h3>
+<code>
+numbers.remove(20)
+print(numbers)
+</code>
+<div class="output">
+Output:<br>
+{10, 30, 40, 50, 60, 70}
+</div>
+
+<h3>discard()</h3>
+<code>
+numbers.discard(100)
+print(numbers)
+</code>
+<div class="output">
+Output:<br>
+{10, 30, 40, 50, 60, 70}
+</div>
+
+<h3>pop()</h3>
+<code>
+numbers.pop()
+print(numbers)
+</code>
+<div class="output">
+Output:<br>
+One random element removed
+</div>
+
+<h2>Set Operations</h2>
+<h3>Union</h3>
+<code>
+a = {1, 2, 3}
+b = {3, 4, 5}
+print(a | b)
+</code>
+<div class="output">
+Output:<br>
+{1, 2, 3, 4, 5}
+</div>
+
+<h3>Intersection</h3>
+<code>
+print(a & b)
+</code>
+<div class="output">
+Output:<br>
+{3}
+</div>
+
+<h3>Difference</h3>
+<code>
+print(a - b)
+</code>
+<div class="output">
+Output:<br>
+{1, 2}
+</div>
+
+<h3>Symmetric Difference</h3>
+<code>
+print(a ^ b)
+</code>
+<div class="output">
+Output:<br>
+{1, 2, 4, 5}
+</div>
+
+<h2>Set Methods</h2>
+<code>
+nums = {1, 2, 3}
+nums.clear()
+print(nums)
+</code>
+<div class="output">
+Output:<br>
+set()
+</div>
+
+<h2>Conclusion</h2>
+<p>
+Sets are useful for storing unique items and performing fast operations like union, intersection, and difference.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

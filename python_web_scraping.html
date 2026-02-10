@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Web Scraping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Web Scraping</h1>
+    <p>Extracting Data from Websites Using Python</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Web scraping is the process of extracting data from websites. Python provides powerful libraries like <code>requests</code> and <code>BeautifulSoup</code> to scrape and parse web data efficiently.
+</p>
+
+<h2>1. Installing Required Libraries</h2>
+<code>
+# Install necessary libraries
+pip install requests
+pip install beautifulsoup4
+</code>
+
+<h2>2. Fetching a Web Page</h2>
+<code>
+import requests
+
+url = "https://www.python.org"
+response = requests.get(url)
+
+print("Status Code:", response.status_code)
+print(response.text[:500])  # Print first 500 characters
+</code>
+<div class="output">
+Output:<br>
+Status Code: 200<br>
+&lt;!doctype html&gt;&lt;html lang="en"&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt;...
+</div>
+
+<h2>3. Parsing HTML with BeautifulSoup</h2>
+<code>
+from bs4 import BeautifulSoup
+import requests
+
+url = "https://www.python.org"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, "html.parser")
+
+# Extract the page title
+title = soup.title.text
+print("Page Title:", title)
+
+# Extract all links
+links = soup.find_all("a")
+for link in links[:5]:  # Show first 5 links
+    print(link.get("href"))
+</code>
+<div class="output">
+Output:<br>
+Page Title: Welcome to Python.org<br>
+/psf-landing/<br>
+/about/<br>
+/downloads/<br>
+/doc/<br>
+/community/
+</div>
+
+<h2>4. Extracting Specific Data</h2>
+<code>
+# Extract upcoming events from Python.org
+events = soup.find("div", class_="shrubbery").find_all("li")
+for event in events[:5]:
+    print(event.text)
+</code>
+<div class="output">
+Output:<br>
+Python 3.12.0 Release<br>
+PyCon 2025 Conference<br>
+Other upcoming events...
+</div>
+
+<h2>5. Tips for Web Scraping</h2>
+<ul>
+    <li>Always check the website's <code>robots.txt</code> before scraping.</li>
+    <li>Use <code>time.sleep()</code> to avoid overloading the server.</li>
+    <li>Consider using <code>Selenium</code> for dynamic websites with JavaScript.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Python makes web scraping easy and efficient with libraries like <code>requests</code> and <code>BeautifulSoup</code>.  
+You can extract, parse, and save web data for analysis, automation, or reporting.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

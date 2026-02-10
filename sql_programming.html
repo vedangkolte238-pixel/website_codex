@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Programming</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.programming-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SQL Programming</h1>
+    <p>Writing and executing SQL queries in applications</p>
+</header>
+
+<section>
+
+    <h2>What is SQL Programming?</h2>
+    <p>
+        SQL programming involves writing SQL commands and integrating them with programming languages
+        like Python, Java, or C# to perform database operations programmatically.
+    </p>
+
+    <h2>1. Connecting to a Database</h2>
+    <p>
+        Use language-specific libraries to connect to a database.
+    </p>
+    <code>
+-- Python example using sqlite3
+import sqlite3
+
+conn = sqlite3.connect('example.db')
+cursor = conn.cursor()
+    </code>
+
+    <h2>2. Executing Queries</h2>
+    <p>
+        Execute SQL commands from your program and fetch results.
+    </p>
+    <code>
+cursor.execute("SELECT * FROM employees")
+rows = cursor.fetchall()
+for row in rows:
+    print(row)
+    </code>
+
+    <h2>3. Inserting Data</h2>
+    <p>
+        Use SQL INSERT statements programmatically.
+    </p>
+    <code>
+cursor.execute("INSERT INTO employees (name, department) VALUES (?, ?)", 
+               ('Alice', 'HR'))
+conn.commit()
+    </code>
+
+    <h2>4. Updating Data</h2>
+    <p>
+        Modify existing data using UPDATE statements.
+    </p>
+    <code>
+cursor.execute("UPDATE employees SET department=? WHERE name=?", 
+               ('Finance', 'Alice'))
+conn.commit()
+    </code>
+
+    <h2>5. Deleting Data</h2>
+    <p>
+        Remove records using DELETE statements.
+    </p>
+    <code>
+cursor.execute("DELETE FROM employees WHERE name=?", ('Alice',))
+conn.commit()
+    </code>
+
+    <h2>6. Using Prepared Statements</h2>
+    <p>
+        Prevent SQL injection by using parameterized queries.
+    </p>
+    <code>
+# Python example
+cursor.execute("SELECT * FROM employees WHERE department=?", ('Finance',))
+rows = cursor.fetchall()
+    </code>
+
+    <h2>7. Transactions in Programming</h2>
+    <p>
+        Use transactions to group multiple operations safely.
+    </p>
+    <code>
+conn.execute("BEGIN TRANSACTION")
+try:
+    cursor.execute("UPDATE accounts SET balance = balance - 500 WHERE id=1")
+    cursor.execute("UPDATE accounts SET balance = balance + 500 WHERE id=2")
+    conn.commit()
+except:
+    conn.rollback()
+    </code>
+
+    <h2>Conclusion</h2>
+    <p>
+        SQL programming allows applications to interact with databases dynamically.
+        It is essential for creating database-driven software, web applications, and automation scripts.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

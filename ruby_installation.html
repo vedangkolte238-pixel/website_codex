@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ruby Installation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fe0000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #fe0000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ruby Installation</h1>
+    <p>Setting Up Ruby on Your System</p>
+</header>
+
+<section>
+
+<h2>Installing Ruby on Windows</h2>
+<ul>
+    <li>Download RubyInstaller from <a href="https://rubyinstaller.org/" target="_blank">rubyinstaller.org</a>.</li>
+    <li>Run the installer and select "Add Ruby executables to your PATH".</li>
+    <li>Complete the installation and open Command Prompt.</li>
+    <li>Check installation: <code>ruby -v</code></li>
+</ul>
+
+<h2>Installing Ruby on macOS</h2>
+<ul>
+    <li>macOS comes with a system Ruby, but you may want a newer version.</li>
+    <li>Install Homebrew if not already installed: <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></li>
+    <li>Install Ruby: <code>brew install ruby</code></li>
+    <li>Add Ruby to PATH in <code>~/.zshrc</code> or <code>~/.bash_profile</code>:</li>
+    <code>export PATH="/usr/local/opt/ruby/bin:$PATH"</code>
+    <li>Verify installation: <code>ruby -v</code></li>
+</ul>
+
+<h2>Installing Ruby on Linux</h2>
+<ul>
+    <li>For Debian/Ubuntu: <code>sudo apt update && sudo apt install ruby-full</code></li>
+    <li>For Fedora: <code>sudo dnf install ruby</code></li>
+    <li>For Arch: <code>sudo pacman -S ruby</code></li>
+    <li>Verify installation: <code>ruby -v</code></li>
+</ul>
+
+<h2>Installing RubyGems</h2>
+<p>RubyGems is the package manager for Ruby. Most Ruby installations include it by default.</p>
+<code>gem -v</code>
+
+<h2>Test Ruby Installation</h2>
+<code>
+# Create a test file hello.rb
+puts "Hello, Ruby!"
+# Run it in terminal
+ruby hello.rb
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Once Ruby is installed, you can start writing Ruby scripts, install gems, and develop applications with ease.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Ruby Learning Website</p>
+</footer>
+
+</body>
+</html>

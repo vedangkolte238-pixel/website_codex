@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Arrays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.array-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Arrays</h1>
+    <p>Multi-dimensional data structures in R programming</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+An array in R is a data structure that can store data in more than two dimensions.
+All elements in an array must be of the same data type.
+</p>
+
+<h2>Creating an Array</h2>
+<p>
+Arrays are created using the <strong>array()</strong> function.
+</p>
+<code>
+arr <- array(1:12, dim = c(3, 2, 2))
+arr
+</code>
+
+<h2>Understanding Array Dimensions</h2>
+<p>
+The <strong>dim</strong> parameter defines rows, columns, and layers.
+</p>
+<code>
+dim(arr)
+</code>
+
+<h2>Accessing Array Elements</h2>
+<p>
+Elements are accessed using indices for each dimension.
+</p>
+<code>
+arr[1, 2, 1]
+arr[, , 2]
+</code>
+
+<h2>Modifying Array Elements</h2>
+<p>
+You can change array values by assigning new data.
+</p>
+<code>
+arr[1, 1, 1] <- 100
+arr
+</code>
+
+<h2>Array Operations</h2>
+<p>
+R supports element-wise operations on arrays.
+</p>
+<code>
+arr2 <- array(1:12, dim = c(3, 2, 2))
+
+arr + arr2
+arr * arr2
+</code>
+
+<h2>Array Functions</h2>
+<p>
+Common functions used with arrays.
+</p>
+<code>
+length(arr)
+apply(arr, c(1, 2), sum)
+</code>
+
+<h2>Difference Between Matrix and Array</h2>
+<ul class="array-list">
+    <li>Matrix: Two-dimensional</li>
+    <li>Array: Multi-dimensional</li>
+    <li>Both store same data type elements</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Arrays are useful for handling complex multi-dimensional data.
+They are commonly used in scientific and statistical computing.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Data Structures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1f2d3d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #1f2d3d;
+            margin-top: 35px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Data Structures</h1>
+    <p>Detailed Explanation with Examples and Output</p>
+</header>
+
+<section>
+
+<h2>What are Data Structures?</h2>
+<p>
+Data structures are used to store, organize, and manage data efficiently.
+Python provides built-in data structures that make programming easy and powerful.
+</p>
+
+<h2>1. List</h2>
+<p>
+A list is an ordered, mutable collection of elements.
+Lists allow duplicate values.
+</p>
+<code>
+numbers = [1, 2, 3, 4]
+numbers.append(5)
+print(numbers)
+</code>
+<div class="output">
+Output:<br>
+[1, 2, 3, 4, 5]
+</div>
+
+<h3>Accessing List Elements</h3>
+<code>
+print(numbers[0])
+</code>
+<div class="output">
+Output:<br>
+1
+</div>
+
+<h2>2. Tuple</h2>
+<p>
+A tuple is an ordered, immutable collection.
+Once created, its values cannot be changed.
+</p>
+<code>
+colors = ("red", "green", "blue")
+print(colors)
+</code>
+<div class="output">
+Output:<br>
+('red', 'green', 'blue')
+</div>
+
+<h2>3. Set</h2>
+<p>
+A set is an unordered collection of unique elements.
+Duplicate values are automatically removed.
+</p>
+<code>
+numbers = {1, 2, 2, 3, 4}
+print(numbers)
+</code>
+<div class="output">
+Output:<br>
+{1, 2, 3, 4}
+</div>
+
+<h3>Adding Elements to Set</h3>
+<code>
+numbers.add(5)
+print(numbers)
+</code>
+<div class="output">
+Output:<br>
+{1, 2, 3, 4, 5}
+</div>
+
+<h2>4. Dictionary</h2>
+<p>
+A dictionary stores data in key-value pairs.
+Keys must be unique.
+</p>
+<code>
+student = {
+    "name": "Rahul",
+    "age": 20,
+    "course": "Python"
+}
+print(student)
+</code>
+<div class="output">
+Output:<br>
+{'name': 'Rahul', 'age': 20, 'course': 'Python'}
+</div>
+
+<h3>Accessing Dictionary Values</h3>
+<code>
+print(student["name"])
+</code>
+<div class="output">
+Output:<br>
+Rahul
+</div>
+
+<h2>5. String</h2>
+<p>
+Strings are sequences of characters used to store text.
+</p>
+<code>
+text = "Python"
+print(text.upper())
+</code>
+<div class="output">
+Output:<br>
+PYTHON
+</div>
+
+<h2>6. List vs Tuple vs Set vs Dictionary</h2>
+<ul>
+    <li>List – Ordered, changeable, allows duplicates</li>
+    <li>Tuple – Ordered, unchangeable, allows duplicates</li>
+    <li>Set – Unordered, unique values only</li>
+    <li>Dictionary – Key-value pairs, keys are unique</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Python data structures make data handling simple and efficient.
+Understanding lists, tuples, sets, and dictionaries is essential for real-world Python programming.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

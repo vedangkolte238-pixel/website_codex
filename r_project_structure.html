@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Project Structure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.structure-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Project Structure</h1>
+    <p>Organizing and managing R projects efficiently</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+A well-organized R project ensures reproducibility, clarity, and efficiency.  
+RStudio provides a project framework to structure scripts, data, and outputs systematically.
+</p>
+
+<h2>Typical R Project Folder Structure</h2>
+<ul class="structure-list">
+    <li><strong>Project Root Folder:</strong> Main folder containing all project files.</li>
+    <li><strong>data/</strong> – Store raw and processed datasets (e.g., CSV, RDS files).</li>
+    <li><strong>scripts/</strong> – R scripts for analysis, functions, and data cleaning.</li>
+    <li><strong>R/</strong> – Custom R functions and utility scripts.</li>
+    <li><strong>output/</strong> – Generated results like tables, plots, and reports.</li>
+    <li><strong>docs/</strong> – Documentation, README, and reports.</li>
+    <li><strong>figures/</strong> – Graphs, charts, and visualizations.</li>
+    <li><strong>renv/</strong> – Optional, used for dependency management.</li>
+</ul>
+
+<h2>Creating a New R Project</h2>
+<code>
+# Using RStudio
+File -> New Project -> New Directory -> Empty Project
+# Set project folder path and click "Create Project"
+</code>
+
+<h2>Using Relative Paths</h2>
+<p>
+Always use relative paths to access files inside the project to ensure reproducibility.
+</p>
+<code>
+# Example
+data <- read.csv("data/my_dataset.csv")
+source("scripts/data_cleaning.R")
+</code>
+
+<h2>Using renv for Package Management</h2>
+<code>
+# Initialize renv in project
+install.packages("renv")
+renv::init()
+
+# Snapshot current packages
+renv::snapshot()
+
+# Restore packages
+renv::restore()
+</code>
+
+<h2>Best Practices</h2>
+<ul class="structure-list">
+    <li>Keep raw data separate from processed data.</li>
+    <li>Document scripts clearly with comments.</li>
+    <li>Use consistent naming conventions for files and folders.</li>
+    <li>Version control with Git is recommended.</li>
+    <li>Keep plots and outputs organized in dedicated folders.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+A clean R project structure improves reproducibility, collaboration, and clarity.  
+It helps manage data, scripts, and outputs efficiently for research or production.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

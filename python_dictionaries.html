@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Dictionary – Basics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Dictionary</h1>
+    <p>Complete Explanation with Examples and Output</p>
+</header>
+
+<section>
+
+<h2>What is a Dictionary?</h2>
+<p>
+A dictionary is a collection of key-value pairs in Python.
+Dictionaries are unordered, changeable, and keys must be unique.
+</p>
+
+<h2>Creating a Dictionary</h2>
+<code>
+person = {"name": "Alice", "age": 25, "city": "New York"}
+print(person)
+</code>
+<div class="output">
+Output:<br>
+{'name': 'Alice', 'age': 25, 'city': 'New York'}
+</div>
+
+<h2>Accessing Dictionary Values</h2>
+<code>
+print(person["name"])
+print(person.get("age"))
+</code>
+<div class="output">
+Output:<br>
+Alice<br>
+25
+</div>
+
+<h2>Adding or Updating Elements</h2>
+<code>
+person["email"] = "alice@example.com"
+person["age"] = 26
+print(person)
+</code>
+<div class="output">
+Output:<br>
+{'name': 'Alice', 'age': 26, 'city': 'New York', 'email': 'alice@example.com'}
+</div>
+
+<h2>Removing Elements</h2>
+<h3>pop()</h3>
+<code>
+person.pop("city")
+print(person)
+</code>
+<div class="output">
+Output:<br>
+{'name': 'Alice', 'age': 26, 'email': 'alice@example.com'}
+</div>
+
+<h3>del</h3>
+<code>
+del person["email"]
+print(person)
+</code>
+<div class="output">
+Output:<br>
+{'name': 'Alice', 'age': 26}
+</div>
+
+<h3>clear()</h3>
+<code>
+person.clear()
+print(person)
+</code>
+<div class="output">
+Output:<br>
+{}
+</div>
+
+<h2>Dictionary Operations</h2>
+<h3>Keys, Values, Items</h3>
+<code>
+person = {"name": "Alice", "age": 26}
+print(person.keys())
+print(person.values())
+print(person.items())
+</code>
+<div class="output">
+Output:<br>
+dict_keys(['name', 'age'])<br>
+dict_values(['Alice', 26])<br>
+dict_items([('name', 'Alice'), ('age', 26)])
+</div>
+
+<h2>Looping Through a Dictionary</h2>
+<code>
+for key, value in person.items():
+    print(key, ":", value)
+</code>
+<div class="output">
+Output:<br>
+name : Alice<br>
+age : 26
+</div>
+
+<h2>Conclusion</h2>
+<p>
+Dictionaries are ideal for storing data with a key-value relationship.
+They are highly flexible, efficient, and widely used in Python programming.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

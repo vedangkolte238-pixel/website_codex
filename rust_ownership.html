@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rust Ownership</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #000000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Rust Ownership</h1>
+    <p>Memory Safety and the Ownership System</p>
+</header>
+
+<section>
+
+<h2>What is Ownership?</h2>
+<p>
+Ownership is a key feature in Rust that ensures memory safety without a garbage collector. 
+It follows three rules:
+</p>
+<ul>
+    <li>Each value has a variable called its <strong>owner</strong>.</li>
+    <li>There can only be one owner at a time.</li>
+    <li>When the owner goes out of scope, the value is automatically dropped.</li>
+</ul>
+
+<h2>Basic Ownership Example</h2>
+<code>
+fn main() {
+    let s1 = String::from("Hello");
+    let s2 = s1;  // Ownership moves to s2
+
+    // println!("{}", s1); // ERROR: s1 is no longer valid
+    println!("{}", s2);    // Works
+}
+</code>
+
+<h2>Borrowing</h2>
+<p>
+Rust allows references to a value without taking ownership. This is called <strong>borrowing</strong>.
+</p>
+<code>
+fn main() {
+    let s = String::from("Hello");
+
+    // Borrow s as immutable reference
+    let len = calculate_length(&s);
+
+    println!("Length of '{}' is {}", s, len);
+}
+
+fn calculate_length(s: &String) -> usize {
+    s.len()
+}
+</code>
+
+<h2>Mutable Borrowing</h2>
+<code>
+fn main() {
+    let mut s = String::from("Hello");
+
+    // Mutable borrow to modify value
+    change(&mut s);
+
+    println!("{}", s);
+}
+
+fn change(some_string: &mut String) {
+    some_string.push_str(", World!");
+}
+</code>
+
+<h2>Rules of References</h2>
+<ul>
+    <li>You can have any number of immutable references (&) to a value at a time.</li>
+    <li>You can have only one mutable reference (&mut) at a time.</li>
+    <li>Mutable and immutable references cannot coexist.</li>
+</ul>
+
+<h2>Applications</h2>
+<ul>
+    <li>Memory-safe programming without garbage collection</li>
+    <li>Preventing data races at compile time</li>
+    <li>Efficient and predictable resource management</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Ownership is the cornerstone of Rust’s memory safety model. Understanding ownership, borrowing, and references is essential to write safe and efficient Rust programs.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Rust Learning Website</p>
+</footer>
+
+</body>
+</html>

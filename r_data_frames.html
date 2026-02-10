@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Data Frames</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.df-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Data Frames</h1>
+    <p>Tabular data structure used for data analysis in R</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+A data frame is a table-like structure in R.
+It stores data in rows and columns, where each column can have a different data type.
+</p>
+
+<h2>Creating a Data Frame</h2>
+<p>
+Data frames are created using the <strong>data.frame()</strong> function.
+</p>
+<code>
+students <- data.frame(
+  id = c(1, 2, 3),
+  name = c("Amit", "Neha", "Ravi"),
+  marks = c(85, 90, 78),
+  passed = c(TRUE, TRUE, FALSE)
+)
+students
+</code>
+
+<h2>Accessing Data Frame Elements</h2>
+<p>
+You can access rows, columns, and individual values.
+</p>
+<code>
+students$name
+students[1, ]
+students[, 3]
+students[2, 2]
+</code>
+
+<h2>Adding New Columns</h2>
+<p>
+New columns can be added easily.
+</p>
+<code>
+students$grade <- c("A", "A", "B")
+students
+</code>
+
+<h2>Adding New Rows</h2>
+<p>
+Use <strong>rbind()</strong> to add rows.
+</p>
+<code>
+new_student <- data.frame(
+  id = 4,
+  name = "Sita",
+  marks = 88,
+  passed = TRUE,
+  grade = "A"
+)
+
+students <- rbind(students, new_student)
+students
+</code>
+
+<h2>Removing Rows and Columns</h2>
+<p>
+Rows or columns can be removed using indexing.
+</p>
+<code>
+students <- students[-1, ]
+students <- students[, -2]
+students
+</code>
+
+<h2>Useful Data Frame Functions</h2>
+<p>
+Commonly used functions for data frames.
+</p>
+<code>
+head(students)
+tail(students)
+summary(students)
+str(students)
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Data frames are the most commonly used data structure in R.
+They are ideal for data analysis, manipulation, and reporting.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

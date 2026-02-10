@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Packages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.pkg-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Packages</h1>
+    <p>Installing and managing R packages for data analysis</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+R packages extend the functionality of R by providing pre-built functions and tools for statistics, visualization, machine learning, and more.  
+Managing packages efficiently is essential for smooth data analysis workflows.
+</p>
+
+<h2>Installing Packages</h2>
+<code>
+# Install a package from CRAN
+install.packages("ggplot2")
+
+# Install multiple packages
+install.packages(c("dplyr", "tidyr", "caret"))
+</code>
+
+<h2>Loading Packages</h2>
+<code>
+# Load a package to use its functions
+library(ggplot2)
+
+# Load multiple packages
+library(dplyr)
+library(tidyr)
+</code>
+
+<h2>Updating Packages</h2>
+<code>
+# Update all installed packages
+update.packages()
+</code>
+
+<h2>Removing Packages</h2>
+<code>
+# Remove a package
+remove.packages("ggplot2")
+</code>
+
+<h2>Listing Installed Packages</h2>
+<code>
+# List all installed packages
+installed.packages()
+</code>
+
+<h2>Searching Packages</h2>
+<code>
+# Search for a function in all loaded packages
+find("filter")
+
+# Search for available packages online
+available.packages()
+</code>
+
+<h2>Popular R Packages</h2>
+<ul class="pkg-list">
+    <li><strong>dplyr</strong> – Data manipulation</li>
+    <li><strong>tidyr</strong> – Data tidying</li>
+    <li><strong>ggplot2</strong> – Data visualization</li>
+    <li><strong>caret</strong> – Machine learning</li>
+    <li><strong>randomForest</strong> – Random forest modeling</li>
+    <li><strong>readr</strong> – Reading CSV and text data</li>
+    <li><strong>lubridate</strong> – Date and time handling</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+R packages are essential tools that expand R’s capabilities.  
+Understanding how to install, load, update, and manage packages is critical for effective data analysis.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

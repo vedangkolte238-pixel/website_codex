@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Strings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Strings</h1>
+    <p>Complete Explanation with Examples and Output</p>
+</header>
+
+<section>
+
+<h2>What is a String?</h2>
+<p>
+A string is a sequence of characters enclosed in single quotes (' '),
+double quotes (" "), or triple quotes.
+Strings in Python are immutable, which means they cannot be changed.
+</p>
+
+<h2>Creating Strings</h2>
+<code>
+name = "Python"
+language = 'Programming'
+print(name)
+print(language)
+</code>
+<div class="output">
+Output:<br>
+Python<br>
+Programming
+</div>
+
+<h2>String Indexing</h2>
+<p>
+Each character in a string has an index starting from 0.
+Negative indexing starts from -1.
+</p>
+<code>
+text = "Python"
+print(text[0])
+print(text[-1])
+</code>
+<div class="output">
+Output:<br>
+P<br>
+n
+</div>
+
+<h2>String Slicing</h2>
+<p>
+Slicing is used to get a part of a string.
+Syntax: string[start:end]
+</p>
+<code>
+text = "Python"
+print(text[1:4])
+print(text[:3])
+print(text[2:])
+</code>
+<div class="output">
+Output:<br>
+yth<br>
+Pyt<br>
+thon
+</div>
+
+<h2>String Concatenation</h2>
+<p>
+Strings can be joined using the + operator.
+</p>
+<code>
+a = "Hello"
+b = "World"
+print(a + " " + b)
+</code>
+<div class="output">
+Output:<br>
+Hello World
+</div>
+
+<h2>String Repetition</h2>
+<p>
+The * operator is used to repeat strings.
+</p>
+<code>
+word = "Hi "
+print(word * 3)
+</code>
+<div class="output">
+Output:<br>
+Hi Hi Hi
+</div>
+
+<h2>String Methods</h2>
+
+<h3>upper() and lower()</h3>
+<code>
+text = "Python"
+print(text.upper())
+print(text.lower())
+</code>
+<div class="output">
+Output:<br>
+PYTHON<br>
+python
+</div>
+
+<h3>strip()</h3>
+<code>
+text = "  Hello  "
+print(text.strip())
+</code>
+<div class="output">
+Output:<br>
+Hello
+</div>
+
+<h3>replace()</h3>
+<code>
+text = "I like Java"
+print(text.replace("Java", "Python"))
+</code>
+<div class="output">
+Output:<br>
+I like Python
+</div>
+
+<h3>split()</h3>
+<code>
+text = "Python is easy"
+print(text.split())
+</code>
+<div class="output">
+Output:<br>
+['Python', 'is', 'easy']
+</div>
+
+<h2>String Membership Operators</h2>
+<code>
+text = "Python Programming"
+print("Python" in text)
+print("Java" not in text)
+</code>
+<div class="output">
+Output:<br>
+True<br>
+True
+</div>
+
+<h2>String Formatting</h2>
+
+<h3>Using format()</h3>
+<code>
+name = "Rahul"
+age = 20
+print("My name is {} and age is {}".format(name, age))
+</code>
+<div class="output">
+Output:<br>
+My name is Rahul and age is 20
+</div>
+
+<h3>Using f-strings</h3>
+<code>
+print(f"My name is {name} and age is {age}")
+</code>
+<div class="output">
+Output:<br>
+My name is Rahul and age is 20
+</div>
+
+<h2>Conclusion</h2>
+<p>
+Strings are one of the most important data types in Python.
+Understanding string operations and methods is essential for text processing
+and real-world applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

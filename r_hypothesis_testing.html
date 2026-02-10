@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Hypothesis Testing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #4F46E5;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.test-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>R Hypothesis Testing</h1>
+    <p>Performing statistical tests using R</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Hypothesis testing is a statistical method to make decisions or inferences about population parameters based on sample data.  
+R provides built-in functions to perform common tests such as t-tests, chi-square tests, and proportion tests.
+</p>
+
+<h2>One-Sample t-Test</h2>
+<code>
+# Sample data
+data <- c(5, 7, 8, 6, 9)
+
+# One-sample t-test (testing mean = 6)
+t.test(data, mu = 6)
+</code>
+
+<h2>Two-Sample t-Test</h2>
+<code>
+# Two groups
+group1 <- c(5, 6, 7, 8)
+group2 <- c(6, 7, 8, 9)
+
+# Two-sample t-test
+t.test(group1, group2, alternative = "two.sided")
+</code>
+
+<h2>Paired t-Test</h2>
+<code>
+# Before and after measurements
+before <- c(90, 85, 88, 92)
+after <- c(95, 87, 90, 94)
+
+t.test(before, after, paired = TRUE)
+</code>
+
+<h2>Chi-Square Test</h2>
+<code>
+# Contingency table
+data <- matrix(c(20, 15, 30, 35), nrow = 2)
+
+# Chi-square test
+chisq.test(data)
+</code>
+
+<h2>Proportion Test</h2>
+<code>
+# Number of successes and trials
+success <- c(45, 30)
+trials <- c(50, 40)
+
+prop.test(success, trials)
+</code>
+
+<h2>ANOVA (Analysis of Variance)</h2>
+<code>
+# Sample data
+group1 <- c(5, 6, 7)
+group2 <- c(8, 9, 10)
+group3 <- c(6, 7, 8)
+
+data <- data.frame(
+  value = c(group1, group2, group3),
+  group = factor(rep(c("A","B","C"), each = 3))
+)
+
+# Perform ANOVA
+anova_result <- aov(value ~ group, data = data)
+summary(anova_result)
+</code>
+
+<h2>Conclusion</h2>
+<p>
+R provides a wide variety of hypothesis testing functions to analyze and infer population characteristics from sample data.  
+Mastering these tests is essential for statistical analysis and research.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 R Learning Website</p>
+</footer>
+
+</body>
+</html>

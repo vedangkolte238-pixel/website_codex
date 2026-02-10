@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rust Structs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #000000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Rust Structs</h1>
+    <p>Custom Data Types in Rust</p>
+</header>
+
+<section>
+
+<h2>What is a Struct?</h2>
+<p>
+A <strong>struct</strong> in Rust is a custom data type that lets you group related values together.
+It’s useful for modeling complex data with multiple attributes.
+</p>
+
+<h2>Defining a Struct</h2>
+<code>
+struct Person {
+    name: String,
+    age: u32,
+    city: String,
+}
+</code>
+
+<h2>Creating Instances</h2>
+<code>
+fn main() {
+    let person1 = Person {
+        name: String::from("Alice"),
+        age: 30,
+        city: String::from("New York"),
+    };
+
+    println!("Name: {}, Age: {}, City: {}", person1.name, person1.age, person1.city);
+}
+</code>
+
+<h2>Structs and Functions</h2>
+<code>
+impl Person {
+    // Method to display info
+    fn display(&self) {
+        println!("{} is {} years old and lives in {}", self.name, self.age, self.city);
+    }
+
+    // Method to increase age
+    fn birthday(&mut self) {
+        self.age += 1;
+    }
+}
+
+fn main() {
+    let mut person1 = Person {
+        name: String::from("Bob"),
+        age: 25,
+        city: String::from("Chicago"),
+    };
+
+    person1.display();
+    person1.birthday();
+    person1.display();
+}
+</code>
+
+<h2>Tuple Structs</h2>
+<p>Structs can also be defined like tuples for simpler data grouping:</p>
+<code>
+struct Color(u8, u8, u8);
+
+fn main() {
+    let black = Color(0, 0, 0);
+    println!("Red: {}, Green: {}, Blue: {}", black.0, black.1, black.2);
+}
+</code>
+
+<h2>Applications</h2>
+<ul>
+    <li>Modeling real-world objects (Person, Car, Product)</li>
+    <li>Grouping multiple related values in a single entity</li>
+    <li>Encapsulation of data with methods using <code>impl</code></li>
+    <li>Simplifying program structure and readability</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Structs are a fundamental feature of Rust for creating custom data types.
+Combined with methods and ownership rules, structs help you write safe and organized programs.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Rust Learning Website</p>
+</footer>
+
+</body>
+</html>

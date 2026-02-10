@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Indexes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.index-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SQL Indexes</h1>
+    <p>Improve database query performance</p>
+</header>
+
+<section>
+
+    <h2>What is an Index?</h2>
+    <p>
+        An index is a database object that improves the speed of data retrieval.
+        It works like an index in a book, allowing quick access to rows in a table.
+    </p>
+
+    <h2>1. Creating an Index</h2>
+    <p>
+        Use the <strong>CREATE INDEX</strong> statement to create an index on a column.
+    </p>
+    <code>
+CREATE INDEX idx_student_name
+ON students(name);
+    </code>
+
+    <h2>2. Unique Index</h2>
+    <p>
+        Ensures that all values in the indexed column are unique.
+    </p>
+    <code>
+CREATE UNIQUE INDEX idx_unique_email
+ON users(email);
+    </code>
+
+    <h2>3. Composite Index</h2>
+    <p>
+        An index on multiple columns to optimize queries using multiple columns.
+    </p>
+    <code>
+CREATE INDEX idx_name_age
+ON students(name, age);
+    </code>
+
+    <h2>4. Dropping an Index</h2>
+    <p>
+        Use the <strong>DROP INDEX</strong> statement to remove an index.
+    </p>
+    <code>
+DROP INDEX idx_student_name;
+    </code>
+
+    <h2>Benefits of Indexes</h2>
+    <ul class="index-list">
+        <li>Speeds up SELECT queries</li>
+        <li>Helps with sorting using ORDER BY</li>
+        <li>Enforces uniqueness when using UNIQUE indexes</li>
+        <li>Reduces full table scans for large tables</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+        SQL indexes are essential for improving database performance.
+        However, too many indexes can slow down INSERT, UPDATE, and DELETE operations.
+        Use them wisely.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

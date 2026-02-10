@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rust Error Handling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #000000;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Rust Error Handling</h1>
+    <p>Handling Errors Safely in Rust</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Rust distinguishes between <strong>recoverable</strong> and <strong>unrecoverable</strong> errors.
+Recoverable errors use <code>Result</code>, while unrecoverable errors cause a <code>panic!</code>.
+</p>
+
+<h2>Option Type</h2>
+<p>The <code>Option</code> enum is used for values that may or may not exist.</p>
+<code>
+fn main() {
+    let some_number: Option<i32> = Some(10);
+    let no_number: Option<i32> = None;
+
+    match some_number {
+        Some(x) => println!("Value: {}", x),
+        None => println!("No value"),
+    }
+}
+</code>
+
+<h2>Result Type</h2>
+<p><code>Result</code> is used for recoverable errors with <code>Ok</code> and <code>Err</code> variants.</p>
+<code>
+use std::fs::File;
+use std::io::ErrorKind;
+
+fn main() {
+    let file = File::open("hello.txt");
+
+    let file = match file {
+        Ok(f) => f,
+        Err(ref e) if e.kind() == ErrorKind::NotFound => {
+            println!("File not found, creating a new one...");
+            File::create("hello.txt").unwrap()
+        }
+        Err(e) => panic!("Problem opening the file: {:?}", e),
+    };
+}
+</code>
+
+<h2>Panic!</h2>
+<p>
+Unrecoverable errors cause the program to stop immediately using <code>panic!</code>.
+</p>
+<code>
+fn main() {
+    let v = vec![1, 2, 3];
+    v[10]; // This will panic because index is out of bounds
+}
+</code>
+
+<h2>Using unwrap and expect</h2>
+<code>
+let f = File::open("hello.txt").unwrap();      // panics if error occurs
+let f = File::open("hello.txt").expect("File not found!"); // custom panic message
+</code>
+
+<h2>Applications</h2>
+<ul>
+    <li>Safe handling of file operations and I/O</li>
+    <li>Graceful handling of optional values</li>
+    <li>Preventing program crashes by using Result instead of panics</li>
+    <li>Debugging with informative panic messages when necessary</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Rust’s error handling ensures safe and predictable behavior.
+Understanding <code>Option</code>, <code>Result</code>, and <code>panic!</code> is essential for writing robust Rust programs.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Rust Learning Website</p>
+</footer>
+
+</body>
+</html>

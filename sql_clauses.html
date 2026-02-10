@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Clauses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.clause-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SQL Clauses</h1>
+    <p>Clauses used to filter and organize data</p>
+</header>
+
+<section>
+
+    <h2>What are SQL Clauses?</h2>
+    <p>
+        SQL clauses are used in SQL queries to filter, sort, group, and limit data.
+        They usually work with the SELECT statement.
+    </p>
+
+    <h2>1. WHERE Clause</h2>
+    <p>
+        Used to filter records based on conditions.
+    </p>
+    <code>
+SELECT * FROM students
+WHERE age > 18;
+    </code>
+
+    <h2>2. ORDER BY Clause</h2>
+    <p>
+        Used to sort records in ascending or descending order.
+    </p>
+    <code>
+SELECT * FROM students
+ORDER BY age ASC;
+    </code>
+
+    <h2>3. GROUP BY Clause</h2>
+    <p>
+        Used to group rows with the same values.
+    </p>
+    <code>
+SELECT department, COUNT(*)
+FROM employees
+GROUP BY department;
+    </code>
+
+    <h2>4. HAVING Clause</h2>
+    <p>
+        Used to filter groups created by GROUP BY.
+    </p>
+    <code>
+SELECT department, COUNT(*)
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 5;
+    </code>
+
+    <h2>5. DISTINCT Clause</h2>
+    <p>
+        Used to remove duplicate records from result.
+    </p>
+    <code>
+SELECT DISTINCT department
+FROM employees;
+    </code>
+
+    <h2>6. LIMIT Clause</h2>
+    <p>
+        Used to limit the number of records returned.
+    </p>
+    <code>
+SELECT * FROM students
+LIMIT 5;
+    </code>
+
+    <h2>Conclusion</h2>
+    <p>
+        SQL clauses make queries more powerful and flexible.
+        Understanding clauses is essential for data retrieval and analysis.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

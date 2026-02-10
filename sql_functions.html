@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Functions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.function-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SQL Functions</h1>
+    <p>Built-in functions used to process data</p>
+</header>
+
+<section>
+
+    <h2>What are SQL Functions?</h2>
+    <p>
+        SQL functions are built-in methods that perform calculations on data.
+        They return a single value after processing input values.
+    </p>
+
+    <h2>1. Aggregate Functions</h2>
+    <p>Used to perform calculations on multiple rows.</p>
+    <ul class="function-list">
+        <li><strong>COUNT()</strong> – Counts number of rows</li>
+        <li><strong>SUM()</strong> – Returns total value</li>
+        <li><strong>AVG()</strong> – Returns average value</li>
+        <li><strong>MIN()</strong> – Returns minimum value</li>
+        <li><strong>MAX()</strong> – Returns maximum value</li>
+    </ul>
+
+    <h2>Example</h2>
+    <code>
+SELECT COUNT(*) FROM students;
+    </code>
+
+    <h2>2. String Functions</h2>
+    <p>Used to manipulate string data.</p>
+    <ul class="function-list">
+        <li><strong>UPPER()</strong></li>
+        <li><strong>LOWER()</strong></li>
+        <li><strong>LENGTH()</strong></li>
+        <li><strong>SUBSTRING()</strong></li>
+        <li><strong>TRIM()</strong></li>
+    </ul>
+
+    <h2>Example</h2>
+    <code>
+SELECT UPPER(name) FROM students;
+    </code>
+
+    <h2>3. Numeric Functions</h2>
+    <p>Used to perform numeric operations.</p>
+    <ul class="function-list">
+        <li><strong>ROUND()</strong></li>
+        <li><strong>ABS()</strong></li>
+        <li><strong>CEILING()</strong></li>
+        <li><strong>FLOOR()</strong></li>
+    </ul>
+
+    <h2>Example</h2>
+    <code>
+SELECT ROUND(AVG(marks), 2) FROM students;
+    </code>
+
+    <h2>4. Date Functions</h2>
+    <p>Used to work with date and time.</p>
+    <ul class="function-list">
+        <li><strong>CURRENT_DATE</strong></li>
+        <li><strong>CURRENT_TIME</strong></li>
+        <li><strong>NOW()</strong></li>
+        <li><strong>YEAR()</strong></li>
+        <li><strong>MONTH()</strong></li>
+    </ul>
+
+    <h2>Example</h2>
+    <code>
+SELECT CURRENT_DATE;
+    </code>
+
+    <h2>Conclusion</h2>
+    <p>
+        SQL functions help perform calculations, format data, and extract useful information.
+        They are essential for data analysis and reporting.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>
