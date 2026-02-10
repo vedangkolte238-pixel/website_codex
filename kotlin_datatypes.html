@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kotlin Installation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4FC3F7;
+            color: #000;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #4FC3F7;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Kotlin Installation</h1>
+    <p>Set Up Kotlin on Your System</p>
+</header>
+
+<section>
+
+<h2>System Requirements</h2>
+<ul>
+    <li>Windows, macOS, or Linux</li>
+    <li>Java Development Kit (JDK 8 or higher)</li>
+    <li>Basic command-line knowledge</li>
+</ul>
+
+<h2>Step 1: Install JDK</h2>
+<p>
+Kotlin runs on the JVM, so you must install Java first.
+</p>
+<ul>
+    <li>Download JDK from Oracle or OpenJDK</li>
+    <li>Install and set JAVA_HOME</li>
+    <li>Verify installation</li>
+</ul>
+
+<code>
+java -version
+</code>
+
+<h2>Step 2: Install Kotlin Compiler</h2>
+<p>
+Download the Kotlin compiler from the official Kotlin website.
+</p>
+
+<h3>Windows / macOS / Linux</h3>
+
+<code>
+kotlinc -version
+</code>
+
+<h2>Step 3: Install IntelliJ IDEA (Recommended)</h2>
+<p>
+IntelliJ IDEA provides the best support for Kotlin.
+</p>
+<ul>
+    <li>Download IntelliJ IDEA Community Edition</li>
+    <li>Select Kotlin plugin during installation</li>
+    <li>Create a new Kotlin project</li>
+</ul>
+
+<h2>Step 4: Write Your First Kotlin Program</h2>
+
+<code>
+fun main() {
+    println("Hello, Kotlin!")
+}
+</code>
+
+<h2>Step 5: Run Kotlin Program</h2>
+
+<h3>Using Compiler</h3>
+<code>
+kotlinc hello.kt -include-runtime -d hello.jar
+java -jar hello.jar
+</code>
+
+<h3>Using IntelliJ IDEA</h3>
+<ul>
+    <li>Create a Kotlin file</li>
+    <li>Click Run ▶</li>
+</ul>
+
+<h2>Alternative: Kotlin Online Compiler</h2>
+<p>
+You can also practice Kotlin without installing anything.
+</p>
+<ul>
+    <li>Kotlin Playground</li>
+    <li>Online IDEs like Replit</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Kotlin installation is simple and beginner-friendly.
+Using IntelliJ IDEA is the easiest way to start learning Kotlin.
+Once installed, you’re ready to build powerful applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Kotlin Learning Website</p>
+</footer>
+
+</body>
+</html>

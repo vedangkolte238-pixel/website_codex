@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Objects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #F7DF1E;
+            color: #000;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #F7DF1E;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JavaScript Objects</h1>
+    <p>Store Data in Key and Value Pairs</p>
+</header>
+
+<section>
+
+<h2>What is an Object?</h2>
+<p>
+An object is a collection of properties.
+Each property has a name (key) and a value.
+Objects are used to represent real world entities.
+</p>
+
+<h2>Creating an Object</h2>
+<code>
+let person = {
+    name: "Rahul",
+    age: 22,
+    isStudent: true
+};
+</code>
+
+<h2>Accessing Object Properties</h2>
+
+<h3>Using Dot Notation</h3>
+<code>
+console.log(person.name);
+console.log(person.age);
+</code>
+
+<h3>Using Bracket Notation</h3>
+<code>
+console.log(person["name"]);
+console.log(person["age"]);
+</code>
+
+<h2>Updating Object Properties</h2>
+<code>
+person.age = 23;
+person.city = "Pune";
+</code>
+
+<h2>Object Methods</h2>
+<p>
+Objects can also contain functions called methods.
+</p>
+
+<code>
+let person = {
+    name: "Rahul",
+    greet: function() {
+        console.log("Hello " + this.name);
+    }
+};
+
+person.greet();
+</code>
+
+<h2>Accessing Methods</h2>
+<code>
+person.greet();
+</code>
+
+<h2>Looping Through an Object</h2>
+<code>
+for (let key in person) {
+    console.log(key + ": " + person[key]);
+}
+</code>
+
+<h2>Nested Objects</h2>
+<code>
+let student = {
+    name: "Amit",
+    marks: {
+        math: 80,
+        science: 85
+    }
+};
+
+console.log(student.marks.math);
+</code>
+
+<h2>Array of Objects</h2>
+<code>
+let users = [
+    { name: "Asha", age: 20 },
+    { name: "Neha", age: 22 }
+];
+
+console.log(users[0].name);
+</code>
+
+<h2>Why Use Objects?</h2>
+<ul>
+    <li>Organize related data</li>
+    <li>Represent real world entities</li>
+    <li>Make code easier to manage</li>
+    <li>Used in APIs and applications</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Objects are one of the most important parts of JavaScript.
+Understanding objects helps you build real applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 JavaScript Learning Website</p>
+</footer>
+
+</body>
+</html>

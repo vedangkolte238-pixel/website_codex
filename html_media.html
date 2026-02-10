@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Audio and Video</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #F06529;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #F06529;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        video, audio {
+            margin-top: 10px;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML Audio and Video</h1>
+    <p>Embed audio and video files in web pages</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+HTML allows you to add multimedia content such as audio and video directly to web pages  
+using the <strong>&lt;audio&gt;</strong> and <strong>&lt;video&gt;</strong> tags.
+</p>
+
+<h2>HTML Audio</h2>
+<p>
+The <strong>&lt;audio&gt;</strong> tag is used to play sound files.
+</p>
+<code>
+&lt;audio controls&gt;
+    &lt;source src="music.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+</code>
+
+<h2>Audio Attributes</h2>
+<ul>
+    <li><strong>controls</strong> – shows play and pause buttons</li>
+    <li><strong>autoplay</strong> – plays audio automatically</li>
+    <li><strong>loop</strong> – repeats the audio</li>
+</ul>
+
+<h2>HTML Video</h2>
+<p>
+The <strong>&lt;video&gt;</strong> tag is used to play video files.
+</p>
+<code>
+&lt;video width="400" controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+</code>
+
+<h2>Video Attributes</h2>
+<ul>
+    <li><strong>controls</strong> – shows video controls</li>
+    <li><strong>width</strong> – sets video width</li>
+    <li><strong>height</strong> – sets video height</li>
+    <li><strong>poster</strong> – image shown before playing</li>
+</ul>
+
+<h2>Multiple Source Files</h2>
+<p>
+You can provide multiple formats for better browser support.
+</p>
+<code>
+&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;source src="video.webm" type="video/webm"&gt;
+&lt;/video&gt;
+</code>
+
+<h2>Important Points</h2>
+<ul>
+    <li>Always use the <strong>controls</strong> attribute</li>
+    <li>Keep file size optimized</li>
+    <li>Use supported formats like MP3 and MP4</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+HTML audio and video elements make websites more interactive.  
+They are widely used for tutorials, presentations, and entertainment.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 HTML Learning Website</p>
+</footer>
+
+</body>
+</html>

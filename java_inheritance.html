@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Inheritance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #C65D00;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #C65D00;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Java Inheritance</h1>
+    <p>Reusing Code Using Parent and Child Classes</p>
+</header>
+
+<section>
+
+<h2>What is Inheritance?</h2>
+<p>
+Inheritance is an OOP concept where one class acquires the properties and methods of another class.
+</p>
+
+<h2>Why Use Inheritance?</h2>
+<ul>
+    <li>Code reusability</li>
+    <li>Reduces duplication</li>
+    <li>Improves maintainability</li>
+    <li>Supports method overriding</li>
+</ul>
+
+<h2>Parent and Child Class</h2>
+<ul>
+    <li><strong>Parent class</strong> (Superclass): The class being inherited</li>
+    <li><strong>Child class</strong> (Subclass): The class that inherits</li>
+</ul>
+
+<h2>Syntax of Inheritance</h2>
+<code>
+class ChildClass extends ParentClass {
+    // code
+}
+</code>
+
+<h2>Example of Inheritance</h2>
+
+<h3>Parent Class</h3>
+<code>
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+</code>
+
+<h3>Child Class</h3>
+<code>
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+</code>
+
+<h2>Using Inherited Methods</h2>
+<code>
+class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+    }
+}
+</code>
+
+<h2>Types of Inheritance in Java</h2>
+<ul>
+    <li>Single Inheritance</li>
+    <li>Multilevel Inheritance</li>
+    <li>Hierarchical Inheritance</li>
+</ul>
+
+<h2>Single Inheritance</h2>
+<code>
+class A {
+    void showA() {
+        System.out.println("Class A");
+    }
+}
+
+class B extends A {
+    void showB() {
+        System.out.println("Class B");
+    }
+}
+</code>
+
+<h2>Multilevel Inheritance</h2>
+<code>
+class A {
+    void showA() {
+        System.out.println("Class A");
+    }
+}
+
+class B extends A {
+    void showB() {
+        System.out.println("Class B");
+    }
+}
+
+class C extends B {
+    void showC() {
+        System.out.println("Class C");
+    }
+}
+</code>
+
+<h2>Hierarchical Inheritance</h2>
+<code>
+class A {
+    void showA() {
+        System.out.println("Class A");
+    }
+}
+
+class B extends A {
+    void showB() {
+        System.out.println("Class B");
+    }
+}
+
+class C extends A {
+    void showC() {
+        System.out.println("Class C");
+    }
+}
+</code>
+
+<h2>Method Overriding</h2>
+<p>
+Child class can provide its own implementation of a parent class method.
+</p>
+
+<code>
+class Animal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+</code>
+
+<h2>Using super Keyword</h2>
+<p>
+The <strong>super</strong> keyword is used to access parent class members.
+</p>
+
+<code>
+class Dog extends Animal {
+    void sound() {
+        super.sound();
+        System.out.println("Dog barks");
+    }
+}
+</code>
+
+<h2>Important Rules</h2>
+<ul>
+    <li>Java does not support multiple inheritance with classes</li>
+    <li>Private members are not inherited</li>
+    <li>Constructors are not inherited</li>
+    <li>Inheritance uses the <strong>extends</strong> keyword</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Inheritance allows one class to reuse another class’s features.
+It makes Java programs more organized, reusable, and scalable.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Java Learning Website</p>
+</footer>
+
+</body>
+</html>

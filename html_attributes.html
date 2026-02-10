@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Attributes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #F06529;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #F06529;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+        ul.attribute-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML Attributes</h1>
+    <p>Learn how to add additional information to HTML elements</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+HTML attributes provide additional information about an element.  
+They are always written inside the opening tag and usually come in a <code>name="value"</code> format.
+</p>
+
+
+<h2>Common HTML Attributes</h2>
+<ul class="attribute-list">
+    <li><strong>id</strong> – Unique identifier for an element. Example: <code>&lt;div id="header"&gt;&lt;/div&gt;</code></li>
+    <li><strong>class</strong> – Assigns one or more class names for styling. Example: <code>&lt;p class="text-primary"&gt;Hello&lt;/p&gt;</code></li>
+    <li><strong>href</strong> – Specifies the URL of a link. Example: <code>&lt;a href="https://example.com"&gt;Link&lt;/a&gt;</code></li>
+    <li><strong>src</strong> – Specifies the path of an image, video, or audio. Example: <code>&lt;img src="image.jpg" alt="My Image"&gt;</code></li>
+    <li><strong>alt</strong> – Provides alternative text for images. Example: <code>&lt;img src="image.jpg" alt="Description"&gt;</code></li>
+    <li><strong>title</strong> – Adds a tooltip when hovering. Example: <code>&lt;button title="Click me"&gt;Submit&lt;/button&gt;</code></li>
+    <li><strong>target</strong> – Specifies where to open a link. Example: <code>&lt;a href="#" target="_blank"&gt;New Tab&lt;/a&gt;</code></li>
+    <li><strong>style</strong> – Adds inline CSS styling. Example: <code>&lt;p style="color:red;"&gt;Red Text&lt;/p&gt;</code></li>
+</ul>
+
+<h2>Boolean Attributes</h2>
+<p>Some attributes don’t need a value. Their presence alone is enough:</p>
+<code>
+<input type="checkbox" checked>
+<input type="disabled">
+</code>
+
+<h2>Multiple Attributes</h2>
+<p>An element can have multiple attributes separated by spaces:</p>
+
+
+<h2>Conclusion</h2>
+<p>
+Attributes allow you to customize HTML elements with links, IDs, classes, styles, tooltips, and more.  
+They are essential for styling with CSS, interacting with JavaScript, and making web pages functional.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 HTML Learning Website</p>
+</footer>
+
+</body>
+</html>

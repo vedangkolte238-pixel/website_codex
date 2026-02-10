@@ -1,0 +1,336 @@
+<html>
+
+<head>
+    <title> Codex: Learn For Code </title>
+    <style>
+        h1 {
+
+            background-color: #050836;
+            padding: 65px;
+            font-size: 40px;
+            letter-spacing: 1px;
+            margin-top: -8px;
+            margin-left: -8px;
+            margin-right: -8px;
+
+
+        }
+
+        h2 {
+            text-align: left;
+            color: white;
+            font-style: italic;
+            font-size: 35px;
+            letter-spacing: 1px;
+            margin-top: -140px;
+            font-weight: bold;
+            background: linear-gradient(180deg, #05efc8, #0027c4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: azure;
+            font-size: 18px;
+            margin-top: -25px;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+
+        body {
+            background-color: black;
+
+        }
+
+
+        .logo {
+            font-size: 33px;
+            font-weight: 600;
+            color: #1e40af;
+            letter-spacing: 1px;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            margin-top: -80px;
+        }
+
+        .logo span {
+            color: #009bde;
+        }
+
+        .logo span1 {
+            color: #1e40af;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #000000;
+            margin-top: 8px;
+            margin-top: -12px;
+            font-style: italic;
+            font-weight: 520;
+        }
+
+        #p1 {
+            background-color: #ffffff;
+            padding: 30px;
+            font-size: -1px;
+            letter-spacing: 1px;
+            margin-top: -8px;
+            margin-left: -8px;
+            margin-right: -8px;
+        }
+
+        #p2 {
+            font-size: 18px;
+            color: #000000;
+            margin-left: 1220px;
+            margin-top: -30px;
+        }
+
+        #p3 {
+            font-size: 28px;
+            margin-left: 1220px;
+            margin-top: -30px;
+            background: linear-gradient(180deg, #05efc8, #0027c4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #p4 {
+            font-size: 28px;
+            margin-left: 1220px;
+            margin-top: -30px;
+            background: linear-gradient(180deg, #05efc8, #0027c4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .a {
+            font-size: 25px;
+            font-weight: 600;
+            color: #1e40af;
+            letter-spacing: 1px;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            margin-top: -60px;
+            margin-left: 850px;
+        }
+
+        .a span {
+            color: #009bde;
+        }
+
+        .a span1 {
+            color: #1e40af;
+        }
+
+        .b {
+            font-size: 25px;
+            font-weight: 600;
+            color: #1e40af;
+            letter-spacing: 1px;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            margin-top: -28px;
+            margin-left: 1000px;
+        }
+
+        .b span {
+            color: #009bde;
+        }
+
+        .b span1 {
+            color: #1e40af;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            margin-top: -37px;
+            margin-left: -350px;
+        }
+
+        input[type="search"] {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #190597;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+            color: #fff;
+            background-color: #333;
+            font-size: 16px;
+            box-shadow: 0 0 10px #0b01c5;
+            text-shadow: 0 0 5px #0b01c5;
+        }
+
+        input::placeholder {
+            color: #0fbbd9;
+            text-shadow: 0 0 5px #15028f;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: 1px solid #000dfe;
+            background-color: #344bfe;
+            color: #ffffff;
+            font-size: 16px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            text-shadow: 0 0 3px #3700ff;
+            box-shadow: 0 0 7px #0095ff;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0022ff;
+            box-shadow: 0 0 10px #0513e0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .lang-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 100px;
+        }
+
+        .lang-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            max-width: 700px;
+        }
+
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            width: 160px;
+            height: 45px;
+            border: 2px solid #0800ff;
+            background: rgb(0, 128, 255);
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.2s ease;
+            text-align: center;
+            background: transparent;
+        }
+
+        .lang-btn:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .lang-btn img {
+            width: 28px;
+            height: 24px;
+        }
+
+        .c {
+            height: 100px;
+            margin-top: -350px;
+            text-align: center;
+            margin-left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1></h1>
+    <h2>Welcome To Codeメ</h2>
+    </div>
+
+    <p>
+        Are you finding it hard to understand programming languages? On this website, you’ll explore and learn the
+        fundamentals of different programming languages.<br>
+        Start your coding journey today and build your skills step by step.
+    </p>
+
+    <div class="extra-text">
+        <p id="p1"></p>
+    </div>
+
+    <div class="logo">
+        <span>C</span>ode<span1>メ</span1>
+    </div>
+    <div class="tagline">
+        Learn programming languages for free...
+    </div>
+
+    <p id="p2">
+        © 2025 Codeメ. All Rights Reserved.
+    </p>
+    <div class="a">
+        <a href="about.html"><span>A</span><span1>bout us</span1>
+        </a>
+    </div>
+    <div class="b">
+        <a href="contact.html"><span>C</span><span1>ontact us</span1>
+        </a>
+    </div>
+
+    <div class="search-box">
+        <form action="#" method="get">
+            <input type="search" name="q" placeholder="Search here..." required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div class="lang-container">
+        <div class="lang-box">
+            <a href="python.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\python.logo.png">Python</button></a>
+            <a href="sql.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\sql.logo.png">SQL</button></a>
+            <a href="r.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\r.logo.png">R</button></a>
+            <a href="html.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\html.logo.png">HTML</button></a>
+            <a href="css.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\css-logo.png">CSS</button></a>
+            <a href="js.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\js.logo.webp">JavaScript</button></a>
+            <a href="typescript.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\Typescript.logo.png">TypeScript</button></a>
+            <a href="java.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\java.logo.webp">Java</button></a>
+            <a href="c.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\c.logo.png">C</button></a>
+            <a href="c++.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\C++.logo.png">C++</button></a>
+            <a href="csharp.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\csharp.logo.jpg">C#</button></a>
+            <a href="go.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\go.logo.png">Go</button></a>
+            <a href="kotlin.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\kontlin.logo.webp">Kotlin</button></a>
+            <a href="swift.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\swift.logo.png">Swift</button></a>
+            <a href="dsa.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\dsa.logo.jpg">DSA</button></a>
+            <a href="numpy.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\numpy.logo.png">NumPy</button></a>
+            <a href="pandas.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\pandas.logo.png">Pandas</button></a>
+            <a href="rust.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\rust.image.png">Rust</button></a>
+            <a href="ruby.html"><button class="lang-btn"><img
+                        src="C:\Users\vedan\OneDrive\Desktop\My Website\Codex\ruby.logo.png">Ruby</button></a>
+        </div>
+    </div>
+    <div class="c">
+        <h2>Learn Programming For Free</h2>
+    </div>
+
+</body>
+
+</html>

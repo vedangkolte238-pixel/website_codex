@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Variables</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #F7DF1E;
+            color: #000;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #F7DF1E;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JavaScript Variables</h1>
+    <p>Store and Manage Data in JavaScript</p>
+</header>
+
+<section>
+
+<h2>What are Variables?</h2>
+<p>
+Variables are containers used to store data values.
+In JavaScript, variables allow you to store numbers, text, and other data types.
+</p>
+
+<h2>Declaring Variables</h2>
+<p>
+JavaScript provides three keywords to declare variables.
+</p>
+
+<h3>1. var</h3>
+<p>
+The <strong>var</strong> keyword is function-scoped and can be redeclared.
+</p>
+
+<code>
+var name = "Alex";
+console.log(name);
+</code>
+
+<h3>2. let</h3>
+<p>
+The <strong>let</strong> keyword is block-scoped and recommended for most cases.
+</p>
+
+<code>
+let age = 25;
+console.log(age);
+</code>
+
+<h3>3. const</h3>
+<p>
+The <strong>const</strong> keyword is used for values that should not change.
+</p>
+
+<code>
+const country = "India";
+console.log(country);
+</code>
+
+<h2>Variable Naming Rules</h2>
+<ul>
+    <li>Names must start with a letter, underscore, or dollar sign</li>
+    <li>Cannot start with a number</li>
+    <li>Cannot use JavaScript keywords</li>
+    <li>Case-sensitive</li>
+</ul>
+
+<h2>Reassigning Variables</h2>
+<p>
+Variables declared with <strong>let</strong> can be reassigned.
+</p>
+
+<code>
+let score = 10;
+score = 20;
+</code>
+
+<h2>Constant Variables</h2>
+<p>
+Values declared with <strong>const</strong> cannot be reassigned.
+</p>
+
+<code>
+const pi = 3.14;
+// pi = 3.15;  ❌ Error
+</code>
+
+<h2>Multiple Variables</h2>
+<p>
+You can declare multiple variables in one statement.
+</p>
+
+<code>
+let x = 10, y = 20, z = 30;
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Variables are the foundation of JavaScript programming.
+Understanding how to use var, let, and const helps you write clean and reliable code.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 JavaScript Learning Website</p>
+</footer>
+
+</body>
+</html>

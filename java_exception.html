@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Exception Handling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #C65D00;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #C65D00;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Java Exception Handling</h1>
+    <p>Handling Runtime Errors Safely</p>
+</header>
+
+<section>
+
+<h2>What is an Exception?</h2>
+<p>
+An exception is an unwanted or unexpected event that occurs during program execution.
+It disrupts the normal flow of the program.
+</p>
+
+<h2>Why Exception Handling?</h2>
+<ul>
+    <li>Prevents program termination</li>
+    <li>Improves program reliability</li>
+    <li>Handles runtime errors gracefully</li>
+    <li>Makes debugging easier</li>
+</ul>
+
+<h2>Common Exceptions</h2>
+<ul>
+    <li>ArithmeticException</li>
+    <li>NullPointerException</li>
+    <li>ArrayIndexOutOfBoundsException</li>
+    <li>NumberFormatException</li>
+</ul>
+
+<h2>Exception Handling Keywords</h2>
+<ul>
+    <li><b>try</b></li>
+    <li><b>catch</b></li>
+    <li><b>finally</b></li>
+    <li><b>throw</b></li>
+    <li><b>throws</b></li>
+</ul>
+
+<h2>try and catch</h2>
+<p>
+The try block contains code that may cause an exception.
+The catch block handles the exception.
+</p>
+
+<code>
+try {
+    int a = 10 / 0;
+}
+catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero");
+}
+</code>
+
+<h2>Output</h2>
+<code>
+Cannot divide by zero
+</code>
+
+<h2>Multiple catch Blocks</h2>
+<code>
+try {
+    int arr[] = new int[5];
+    arr[10] = 50;
+}
+catch (ArithmeticException e) {
+    System.out.println("Arithmetic Error");
+}
+catch (ArrayIndexOutOfBoundsException e) {
+    System.out.println("Array index error");
+}
+</code>
+
+<h2>finally Block</h2>
+<p>
+The finally block always executes whether an exception occurs or not.
+</p>
+
+<code>
+try {
+    int x = 20 / 2;
+}
+catch (Exception e) {
+    System.out.println("Error occurred");
+}
+finally {
+    System.out.println("Program finished");
+}
+</code>
+
+<h2>throw Keyword</h2>
+<p>
+The throw keyword is used to explicitly throw an exception.
+</p>
+
+<code>
+if (age < 18) {
+    throw new ArithmeticException("Not eligible to vote");
+}
+</code>
+
+<h2>throws Keyword</h2>
+<p>
+The throws keyword is used in method declaration to pass exception responsibility.
+</p>
+
+<code>
+void readFile() throws IOException {
+    // file handling code
+}
+</code>
+
+<h2>Checked vs Unchecked Exceptions</h2>
+<ul>
+    <li><b>Checked:</b> Checked at compile time (IOException)</li>
+    <li><b>Unchecked:</b> Checked at runtime (ArithmeticException)</li>
+</ul>
+
+<h2>Custom Exception</h2>
+<p>
+User-defined exceptions can be created by extending the Exception class.
+</p>
+
+<code>
+class MyException extends Exception {
+    MyException(String msg) {
+        super(msg);
+    }
+}
+</code>
+
+<h2>Key Points</h2>
+<ul>
+    <li>Exceptions occur at runtime</li>
+    <li>Use try-catch to handle errors</li>
+    <li>finally always executes</li>
+    <li>Custom exceptions improve clarity</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Exception handling makes Java programs more robust and user-friendly.
+It is an essential concept for real-world applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Java Learning Website</p>
+</footer>
+
+</body>
+</html>

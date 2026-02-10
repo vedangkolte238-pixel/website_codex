@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Data Types</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #C65D00;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #C65D00;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #C65D00;
+            color: white;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Java Data Types</h1>
+    <p>Understanding how data is stored in Java</p>
+</header>
+
+<section>
+
+<h2>What are Data Types?</h2>
+<p>
+Data types specify the type of data a variable can store.
+Java is a strongly typed language, which means every variable
+must have a declared data type.
+</p>
+
+<h2>Types of Data Types in Java</h2>
+<ul>
+    <li>Primitive Data Types</li>
+    <li>Non-Primitive (Reference) Data Types</li>
+</ul>
+
+<h2>Primitive Data Types</h2>
+<p>
+Primitive data types store simple values directly in memory.
+Java has 8 primitive data types.
+</p>
+
+<table>
+    <tr>
+        <th>Data Type</th>
+        <th>Size</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td>byte</td>
+        <td>1 byte</td>
+        <td>byte a = 10;</td>
+    </tr>
+    <tr>
+        <td>short</td>
+        <td>2 bytes</td>
+        <td>short b = 200;</td>
+    </tr>
+    <tr>
+        <td>int</td>
+        <td>4 bytes</td>
+        <td>int c = 5000;</td>
+    </tr>
+    <tr>
+        <td>long</td>
+        <td>8 bytes</td>
+        <td>long d = 100000L;</td>
+    </tr>
+    <tr>
+        <td>float</td>
+        <td>4 bytes</td>
+        <td>float e = 10.5f;</td>
+    </tr>
+    <tr>
+        <td>double</td>
+        <td>8 bytes</td>
+        <td>double f = 99.99;</td>
+    </tr>
+    <tr>
+        <td>char</td>
+        <td>2 bytes</td>
+        <td>char g = 'A';</td>
+    </tr>
+    <tr>
+        <td>boolean</td>
+        <td>1 bit</td>
+        <td>boolean h = true;</td>
+    </tr>
+</table>
+
+<h2>Primitive Example</h2>
+<code>
+int age = 20;
+double price = 499.99;
+char grade = 'A';
+boolean isPassed = true;
+</code>
+
+<h2>Non-Primitive Data Types</h2>
+<p>
+Non-primitive data types store references to objects.
+They are created using classes.
+</p>
+
+<ul>
+    <li>String</li>
+    <li>Arrays</li>
+    <li>Classes</li>
+    <li>Interfaces</li>
+</ul>
+
+<h3>String Example</h3>
+<code>
+String name = "Java Programming";
+</code>
+
+<h3>Array Example</h3>
+<code>
+int[] numbers = {10, 20, 30, 40};
+</code>
+
+<h3>Class Example</h3>
+<code>
+class Student {
+    int id;
+    String name;
+}
+</code>
+
+<h2>Difference: Primitive vs Non-Primitive</h2>
+<ul>
+    <li>Primitive stores value directly</li>
+    <li>Non-primitive stores memory address</li>
+    <li>Primitive has fixed size</li>
+    <li>Non-primitive size varies</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Understanding Java data types is essential for writing
+efficient and error-free programs.
+They form the foundation of Java programming.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Java Learning Website</p>
+</footer>
+
+</body>
+</html>

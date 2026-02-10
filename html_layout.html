@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #F06529;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #F06529;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+        .layout-demo {
+            border: 1px solid #ccc;
+            margin-top: 15px;
+        }
+        .demo-header, .demo-footer {
+            background-color: #ffe3d6;
+            padding: 10px;
+            text-align: center;
+        }
+        .demo-nav {
+            background-color: #fdd3c2;
+            padding: 10px;
+        }
+        .demo-main {
+            display: flex;
+        }
+        .demo-content {
+            flex: 3;
+            padding: 10px;
+            background-color: #fff3ee;
+        }
+        .demo-aside {
+            flex: 1;
+            padding: 10px;
+            background-color: #fde7dd;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML Layout</h1>
+    <p>Structure of a Web Page</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+HTML layout defines how different parts of a webpage are arranged.  
+A typical layout includes header, navigation, main content, sidebar, and footer.
+</p>
+
+<h2>Common Layout Elements</h2>
+<ul>
+    <li>&lt;header&gt; – Top section of the page</li>
+    <li>&lt;nav&gt; – Navigation menu</li>
+    <li>&lt;main&gt; – Main content area</li>
+    <li>&lt;section&gt; – Grouped content</li>
+    <li>&lt;aside&gt; – Sidebar content</li>
+    <li>&lt;footer&gt; – Bottom section</li>
+</ul>
+
+<h2>Basic HTML Layout Structure</h2>
+<code>
+&lt;header&gt;Header&lt;/header&gt;
+&lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;main&gt;
+    &lt;section&gt;Content&lt;/section&gt;
+    &lt;aside&gt;Sidebar&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;Footer&lt;/footer&gt;
+</code>
+
+<h2>Visual Layout Example</h2>
+<div class="layout-demo">
+    <div class="demo-header">Header</div>
+    <div class="demo-nav">Navigation</div>
+    <div class="demo-main">
+        <div class="demo-content">Main Content</div>
+        <div class="demo-aside">Sidebar</div>
+    </div>
+    <div class="demo-footer">Footer</div>
+</div>
+
+<h2>Why HTML Layout is Important</h2>
+<ul>
+    <li>Makes content organized</li>
+    <li>Improves readability</li>
+    <li>Helps search engines understand the page</li>
+    <li>Makes styling easier with CSS</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+HTML layout provides a clear structure to web pages.  
+Using proper layout elements makes your website clean, readable, and professional.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 HTML Learning Website</p>
+</footer>
+
+</body>
+</html>

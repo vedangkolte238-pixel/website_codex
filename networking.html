@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Networking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Networking</h1>
+    <p>Socket Programming and Client-Server Example</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Python provides the <code>socket</code> module to implement networking.  
+Sockets allow communication between computers over a network using TCP or UDP protocols.
+</p>
+
+<h2>1. Server Program (TCP)</h2>
+<code>
+import socket
+
+# Create socket
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Bind to localhost and port
+server_socket.bind(("127.0.0.1", 12345))
+server_socket.listen(1)
+print("Server is listening...")
+
+conn, addr = server_socket.accept()
+print("Connected by:", addr)
+
+data = conn.recv(1024).decode()
+print("Received from client:", data)
+
+conn.send("Hello Client!".encode())
+conn.close()
+</code>
+<div class="output">
+Output:<br>
+Server is listening...<br>
+Connected by: ('127.0.0.1', 54321)<br>
+Received from client: Hello Server
+</div>
+
+<h2>2. Client Program (TCP)</h2>
+<code>
+import socket
+
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect(("127.0.0.1", 12345))
+
+client_socket.send("Hello Server".encode())
+data = client_socket.recv(1024).decode()
+print("Received from server:", data)
+
+client_socket.close()
+</code>
+<div class="output">
+Output:<br>
+Received from server: Hello Client!
+</div>
+
+<h2>3. Explanation</h2>
+<ul>
+    <li><strong>Server:</strong> Creates a socket, binds to IP & port, listens, and accepts connections.</li>
+    <li><strong>Client:</strong> Connects to server and communicates using send/recv.</li>
+    <li><strong>TCP:</strong> Reliable connection-oriented protocol used in this example.</li>
+    <li>Both client and server must run on the same machine or network for testing.</li>
+</ul>
+
+<h2>4. Conclusion</h2>
+<p>
+Python's <code>socket</code> module allows you to implement networking applications, including chat apps, file transfer, or client-server communication.  
+This is the foundation for more advanced network programming like HTTP servers or real-time applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

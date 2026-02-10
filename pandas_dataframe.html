@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pandas DataFrame</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #130654;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #130654;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Pandas DataFrame</h1>
+    <p>Two-Dimensional Labeled Data Structure in Pandas</p>
+</header>
+
+<section>
+
+<h2>What is a DataFrame?</h2>
+<p>
+A Pandas DataFrame is a two-dimensional labeled data structure with columns of potentially different types.
+It can be thought of as a table or spreadsheet in Python.
+</p>
+
+<h2>Creating a DataFrame</h2>
+<code>
+import pandas as pd
+
+# From a dictionary
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Age': [25, 30, 35],
+    'City': ['New York', 'Los Angeles', 'Chicago']
+}
+df = pd.DataFrame(data)
+print(df)
+
+# From a list of lists
+data_list = [['Alice', 25], ['Bob', 30], ['Charlie', 35]]
+df2 = pd.DataFrame(data_list, columns=['Name', 'Age'])
+print(df2)
+</code>
+
+<h2>Accessing Columns</h2>
+<code>
+# Single column as Series
+print(df['Name'])
+
+# Multiple columns as DataFrame
+print(df[['Name', 'Age']])
+</code>
+
+<h2>Accessing Rows</h2>
+<code>
+# Using iloc for index-based selection
+print(df.iloc[0])  # First row
+
+# Using loc for label-based selection
+print(df.loc[0])   # First row (if default index)
+</code>
+
+<h2>DataFrame Operations</h2>
+<code>
+import numpy as np
+
+df['AgePlus10'] = df['Age'] + 10
+print(df)
+
+# Filtering rows
+print(df[df['Age'] > 28])
+
+# Basic statistics
+print(df['Age'].mean())   # 30.0
+print(df['Age'].max())    # 35
+</code>
+
+<h2>Applications of DataFrames</h2>
+<ul>
+    <li>Data cleaning and preprocessing</li>
+    <li>Exploratory Data Analysis (EDA)</li>
+    <li>Joining, merging, and reshaping datasets</li>
+    <li>Time series analysis and financial data</li>
+    <li>Machine learning data pipelines</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+DataFrames are the core data structure in Pandas for handling tabular data.
+They provide flexible indexing, selection, filtering, and computational tools, making them essential for data analysis.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Pandas Learning Website</p>
+</footer>
+
+</body>
+</html>

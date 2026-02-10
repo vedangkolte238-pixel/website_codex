@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NumPy File Handling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #013243;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #013243;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>NumPy File Handling</h1>
+    <p>Saving and Loading NumPy Arrays to Files</p>
+</header>
+
+<section>
+
+<h2>Saving Arrays to a File</h2>
+<p>NumPy allows you to save arrays to disk for later use.</p>
+
+<h3>Saving as a binary file</h3>
+<code>
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+np.save('my_array.npy', arr)  # saves array in .npy format
+</code>
+
+<h3>Saving multiple arrays</h3>
+<code>
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+np.savez('arrays.npz', arr1=arr1, arr2=arr2)  # compressed file
+</code>
+
+<h3>Saving as text file</h3>
+<code>
+np.savetxt('my_array.txt', arr, delimiter=',')
+</code>
+
+<h2>Loading Arrays from a File</h2>
+
+<h3>Loading a binary file</h3>
+<code>
+loaded_arr = np.load('my_array.npy')
+print(loaded_arr)  # [1 2 3 4 5]
+</code>
+
+<h3>Loading multiple arrays</h3>
+<code>
+data = np.load('arrays.npz')
+print(data['arr1'])  # [1 2 3]
+print(data['arr2'])  # [4 5 6]
+</code>
+
+<h3>Loading from a text file</h3>
+<code>
+loaded_txt = np.loadtxt('my_array.txt', delimiter=',')
+print(loaded_txt)  # [1. 2. 3. 4. 5.]
+</code>
+
+<h2>Applications</h2>
+<ul>
+    <li>Saving intermediate results in computations</li>
+    <li>Storing large datasets efficiently</li>
+    <li>Sharing data between programs or machines</li>
+    <li>Reloading arrays without recomputation</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+NumPy’s file handling capabilities make it easy to save and load arrays for data analysis,
+scientific computing, and machine learning projects. Using `.npy` or `.npz` formats is efficient and convenient.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 NumPy Learning Website</p>
+</footer>
+
+</body>
+</html>

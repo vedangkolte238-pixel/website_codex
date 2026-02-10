@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kotlin Classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4FC3F7;
+            color: #000;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #4FC3F7;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Kotlin Classes</h1>
+    <p>Understand Classes and Objects in Kotlin</p>
+</header>
+
+<section>
+
+<h2>What is a Class?</h2>
+<p>
+A class is a blueprint for creating objects.
+It defines properties (variables) and functions (methods)
+that describe the behavior of an object.
+</p>
+
+<h2>Class Syntax in Kotlin</h2>
+
+<code>
+class ClassName {
+    // properties
+    // functions
+}
+</code>
+
+<h2>Example of a Class</h2>
+
+<code>
+class Person {
+    var name: String = "John"
+    var age: Int = 25
+
+    fun displayInfo() {
+        println("Name: $name, Age: $age")
+    }
+}
+</code>
+
+<h2>Creating an Object</h2>
+<p>
+An object is an instance of a class.
+</p>
+
+<code>
+val person = Person()
+person.displayInfo()
+</code>
+
+<h2>Primary Constructor</h2>
+<p>
+Kotlin allows defining a constructor directly in the class header.
+</p>
+
+<code>
+class Student(val name: String, var marks: Int)
+</code>
+
+<h2>Class with Constructor and Method</h2>
+
+<code>
+class Car(val brand: String, val year: Int) {
+    fun details() {
+        println("Brand: $brand, Year: $year")
+    }
+}
+</code>
+
+<h2>Init Block</h2>
+<p>
+The init block runs when the object is created.
+</p>
+
+<code>
+class Laptop(val model: String) {
+    init {
+        println("Laptop model: $model")
+    }
+}
+</code>
+
+<h2>Access Modifiers</h2>
+<ul>
+    <li><strong>public</strong> – default, accessible everywhere</li>
+    <li><strong>private</strong> – accessible inside the class</li>
+    <li><strong>protected</strong> – accessible in subclasses</li>
+    <li><strong>internal</strong> – accessible within the module</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Classes are the foundation of object-oriented programming in Kotlin.
+They help organize code, represent real-world entities,
+and build scalable applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Kotlin Learning Website</p>
+</footer>
+
+</body>
+</html>

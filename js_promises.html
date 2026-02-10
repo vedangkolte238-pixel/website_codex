@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Promises</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #F7DF1E;
+            color: #000;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #F7DF1E;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JavaScript Promises</h1>
+    <p>Handle Asynchronous Operations</p>
+</header>
+
+<section>
+
+<h2>What is a Promise?</h2>
+<p>
+A Promise is an object that represents the result of an asynchronous operation.
+It can be completed in the future or fail.
+</p>
+
+<h2>Promise States</h2>
+<ul>
+    <li>Pending – operation is not completed yet</li>
+    <li>Fulfilled – operation completed successfully</li>
+    <li>Rejected – operation failed</li>
+</ul>
+
+<h2>Creating a Promise</h2>
+<code>
+let myPromise = new Promise(function(resolve, reject) {
+    let success = true;
+
+    if (success) {
+        resolve("Task completed");
+    } else {
+        reject("Task failed");
+    }
+});
+</code>
+
+<h2>Using then()</h2>
+<code>
+myPromise.then(function(result) {
+    console.log(result);
+});
+</code>
+
+<h2>Using catch()</h2>
+<code>
+myPromise.catch(function(error) {
+    console.log(error);
+});
+</code>
+
+<h2>Using then() and catch() Together</h2>
+<code>
+myPromise
+.then(function(result) {
+    console.log(result);
+})
+.catch(function(error) {
+    console.log(error);
+});
+</code>
+
+<h2>Promise with setTimeout</h2>
+<code>
+let delayPromise = new Promise(function(resolve) {
+    setTimeout(function() {
+        resolve("Data loaded after 2 seconds");
+    }, 2000);
+});
+
+delayPromise.then(function(message) {
+    console.log(message);
+});
+</code>
+
+<h2>Promise Chaining</h2>
+<code>
+let numberPromise = new Promise(function(resolve) {
+    resolve(10);
+});
+
+numberPromise
+.then(function(value) {
+    return value * 2;
+})
+.then(function(value) {
+    return value + 5;
+})
+.then(function(result) {
+    console.log(result);
+});
+</code>
+
+<h2>Why Use Promises?</h2>
+<ul>
+    <li>Handle asynchronous code easily</li>
+    <li>Avoid callback hell</li>
+    <li>Improve code readability</li>
+    <li>Used in API calls and fetch</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Promises make asynchronous programming simpler and cleaner.
+They are widely used in modern JavaScript applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 JavaScript Learning Website</p>
+</footer>
+
+</body>
+</html>

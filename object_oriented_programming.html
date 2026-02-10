@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Object-Oriented Programming – Basics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Object-Oriented Programming (OOP)</h1>
+    <p>Complete Explanation with Examples and Output</p>
+</header>
+
+<section>
+
+<h2>What is Object-Oriented Programming?</h2>
+<p>
+OOP is a programming paradigm based on objects and classes. 
+It allows organizing code around real-world entities.
+</p>
+
+<h2>Class and Object</h2>
+<code>
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+
+# Creating object
+p1 = Person("Alice", 25)
+p1.display()
+</code>
+<div class="output">
+Output:<br>
+Name: Alice<br>
+Age: 25
+</div>
+
+<h2>Constructor (__init__)</h2>
+<p>
+The <code>__init__</code> method initializes object attributes when an object is created.
+</p>
+
+<h2>Methods</h2>
+<p>
+Functions inside a class are called methods. They define behaviors of objects.
+</p>
+
+<h2>Inheritance</h2>
+<p>
+Inheritance allows a class to inherit properties and methods of another class.
+</p>
+<code>
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)
+        self.student_id = student_id
+
+    def display_student(self):
+        print("Student ID:", self.student_id)
+
+s1 = Student("Bob", 20, "S101")
+s1.display()
+s1.display_student()
+</code>
+<div class="output">
+Output:<br>
+Name: Bob<br>
+Age: 20<br>
+Student ID: S101
+</div>
+
+<h2>Encapsulation</h2>
+<p>
+Encapsulation hides internal details of an object. Use <code>_</code> or <code>__</code> for private attributes.
+</p>
+<code>
+class Account:
+    def __init__(self, balance):
+        self.__balance = balance
+
+    def deposit(self, amount):
+        self.__balance += amount
+
+    def get_balance(self):
+        return self.__balance
+
+acc = Account(1000)
+acc.deposit(500)
+print(acc.get_balance())
+</code>
+<div class="output">
+Output:<br>
+1500
+</div>
+
+<h2>Polymorphism</h2>
+<p>
+Polymorphism allows objects of different classes to be treated similarly.
+</p>
+<code>
+class Cat:
+    def sound(self):
+        print("Meow")
+
+class Dog:
+    def sound(self):
+        print("Woof")
+
+def make_sound(animal):
+    animal.sound()
+
+make_sound(Cat())
+make_sound(Dog())
+</code>
+<div class="output">
+Output:<br>
+Meow<br>
+Woof
+</div>
+
+<h2>Conclusion</h2>
+<p>
+OOP in Python helps structure programs using real-world entities, making code reusable, modular, and easier to maintain.
+Understanding classes, objects, inheritance, encapsulation, and polymorphism is essential for advanced Python programming.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

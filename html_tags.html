@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Tags</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #F06529;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #F06529;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+        ul.tag-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML Tags</h1>
+    <p>Learn about different HTML tags and their usage</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+HTML tags are the basic building blocks of a web page.  
+Tags are used to create elements, and most come in pairs with an opening and closing tag.  
+Some tags are self-closing and do not need an end tag.
+</p>
+
+<h2>Basic Syntax</h2>
+<code>
+&lt;tagname&gt;Content&lt;/tagname&gt;
+</code>
+<p>Example:</p>
+<code>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+</code>
+
+<h2>Common HTML Tags</h2>
+<ul class="tag-list">
+    <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong> – Headings, <code>h1</code> is the largest</li>
+    <li><strong>&lt;p&gt;</strong> – Paragraph</li>
+    <li><strong>&lt;a&gt;</strong> – Hyperlink</li>
+    <li><strong>&lt;img&gt;</strong> – Image (self-closing)</li>
+    <li><strong>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</strong> – Lists</li>
+    <li><strong>&lt;div&gt;</strong> – Block-level container</li>
+    <li><strong>&lt;span&gt;</strong> – Inline container</li>
+    <li><strong>&lt;form&gt;</strong> – Form for user input</li>
+    <li><strong>&lt;input&gt;</strong> – Input field (self-closing)</li>
+    <li><strong>&lt;button&gt;</strong> – Button element</li>
+    <li><strong>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;</strong> – Table structure</li>
+    <li><strong>&lt;br&gt;</strong> – Line break (self-closing)</li>
+    <li><strong>&lt;hr&gt;</strong> – Horizontal rule (self-closing)</li>
+    <li><strong>&lt;header&gt;, &lt;footer&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;</strong> – Semantic HTML tags</li>
+</ul>
+
+<h2>Self-closing Tags</h2>
+<p>Some tags do not need a closing tag. They are self-closing:</p>
+<code>
+&lt;br&gt;   <!-- Line break -->
+&lt;hr&gt;   <!-- Horizontal line -->
+&lt;img src="image.jpg" alt="Image"&gt;   <!-- Image -->
+&lt;input type="text"&gt;   <!-- Input field -->
+</code>
+
+<h2>Nesting Tags</h2>
+<p>HTML elements can be nested inside other elements:</p>
+<code>
+&lt;div&gt;
+    &lt;h1&gt;Heading inside div&lt;/h1&gt;
+    &lt;p&gt;Paragraph inside div&lt;/p&gt;
+&lt;/div&gt;
+</code>
+
+<h2>Conclusion</h2>
+<p>
+HTML tags are the foundation of web pages.  
+Learning the most commonly used tags and their correct usage is essential before moving to styling with CSS or interactivity with JavaScript.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 HTML Learning Website</p>
+</footer>
+
+</body>
+</html>

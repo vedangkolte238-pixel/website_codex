@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pandas Data Cleaning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #130654;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #130654;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Pandas Data Cleaning</h1>
+    <p>Handling Missing Data and Preparing Datasets</p>
+</header>
+
+<section>
+
+<h2>Handling Missing Values</h2>
+<p>Pandas provides tools to detect and handle missing data (NaN).</p>
+
+<h3>Detecting Missing Values</h3>
+<code>
+import pandas as pd
+import numpy as np
+
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', None],
+    'Age': [25, np.nan, 35, 40],
+    'City': ['New York', 'Los Angeles', None, 'Chicago']
+}
+df = pd.DataFrame(data)
+
+# Check for missing values
+print(df.isnull())
+print(df.isnull().sum())
+</code>
+
+<h3>Dropping Missing Values</h3>
+<code>
+# Drop rows with any missing values
+df_drop = df.dropna()
+print(df_drop)
+
+# Drop columns with missing values
+df_drop_col = df.dropna(axis=1)
+print(df_drop_col)
+</code>
+
+<h3>Filling Missing Values</h3>
+<code>
+# Fill missing values with a constant
+df_fill = df.fillna({'Name':'Unknown', 'Age':0, 'City':'Unknown'})
+print(df_fill)
+
+# Fill missing numerical values with mean
+df['Age'].fillna(df['Age'].mean(), inplace=True)
+print(df)
+</code>
+
+<h2>Removing Duplicates</h2>
+<code>
+data = {'Name': ['Alice', 'Bob', 'Alice', 'Charlie'],
+        'Age': [25, 30, 25, 35]}
+df = pd.DataFrame(data)
+
+# Drop duplicate rows
+df_unique = df.drop_duplicates()
+print(df_unique)
+</code>
+
+<h2>Renaming Columns</h2>
+<code>
+df.rename(columns={'Name':'FullName', 'Age':'AgeYears'}, inplace=True)
+print(df)
+</code>
+
+<h2>Changing Data Types</h2>
+<code>
+df['AgeYears'] = df['AgeYears'].astype(float)
+print(df.dtypes)
+</code>
+
+<h2>Applications</h2>
+<ul>
+    <li>Preparing clean datasets for analysis and machine learning</li>
+    <li>Handling missing or inconsistent data efficiently</li>
+    <li>Ensuring data consistency and quality</li>
+    <li>Removing duplicates and renaming columns for readability</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Data cleaning is a crucial step in data analysis. Pandas provides powerful functions to detect, fill, and remove missing or duplicate data, 
+making datasets ready for analysis and modeling.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Pandas Learning Website</p>
+</footer>
+
+</body>
+</html>

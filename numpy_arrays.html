@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NumPy Arrays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #013243;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #013243;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>NumPy Arrays</h1>
+    <p>Working with Arrays in NumPy</p>
+</header>
+
+<section>
+
+<h2>What Is a NumPy Array?</h2>
+<p>
+A NumPy array (ndarray) is a multidimensional, homogeneous data structure for storing elements of the same type.
+It provides fast, vectorized operations that are much more efficient than Python lists.
+</p>
+
+<h2>Creating Arrays</h2>
+<ul>
+    <li><strong>From Python list:</strong></li>
+</ul>
+
+<code>
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+print(arr)
+</code>
+
+<ul>
+    <li><strong>Zeros array:</strong></li>
+</ul>
+
+<code>
+zeros_arr = np.zeros((3, 4))  # 3x4 matrix filled with zeros
+print(zeros_arr)
+</code>
+
+<ul>
+    <li><strong>Ones array:</strong></li>
+</ul>
+
+<code>
+ones_arr = np.ones((2, 5))  # 2x5 matrix filled with ones
+print(ones_arr)
+</code>
+
+<ul>
+    <li><strong>Range of numbers:</strong></li>
+</ul>
+
+<code>
+range_arr = np.arange(0, 10, 2)  # 0 to 10 with step 2
+print(range_arr)
+</code>
+
+<ul>
+    <li><strong>Linearly spaced numbers:</strong></li>
+</ul>
+
+<code>
+linspace_arr = np.linspace(0, 1, 5)  # 5 numbers between 0 and 1
+print(linspace_arr)
+</code>
+
+<h2>Array Attributes</h2>
+<ul>
+    <li><strong>Shape:</strong> <code>arr.shape</code> → dimensions of array</li>
+    <li><strong>Size:</strong> <code>arr.size</code> → total number of elements</li>
+    <li><strong>Data type:</strong> <code>arr.dtype</code></li>
+    <li><strong>Number of dimensions:</strong> <code>arr.ndim</code></li>
+</ul>
+
+<h2>Array Operations</h2>
+<ul>
+    <li>Element-wise addition, subtraction, multiplication, division</li>
+    <li>Scalar operations applied to all elements</li>
+    <li>Vectorized operations (no need for loops)</li>
+</ul>
+
+<code>
+arr1 = np.array([1,2,3])
+arr2 = np.array([4,5,6])
+
+print(arr1 + arr2)  # [5 7 9]
+print(arr1 * 2)     # [2 4 6]
+</code>
+
+<h2>Multidimensional Arrays</h2>
+
+<code>
+matrix = np.array([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
+
+print(matrix.shape)  # (3, 3)
+print(matrix[0, 1])  # Access element at row 0, col 1 → 2
+</code>
+
+<h2>Applications of NumPy Arrays</h2>
+<ul>
+    <li>Data analysis and manipulation</li>
+    <li>Machine learning and AI</li>
+    <li>Scientific computing and simulations</li>
+    <li>Image and signal processing</li>
+    <li>Financial modeling and statistics</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+NumPy arrays are the core data structure of the library, providing fast, efficient, and flexible tools
+for numerical computing in Python. Mastering arrays is the first step to advanced data science and ML tasks.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 NumPy Learning Website</p>
+</footer>
+
+</body>
+</html>

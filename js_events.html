@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #F7DF1E;
+            color: #000;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #F7DF1E;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JavaScript Events</h1>
+    <p>Responding to User Actions in JavaScript</p>
+</header>
+
+<section>
+
+<h2>What is an Event?</h2>
+<p>
+An event is an action performed by the user or the browser.
+JavaScript can detect these actions and execute code in response.
+</p>
+
+<h2>Common JavaScript Events</h2>
+<ul>
+    <li>click</li>
+    <li>mouseover</li>
+    <li>mouseout</li>
+    <li>keydown</li>
+    <li>keyup</li>
+    <li>submit</li>
+    <li>load</li>
+</ul>
+
+<h2>Event Using HTML Attribute</h2>
+<p>
+An event can be handled directly in HTML.
+</p>
+
+<code>
+&lt;button onclick="alert('Button Clicked')"&gt;Click Me&lt;/button&gt;
+</code>
+
+<h2>Event Using JavaScript</h2>
+<p>
+Events can also be handled using JavaScript functions.
+</p>
+
+<code>
+let btn = document.getElementById("myBtn");
+btn.onclick = function() {
+    alert("Button clicked");
+};
+</code>
+
+<h2>addEventListener()</h2>
+<p>
+The recommended way to handle events.
+</p>
+
+<code>
+let button = document.getElementById("btn");
+
+button.addEventListener("click", function() {
+    console.log("Button clicked");
+});
+</code>
+
+<h2>Mouse Events</h2>
+<code>
+element.addEventListener("mouseover", function() {
+    console.log("Mouse over element");
+});
+</code>
+
+<h2>Keyboard Events</h2>
+<code>
+document.addEventListener("keydown", function() {
+    console.log("Key pressed");
+});
+</code>
+
+<h2>Form Events</h2>
+<code>
+form.addEventListener("submit", function() {
+    console.log("Form submitted");
+});
+</code>
+
+<h2>Event Object</h2>
+<p>
+The event object contains details about the event.
+</p>
+
+<code>
+button.addEventListener("click", function(event) {
+    console.log(event.type);
+});
+</code>
+
+<h2>Why Use Events?</h2>
+<ul>
+    <li>Makes web pages interactive</li>
+    <li>Responds to user actions</li>
+    <li>Controls dynamic behavior</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+JavaScript events allow your website to react to user input.
+They are essential for creating interactive and dynamic web applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 JavaScript Learning Website</p>
+</footer>
+
+</body>
+</html>

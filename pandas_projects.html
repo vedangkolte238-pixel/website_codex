@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pandas Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #130654;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #130654;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Pandas Projects</h1>
+    <p>Practical Examples Using Pandas</p>
+</header>
+
+<section>
+
+<h2>Project 1: Sales Analysis</h2>
+<p>Analyze sales data to get insights about total and average sales per region and visualize trends.</p>
+<code>
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load dataset
+df = pd.read_csv('sales_data.csv')
+
+# Data cleaning
+df.fillna(0, inplace=True)
+
+# Group by region
+region_sales = df.groupby('Region')['Sales'].sum()
+print(region_sales)
+
+# Visualization
+region_sales.plot(kind='bar', title='Total Sales by Region')
+plt.show()
+</code>
+
+<h2>Project 2: Employee Salary Analysis</h2>
+<p>Combine multiple datasets, clean data, and analyze average salary per department.</p>
+<code>
+df_emp = pd.read_csv('employees.csv')
+df_salary = pd.read_csv('salaries.csv')
+
+# Merge datasets
+df_merged = pd.merge(df_emp, df_salary, on='EmployeeID', how='inner')
+
+# Handle missing data
+df_merged.fillna({'Salary':0}, inplace=True)
+
+# Group by Department
+avg_salary = df_merged.groupby('Department')['Salary'].mean()
+print(avg_salary)
+
+# Plot
+avg_salary.plot(kind='pie', autopct='%1.1f%%', title='Average Salary by Department')
+plt.show()
+</code>
+
+<h2>Project 3: Student Performance Analysis</h2>
+<p>Analyze student grades, handle missing data, calculate average scores, and rank students.</p>
+<code>
+df = pd.read_excel('students.xlsx')
+
+# Fill missing marks with mean
+df.fillna(df.mean(), inplace=True)
+
+# Calculate total and average
+df['Total'] = df[['Math', 'Science', 'English']].sum(axis=1)
+df['Average'] = df['Total'] / 3
+
+# Rank students
+df['Rank'] = df['Average'].rank(ascending=False)
+print(df)
+
+# Visualize top 5 students
+df.nlargest(5, 'Average').plot(x='Name', y='Average', kind='bar', title='Top 5 Students')
+plt.show()
+</code>
+
+<h2>Applications of Pandas Projects</h2>
+<ul>
+    <li>Business analytics and reporting</li>
+    <li>Human resources data management</li>
+    <li>Education and student performance tracking</li>
+    <li>Financial and sales data analysis</li>
+    <li>Preparing datasets for machine learning models</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Pandas projects allow practical application of concepts like Series, DataFrames, Indexing, Cleaning, Group By, Merge, and Visualization.
+Working on projects helps in understanding data workflows and improves data analysis skills.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Pandas Learning Website</p>
+</footer>
+
+</body>
+</html>

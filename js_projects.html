@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #F7DF1E;
+            color: #000;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #F7DF1E;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        ul.project-list li {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JavaScript Projects</h1>
+    <p>Ideas and Examples to Practice JavaScript</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+These projects help beginners and intermediate learners practice JavaScript.
+You can showcase these on your portfolio or website.
+Projects are divided into categories: DOM Manipulation, Games, Forms, API, and Mini Apps.
+</p>
+
+<h2>1. DOM Manipulation Projects</h2>
+<ul class="project-list">
+    <li>
+        <strong>To-Do List</strong>  
+        <p>Add, delete, and mark tasks as completed using DOM methods.</p>
+        <code>
+// Example: Add task to list
+let taskInput = document.getElementById("taskInput");
+let taskList = document.getElementById("taskList");
+
+function addTask() {
+    let li = document.createElement("li");
+    li.textContent = taskInput.value;
+    taskList.appendChild(li);
+}
+        </code>
+    </li>
+    <li>
+        <strong>Color Changer</strong>  
+        <p>Change background or text color dynamically on button clicks.</p>
+        <code>
+document.getElementById("btn").onclick = function() {
+    document.body.style.backgroundColor = "lightblue";
+};
+        </code>
+    </li>
+</ul>
+
+<h2>2. Game Projects</h2>
+<ul class="project-list">
+    <li>
+        <strong>Number Guessing Game</strong>  
+        <p>Guess a number between 1 and 100. Show hints for higher/lower.</p>
+        <code>
+let secret = Math.floor(Math.random() * 100) + 1;
+function guessNumber(userGuess) {
+    if(userGuess === secret) alert("Correct!");
+    else if(userGuess < secret) alert("Too low!");
+    else alert("Too high!");
+}
+        </code>
+    </li>
+    <li>
+        <strong>Simple Quiz</strong>  
+        <p>Display multiple-choice questions and show score at the end.</p>
+    </li>
+</ul>
+
+<h2>3. Form Projects</h2>
+<ul class="project-list">
+    <li>
+        <strong>Form Validation</strong>  
+        <p>Check if all fields are filled and show error messages.</p>
+        <code>
+let form = document.getElementById("myForm");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    if(document.getElementById("name").value === "") {
+        alert("Name is required");
+    }
+});
+        </code>
+    </li>
+    <li>
+        <strong>Signup Form</strong>  
+        <p>Validate email, password, and confirm password fields.</p>
+    </li>
+</ul>
+
+<h2>4. API & Fetch Projects</h2>
+<ul class="project-list">
+    <li>
+        <strong>Weather App</strong>  
+        <p>Fetch weather data from an API and display temperature and condition.</p>
+        <code>
+fetch("https://api.example.com/weather")
+.then(response => response.json())
+.then(data => console.log(data));
+        </code>
+    </li>
+    <li>
+        <strong>Random User Generator</strong>  
+        <p>Display random user info using fetch from a public API.</p>
+    </li>
+</ul>
+
+<h2>5. Mini Apps</h2>
+<ul class="project-list">
+    <li>
+        <strong>Calculator</strong>  
+        <p>Simple arithmetic calculator using JavaScript functions.</p>
+    </li>
+    <li>
+        <strong>Stopwatch</strong>  
+        <p>Start, stop, and reset a timer using setInterval.</p>
+    </li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+These projects help you practice key JavaScript concepts like DOM, events, arrays, objects, and asynchronous code.  
+Start small, and gradually move to API-based or interactive apps.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 JavaScript Learning Website</p>
+</footer>
+
+</body>
+</html>

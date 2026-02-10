@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript JSON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #F7DF1E;
+            color: #000;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #F7DF1E;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JavaScript JSON</h1>
+    <p>Store and Exchange Data Easily</p>
+</header>
+
+<section>
+
+<h2>What is JSON?</h2>
+<p>
+JSON stands for JavaScript Object Notation.
+It is a lightweight format used to store and transfer data.
+JSON is easy for humans to read and easy for machines to parse.
+</p>
+
+<h2>JSON Structure</h2>
+<p>
+JSON data is written as key and value pairs.
+Keys must be in double quotes.
+</p>
+
+<code>
+{
+    "name": "John",
+    "age": 25,
+    "isStudent": true
+}
+</code>
+
+<h2>JSON vs JavaScript Object</h2>
+<p>
+They look similar, but JSON is stricter.
+</p>
+
+<code>
+// JavaScript Object
+let user = {
+    name: "John",
+    age: 25
+};
+
+// JSON
+{
+    "name": "John",
+    "age": 25
+}
+</code>
+
+<h2>JSON.stringify()</h2>
+<p>
+Converts a JavaScript object into a JSON string.
+</p>
+
+<code>
+let user = {
+    name: "Alice",
+    age: 30
+};
+
+let jsonData = JSON.stringify(user);
+console.log(jsonData);
+</code>
+
+<h2>JSON.parse()</h2>
+<p>
+Converts a JSON string back into a JavaScript object.
+</p>
+
+<code>
+let jsonText = '{"name":"Alice","age":30}';
+
+let obj = JSON.parse(jsonText);
+console.log(obj.name);
+</code>
+
+<h2>JSON Arrays</h2>
+<p>
+JSON can store multiple objects using arrays.
+</p>
+
+<code>
+[
+    { "id": 1, "title": "Book" },
+    { "id": 2, "title": "Pen" }
+]
+</code>
+
+<h2>Where JSON is Used</h2>
+<ul>
+    <li>Sending data between server and browser</li>
+    <li>APIs and web services</li>
+    <li>Configuration files</li>
+    <li>Storing structured data</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+JSON is a core part of modern JavaScript development.
+Understanding JSON is essential for working with APIs and data-driven applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 JavaScript Learning Website</p>
+</footer>
+
+</body>
+</html>

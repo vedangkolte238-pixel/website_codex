@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NumPy Broadcasting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #013243;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #013243;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>NumPy Broadcasting</h1>
+    <p>Understanding Broadcasting in NumPy</p>
+</header>
+
+<section>
+
+<h2>What Is Broadcasting?</h2>
+<p>
+Broadcasting allows NumPy to perform operations on arrays of different shapes.
+Smaller arrays are “broadcast” across larger arrays so that arithmetic operations can be performed without explicit replication.
+</p>
+
+<h2>Rules of Broadcasting</h2>
+<ul>
+    <li>If arrays have different dimensions, prepend 1 to the shape of the smaller array.</li>
+    <li>Arrays are compatible in a dimension if they are equal or one of them is 1.</li>
+    <li>If shapes are not compatible, a <strong>ValueError</strong> is raised.</li>
+</ul>
+
+<h2>Example 1: Adding a scalar to an array</h2>
+
+<code>
+import numpy as np
+
+arr = np.array([1, 2, 3])
+result = arr + 5  # Scalar 5 broadcasted to each element
+print(result)     # [6 7 8]
+</code>
+
+<h2>Example 2: Adding arrays of different shapes</h2>
+
+<code>
+A = np.array([[1, 2, 3],
+              [4, 5, 6]])
+
+B = np.array([10, 20, 30])
+
+C = A + B  # B is broadcasted to each row of A
+print(C)
+# Output:
+# [[11 22 33]
+#  [14 25 36]]
+</code>
+
+<h2>Example 3: Broadcasting with column vector</h2>
+
+<code>
+X = np.array([[1,2,3],
+              [4,5,6]])
+
+Y = np.array([[10],
+              [20]])
+
+Z = X + Y  # Y is broadcasted across columns
+print(Z)
+# Output:
+# [[11 12 13]
+#  [24 25 26]]
+</code>
+
+<h2>Applications of Broadcasting</h2>
+<ul>
+    <li>Vectorized arithmetic operations without loops</li>
+    <li>Efficient matrix operations</li>
+    <li>Feature scaling in machine learning</li>
+    <li>Image processing (adding constants to images)</li>
+</ul>
+
+<h2>Advantages of Broadcasting</h2>
+<ul>
+    <li>Memory-efficient (no need to replicate arrays)</li>
+    <li>Faster computations due to vectorization</li>
+    <li>Cleaner, simpler code</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Broadcasting is a powerful feature in NumPy that allows flexible operations on arrays of different shapes.
+Mastering broadcasting improves efficiency and simplifies numerical code.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 NumPy Learning Website</p>
+</footer>
+
+</body>
+</html>

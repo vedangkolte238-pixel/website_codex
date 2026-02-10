@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pandas Group By</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #130654;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #130654;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Pandas Group By</h1>
+    <p>Grouping and Aggregating Data in Pandas</p>
+</header>
+
+<section>
+
+<h2>What is Group By?</h2>
+<p>
+The <strong>groupby()</strong> function in Pandas is used to split data into groups based on some criteria, perform computations on each group, and combine the results.
+It’s very useful for aggregation and analysis of grouped data.
+</p>
+
+<h2>Basic Group By Example</h2>
+<code>
+import pandas as pd
+
+data = {
+    'Department': ['HR', 'IT', 'HR', 'IT', 'Sales'],
+    'Employee': ['Alice', 'Bob', 'Charlie', 'David', 'Eve'],
+    'Salary': [50000, 60000, 55000, 65000, 70000]
+}
+df = pd.DataFrame(data)
+
+# Group by Department
+grouped = df.groupby('Department')
+
+# Sum of salaries in each department
+print(grouped['Salary'].sum())
+</code>
+
+<h2>Common Aggregation Functions</h2>
+<code>
+print(grouped['Salary'].mean())    # Average salary per department
+print(grouped['Salary'].max())     # Maximum salary per department
+print(grouped['Salary'].min())     # Minimum salary per department
+print(grouped['Salary'].count())   # Number of employees per department
+</code>
+
+<h2>Multiple Aggregations</h2>
+<code>
+agg_result = grouped['Salary'].agg(['sum', 'mean', 'max', 'min'])
+print(agg_result)
+</code>
+
+<h2>Grouping by Multiple Columns</h2>
+<code>
+data = {
+    'Department': ['HR', 'IT', 'HR', 'IT', 'Sales'],
+    'Gender': ['F', 'M', 'M', 'M', 'F'],
+    'Salary': [50000, 60000, 55000, 65000, 70000]
+}
+df = pd.DataFrame(data)
+
+grouped_multi = df.groupby(['Department', 'Gender'])
+print(grouped_multi['Salary'].mean())
+</code>
+
+<h2>Applications</h2>
+<ul>
+    <li>Summarizing sales, salaries, or other metrics by category</li>
+    <li>Performing statistical analysis on grouped data</li>
+    <li>Generating reports by department, region, or any categorical variable</li>
+    <li>Data aggregation for visualization</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+The <strong>groupby()</strong> function in Pandas is a powerful tool for analyzing and summarizing data.
+It allows splitting data into logical groups, applying aggregation or transformation functions, and combining the results efficiently.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Pandas Learning Website</p>
+</footer>
+
+</body>
+</html>

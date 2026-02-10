@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NumPy Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #013243;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #013243;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>NumPy Projects</h1>
+    <p>Practical Projects Using NumPy</p>
+</header>
+
+<section>
+
+<h2>1. Array Operations Calculator</h2>
+<p>
+Create a program that takes two arrays as input and performs addition, subtraction, multiplication, and division
+using NumPy operations. Display results for each operation.
+</p>
+
+<code>
+import numpy as np
+
+a = np.array([1,2,3])
+b = np.array([4,5,6])
+
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+</code>
+
+<h2>2. Random Data Generator</h2>
+<p>
+Generate random datasets for testing machine learning models. Include random integers, floats, and normal distributions.
+</p>
+
+<code>
+import numpy as np
+
+# Random integers
+rand_int = np.random.randint(0, 100, size=10)
+
+# Random floats
+rand_float = np.random.rand(10)
+
+# Normal distribution
+rand_normal = np.random.normal(0, 1, size=10)
+
+print(rand_int, rand_float, rand_normal)
+</code>
+
+<h2>3. Statistical Analysis of Data</h2>
+<p>
+Use NumPy to calculate mean, median, standard deviation, and cumulative sum of a dataset.
+</p>
+
+<code>
+data = np.array([12, 15, 20, 21, 19, 18])
+
+print("Mean:", np.mean(data))
+print("Median:", np.median(data))
+print("Std Dev:", np.std(data))
+print("Cumulative Sum:", np.cumsum(data))
+</code>
+
+<h2>4. Image Brightness Adjuster</h2>
+<p>
+Using NumPy arrays, read an image as a matrix and adjust its brightness by adding a scalar to all pixel values.
+</p>
+
+<code>
+from PIL import Image
+import numpy as np
+
+img = Image.open("image.jpg")
+arr = np.array(img)
+
+# Increase brightness
+bright_img = np.clip(arr + 50, 0, 255)
+Image.fromarray(bright_img.astype('uint8')).save("bright_image.jpg")
+</code>
+
+<h2>5. Matrix Operations</h2>
+<p>
+Perform matrix addition, multiplication, transpose, and determinant calculation using NumPy.
+</p>
+
+<code>
+A = np.array([[1,2],[3,4]])
+B = np.array([[5,6],[7,8]])
+
+print("Addition:\n", A + B)
+print("Multiplication:\n", np.dot(A, B))
+print("Transpose of A:\n", A.T)
+print("Determinant of A:", np.linalg.det(A))
+</code>
+
+<h2>Conclusion</h2>
+<p>
+These projects help reinforce NumPy concepts like arrays, operations, random number generation, and linear algebra.
+They are perfect for beginners to intermediate learners to gain practical experience in Python numerical computing.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 NumPy Learning Website</p>
+</footer>
+
+</body>
+</html>

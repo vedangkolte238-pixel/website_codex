@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Images</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #F06529;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #F06529;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+        ul {
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        img.example {
+            max-width: 200px;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML Images</h1>
+    <p>Learn how to display images in a web page</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Images make web pages more attractive and informative.  
+In HTML, images are displayed using the <strong>&lt;img&gt;</strong> tag.
+</p>
+
+<h2>Basic Image Syntax</h2>
+<code>
+&lt;img src="image.jpg" alt="Sample Image"&gt;
+</code>
+
+<h2>Explanation</h2>
+<ul>
+    <li><strong>src</strong> specifies the image file path</li>
+    <li><strong>alt</strong> provides alternative text if the image does not load</li>
+    <li>The <strong>&lt;img&gt;</strong> tag is self-closing</li>
+</ul>
+
+<h2>Setting Image Width and Height</h2>
+<p>
+You can control the size of an image using width and height attributes.
+</p>
+<code>
+&lt;img src="photo.png" alt="Photo" width="200" height="150"&gt;
+</code>
+
+<h2>Using CSS to Resize Images</h2>
+<p>
+Images can also be styled using CSS.
+</p>
+<code>
+&lt;img src="logo.png" class="example" alt="Logo"&gt;
+</code>
+
+<h2>Image Folder Structure</h2>
+<p>
+Images are usually stored in a separate folder.
+</p>
+<code>
+project-folder/
+│
+├── images/
+│   └── picture.jpg
+├── index.html
+</code>
+
+<h2>Common Image Formats</h2>
+<ul>
+    <li>JPG – photos</li>
+    <li>PNG – transparent images</li>
+    <li>GIF – simple animations</li>
+    <li>SVG – scalable vector graphics</li>
+</ul>
+
+<h2>Important Tips</h2>
+<ul>
+    <li>Always use the <strong>alt</strong> attribute</li>
+    <li>Keep image size optimized</li>
+    <li>Use meaningful image names</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+HTML images help improve the visual appearance of a website.  
+Using images correctly makes your pages more engaging and user-friendly.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 HTML Learning Website</p>
+</footer>
+
+</body>
+</html>

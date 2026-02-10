@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kotlin OOPs Concepts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4FC3F7;
+            color: #000;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #4FC3F7;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Kotlin OOPs Concepts</h1>
+    <p>Object-Oriented Programming in Kotlin</p>
+</header>
+
+<section>
+
+<h2>What is OOP?</h2>
+<p>
+Object-Oriented Programming (OOP) is a programming approach
+based on objects rather than functions and logic.
+It helps in organizing complex programs efficiently.
+</p>
+
+<h2>Core OOPs Concepts</h2>
+<ul>
+    <li>Class</li>
+    <li>Object</li>
+    <li>Encapsulation</li>
+    <li>Inheritance</li>
+    <li>Polymorphism</li>
+    <li>Abstraction</li>
+</ul>
+
+<h2>1. Class and Object</h2>
+<p>
+A class is a blueprint, and an object is its instance.
+</p>
+
+<code>
+class Animal {
+    fun sound() {
+        println("Animal makes sound")
+    }
+}
+
+val dog = Animal()
+dog.sound()
+</code>
+
+<h2>2. Encapsulation</h2>
+<p>
+Encapsulation hides internal data and allows access
+only through methods.
+</p>
+
+<code>
+class Account {
+    private var balance = 1000
+
+    fun getBalance(): Int {
+        return balance
+    }
+}
+</code>
+
+<h2>3. Inheritance</h2>
+<p>
+Inheritance allows one class to acquire properties of another class.
+</p>
+
+<code>
+open class Vehicle {
+    fun move() {
+        println("Vehicle is moving")
+    }
+}
+
+class Bike : Vehicle()
+</code>
+
+<h2>4. Polymorphism</h2>
+<p>
+Polymorphism allows methods to behave differently
+based on the object.
+</p>
+
+<code>
+open class Shape {
+    open fun draw() {
+        println("Drawing shape")
+    }
+}
+
+class Circle : Shape() {
+    override fun draw() {
+        println("Drawing circle")
+    }
+}
+</code>
+
+<h2>5. Abstraction</h2>
+<p>
+Abstraction hides implementation details
+and shows only essential features.
+</p>
+
+<code>
+abstract class Animal {
+    abstract fun sound()
+}
+
+class Cat : Animal() {
+    override fun sound() {
+        println("Meow")
+    }
+}
+</code>
+
+<h2>Conclusion</h2>
+<p>
+OOP concepts in Kotlin make programs modular, reusable,
+and easier to maintain.
+They are essential for building real-world applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Kotlin Learning Website</p>
+</footer>
+
+</body>
+</html>

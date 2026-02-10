@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Modules and Packages – Basics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Modules and Packages</h1>
+    <p>Complete Explanation with Examples and Output</p>
+</header>
+
+<section>
+
+<h2>What is a Module?</h2>
+<p>
+A module is a Python file containing functions, variables, or classes that can be imported and used in other Python programs.
+</p>
+
+<h2>Creating and Using a Module</h2>
+<code>
+# file: mymodule.py
+def greet(name):
+    return "Hello, " + name
+</code>
+
+<code>
+# file: main.py
+import mymodule
+
+print(mymodule.greet("Alice"))
+</code>
+<div class="output">
+Output:<br>
+Hello, Alice
+</div>
+
+<h2>Importing Specific Functions</h2>
+<code>
+from mymodule import greet
+
+print(greet("Bob"))
+</code>
+<div class="output">
+Output:<br>
+Hello, Bob
+</div>
+
+<h2>Using Aliases</h2>
+<code>
+import mymodule as mm
+
+print(mm.greet("Charlie"))
+</code>
+<div class="output">
+Output:<br>
+Hello, Charlie
+</div>
+
+<h2>What is a Package?</h2>
+<p>
+A package is a collection of Python modules organized in directories.
+It usually contains an <code>__init__.py</code> file to mark the directory as a package.
+</p>
+
+<h2>Using a Package</h2>
+<code>
+# Directory structure:
+# mypackage/
+#     __init__.py
+#     module1.py
+#     module2.py
+
+from mypackage import module1, module2
+
+module1.func1()
+module2.func2()
+</code>
+
+<h2>Python Built-in Modules</h2>
+<p>Python provides many built-in modules for common tasks:</p>
+<ul>
+    <li><strong>math</strong> – mathematical functions</li>
+    <li><strong>random</strong> – generate random numbers</li>
+    <li><strong>os</strong> – interact with the operating system</li>
+    <li><strong>sys</strong> – system-specific parameters and functions</li>
+    <li><strong>datetime</strong> – date and time operations</li>
+</ul>
+
+<h2>Example: Using a Built-in Module</h2>
+<code>
+import math
+
+print(math.sqrt(25))
+print(math.factorial(5))
+</code>
+<div class="output">
+Output:<br>
+5.0<br>
+120
+</div>
+
+<h2>Conclusion</h2>
+<p>
+Modules and packages help organize Python code, promote reusability, and simplify project management. 
+Using them effectively makes your programs modular and efficient.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

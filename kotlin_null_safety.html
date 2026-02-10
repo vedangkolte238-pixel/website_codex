@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kotlin Null Safety</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4FC3F7;
+            color: #000;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #4FC3F7;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Kotlin Null Safety</h1>
+    <p>Preventing Null Pointer Exceptions in Kotlin</p>
+</header>
+
+<section>
+
+<h2>What is Null Safety?</h2>
+<p>
+Null safety is a Kotlin feature that helps prevent
+NullPointerException (NPE) errors.
+Kotlin handles null values at compile time instead of runtime.
+</p>
+
+<h2>Nullable and Non-Nullable Types</h2>
+
+<h3>Non-Nullable Type</h3>
+<code>
+var name: String = "Kotlin"
+// name = null ❌ Not allowed
+</code>
+
+<h3>Nullable Type</h3>
+<code>
+var name: String? = "Kotlin"
+name = null // Allowed
+</code>
+
+<h2>Safe Call Operator (?.)</h2>
+<p>
+The safe call operator executes code only if the value is not null.
+</p>
+
+<code>
+val length = name?.length
+println(length)
+</code>
+
+<h2>Elvis Operator (?:)</h2>
+<p>
+Provides a default value when the variable is null.
+</p>
+
+<code>
+val len = name?.length ?: 0
+println(len)
+</code>
+
+<h2>Not-Null Assertion (!!)</h2>
+<p>
+Forces Kotlin to treat a value as non-null.
+Use carefully, as it can throw an exception.
+</p>
+
+<code>
+val size = name!!.length
+</code>
+
+<h2>Safe Cast (as?)</h2>
+<p>
+Safely casts a value and returns null if casting fails.
+</p>
+
+<code>
+val value: Any = "Hello"
+val str: String? = value as?
+String
+</code>
+
+<h2>Let Function</h2>
+<p>
+Executes code only when the value is not null.
+</p>
+
+<code>
+name?.let {
+    println("Length is ${it.length}")
+}
+</code>
+
+<h2>Why Kotlin Null Safety is Important</h2>
+<ul>
+    <li>Reduces runtime crashes</li>
+    <li>Makes code safer and cleaner</li>
+    <li>Detects errors at compile time</li>
+    <li>Improves app stability</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Kotlin null safety is one of its strongest features.
+By using nullable types and safety operators,
+you can write robust and crash-free applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Kotlin Learning Website</p>
+</footer>
+
+</body>
+</html>

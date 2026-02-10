@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NumPy Random Module</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #013243;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #013243;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>NumPy Random Module</h1>
+    <p>Generating Random Numbers with NumPy</p>
+</header>
+
+<section>
+
+<h2>What Is the Random Module?</h2>
+<p>
+NumPy provides the <strong>numpy.random</strong> module to generate random numbers and perform random sampling.
+It is widely used in simulations, data analysis, and machine learning.
+</p>
+
+<h2>Generating Random Numbers</h2>
+
+<h3>Random floats between 0 and 1</h3>
+<code>
+import numpy as np
+
+arr = np.random.rand(5)  # 5 random floats [0,1)
+print(arr)
+</code>
+
+<h3>Random integers</h3>
+<code>
+arr = np.random.randint(0, 10, size=5)  # 5 random integers from 0 to 9
+print(arr)
+</code>
+
+<h3>Random numbers from a normal distribution</h3>
+<code>
+arr = np.random.randn(5)  # 5 numbers from standard normal distribution
+print(arr)
+</code>
+
+<h3>Random numbers from a specific normal distribution</h3>
+<code>
+arr = np.random.normal(loc=10, scale=2, size=5)  # mean=10, std=2
+print(arr)
+</code>
+
+<h3>Random choice from an array</h3>
+<code>
+arr = np.array([10, 20, 30, 40])
+choice = np.random.choice(arr, size=2)  # pick 2 random elements
+print(choice)
+</code>
+
+<h3>Shuffling arrays</h3>
+<code>
+arr = np.array([1, 2, 3, 4, 5])
+np.random.shuffle(arr)  # shuffle in-place
+print(arr)
+</code>
+
+<h3>Seeding for reproducibility</h3>
+<code>
+np.random.seed(42)  # ensures same random numbers every time
+arr = np.random.rand(3)
+print(arr)
+</code>
+
+<h2>Applications of NumPy Random</h2>
+<ul>
+    <li>Simulations and modeling</li>
+    <li>Random sampling and bootstrapping</li>
+    <li>Machine learning (train/test splitting, initialization)</li>
+    <li>Games and procedural content generation</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+The NumPy random module is a powerful tool for generating random numbers and sampling data.
+Mastering it is essential for simulations, statistical analysis, and machine learning applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 NumPy Learning Website</p>
+</footer>
+
+</body>
+</html>

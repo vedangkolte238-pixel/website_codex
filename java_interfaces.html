@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Interface</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #C65D00;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #C65D00;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Java Interface</h1>
+    <p>Achieving 100% Abstraction</p>
+</header>
+
+<section>
+
+<h2>What is an Interface?</h2>
+<p>
+An interface in Java is a blueprint of a class.
+It contains abstract methods and constants.
+Interfaces are used to achieve abstraction and multiple inheritance.
+</p>
+
+<h2>Why Use Interface?</h2>
+<ul>
+    <li>Supports multiple inheritance</li>
+    <li>Achieves abstraction</li>
+    <li>Improves security</li>
+    <li>Helps in loose coupling</li>
+</ul>
+
+<h2>Interface Syntax</h2>
+<code>
+interface InterfaceName {
+    void methodName();
+}
+</code>
+
+<h2>Implementing an Interface</h2>
+<p>
+A class uses the <b>implements</b> keyword to implement an interface.
+</p>
+
+<code>
+interface Animal {
+    void sound();
+}
+
+class Dog implements Animal {
+    public void sound() {
+        System.out.println("Dog barks");
+    }
+}
+</code>
+
+<h2>Using Interface Object</h2>
+<code>
+class Main {
+    public static void main(String[] args) {
+        Animal a = new Dog();
+        a.sound();
+    }
+}
+</code>
+
+<h2>Output</h2>
+<code>
+Dog barks
+</code>
+
+<h2>Multiple Inheritance Using Interface</h2>
+<p>
+Java does not support multiple inheritance using classes.
+But it supports it using interfaces.
+</p>
+
+<code>
+interface A {
+    void show();
+}
+
+interface B {
+    void display();
+}
+
+class Test implements A, B {
+    public void show() {
+        System.out.println("Show method");
+    }
+
+    public void display() {
+        System.out.println("Display method");
+    }
+}
+</code>
+
+<h2>Interface vs Abstract Class</h2>
+<ul>
+    <li>Interface supports multiple inheritance</li>
+    <li>Methods are abstract by default</li>
+    <li>Variables are public static final</li>
+    <li>Uses implements keyword</li>
+</ul>
+
+<h2>Key Points</h2>
+<ul>
+    <li>Interface cannot have constructors</li>
+    <li>All methods are public</li>
+    <li>Class must implement all interface methods</li>
+    <li>Interface reference can hold object of implementing class</li>
+</ul>
+
+<h2>Real-life Example</h2>
+<p>
+A payment system interface can be implemented by credit card, UPI, or net banking.
+Each follows the same rules but works differently.
+</p>
+
+<h2>Conclusion</h2>
+<p>
+Interfaces make Java programs more flexible, scalable, and maintainable.
+They are a key part of object-oriented programming.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Java Learning Website</p>
+</footer>
+
+</body>
+</html>

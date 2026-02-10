@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML SVG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #F06529;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #F06529;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+        svg {
+            border: 1px solid #ccc;
+            margin-top: 15px;
+            display: block;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML SVG</h1>
+    <p>Scalable Vector Graphics for Web</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+SVG (Scalable Vector Graphics) is an XML-based markup language for describing 2D graphics.  
+It allows graphics to scale without losing quality.
+</p>
+
+<h2>Basic SVG Syntax</h2>
+<code>
+&lt;svg width="100" height="100"&gt;
+    &lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /&gt;
+&lt;/svg&gt;
+</code>
+
+<h2>Example: Circle</h2>
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="#F06529" />
+</svg>
+
+<h2>Example: Rectangle</h2>
+<code>
+&lt;svg width="200" height="100"&gt;
+    &lt;rect width="150" height="80" x="25" y="10" stroke="black" fill="#F06529" stroke-width="3" /&gt;
+&lt;/svg&gt;
+</code>
+
+<svg width="200" height="100">
+    <rect width="150" height="80" x="25" y="10" stroke="black" fill="#F06529" stroke-width="3" />
+</svg>
+
+<h2>Example: Line</h2>
+<code>
+&lt;svg width="200" height="100"&gt;
+    &lt;line x1="0" y1="50" x2="200" y2="50" stroke="#F06529" stroke-width="4" /&gt;
+&lt;/svg&gt;
+</code>
+
+<svg width="200" height="100">
+    <line x1="0" y1="50" x2="200" y2="50" stroke="#F06529" stroke-width="4" />
+</svg>
+
+<h2>Example: Text</h2>
+<code>
+&lt;svg width="200" height="100"&gt;
+    &lt;text x="10" y="50" font-family="Arial" font-size="20" fill="#F06529"&gt;Hello SVG&lt;/text&gt;
+&lt;/svg&gt;
+</code>
+
+<svg width="200" height="100">
+    <text x="10" y="50" font-family="Arial" font-size="20" fill="#F06529">Hello SVG</text>
+</svg>
+
+<h2>Key Points</h2>
+<ul>
+    <li>SVG is scalable and resolution-independent</li>
+    <li>Can include shapes, text, lines, and paths</li>
+    <li>Works well with CSS and JavaScript for animations</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+SVG is perfect for logos, icons, charts, and interactive graphics because it scales without losing quality.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 HTML Learning Website</p>
+</footer>
+
+</body>
+</html>

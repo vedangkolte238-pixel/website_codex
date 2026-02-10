@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Arrays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #F7DF1E;
+            color: #000;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #F7DF1E;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JavaScript Arrays</h1>
+    <p>Store and Manage Multiple Values</p>
+</header>
+
+<section>
+
+<h2>What is an Array?</h2>
+<p>
+An array is a variable that can store multiple values in a single place.
+Each value in an array has an index number starting from 0.
+</p>
+
+<h2>Creating an Array</h2>
+<code>
+let fruits = ["Apple", "Banana", "Mango"];
+</code>
+
+<h2>Accessing Array Elements</h2>
+<code>
+let fruits = ["Apple", "Banana", "Mango"];
+console.log(fruits[0]);  // Apple
+console.log(fruits[2]);  // Mango
+</code>
+
+<h2>Changing Array Values</h2>
+<code>
+let fruits = ["Apple", "Banana", "Mango"];
+fruits[1] = "Orange";
+console.log(fruits);
+</code>
+
+<h2>Array Length</h2>
+<p>
+The length property returns the number of elements.
+</p>
+
+<code>
+let fruits = ["Apple", "Banana", "Mango"];
+console.log(fruits.length);
+</code>
+
+<h2>Common Array Methods</h2>
+
+<h3>push() – Add at End</h3>
+<code>
+let numbers = [1, 2, 3];
+numbers.push(4);
+</code>
+
+<h3>pop() – Remove from End</h3>
+<code>
+let numbers = [1, 2, 3];
+numbers.pop();
+</code>
+
+<h3>shift() – Remove from Start</h3>
+<code>
+let numbers = [1, 2, 3];
+numbers.shift();
+</code>
+
+<h3>unshift() – Add at Start</h3>
+<code>
+let numbers = [1, 2, 3];
+numbers.unshift(0);
+</code>
+
+<h2>Looping Through an Array</h2>
+<code>
+let fruits = ["Apple", "Banana", "Mango"];
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+</code>
+
+<h2>forEach() Method</h2>
+<code>
+let fruits = ["Apple", "Banana", "Mango"];
+
+fruits.forEach(function(item) {
+    console.log(item);
+});
+</code>
+
+<h2>Array with Mixed Data</h2>
+<code>
+let data = ["John", 25, true];
+</code>
+
+<h2>Why Use Arrays?</h2>
+<ul>
+    <li>Store multiple values easily</li>
+    <li>Organize related data</li>
+    <li>Work efficiently with loops</li>
+    <li>Essential for real applications</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Arrays are a core part of JavaScript.
+They help manage collections of data and are used in almost every program.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 JavaScript Learning Website</p>
+</footer>
+
+</body>
+</html>

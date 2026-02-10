@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pandas Merge & Join</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #130654;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #130654;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Pandas Merge & Join</h1>
+    <p>Combining DataFrames in Pandas</p>
+</header>
+
+<section>
+
+<h2>What is Merge?</h2>
+<p>
+The <strong>merge()</strong> function in Pandas combines two DataFrames based on a key column(s) similar to SQL joins.
+This allows integrating data from multiple sources into a single DataFrame.
+</p>
+
+<h2>Basic Merge</h2>
+<code>
+import pandas as pd
+
+df1 = pd.DataFrame({
+    'EmployeeID': [1, 2, 3],
+    'Name': ['Alice', 'Bob', 'Charlie']
+})
+
+df2 = pd.DataFrame({
+    'EmployeeID': [1, 2, 4],
+    'Salary': [50000, 60000, 70000]
+})
+
+# Inner join (only matching keys)
+merged_inner = pd.merge(df1, df2, on='EmployeeID', how='inner')
+print(merged_inner)
+</code>
+
+<h2>Types of Merge / Join</h2>
+<code>
+# Left join (all rows from left, matched from right)
+merged_left = pd.merge(df1, df2, on='EmployeeID', how='left')
+
+# Right join (all rows from right, matched from left)
+merged_right = pd.merge(df1, df2, on='EmployeeID', how='right')
+
+# Outer join (all rows from both, NaN for missing)
+merged_outer = pd.merge(df1, df2, on='EmployeeID', how='outer')
+</code>
+
+<h2>Merge on Multiple Columns</h2>
+<code>
+df1 = pd.DataFrame({
+    'EmployeeID': [1, 2, 3],
+    'Dept': ['HR', 'IT', 'IT'],
+    'Name': ['Alice', 'Bob', 'Charlie']
+})
+
+df2 = pd.DataFrame({
+    'EmployeeID': [1, 2, 3],
+    'Dept': ['HR', 'IT', 'Sales'],
+    'Salary': [50000, 60000, 70000]
+})
+
+merged_multi = pd.merge(df1, df2, on=['EmployeeID', 'Dept'], how='inner')
+print(merged_multi)
+</code>
+
+<h2>Concatenation (Stacking DataFrames)</h2>
+<code>
+# Combine vertically
+df_top = pd.DataFrame({'A':[1,2], 'B':[3,4]})
+df_bottom = pd.DataFrame({'A':[5,6], 'B':[7,8]})
+
+df_concat = pd.concat([df_top, df_bottom], axis=0)  # Rows
+print(df_concat)
+
+# Combine horizontally
+df_concat_h = pd.concat([df_top, df_bottom], axis=1)  # Columns
+print(df_concat_h)
+</code>
+
+<h2>Applications</h2>
+<ul>
+    <li>Integrating data from multiple CSV, Excel, or database tables</li>
+    <li>Performing SQL-style joins in Python</li>
+    <li>Combining different datasets for analysis or visualization</li>
+    <li>Stacking or appending datasets vertically or horizontally</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Pandas provides versatile tools to merge, join, and concatenate DataFrames.
+This is essential for combining datasets, integrating data sources, and preparing data for analysis.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Pandas Learning Website</p>
+</footer>
+
+</body>
+</html>

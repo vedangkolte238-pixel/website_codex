@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pandas Introduction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #130654;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #130654;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Pandas Introduction</h1>
+    <p>Learn the Basics of Pandas for Data Analysis</p>
+</header>
+
+<section>
+
+<h2>What is Pandas?</h2>
+<p>
+Pandas is a popular Python library for data manipulation and analysis.
+It provides data structures like <strong>Series</strong> and <strong>DataFrame</strong> to handle structured data efficiently.
+</p>
+
+<h2>Why Use Pandas?</h2>
+<ul>
+    <li>Easy data manipulation and analysis</li>
+    <li>Works seamlessly with NumPy and other Python libraries</li>
+    <li>Supports reading/writing data from multiple file formats (CSV, Excel, SQL, JSON)</li>
+    <li>Powerful tools for cleaning, transforming, and aggregating data</li>
+</ul>
+
+<h2>Features of Pandas</h2>
+<ul>
+    <li>High-performance data structures (Series, DataFrame)</li>
+    <li>Handling missing data easily</li>
+    <li>Flexible reshaping and merging of datasets</li>
+    <li>Time series functionality</li>
+</ul>
+
+<h2>Basic Pandas Objects</h2>
+<p>
+Two main data structures in Pandas:
+</p>
+<ul>
+    <li><strong>Series:</strong> 1D labeled array capable of holding any data type</li>
+    <li><strong>DataFrame:</strong> 2D labeled data structure with columns of potentially different types</li>
+</ul>
+
+<h2>Example: Creating Series and DataFrame</h2>
+<code>
+import pandas as pd
+
+# Series
+s = pd.Series([10, 20, 30, 40])
+print(s)
+
+# DataFrame
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Age': [25, 30, 35],
+    'City': ['New York', 'Los Angeles', 'Chicago']
+}
+df = pd.DataFrame(data)
+print(df)
+</code>
+
+<h2>Applications of Pandas</h2>
+<ul>
+    <li>Data cleaning and preparation</li>
+    <li>Exploratory data analysis (EDA)</li>
+    <li>Statistical and numerical computations</li>
+    <li>Time series analysis</li>
+    <li>Machine learning preprocessing</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Pandas is an essential tool for any data analyst or data scientist.
+It makes handling, analyzing, and manipulating structured data simple and efficient.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Pandas Learning Website</p>
+</footer>
+
+</body>
+</html>

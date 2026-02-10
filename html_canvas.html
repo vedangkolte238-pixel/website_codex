@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Canvas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #F06529;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #F06529;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            margin-top: 15px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML Canvas</h1>
+    <p>Drawing Graphics on a Web Page</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+The HTML &lt;canvas&gt; element allows you to draw graphics such as shapes, text, images, and animations directly in the browser using JavaScript.
+</p>
+
+<h2>Basic Canvas Syntax</h2>
+<code>
+&lt;canvas id="myCanvas" width="300" height="150"&gt;&lt;/canvas&gt;
+</code>
+
+<h2>Drawing a Rectangle</h2>
+<code>
+&lt;canvas id="rectCanvas" width="300" height="150"&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+var canvas = document.getElementById('rectCanvas');
+var ctx = canvas.getContext('2d');
+ctx.fillStyle = '#F06529';
+ctx.fillRect(50, 20, 150, 100);
+&lt;/script&gt;
+</code>
+
+<canvas id="rectCanvas" width="300" height="150"></canvas>
+<script>
+var canvas = document.getElementById('rectCanvas');
+var ctx = canvas.getContext('2d');
+ctx.fillStyle = '#F06529';
+ctx.fillRect(50, 20, 150, 100);
+</script>
+
+<h2>Drawing a Circle</h2>
+<code>
+&lt;canvas id="circleCanvas" width="300" height="150"&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+var canvas = document.getElementById('circleCanvas');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.arc(150, 75, 50, 0, 2 * Math.PI);
+ctx.fillStyle = '#F06529';
+ctx.fill();
+&lt;/script&gt;
+</code>
+
+<canvas id="circleCanvas" width="300" height="150"></canvas>
+<script>
+var canvas = document.getElementById('circleCanvas');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.arc(150, 75, 50, 0, 2 * Math.PI);
+ctx.fillStyle = '#F06529';
+ctx.fill();
+</script>
+
+<h2>Adding Text on Canvas</h2>
+<code>
+ctx.font = "20px Arial";
+ctx.fillStyle = "blue";
+ctx.fillText("Hello Canvas", 50, 50);
+</code>
+
+<h2>Key Points</h2>
+<ul>
+    <li>&lt;canvas&gt; defines a drawable area</li>
+    <li>JavaScript is used for drawing</li>
+    <li>Supports shapes, text, images, and animations</li>
+    <li>Requires specifying width and height</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+HTML Canvas is a powerful feature to create dynamic graphics and interactive web applications without needing external plugins.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 HTML Learning Website</p>
+</footer>
+
+</body>
+</html>

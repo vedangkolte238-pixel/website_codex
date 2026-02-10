@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kotlin Coroutines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4FC3F7;
+            color: #000;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #4FC3F7;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Kotlin Coroutines</h1>
+    <p>Asynchronous Programming Made Simple</p>
+</header>
+
+<section>
+
+<h2>What are Coroutines?</h2>
+<p>
+Coroutines are a Kotlin feature used for writing asynchronous
+and non-blocking code in a simple and readable way.
+They allow long-running tasks to run without blocking the main thread.
+</p>
+
+<h2>Why Use Coroutines?</h2>
+<ul>
+    <li>Simpler than threads</li>
+    <li>Efficient and lightweight</li>
+    <li>Easy to read and maintain</li>
+    <li>Perfect for network and background tasks</li>
+</ul>
+
+<h2>Coroutine Basics</h2>
+<p>
+Coroutines run inside a <b>CoroutineScope</b> and are launched
+using coroutine builders.
+</p>
+
+<h3>launch</h3>
+<code>
+import kotlinx.coroutines.*
+
+fun main() = runBlocking {
+    launch {
+        println("Coroutine running")
+    }
+}
+</code>
+
+<h2>runBlocking</h2>
+<p>
+Blocks the current thread until coroutine execution is complete.
+Mostly used in testing and main functions.
+</p>
+
+<code>
+runBlocking {
+    delay(1000)
+    println("Task completed")
+}
+</code>
+
+<h2>suspend Function</h2>
+<p>
+Suspend functions can pause execution without blocking the thread.
+</p>
+
+<code>
+suspend fun fetchData() {
+    delay(2000)
+    println("Data fetched")
+}
+</code>
+
+<h2>delay()</h2>
+<p>
+Non-blocking alternative to Thread.sleep().
+</p>
+
+<code>
+delay(1000) // waits for 1 second
+</code>
+
+<h2>async and await</h2>
+<p>
+Used when you want to return a result from a coroutine.
+</p>
+
+<code>
+val result = async {
+    delay(1000)
+    "Hello Coroutines"
+}
+
+println(result.await())
+</code>
+
+<h2>Dispatchers</h2>
+<p>
+Dispatchers decide which thread the coroutine runs on.
+</p>
+
+<ul>
+    <li><b>Dispatchers.Main</b> – UI thread</li>
+    <li><b>Dispatchers.IO</b> – Network and disk operations</li>
+    <li><b>Dispatchers.Default</b> – CPU intensive tasks</li>
+</ul>
+
+<code>
+launch(Dispatchers.IO) {
+    println("Running in IO thread")
+}
+</code>
+
+<h2>Advantages of Coroutines</h2>
+<ul>
+    <li>Re

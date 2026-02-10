@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NumPy Indexing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #013243;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #013243;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>NumPy Indexing</h1>
+    <p>Access and Manipulate Elements in NumPy Arrays</p>
+</header>
+
+<section>
+
+<h2>Indexing 1D Arrays</h2>
+<code>
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+
+print(arr[0])   # 10
+print(arr[2])   # 30
+print(arr[-1])  # 50 (last element)
+</code>
+
+<h2>Slicing 1D Arrays</h2>
+<code>
+print(arr[1:4])    # [20 30 40]
+print(arr[:3])     # [10 20 30]
+print(arr[2:])     # [30 40 50]
+print(arr[::2])    # [10 30 50] (every second element)
+</code>
+
+<h2>Indexing 2D Arrays</h2>
+<code>
+arr2d = np.array([[1, 2, 3],
+                  [4, 5, 6],
+                  [7, 8, 9]])
+
+print(arr2d[0, 1])  # 2 (row 0, col 1)
+print(arr2d[2, 2])  # 9
+</code>
+
+<h2>Slicing 2D Arrays</h2>
+<code>
+print(arr2d[0:2, 1:3])  
+# [[2 3]
+#  [5 6]]
+
+print(arr2d[:, 0])  # first column → [1 4 7]
+print(arr2d[1, :])  # second row → [4 5 6]
+</code>
+
+<h2>Boolean Indexing</h2>
+<code>
+arr = np.array([10, 15, 20, 25, 30])
+mask = arr > 20
+print(arr[mask])  # [25 30]
+
+# Shortcut:
+print(arr[arr % 20 == 0])  # [20]
+</code>
+
+<h2>Fancy Indexing</h2>
+<code>
+arr = np.array([5, 10, 15, 20, 25])
+indices = [0, 2, 4]
+print(arr[indices])  # [5 15 25]
+
+arr2d = np.array([[1, 2],
+                  [3, 4],
+                  [5, 6]])
+rows = [0, 2]
+cols = [1, 0]
+print(arr2d[rows, cols])  # [2 5]
+</code>
+
+<h2>Applications</h2>
+<ul>
+    <li>Extracting specific rows, columns, or elements</li>
+    <li>Filtering arrays based on conditions</li>
+    <li>Reordering or selecting subsets of data</li>
+    <li>Efficient data preprocessing for machine learning</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Indexing and slicing in NumPy allows you to access and manipulate elements efficiently.
+Boolean and fancy indexing provide powerful ways to filter and select data without loops.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 NumPy Learning Website</p>
+</footer>
+
+</body>
+</html>

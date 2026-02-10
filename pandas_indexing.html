@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pandas Indexing & Selection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #130654;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #130654;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Pandas Indexing & Selection</h1>
+    <p>Accessing Rows and Columns in Pandas DataFrames</p>
+</header>
+
+<section>
+
+<h2>Selecting Columns</h2>
+<code>
+import pandas as pd
+
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Age': [25, 30, 35],
+    'City': ['New York', 'Los Angeles', 'Chicago']
+}
+df = pd.DataFrame(data)
+
+# Single column
+print(df['Name'])
+
+# Multiple columns
+print(df[['Name', 'Age']])
+</code>
+
+<h2>Selecting Rows</h2>
+<code>
+# Using iloc (integer-location based)
+print(df.iloc[0])   # First row
+print(df.iloc[0:2]) # First two rows
+
+# Using loc (label-based)
+print(df.loc[0])    # First row
+print(df.loc[0:1])  # First two rows
+</code>
+
+<h2>Conditional Selection</h2>
+<code>
+# Select rows where Age > 28
+print(df[df['Age'] > 28])
+
+# Select rows where City is 'Chicago'
+print(df[df['City'] == 'Chicago'])
+</code>
+
+<h2>Setting and Accessing Index</h2>
+<code>
+df_indexed = df.set_index('Name')
+print(df_indexed)
+
+# Access row by index
+print(df_indexed.loc['Bob'])
+</code>
+
+<h2>Boolean Indexing</h2>
+<code>
+# Create a boolean mask
+mask = df['Age'] > 28
+print(df[mask])  # Only rows with Age > 28
+</code>
+
+<h2>Using .at and .iat</h2>
+<code>
+# Fast access to single value
+print(df.at[1, 'City'])  # 'Los Angeles'
+print(df.iat[1, 2])      # 'Los Angeles' (integer-based)
+</code>
+
+<h2>Applications</h2>
+<ul>
+    <li>Filtering data based on conditions</li>
+    <li>Accessing specific rows or columns efficiently</li>
+    <li>Preparing subsets of data for analysis or visualization</li>
+    <li>Integrating with other libraries like NumPy and Matplotlib</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Indexing and selection in Pandas is essential for efficient data manipulation.
+Using loc, iloc, conditional and boolean indexing allows precise control over your dataset.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Pandas Learning Website</p>
+</footer>
+
+</body>
+</html>

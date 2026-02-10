@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction to SQL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color:  #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color:  #0A2540;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        ul.topic-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Introduction to SQL</h1>
+    <p>Learn the Basics of Structured Query Language</p>
+</header>
+
+<section>
+
+<h2>What is SQL?</h2>
+<p>
+SQL stands for <strong>Structured Query Language</strong>.  
+It is used to store, retrieve, update, and manage data in a database.
+SQL works with relational databases like MySQL, Oracle, PostgreSQL, and SQL Server.
+</p>
+
+<h2>Why SQL is Important?</h2>
+<ul class="topic-list">
+    <li>SQL is used in almost every application that stores data</li>
+    <li>It is easy to learn and very powerful</li>
+    <li>Required skill for developers, data analysts, and testers</li>
+    <li>Works with large amounts of data efficiently</li>
+</ul>
+
+<h2>Types of SQL Commands</h2>
+
+<h3>1. DDL (Data Definition Language)</h3>
+<p>Used to define and modify database structure.</p>
+<code>
+CREATE  
+ALTER  
+DROP  
+TRUNCATE
+</code>
+
+<h3>2. DML (Data Manipulation Language)</h3>
+<p>Used to manage data inside tables.</p>
+<code>
+INSERT  
+UPDATE  
+DELETE
+</code>
+
+<h3>3. DQL (Data Query Language)</h3>
+<p>Used to retrieve data from the database.</p>
+<code>
+SELECT
+</code>
+
+<h3>4. DCL (Data Control Language)</h3>
+<p>Used to control access to data.</p>
+<code>
+GRANT  
+REVOKE
+</code>
+
+<h3>5. TCL (Transaction Control Language)</h3>
+<p>Used to manage transactions.</p>
+<code>
+COMMIT  
+ROLLBACK  
+SAVEPOINT
+</code>
+
+<h2>Basic SQL Example</h2>
+<p>Creating a table and inserting data:</p>
+<code>
+CREATE TABLE students (
+    id INT,
+    name VARCHAR(50),
+    age INT
+);
+
+INSERT INTO students VALUES (1, 'Rahul', 20);
+</code>
+
+<h2>Where SQL is Used?</h2>
+<ul class="topic-list">
+    <li>Web applications</li>
+    <li>Banking systems</li>
+    <li>Student management systems</li>
+    <li>Data analysis and reporting</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+SQL is a must-know language for anyone working with data.  
+Once you understand the basics, you can easily move to advanced queries, joins, and database optimization.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Responsive Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #F06529;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #F06529;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+
+        /* Responsive Layout Demo */
+        .container {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .box {
+            flex: 1;
+            padding: 20px;
+            background-color: #ffe3d6;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Media Query */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML Responsive Design</h1>
+    <p>Making Web Pages Work on All Screen Sizes</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Responsive design means creating web pages that automatically adjust to different screen sizes like mobile, tablet, and desktop.
+The same page looks good on every device.
+</p>
+
+<h2>Why Responsive Design is Important</h2>
+<ul>
+    <li>Mobile-friendly websites</li>
+    <li>Better user experience</li>
+    <li>Easy to maintain one layout</li>
+    <li>Improves readability on all devices</li>
+</ul>
+
+<h2>Viewport Meta Tag</h2>
+<p>
+The viewport tag tells the browser how to control page dimensions and scaling.
+</p>
+<code>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</code>
+
+<h2>Flexible Layout Using CSS</h2>
+<p>
+Flexible layouts use percentages or flexbox instead of fixed widths.
+</p>
+<code>
+.container {
+    display: flex;
+}
+.box {
+    flex: 1;
+}
+</code>
+
+<h2>Media Queries</h2>
+<p>
+Media queries apply different styles based on screen size.
+</p>
+<code>
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+</code>
+
+<h2>Responsive Layout Example</h2>
+<p>
+Resize the browser window to see how the layout changes.
+</p>
+
+<div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+</div>
+
+<h2>Responsive Images</h2>
+<p>
+Images should resize automatically to fit the screen.
+</p>
+<code>
+img {
+    max-width: 100%;
+    height: auto;
+}
+</code>
+
+<h2>Key Points to Remember</h2>
+<ul>
+    <li>Use viewport meta tag</li>
+    <li>Avoid fixed widths</li>
+    <li>Use media queries</li>
+    <li>Test on different screen sizes</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+HTML responsive design ensures your website looks clean and usable on all devices.
+It is an essential skill for modern web development.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 HTML Learning Website</p>
+</footer>
+
+</body>
+</html>

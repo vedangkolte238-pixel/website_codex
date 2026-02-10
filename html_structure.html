@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Basic Structure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #F06529;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #F06529;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+        ul.structure-list li {
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML Basic Structure</h1>
+    <p>Understanding the skeleton of an HTML page</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Every HTML page follows a standard structure that allows browsers to understand and render the content correctly.  
+Using proper structure ensures the page is readable, maintainable, and works across all browsers.
+</p>
+
+<h2>Basic Structure</h2>
+<p>The simplest HTML document looks like this:</p>
+<code>
+<!DOCTYPE html>               <!-- Defines the document as HTML5 -->
+<html lang="en">              <!-- Root element of the HTML page -->
+    <head>                    <!-- Metadata section -->
+        <meta charset="UTF-8">   <!-- Character encoding -->
+        <title>My First Page</title>  <!-- Page title -->
+    </head>
+    <body>                    <!-- Content section visible to users -->
+        <h1>Welcome to HTML</h1>
+        <p>This is a paragraph of text.</p>
+    </body>
+</html>
+</code>
+
+<h2>Explanation of Each Section</h2>
+<ul class="structure-list">
+    <li><strong>&lt;!DOCTYPE html&gt;</strong>: Declares that this document is HTML5.</li>
+    <li><strong>&lt;html lang="en"&gt;</strong>: The root element that wraps the entire page.</li>
+    <li><strong>&lt;head&gt;</strong>: Contains metadata, including the page title, character encoding, links to CSS, and scripts.</li>
+    <li><strong>&lt;meta charset="UTF-8"&gt;</strong>: Sets the character encoding to UTF-8 for proper text rendering.</li>
+    <li><strong>&lt;title&gt;</strong>: Specifies the page title shown in the browser tab.</li>
+    <li><strong>&lt;body&gt;</strong>: Contains all visible content such as headings, paragraphs, images, links, and other elements.</li>
+</ul>
+
+<h2>Indented Visual Structure</h2>
+<p>Using indentation helps show the hierarchy of elements:</p>
+<code>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <header>
+            <h1>Main Heading</h1>
+        </header>
+        <section>
+            <p>Paragraph content</p>
+        </section>
+        <footer>
+            <p>Footer information</p>
+        </footer>
+    </body>
+</html>
+</code>
+
+<h2>Conclusion</h2>
+<p>
+The basic structure of HTML forms the foundation of every web page.  
+Always start with a proper DOCTYPE, include the <code>&lt;head&gt;</code> for metadata, and place all visible content inside the <code>&lt;body&gt;</code>.  
+This structure is essential before adding styles with CSS or interactivity with JavaScript.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 HTML Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML APIs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #F06529;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #F06529;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #F06529;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML APIs</h1>
+    <p>Using Web APIs to Enhance Web Pages</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+HTML APIs are built-in browser features accessible through JavaScript.  
+They allow you to interact with the browser, device hardware, or external services.
+</p>
+
+<h2>Why HTML APIs Are Useful</h2>
+<ul>
+    <li>Access device features like geolocation, camera, or clipboard</li>
+    <li>Enhance user experience with dynamic content</li>
+    <li>Interact with external data using Fetch API</li>
+</ul>
+
+<h2>Examples of HTML APIs</h2>
+
+<h3>1. Geolocation API</h3>
+<p>Get the user’s current location.</p>
+<button onclick="getLocation()">Get Location</button>
+<p id="geoResult"></p>
+<code>
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        document.getElementById('geoResult').innerText = "Geolocation not supported";
+    }
+}
+
+function showPosition(position) {
+    document.getElementById('geoResult').innerText =
+        "Latitude: " + position.coords.latitude +
+        ", Longitude: " + position.coords.longitude;
+}
+</code>
+<script>
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        document.getElementById('geoResult').innerText = "Geolocation not supported";
+    }
+}
+
+function showPosition(position) {
+    document.getElementById('geoResult').innerText =
+        "Latitude: " + position.coords.latitude +
+        ", Longitude: " + position.coords.longitude;
+}
+</script>
+
+<h3>2. Fetch API</h3>
+<p>Retrieve data from a public API.</p>
+<button onclick="fetchData()">Fetch Joke</button>
+<p id="apiResult"></p>
+<code>
+function fetchData() {
+    fetch('https://api.chucknorris.io/jokes/random')
+    .then(response => response.json())
+    .then(data => document.getElementById('apiResult').innerText = data.value);
+}
+</code>
+<script>
+function fetchData() {
+    fetch('https://api.chucknorris.io/jokes/random')
+    .then(response => response.json())
+    .then(data => document.getElementById('apiResult').innerText = data.value);
+}
+</script>
+
+<h3>3. Clipboard API</h3>
+<p>Copy text to clipboard.</p>
+<button onclick="copyText()">Copy Text</button>
+<p id="clipResult"></p>
+<code>
+function copyText() {
+    navigator.clipboard.writeText("Hello from Clipboard API")
+        .then(() => document.getElementById('clipResult').innerText = "Text copied!")
+        .catch(err => document.getElementById('clipResult').innerText = "Error: " + err);
+}
+</code>
+<script>
+function copyText() {
+    navigator.clipboard.writeText("Hello from Clipboard API")
+        .then(() => document.getElementById('clipResult').innerText = "Text copied!")
+        .catch(err => document.getElementById('clipResult').innerText = "Error: " + err);
+}
+</script>
+
+<h2>Key Points</h2>
+<ul>
+    <li>APIs allow interaction with browser or external services</li>
+    <li>Most APIs are accessed through JavaScript</li>
+    <li>Some APIs require user permission, like geolocation or camera</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+HTML APIs make web pages more interactive and powerful.  
+Using APIs, you can integrate device features, fetch data, and enhance user experience.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 HTML Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #C65D00;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #C65D00;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Java Classes</h1>
+    <p>Building blocks of Java programs</p>
+</header>
+
+<section>
+
+<h2>What is a Class?</h2>
+<p>
+A class is a blueprint or template used to create objects.
+It defines properties (variables) and behaviors (methods).
+</p>
+
+<h2>Why Use Classes?</h2>
+<ul>
+    <li>To organize code</li>
+    <li>To model real-world entities</li>
+    <li>To support object-oriented programming</li>
+    <li>To reuse code easily</li>
+</ul>
+
+<h2>Basic Class Structure</h2>
+<code>
+class ClassName {
+    // variables
+    // methods
+}
+</code>
+
+<h2>Example: Simple Class</h2>
+<code>
+class Student {
+    int id;
+    String name;
+}
+</code>
+
+<h2>Creating an Object</h2>
+<p>
+An object is an instance of a class.
+</p>
+
+<code>
+Student s1 = new Student();
+</code>
+
+<h2>Accessing Class Members</h2>
+<code>
+s1.id = 101;
+s1.name = "Rahul";
+</code>
+
+<h2>Class with Method</h2>
+<code>
+class Student {
+    int id;
+    String name;
+
+    void display() {
+        System.out.println(id);
+        System.out.println(name);
+    }
+}
+</code>
+
+<h2>Calling a Method</h2>
+<code>
+Student s1 = new Student();
+s1.id = 101;
+s1.name = "Rahul";
+s1.display();
+</code>
+
+<h2>Multiple Objects</h2>
+<code>
+Student s1 = new Student();
+Student s2 = new Student();
+
+s1.name = "Amit";
+s2.name = "Neha";
+</code>
+
+<h2>Class with Constructor</h2>
+<p>
+A constructor initializes objects.
+It has the same name as the class.
+</p>
+
+<code>
+class Student {
+    int id;
+    String name;
+
+    Student(int i, String n) {
+        id = i;
+        name = n;
+    }
+}
+</code>
+
+<h2>Constructor Example</h2>
+<code>
+Student s1 = new Student(101, "Rahul");
+Student s2 = new Student(102, "Anita");
+</code>
+
+<h2>Main Method Inside Class</h2>
+<code>
+class Test {
+    public static void main(String[] args) {
+        Student s1 = new Student(101, "Rahul");
+        s1.display();
+    }
+}
+</code>
+
+<h2>Key Points</h2>
+<ul>
+    <li>Class is a blueprint</li>
+    <li>Object is a real entity</li>
+    <li>Variables store data</li>
+    <li>Methods define behavior</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Classes are the foundation of Java programming.
+Understanding classes helps you learn objects, inheritance,
+polymorphism, and other OOP concepts.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Java Learning Website</p>
+</footer>
+
+</body>
+</html>

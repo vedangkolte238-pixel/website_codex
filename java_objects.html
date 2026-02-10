@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Objects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #C65D00;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #C65D00;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Java Objects</h1>
+    <p>Instances of Java Classes</p>
+</header>
+
+<section>
+
+<h2>What is an Object?</h2>
+<p>
+An object is a real-world entity created from a class.
+It represents data and behavior together.
+</p>
+
+<h2>Why Objects are Important</h2>
+<ul>
+    <li>Objects represent real-life entities</li>
+    <li>They help structure programs</li>
+    <li>They allow reuse of class code</li>
+    <li>They support object-oriented programming</li>
+</ul>
+
+<h2>Creating an Object</h2>
+<p>
+Objects are created using the <strong>new</strong> keyword.
+</p>
+
+<code>
+ClassName objectName = new ClassName();
+</code>
+
+<h2>Example Class</h2>
+<code>
+class Car {
+    String brand;
+    int speed;
+}
+</code>
+
+<h2>Creating an Object of Car</h2>
+<code>
+Car c1 = new Car();
+</code>
+
+<h2>Assigning Values to Object</h2>
+<code>
+c1.brand = "BMW";
+c1.speed = 120;
+</code>
+
+<h2>Accessing Object Data</h2>
+<code>
+System.out.println(c1.brand);
+System.out.println(c1.speed);
+</code>
+
+<h2>Object with Method</h2>
+<code>
+class Car {
+    String brand;
+    int speed;
+
+    void display() {
+        System.out.println(brand);
+        System.out.println(speed);
+    }
+}
+</code>
+
+<h2>Calling Method Using Object</h2>
+<code>
+Car c1 = new Car();
+c1.brand = "Audi";
+c1.speed = 150;
+c1.display();
+</code>
+
+<h2>Multiple Objects</h2>
+<p>
+Multiple objects can be created from the same class.
+</p>
+
+<code>
+Car c1 = new Car();
+Car c2 = new Car();
+
+c1.brand = "BMW";
+c2.brand = "Tesla";
+</code>
+
+<h2>Objects with Constructor</h2>
+<code>
+class Car {
+    String brand;
+    int speed;
+
+    Car(String b, int s) {
+        brand = b;
+        speed = s;
+    }
+}
+</code>
+
+<h2>Creating Object Using Constructor</h2>
+<code>
+Car c1 = new Car("BMW", 120);
+Car c2 = new Car("Tesla", 140);
+</code>
+
+<h2>Object Reference</h2>
+<p>
+The variable stores the reference of the object, not the object itself.
+</p>
+
+<code>
+Car c1 = new Car();
+Car c2 = c1;
+</code>
+
+<h2>Object and Memory</h2>
+<ul>
+    <li>Objects are stored in heap memory</li>
+    <li>Reference variables are stored in stack</li>
+    <li>Garbage collector removes unused objects</li>
+</ul>
+
+<h2>Key Points</h2>
+<ul>
+    <li>Object is an instance of a class</li>
+    <li>Created using new keyword</li>
+    <li>Accessed using dot operator</li>
+    <li>Multiple objects can exist for one class</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Objects make Java powerful by combining data and behavior.
+Understanding objects is essential for mastering Java OOP concepts.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Java Learning Website</p>
+</footer>
+
+</body>
+</html>

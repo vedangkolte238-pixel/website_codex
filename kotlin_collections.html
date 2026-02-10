@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kotlin Collections</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4FC3F7;
+            color: #000;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #4FC3F7;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Kotlin Collections</h1>
+    <p>Working with Data Groups in Kotlin</p>
+</header>
+
+<section>
+
+<h2>What are Collections?</h2>
+<p>
+Collections are used to store, manage, and manipulate
+groups of related data.
+Kotlin provides powerful and easy-to-use collection APIs.
+</p>
+
+<h2>Types of Collections in Kotlin</h2>
+<ul>
+    <li>List</li>
+    <li>Set</li>
+    <li>Map</li>
+</ul>
+
+<h2>1. List</h2>
+<p>
+A List stores elements in order and allows duplicate values.
+</p>
+
+<code>
+val fruits = listOf("Apple", "Banana", "Orange")
+println(fruits[0])
+</code>
+
+<h3>Mutable List</h3>
+<code>
+val numbers = mutableListOf(1, 2, 3)
+numbers.add(4)
+println(numbers)
+</code>
+
+<h2>2. Set</h2>
+<p>
+A Set stores unique elements and does not allow duplicates.
+</p>
+
+<code>
+val cities = setOf("Delhi", "Mumbai", "Delhi")
+println(cities)
+</code>
+
+<h3>Mutable Set</h3>
+<code>
+val ids = mutableSetOf(101, 102)
+ids.add(103)
+</code>
+
+<h2>3. Map</h2>
+<p>
+A Map stores data in key-value pairs.
+</p>
+
+<code>
+val student = mapOf(1 to "Rahul", 2 to "Amit")
+println(student[1])
+</code>
+
+<h3>Mutable Map</h3>
+<code>
+val scores = mutableMapOf("Math" to 90)
+scores["Science"] = 95
+</code>
+
+<h2>Common Collection Functions</h2>
+<ul>
+    <li>filter()</li>
+    <li>map()</li>
+    <li>forEach()</li>
+    <li>size</li>
+    <li>contains()</li>
+</ul>
+
+<code>
+val nums = listOf(1, 2, 3, 4, 5)
+val even = nums.filter { it % 2 == 0 }
+println(even)
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Kotlin collections make data handling simple,
+safe, and expressive.
+They are heavily used in real-world Kotlin applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Kotlin Learning Website</p>
+</footer>
+
+</body>
+</html>

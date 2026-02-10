@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Functions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #F7DF1E;
+            color: #000;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #F7DF1E;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JavaScript Functions</h1>
+    <p>Reusable Blocks of Code in JavaScript</p>
+</header>
+
+<section>
+
+<h2>What is a Function?</h2>
+<p>
+A function is a block of reusable code designed to perform a specific task.
+Functions help reduce repetition and make code easier to manage.
+</p>
+
+<h2>Function Syntax</h2>
+<code>
+function functionName() {
+    // code to execute
+}
+</code>
+
+<h2>Simple Function Example</h2>
+<code>
+function greet() {
+    console.log("Hello, JavaScript");
+}
+
+greet();
+</code>
+
+<h2>Function with Parameters</h2>
+<p>
+Parameters allow you to pass values to a function.
+</p>
+
+<code>
+function add(a, b) {
+    return a + b;
+}
+
+add(5, 3);
+</code>
+
+<h2>Function with Return Value</h2>
+<p>
+The return statement sends a value back to the caller.
+</p>
+
+<code>
+function square(num) {
+    return num * num;
+}
+
+square(4);
+</code>
+
+<h2>Function Expression</h2>
+<p>
+A function can be stored inside a variable.
+</p>
+
+<code>
+const multiply = function(x, y) {
+    return x * y;
+};
+
+multiply(4, 5);
+</code>
+
+<h2>Arrow Function</h2>
+<p>
+Arrow functions provide a shorter syntax.
+</p>
+
+<code>
+const subtract = (a, b) => a - b;
+
+subtract(10, 3);
+</code>
+
+<h2>Default Parameters</h2>
+<p>
+Default values are used if no argument is passed.
+</p>
+
+<code>
+function greetUser(name = "Guest") {
+    return "Hello " + name;
+}
+
+greetUser();
+</code>
+
+<h2>Why Use Functions?</h2>
+<ul>
+    <li>Makes code reusable</li>
+    <li>Improves readability</li>
+    <li>Reduces errors</li>
+    <li>Easy to debug</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Functions are a core concept in JavaScript.
+Mastering functions allows you to build clean, efficient, and scalable programs.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 JavaScript Learning Website</p>
+</footer>
+
+</body>
+</html>
