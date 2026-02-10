@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C Data Types</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0027c4;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0027c4;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C Data Types</h1>
+    <p>Understanding Different Types of Data in C</p>
+</header>
+
+<section>
+
+<h2>What are Data Types?</h2>
+<p>
+Data types specify the type of data that a variable can store.
+They help the compiler understand how much memory to allocate
+and what operations can be performed.
+</p>
+
+<h2>Types of Data Types in C</h2>
+<ul>
+    <li>Basic Data Types</li>
+    <li>Derived Data Types</li>
+    <li>User-defined Data Types</li>
+</ul>
+
+<h2>Basic Data Types</h2>
+
+<h3>1. int</h3>
+<p>Used to store integer values.</p>
+<code>
+int age = 20;
+</code>
+
+<h3>2. float</h3>
+<p>Used to store decimal values with single precision.</p>
+<code>
+float price = 99.50;
+</code>
+
+<h3>3. double</h3>
+<p>Used to store decimal values with double precision.</p>
+<code>
+double distance = 12345.6789;
+</code>
+
+<h3>4. char</h3>
+<p>Used to store single characters.</p>
+<code>
+char grade = 'A';
+</code>
+
+<h2>Derived Data Types</h2>
+<ul>
+    <li>Arrays</li>
+    <li>Pointers</li>
+    <li>Structures</li>
+    <li>Unions</li>
+</ul>
+
+<code>
+int numbers[5];
+int *ptr;
+</code>
+
+<h2>User-defined Data Types</h2>
+<ul>
+    <li>struct</li>
+    <li>union</li>
+    <li>enum</li>
+    <li>typedef</li>
+</ul>
+
+<code>
+struct Student {
+    int id;
+    char name[20];
+};
+</code>
+
+<h2>Size of Data Types</h2>
+<p>
+The size of data types depends on the system and compiler.
+</p>
+
+<code>
+printf("%lu", sizeof(int));
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Data types are the foundation of C programming.
+Understanding them helps in efficient memory usage
+and writing error-free programs.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C Programming Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ STL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1002b4d0;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #1002b4d0;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C++ Standard Template Library (STL)</h1>
+    <p>Introduction to C++ STL</p>
+</header>
+
+<section>
+
+<h2>What is STL?</h2>
+<p>
+STL stands for Standard Template Library. It is a powerful library in C++ that provides
+predefined classes and functions for common data structures and algorithms.
+</p>
+
+<h2>Main Components of STL</h2>
+<ul>
+    <li><strong>Containers:</strong> Store data (vector, list, deque, stack, queue, map, set)</li>
+    <li><strong>Algorithms:</strong> Perform operations on containers (sort, find, reverse, etc.)</li>
+    <li><strong>Iterators:</strong> Used to traverse elements of containers</li>
+</ul>
+
+<h2>1. Containers Example</h2>
+<p>Vector is a dynamic array in STL:</p>
+
+<code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; numbers;
+
+    numbers.push_back(10);
+    numbers.push_back(20);
+    numbers.push_back(30);
+
+    for(int i : numbers) {
+        cout &lt;&lt; i &lt;&lt; " ";
+    }
+
+    return 0;
+}
+</code>
+
+<h2>2. Iterators Example</h2>
+<p>Iterators are used to navigate through containers:</p>
+
+<code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; numbers = {1, 2, 3, 4, 5};
+
+    vector&lt;int&gt;::iterator it;
+    for(it = numbers.begin(); it != numbers.end(); ++it) {
+        cout &lt;&lt; *it &lt;&lt; " ";
+    }
+
+    return 0;
+}
+</code>
+
+<h2>3. Algorithms Example</h2>
+<p>STL provides many useful algorithms:</p>
+
+<code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; numbers = {5, 2, 9, 1, 7};
+
+    sort(numbers.begin(), numbers.end());
+
+    for(int i : numbers) {
+        cout &lt;&lt; i &lt;&lt; " ";
+    }
+
+    return 0;
+}
+</code>
+
+<h2>Advantages of STL</h2>
+<ul>
+    <li>Code Reusability – no need to implement common structures</li>
+    <li>Efficiency – highly optimized and tested</li>
+    <li>Faster Development – reduces coding effort</li>
+    <li>Consistency – standardized across C++ programs</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+STL is an essential part of modern C++ programming.
+It simplifies working with data structures and algorithms,
+and is widely used in competitive programming and real-world applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C++ Learning Website</p>
+</footer>
+
+</body>
+</html>

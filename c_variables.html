@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C Variables</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0027c4;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0027c4;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C Variables</h1>
+    <p>Storing and Managing Data in C</p>
+</header>
+
+<section>
+
+<h2>What is a Variable?</h2>
+<p>
+A variable is a named memory location used to store data.
+The value of a variable can change during program execution.
+</p>
+
+<h2>Declaring Variables</h2>
+<p>
+In C, a variable must be declared before it is used.
+</p>
+
+<code>
+data_type variable_name;
+</code>
+
+<code>
+int age;
+float salary;
+char grade;
+</code>
+
+<h2>Initializing Variables</h2>
+<p>
+Initialization means assigning a value to a variable at the time of declaration.
+</p>
+
+<code>
+int count = 10;
+float price = 99.50;
+char ch = 'A';
+</code>
+
+<h2>Rules for Naming Variables</h2>
+<ul>
+    <li>Must start with a letter or underscore</li>
+    <li>Cannot start with a number</li>
+    <li>No spaces allowed</li>
+    <li>Cannot use C keywords</li>
+    <li>Case-sensitive</li>
+</ul>
+
+<h2>Types of Variables in C</h2>
+
+<h3>1. Local Variables</h3>
+<p>
+Declared inside a function and accessible only within that function.
+</p>
+
+<code>
+void display() {
+    int x = 5;
+}
+</code>
+
+<h3>2. Global Variables</h3>
+<p>
+Declared outside all functions and accessible throughout the program.
+</p>
+
+<code>
+int total;
+
+void main() {
+    total = 100;
+}
+</code>
+
+<h3>3. Static Variables</h3>
+<p>
+Retains its value between function calls.
+</p>
+
+<code>
+void counter() {
+    static int count = 0;
+    count++;
+}
+</code>
+
+<h3>4. Register Variables</h3>
+<p>
+Stored in CPU registers for faster access.
+</p>
+
+<code>
+register int speed;
+</code>
+
+<h2>Scope of Variables</h2>
+<p>
+Scope defines where a variable can be accessed in a program.
+</p>
+
+<ul>
+    <li>Local scope</li>
+    <li>Global scope</li>
+    <li>Block scope</li>
+</ul>
+
+<h2>Example Program</h2>
+
+<code>
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    int b = 20;
+    int sum = a + b;
+
+    printf("Sum = %d", sum);
+    return 0;
+}
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Variables are essential in C programming for storing and manipulating data.
+Understanding variable types and scope helps in writing efficient programs.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C Learning Website</p>
+</footer>
+
+</body>
+</html>

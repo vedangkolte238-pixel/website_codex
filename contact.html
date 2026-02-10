@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --brand-blue: #1e40af;
+    }
+  </style>
+</head>
+<body class="bg-black text-slate-200">
+
+  <header class="text-white" style="background-color: var(--brand-blue);">
+    <div class="max-w-6xl mx-auto px-6 py-16 text-center">
+      <h1 class="text-4xl font-bold mb-4">Contact Us</h1>
+      <p class="text-lg opacity-90">We’d love to hear from you</p>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-16 space-y-20">
+
+    <section class="grid md:grid-cols-2 gap-12 items-start">
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-4 text-slate-900">Get in Touch</h2>
+        <p class="text-slate-600 mb-8 leading-relaxed">
+          Have a question, feedback, or a collaboration idea?
+          Fill out the form and we’ll get back to you as soon as possible.
+        </p>
+
+        <div class="space-y-4 text-slate-700">
+          <p><strong>Email:</strong> vedangkolte117@gmail.com</p>
+          <p><strong>Phone:</strong> +91 94238 12431</p>
+          <p><strong>Location:</strong> India,Maharashtra</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-900 rounded-2xl p-8 shadow">
+        <form class="space-y-6">
+          <div>
+            <label class="block text-sm font-medium mb-1">Name</label>
+            <input type="text" placeholder="Your name" class="w-full rounded-lg border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1">Email</label>
+            <input type="email" placeholder="you@example.com" class="w-full rounded-lg border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1">Message</label>
+            <textarea rows="5" placeholder="Write your message..." class="w-full rounded-lg border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+          </div>
+
+          <button type="submit" class="w-full text-white font-medium py-3 rounded-lg transition" style="background-color: var(--brand-blue);">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+    </section>
+
+    <section class="rounded-2xl p-12 text-center text-white" style="background-color: var(--brand-blue);">
+      <h2 class="text-2xl font-semibold mb-4">Let’s Build Something Together</h2>
+      <p class="max-w-3xl mx-auto opacity-90">
+        Whether you have an idea, a project, or just want to say hello,
+        we’re always open to meaningful conversations.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="text-center py-6 text-sm text-slate-400">
+    © 2026 Your Brand. All rights reserved.
+  </footer>
+
+</body>
+</html>

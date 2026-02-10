@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ Inheritance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1002b4d0;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #1002b4d0;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C++ Inheritance</h1>
+    <p>Understanding Inheritance in Object-Oriented Programming</p>
+</header>
+
+<section>
+
+<h2>What is Inheritance?</h2>
+<p>
+Inheritance is a feature of object-oriented programming
+that allows one class (derived class) to acquire the properties
+and methods of another class (base class).
+</p>
+
+<h2>Why Use Inheritance?</h2>
+<ul>
+    <li>Reusability of code</li>
+    <li>Improved organization</li>
+    <li>Reduces redundancy</li>
+    <li>Allows hierarchical relationships</li>
+</ul>
+
+<h2>Basic Example of Inheritance</h2>
+
+<code>
+#include &lt;iostream&gt;
+using namespace std;
+
+class Animal {  // Base class
+public:
+    void eat() {
+        cout &lt;&lt; "Eating...\n";
+    }
+};
+
+class Dog : public Animal {  // Derived class
+public:
+    void bark() {
+        cout &lt;&lt; "Barking...\n";
+    }
+};
+
+int main() {
+    Dog d;
+    d.eat();   // Inherited from Animal
+    d.bark();  // Own method
+    return 0;
+}
+</code>
+
+<h2>Types of Inheritance</h2>
+<ul>
+    <li><strong>Single Inheritance:</strong> One derived class inherits from one base class.</li>
+    <li><strong>Multiple Inheritance:</strong> One derived class inherits from multiple base classes.</li>
+    <li><strong>Multilevel Inheritance:</strong> Chain of inheritance where a class is derived from a derived class.</li>
+    <li><strong>Hierarchical Inheritance:</strong> Multiple classes inherit from a single base class.</li>
+    <li><strong>Hybrid Inheritance:</strong> Combination of two or more types of inheritance.</li>
+</ul>
+
+<h2>Multiple Inheritance Example</h2>
+
+<code>
+class A {
+public:
+    void showA() { cout &lt;&lt; "Class A\n"; }
+};
+
+class B {
+public:
+    void showB() { cout &lt;&lt; "Class B\n"; }
+};
+
+class C : public A, public B {
+};
+
+int main() {
+    C obj;
+    obj.showA();
+    obj.showB();
+    return 0;
+}
+</code>
+
+<h2>Access Specifiers in Inheritance</h2>
+<ul>
+    <li><strong>Public:</strong> Public and protected members of base class become public and protected in derived class.</li>
+    <li><strong>Protected:</strong> Public and protected members of base class become protected in derived class.</li>
+    <li><strong>Private:</strong> Public and protected members of base class become private in derived class.</li>
+</ul>
+
+<h2>Advantages of Inheritance</h2>
+<ul>
+    <li>Reduces code duplication</li>
+    <li>Promotes code reusability</li>
+    <li>Makes programs easier to maintain</li>
+    <li>Supports polymorphism</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Inheritance is a core concept of OOP in C++.
+It allows classes to build upon each other and
+promotes organized, reusable, and maintainable code.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C++ Learning Website</p>
+</footer>
+
+</body>
+</html>

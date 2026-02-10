@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ Classes and Objects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1002b4d0;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #1002b4d0;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C++ Classes and Objects</h1>
+    <p>Learn How to Use Classes and Objects in C++</p>
+</header>
+
+<section>
+
+<h2>What is a Class?</h2>
+<p>
+A class is a blueprint for creating objects.
+It defines the properties (attributes) and behaviors (methods) of objects.
+</p>
+
+<h2>What is an Object?</h2>
+<p>
+An object is an instance of a class.
+Each object can have different values for the attributes defined in the class.
+</p>
+
+<h2>Defining a Class</h2>
+
+<code>
+class Car {
+public:
+    string brand;
+    string model;
+    int year;
+
+    void displayInfo() {
+        cout &lt;&lt; "Brand: " &lt;&lt; brand &lt;&lt; ", Model: " &lt;&lt; model &lt;&lt; ", Year: " &lt;&lt; year &lt;&lt; endl;
+    }
+};
+</code>
+
+<h2>Creating Objects</h2>
+
+<code>
+int main() {
+    Car car1;
+    car1.brand = "Toyota";
+    car1.model = "Corolla";
+    car1.year = 2023;
+
+    Car car2;
+    car2.brand = "Honda";
+    car2.model = "Civic";
+    car2.year = 2022;
+
+    car1.displayInfo();
+    car2.displayInfo();
+
+    return 0;
+}
+</code>
+
+<h2>Key Points</h2>
+<ul>
+    <li>Classes define the structure; objects hold actual data.</li>
+    <li>Multiple objects can be created from the same class.</li>
+    <li>Methods inside classes define the behavior of objects.</li>
+</ul>
+
+<h2>Constructor in C++</h2>
+<p>
+A constructor is a special function used to initialize objects.
+It has the same name as the class and no return type.
+</p>
+
+<code>
+class Car {
+public:
+    string brand;
+    int year;
+
+    Car(string b, int y) {  // Constructor
+        brand = b;
+        year = y;
+    }
+
+    void display() {
+        cout &lt;&lt; brand &lt;&lt; " " &lt;&lt; year &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Car car1("Ford", 2021);
+    Car car2("BMW", 2022);
+
+    car1.display();
+    car2.display();
+
+    return 0;
+}
+</code>
+
+<h2>Destructor in C++</h2>
+<p>
+A destructor is called automatically when an object goes out of scope.
+It is used to free resources.
+</p>
+
+<code>
+class Car {
+public:
+    Car() { cout &lt;&lt; "Constructor called\n"; }
+    ~Car() { cout &lt;&lt; "Destructor called\n"; }
+};
+
+int main() {
+    Car car1;
+    return 0;
+}
+</code>
+
+<h2>Advantages of Using Classes and Objects</h2>
+<ul>
+    <li>Encapsulation of data</li>
+    <li>Code reusability</li>
+    <li>Better structure for large programs</li>
+    <li>Easy maintenance and readability</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Classes and objects are the foundation of object-oriented programming in C++.
+Understanding how to define and use them is crucial for building structured and efficient programs.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C++ Learning Website</p>
+</footer>
+
+</body>
+</html>

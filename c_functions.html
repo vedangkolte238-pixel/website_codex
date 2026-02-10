@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C Functions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0027c4;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0027c4;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C Functions</h1>
+    <p>Modular Programming in C</p>
+</header>
+
+<section>
+
+<h2>What is a Function?</h2>
+<p>
+A function is a block of code that performs a specific task.
+Functions help break a program into smaller, manageable parts.
+</p>
+
+<h2>Why Use Functions?</h2>
+<ul>
+    <li>Improves code reusability</li>
+    <li>Makes programs easier to understand</li>
+    <li>Reduces code repetition</li>
+    <li>Helps in debugging and testing</li>
+</ul>
+
+<h2>Function Structure</h2>
+<p>
+A function has three main parts: declaration, definition, and call.
+</p>
+
+<code>
+return_type function_name(parameters) {
+    // function body
+}
+</code>
+
+<h2>Example of a Function</h2>
+
+<code>
+#include &lt;stdio.h&gt;
+
+void greet() {
+    printf("Hello, Welcome to C!");
+}
+
+int main() {
+    greet();
+    return 0;
+}
+</code>
+
+<h2>Types of Functions</h2>
+
+<h3>1. Library Functions</h3>
+<p>
+Predefined functions provided by C libraries.
+</p>
+
+<code>
+printf("Hello");
+scanf("%d", &num);
+</code>
+
+<h3>2. User-Defined Functions</h3>
+<p>
+Functions created by the programmer.
+</p>
+
+<code>
+int add(int a, int b) {
+    return a + b;
+}
+</code>
+
+<h2>Function Declaration</h2>
+<p>
+Tells the compiler about the function name, return type, and parameters.
+</p>
+
+<code>
+int add(int, int);
+</code>
+
+<h2>Function Definition</h2>
+<p>
+Contains the actual code of the function.
+</p>
+
+<code>
+int add(int a, int b) {
+    return a + b;
+}
+</code>
+
+<h2>Function Call</h2>
+<p>
+Used to execute the function.
+</p>
+
+<code>
+int result = add(5, 3);
+</code>
+
+<h2>Functions with Arguments and Return Value</h2>
+
+<code>
+#include &lt;stdio.h&gt;
+
+int square(int x) {
+    return x * x;
+}
+
+int main() {
+    int result = square(4);
+    printf("%d", result);
+    return 0;
+}
+</code>
+
+<h2>Advantages of Functions</h2>
+<ul>
+    <li>Code modularity</li>
+    <li>Easy maintenance</li>
+    <li>Better readability</li>
+    <li>Time saving</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Functions are a core concept in C programming.
+They make programs structured, reusable, and easier to manage.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C Learning Website</p>
+</footer>
+
+</body>
+</html>

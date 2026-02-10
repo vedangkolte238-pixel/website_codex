@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic SQL Commands</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.command-list li {
+            margin-bottom: 12px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Basic SQL Commands</h1>
+    <p>Learn the most commonly used SQL statements</p>
+</header>
+
+<section>
+
+    <h2>1. CREATE TABLE</h2>
+    <p>Used to create a new table in the database.</p>
+    <code>
+CREATE TABLE students (
+    id INT,
+    name VARCHAR(50),
+    age INT
+);
+    </code>
+
+    <h2>2. INSERT</h2>
+    <p>Used to insert data into a table.</p>
+    <code>
+INSERT INTO students VALUES (1, 'Amit', 21);
+    </code>
+
+    <h2>3. SELECT</h2>
+    <p>Used to fetch data from a table.</p>
+    <code>
+SELECT * FROM students;
+    </code>
+
+    <h2>4. WHERE</h2>
+    <p>Used to filter records based on a condition.</p>
+    <code>
+SELECT * FROM students WHERE age > 20;
+    </code>
+
+    <h2>5. UPDATE</h2>
+    <p>Used to modify existing data in a table.</p>
+    <code>
+UPDATE students
+SET age = 22
+WHERE id = 1;
+    </code>
+
+    <h2>6. DELETE</h2>
+    <p>Used to remove records from a table.</p>
+    <code>
+DELETE FROM students WHERE id = 1;
+    </code>
+
+    <h2>7. DROP TABLE</h2>
+    <p>Used to permanently delete a table from the database.</p>
+    <code>
+DROP TABLE students;
+    </code>
+
+    <h2>Conclusion</h2>
+    <p>
+        These basic SQL commands are enough to start working with databases.
+        Once you are comfortable with them, you can move on to joins, functions, and advanced queries.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

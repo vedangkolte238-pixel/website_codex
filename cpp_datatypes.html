@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ Data Types</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1002b4d0;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #1002b4d0;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C++ Data Types</h1>
+    <p>Understanding Different Types of Data in C++</p>
+</header>
+
+<section>
+
+<h2>What are Data Types?</h2>
+<p>
+Data types specify the type of data a variable can store.
+They help the compiler understand how much memory to allocate
+and what kind of operations can be performed on the data.
+</p>
+
+<h2>Types of Data Types in C++</h2>
+<ul>
+    <li>Primitive (Basic) Data Types</li>
+    <li>Derived Data Types</li>
+    <li>User-defined Data Types</li>
+</ul>
+
+<h2>1. Primitive Data Types</h2>
+<p>
+These are the basic data types provided by C++.
+</p>
+
+<h3>int</h3>
+<p>Used to store whole numbers.</p>
+<code>
+int age = 20;
+</code>
+
+<h3>float</h3>
+<p>Used to store decimal numbers (single precision).</p>
+<code>
+float price = 99.5;
+</code>
+
+<h3>double</h3>
+<p>Used to store decimal numbers with higher precision.</p>
+<code>
+double salary = 45678.75;
+</code>
+
+<h3>char</h3>
+<p>Used to store a single character.</p>
+<code>
+char grade = 'A';
+</code>
+
+<h3>bool</h3>
+<p>Used to store true or false values.</p>
+<code>
+bool isPassed = true;
+</code>
+
+<h2>2. Derived Data Types</h2>
+<p>
+Derived data types are created from basic data types.
+</p>
+
+<h3>Array</h3>
+<code>
+int numbers[5] = {1, 2, 3, 4, 5};
+</code>
+
+<h3>Pointer</h3>
+<code>
+int x = 10;
+int* ptr = &x;
+</code>
+
+<h3>Reference</h3>
+<code>
+int a = 5;
+int& ref = a;
+</code>
+
+<h2>3. User-defined Data Types</h2>
+<p>
+These data types allow users to define their own types.
+</p>
+
+<h3>struct</h3>
+<code>
+struct Student {
+    int id;
+    char grade;
+};
+</code>
+
+<h3>enum</h3>
+<code>
+enum Day {Monday, Tuesday, Wednesday};
+</code>
+
+<h3>typedef</h3>
+<code>
+typedef int marks;
+marks score = 85;
+</code>
+
+<h2>Size of Data Types (Typical)</h2>
+<ul>
+    <li>int → 4 bytes</li>
+    <li>float → 4 bytes</li>
+    <li>double → 8 bytes</li>
+    <li>char → 1 byte</li>
+    <li>bool → 1 byte</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Data types are fundamental in C++ programming.
+Choosing the correct data type improves memory usage
+and makes programs more efficient and readable.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C++ Learning Website</p>
+</footer>
+
+</body>
+</html>

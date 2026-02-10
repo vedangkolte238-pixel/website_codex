@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Advanced Topics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Advanced Topics</h1>
+    <p>Overview of Key Advanced Concepts with Examples</p>
+</header>
+
+<section>
+
+<h2>1. Decorators</h2>
+<p>
+Decorators allow you to modify the behavior of a function or class without changing its code.
+</p>
+<code>
+def decorator(func):
+    def wrapper():
+        print("Before function call")
+        func()
+        print("After function call")
+    return wrapper
+
+@decorator
+def greet():
+    print("Hello World!")
+
+greet()
+</code>
+<div class="output">
+Output:<br>
+Before function call<br>
+Hello World!<br>
+After function call
+</div>
+
+<h2>2. Generators</h2>
+<p>
+Generators allow you to iterate over data lazily, producing items one at a time using <code>yield</code>.
+</p>
+<code>
+def numbers():
+    for i in range(1, 4):
+        yield i
+
+for num in numbers():
+    print(num)
+</code>
+<div class="output">
+Output:<br>
+1<br>
+2<br>
+3
+</div>
+
+<h2>3. List Comprehensions</h2>
+<p>
+Concise way to create lists using expressions.
+</p>
+<code>
+squares = [x**2 for x in range(5)]
+print(squares)
+</code>
+<div class="output">
+Output:<br>
+[0, 1, 4, 9, 16]
+</div>
+
+<h2>4. Lambda Functions</h2>
+<p>
+Anonymous functions created using <code>lambda</code>.
+</p>
+<code>
+add = lambda a, b: a + b
+print(add(5, 3))
+</code>
+<div class="output">
+Output:<br>
+8
+</div>
+
+<h2>5. Context Managers</h2>
+<p>
+Use <code>with</code> to handle resources like files efficiently.
+</p>
+<code>
+with open("example.txt", "w") as f:
+    f.write("Hello Context Manager!")
+</code>
+
+<h2>6. Exception Handling Advanced</h2>
+<p>
+Catching multiple exceptions and raising custom exceptions.
+</p>
+<code>
+try:
+    x = int("abc")
+except (ValueError, TypeError) as e:
+    print("Error:", e)
+</code>
+<div class="output">
+Output:<br>
+Error: invalid literal for int() with base 10: 'abc'
+</div>
+
+<h2>7. Modules and Packages</h2>
+<p>
+Advanced usage includes creating reusable packages and importing modules efficiently.
+</p>
+<code>
+import os
+print(os.getcwd())
+</code>
+<div class="output">
+Output:<br>
+C:\Your\Current\Directory
+</div>
+
+<h2>8. OOP Advanced</h2>
+<p>
+Advanced OOP concepts: inheritance, polymorphism, encapsulation, abstract classes, and multiple inheritance.
+</p>
+<code>
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class Square(Shape):
+    def __init__(self, side):
+        self.side = side
+    def area(self):
+        return self.side * self.side
+
+s = Square(4)
+print(s.area())
+</code>
+<div class="output">
+Output:<br>
+16
+</div>
+
+<h2>9. File Handling Advanced</h2>
+<p>
+Reading and writing large files efficiently or in binary mode.
+</p>
+<code>
+with open("example.txt", "rb") as f:
+    content = f.read()
+    print(content)
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Advanced Python topics like decorators, generators, context managers, and OOP allow writing efficient, clean, and reusable code.
+Mastering these topics is essential for professional Python programming.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ Polymorphism</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1002b4d0;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #1002b4d0;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C++ Polymorphism</h1>
+    <p>Understanding Polymorphism in C++</p>
+</header>
+
+<section>
+
+<h2>What is Polymorphism?</h2>
+<p>
+Polymorphism is an OOP concept that allows a function, operator, or object
+to behave differently in different contexts.
+It comes from Greek meaning "many forms".
+</p>
+
+<h2>Types of Polymorphism in C++</h2>
+<ul>
+    <li><strong>Compile-time (Static) Polymorphism</strong> – Achieved using function overloading and operator overloading.</li>
+    <li><strong>Run-time (Dynamic) Polymorphism</strong> – Achieved using inheritance and virtual functions.</li>
+</ul>
+
+<h2>1. Function Overloading (Compile-time)</h2>
+<p>
+You can have multiple functions with the same name but different parameters.
+</p>
+
+<code>
+#include &lt;iostream&gt;
+using namespace std;
+
+class Calculator {
+public:
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+};
+
+int main() {
+    Calculator calc;
+    cout &lt;&lt; calc.add(5, 10) &lt;&lt; endl;
+    cout &lt;&lt; calc.add(3.5, 2.5) &lt;&lt; endl;
+    return 0;
+}
+</code>
+
+<h2>2. Operator Overloading (Compile-time)</h2>
+<p>
+You can redefine how operators work with user-defined types.
+</p>
+
+<code>
+#include &lt;iostream&gt;
+using namespace std;
+
+class Number {
+public:
+    int value;
+    Number(int v) { value = v; }
+
+    Number operator+(Number n) {
+        return Number(value + n.value);
+    }
+};
+
+int main() {
+    Number n1(5), n2(10);
+    Number n3 = n1 + n2;  // Uses overloaded +
+    cout &lt;&lt; n3.value;
+    return 0;
+}
+</code>
+
+<h2>3. Run-time Polymorphism (Dynamic)</h2>
+<p>
+Achieved using <strong>inheritance</strong> and <strong>virtual functions</strong>.
+The function that is called is determined at runtime.
+</p>
+
+<code>
+#include &lt;iostream&gt;
+using namespace std;
+
+class Animal {
+public:
+    virtual void sound() {
+        cout &lt;&lt; "Animal sound\n";
+    }
+};
+
+class Dog : public Animal {
+public:
+    void sound() {
+        cout &lt;&lt; "Bark\n";
+    }
+};
+
+class Cat : public Animal {
+public:
+    void sound() {
+        cout &lt;&lt; "Meow\n";
+    }
+};
+
+int main() {
+    Animal* a;
+    Dog d;
+    Cat c;
+
+    a = &d;
+    a-&gt;sound();  // Bark
+
+    a = &c;
+    a-&gt;sound();  // Meow
+
+    return 0;
+}
+</code>
+
+<h2>Key Points</h2>
+<ul>
+    <li>Polymorphism allows flexibility and reusability in code.</li>
+    <li>Compile-time polymorphism is resolved during compilation.</li>
+    <li>Run-time polymorphism is resolved during program execution.</li>
+    <li>Virtual functions are essential for dynamic polymorphism.</li>
+</ul>
+
+<h2>Advantages of Polymorphism</h2>
+<ul>
+    <li>Improves code readability and maintenance</li>
+    <li>Supports method overriding</li>
+    <li>Enables dynamic behavior</li>
+    <li>Promotes code reusability</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Polymorphism is a powerful concept in C++ that allows objects and functions
+to take many forms. Understanding it is essential for advanced OOP programming.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C++ Learning Website</p>
+</footer>
+
+</body>
+</html>

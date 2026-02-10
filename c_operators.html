@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C Operators</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0027c4;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0027c4;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C Operators</h1>
+    <p>Performing Operations on Data in C</p>
+</header>
+
+<section>
+
+<h2>What are Operators?</h2>
+<p>
+Operators are special symbols used to perform operations on variables and values.
+C provides a wide range of operators for mathematical, logical, and decision-making tasks.
+</p>
+
+<h2>Types of Operators in C</h2>
+
+<h3>1. Arithmetic Operators</h3>
+<p>
+Used to perform basic mathematical operations.
+</p>
+
+<code>
++   Addition
+-   Subtraction
+*   Multiplication
+/   Division
+%   Modulus
+</code>
+
+<code>
+int a = 10, b = 3;
+int sum = a + b;
+int rem = a % b;
+</code>
+
+<h3>2. Relational Operators</h3>
+<p>
+Used to compare two values.
+</p>
+
+<code>
+==   Equal to
+!=   Not equal to
+>    Greater than
+<    Less than
+>=   Greater than or equal to
+<=   Less than or equal to
+</code>
+
+<code>
+if (a > b) {
+    printf("a is greater");
+}
+</code>
+
+<h3>3. Logical Operators</h3>
+<p>
+Used to combine multiple conditions.
+</p>
+
+<code>
+&&   Logical AND
+||   Logical OR
+!    Logical NOT
+</code>
+
+<code>
+if (a > 5 && b < 5) {
+    printf("Condition true");
+}
+</code>
+
+<h3>4. Assignment Operators</h3>
+<p>
+Used to assign values to variables.
+</p>
+
+<code>
+=    Assign
++=   Add and assign
+-=   Subtract and assign
+*=   Multiply and assign
+/=   Divide and assign
+</code>
+
+<code>
+int x = 10;
+x += 5;
+</code>
+
+<h3>5. Increment and Decrement Operators</h3>
+<p>
+Used to increase or decrease a value by one.
+</p>
+
+<code>
+++   Increment
+--   Decrement
+</code>
+
+<code>
+int i = 5;
+i++;
+--i;
+</code>
+
+<h3>6. Bitwise Operators</h3>
+<p>
+Used to perform operations at the bit level.
+</p>
+
+<code>
+&   Bitwise AND
+|   Bitwise OR
+^   Bitwise XOR
+~   Bitwise NOT
+<<  Left shift
+>>  Right shift
+</code>
+
+<h3>7. Conditional Operator</h3>
+<p>
+A shorthand for if-else conditions.
+</p>
+
+<code>
+(condition) ? value1 : value2;
+</code>
+
+<code>
+int max = (a > b) ? a : b;
+</code>
+
+<h3>8. sizeof Operator</h3>
+<p>
+Used to find the size of a data type or variable.
+</p>
+
+<code>
+printf("%d", sizeof(int));
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Operators are a fundamental part of C programming.
+Understanding operators helps you write efficient and logical programs.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C Learning Website</p>
+</footer>
+
+</body>
+</html>

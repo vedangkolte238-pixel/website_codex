@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ Templates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1002b4d0;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #1002b4d0;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C++ Templates</h1>
+    <p>Learn How to Use Templates in C++</p>
+</header>
+
+<section>
+
+<h2>What is a Template?</h2>
+<p>
+A template is a feature in C++ that allows you to write generic functions or classes.
+It helps you create reusable code for different data types without rewriting the same logic.
+</p>
+
+<h2>Types of Templates</h2>
+<ul>
+    <li>Function Templates</li>
+    <li>Class Templates</li>
+</ul>
+
+<h2>1. Function Templates</h2>
+<p>
+Function templates allow the same function to work with different data types.
+</p>
+
+<code>
+#include &lt;iostream&gt;
+using namespace std;
+
+template &lt;typename T&gt;
+T add(T a, T b) {
+    return a + b;
+}
+
+int main() {
+    cout &lt;&lt; add(5, 10) &lt;&lt; endl;       // int
+    cout &lt;&lt; add(3.5, 2.5) &lt;&lt; endl;   // double
+    return 0;
+}
+</code>
+
+<h2>2. Class Templates</h2>
+<p>
+Class templates allow you to create a class that can handle different data types.
+</p>
+
+<code>
+#include &lt;iostream&gt;
+using namespace std;
+
+template &lt;typename T&gt;
+class Box {
+private:
+    T content;
+public:
+    void setContent(T c) {
+        content = c;
+    }
+    T getContent() {
+        return content;
+    }
+};
+
+int main() {
+    Box&lt;int&gt; intBox;
+    intBox.setContent(123);
+    cout &lt;&lt; intBox.getContent() &lt;&lt; endl;
+
+    Box&lt;string&gt; strBox;
+    strBox.setContent("Hello Templates");
+    cout &lt;&lt; strBox.getContent() &lt;&lt; endl;
+
+    return 0;
+}
+</code>
+
+<h2>Advantages of Templates</h2>
+<ul>
+    <li>Code Reusability – write once, use for any data type</li>
+    <li>Type Safety – compiler checks types at compile-time</li>
+    <li>Maintainability – fewer lines of code to maintain</li>
+    <li>Flexibility – works with user-defined types</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Templates are a powerful feature in C++ that allow you to write generic and reusable code.
+They are widely used in C++ Standard Template Library (STL) and advanced programming.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C++ Learning Website</p>
+</footer>
+
+</body>
+</html>

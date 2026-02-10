@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Control Statements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Control Statements</h1>
+    <p>Decision Making and Looping Statements with Examples</p>
+</header>
+
+<section>
+
+<h2>What are Control Statements?</h2>
+<p>
+Control statements are used to control the flow of execution of a program.
+They decide which statements will execute and how many times.
+</p>
+
+<h2>1. Decision Making Statements</h2>
+
+<h3>If Statement</h3>
+<p>
+The <b>if</b> statement executes a block of code only when the condition is true.
+</p>
+<code>
+age = 20
+if age >= 18:
+    print("Eligible to vote")
+</code>
+<div class="output">
+Output:<br>
+Eligible to vote
+</div>
+
+<h3>If-Else Statement</h3>
+<p>
+The <b>if-else</b> statement executes one block if the condition is true
+and another block if it is false.
+</p>
+<code>
+age = 16
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+</code>
+<div class="output">
+Output:<br>
+Minor
+</div>
+
+<h3>If-Elif-Else Statement</h3>
+<p>
+The <b>elif</b> statement is used to check multiple conditions.
+</p>
+<code>
+marks = 75
+if marks >= 90:
+    print("Grade A")
+elif marks >= 60:
+    print("Grade B")
+else:
+    print("Grade C")
+</code>
+<div class="output">
+Output:<br>
+Grade B
+</div>
+
+<h2>2. Looping Statements</h2>
+
+<h3>For Loop</h3>
+<p>
+The <b>for loop</b> is used to iterate over a sequence like list, tuple, or range.
+</p>
+<code>
+for i in range(1, 6):
+    print(i)
+</code>
+<div class="output">
+Output:<br>
+1 2 3 4 5
+</div>
+
+<h3>While Loop</h3>
+<p>
+The <b>while loop</b> executes as long as the condition remains true.
+</p>
+<code>
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+</code>
+<div class="output">
+Output:<br>
+1 2 3 4 5
+</div>
+
+<h2>3. Loop Control Statements</h2>
+
+<h3>Break Statement</h3>
+<p>
+The <b>break</b> statement is used to stop the loop immediately.
+</p>
+<code>
+for i in range(1, 6):
+    if i == 4:
+        break
+    print(i)
+</code>
+<div class="output">
+Output:<br>
+1 2 3
+</div>
+
+<h3>Continue Statement</h3>
+<p>
+The <b>continue</b> statement skips the current iteration and moves to the next.
+</p>
+<code>
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+</code>
+<div class="output">
+Output:<br>
+1 2 4 5
+</div>
+
+<h3>Pass Statement</h3>
+<p>
+The <b>pass</b> statement is used as a placeholder where a statement is required.
+</p>
+<code>
+for i in range(1, 4):
+    if i == 2:
+        pass
+    print(i)
+</code>
+<div class="output">
+Output:<br>
+1 2 3
+</div>
+
+<h2>Conclusion</h2>
+<p>
+Control statements are the backbone of programming logic.
+They help programs make decisions and perform repetitive tasks efficiently.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python API Programming</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python API Programming</h1>
+    <p>Working with Web APIs using Python</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+API (Application Programming Interface) allows applications to communicate with each other.  
+Python's <code>requests</code> library makes it easy to interact with web APIs.
+</p>
+
+<h2>1. Installing Requests Library</h2>
+<code>
+# Install requests if not installed
+pip install requests
+</code>
+
+<h2>2. Making a GET Request</h2>
+<code>
+import requests
+
+response = requests.get("https://api.github.com")
+print(response.status_code)
+print(response.json())
+</code>
+<div class="output">
+Output:<br>
+200<br>
+{'current_user_url': 'https://api.github.com/user', 'current_user_authorizations_html_url': 'https://github.com/settings/connections/applications{/client_id}', ...}
+</div>
+
+<h2>3. Making a POST Request</h2>
+<code>
+import requests
+
+url = "https://jsonplaceholder.typicode.com/posts"
+data = {
+    "title": "foo",
+    "body": "bar",
+    "userId": 1
+}
+
+response = requests.post(url, json=data)
+print(response.status_code)
+print(response.json())
+</code>
+<div class="output">
+Output:<br>
+201<br>
+{'title': 'foo', 'body': 'bar', 'userId': 1, 'id': 101}
+</div>
+
+<h2>4. Using Headers and Parameters</h2>
+<code>
+import requests
+
+url = "https://api.github.com/search/repositories"
+params = {"q": "python"}
+headers = {"Accept": "application/vnd.github.v3+json"}
+
+response = requests.get(url, params=params, headers=headers)
+data = response.json()
+print(data["total_count"])
+print(data["items"][0]["full_name"])
+</code>
+<div class="output">
+Output:<br>
+Total repositories matching 'python': 500000+<br>
+First repository: The actual repo name from API response
+</div>
+
+<h2>5. Error Handling</h2>
+<code>
+import requests
+
+try:
+    response = requests.get("https://api.github.com/invalidendpoint")
+    response.raise_for_status()
+except requests.exceptions.HTTPError as err:
+    print("HTTP error occurred:", err)
+except Exception as e:
+    print("Other error occurred:", e)
+</code>
+<div class="output">
+Output:<br>
+HTTP error occurred: 404 Client Error: Not Found for url: https://api.github.com/invalidendpoint
+</div>
+
+<h2>Conclusion</h2>
+<p>
+Python's <code>requests</code> library makes it simple to work with web APIs.  
+You can perform GET, POST, PUT, DELETE requests, handle errors, and interact with JSON data efficiently.  
+APIs are essential for connecting your Python applications with web services, databases, or other applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

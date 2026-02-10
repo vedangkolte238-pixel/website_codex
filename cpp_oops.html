@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ OOPs Concepts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1002b4d0;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #1002b4d0;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C++ OOPs Concepts</h1>
+    <p>Object-Oriented Programming in C++</p>
+</header>
+
+<section>
+
+<h2>What is OOP?</h2>
+<p>
+Object-Oriented Programming (OOP) is a programming approach
+that organizes code using objects and classes.
+It helps make programs more modular, reusable, and easy to maintain.
+</p>
+
+<h2>Main OOP Concepts in C++</h2>
+<ul>
+    <li>Class</li>
+    <li>Object</li>
+    <li>Encapsulation</li>
+    <li>Inheritance</li>
+    <li>Polymorphism</li>
+    <li>Abstraction</li>
+</ul>
+
+<h2>Class</h2>
+<p>
+A class is a blueprint for creating objects.
+It defines properties (variables) and behaviors (functions).
+</p>
+
+<code>
+class Student {
+public:
+    int id;
+    string name;
+
+    void display() {
+        cout << id << " " << name;
+    }
+};
+</code>
+
+<h2>Object</h2>
+<p>
+An object is an instance of a class.
+</p>
+
+<code>
+Student s1;
+s1.id = 1;
+s1.name = "Alex";
+s1.display();
+</code>
+
+<h2>Encapsulation</h2>
+<p>
+Encapsulation means binding data and functions together
+and restricting direct access to data.
+</p>
+
+<code>
+class Account {
+private:
+    int balance;
+
+public:
+    void setBalance(int b) {
+        balance = b;
+    }
+
+    int getBalance() {
+        return balance;
+    }
+};
+</code>
+
+<h2>Inheritance</h2>
+<p>
+Inheritance allows a class to acquire properties of another class.
+</p>
+
+<code>
+class Animal {
+public:
+    void eat() {
+        cout << "Eating";
+    }
+};
+
+class Dog : public Animal {
+public:
+    void bark() {
+        cout << "Barking";
+    }
+};
+</code>
+
+<h2>Polymorphism</h2>
+<p>
+Polymorphism allows the same function name
+to behave differently based on the object.
+</p>
+
+<code>
+class Shape {
+public:
+    virtual void draw() {
+        cout << "Drawing shape";
+    }
+};
+
+class Circle : public Shape {
+public:
+    void draw() {
+        cout << "Drawing circle";
+    }
+};
+</code>
+
+<h2>Abstraction</h2>
+<p>
+Abstraction hides implementation details
+and shows only essential features.
+</p>
+
+<code>
+class Vehicle {
+public:
+    virtual void start() = 0;
+};
+</code>
+
+<h2>Advantages of OOP</h2>
+<ul>
+    <li>Code reusability</li>
+    <li>Better security</li>
+    <li>Easy maintenance</li>
+    <li>Scalable applications</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+OOP concepts form the backbone of C++ programming.
+Understanding these principles helps you build
+efficient, structured, and professional software.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C++ Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C Pointers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0027c4;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0027c4;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C Pointers</h1>
+    <p>Understanding Memory Addressing in C</p>
+</header>
+
+<section>
+
+<h2>What is a Pointer?</h2>
+<p>
+A pointer is a variable that stores the memory address of another variable.
+Pointers allow direct access to memory locations.
+</p>
+
+<h2>Why Use Pointers?</h2>
+<ul>
+    <li>Efficient memory usage</li>
+    <li>Allows call by reference</li>
+    <li>Used in dynamic memory allocation</li>
+    <li>Essential for arrays and strings</li>
+</ul>
+
+<h2>Pointer Declaration</h2>
+<p>
+Syntax to declare a pointer:
+</p>
+
+<code>
+data_type *pointer_name;
+</code>
+
+<h2>Example of Pointer Declaration</h2>
+
+<code>
+int *ptr;
+</code>
+
+<h2>Pointer Initialization</h2>
+<p>
+Assigning the address of a variable to a pointer.
+</p>
+
+<code>
+int num = 10;
+int *ptr = &num;
+</code>
+
+<h2>Accessing Value Using Pointer</h2>
+<p>
+The dereference operator (*) is used to access the value stored at the address.
+</p>
+
+<code>
+printf("%d", *ptr);   // Output: 10
+</code>
+
+<h2>Complete Example Program</h2>
+
+<code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num = 20;
+    int *ptr = &num;
+
+    printf("Value of num: %d\n", num);
+    printf("Address of num: %p\n", &num);
+    printf("Value using pointer: %d\n", *ptr);
+
+    return 0;
+}
+</code>
+
+<h2>Pointer to Pointer</h2>
+<p>
+A pointer that stores the address of another pointer.
+</p>
+
+<code>
+int num = 5;
+int *p = &num;
+int **pp = &p;
+</code>
+
+<h2>Access Using Pointer to Pointer</h2>
+
+<code>
+printf("%d", **pp);   // Output: 5
+</code>
+
+<h2>Pointers and Arrays</h2>
+<p>
+Array name acts as a pointer to the first element.
+</p>
+
+<code>
+int arr[3] = {10, 20, 30};
+int *p = arr;
+
+printf("%d", *p);      // 10
+printf("%d", *(p+1));  // 20
+</code>
+
+<h2>Null Pointer</h2>
+<p>
+A pointer that does not point to any valid memory location.
+</p>
+
+<code>
+int *ptr = NULL;
+</code>
+
+<h2>Advantages of Pointers</h2>
+<ul>
+    <li>Direct memory access</li>
+    <li>Improves program efficiency</li>
+    <li>Used in advanced data structures</li>
+    <li>Supports dynamic memory allocation</li>
+</ul>
+
+<h2>Disadvantages of Pointers</h2>
+<ul>
+    <li>Complex to understand</li>
+    <li>Can cause memory errors</li>
+    <li>Risk of segmentation faults</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Pointers are a powerful feature of C.
+They provide flexibility and efficiency but must be used carefully.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C Learning Website</p>
+</footer>
+
+</body>
+</html>
