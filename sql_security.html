@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Security</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.security-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SQL Security</h1>
+    <p>Protecting data and controlling access in databases</p>
+</header>
+
+<section>
+
+    <h2>What is SQL Security?</h2>
+    <p>
+        SQL security involves measures to protect databases from unauthorized access, data breaches, and misuse.
+        It ensures that only authorized users can perform allowed operations.
+    </p>
+
+    <h2>1. User Authentication</h2>
+    <p>
+        Every user must have a unique login and password to access the database.
+    </p>
+    <code>
+CREATE USER 'john'@'localhost' IDENTIFIED BY 'StrongPassword123';
+    </code>
+
+    <h2>2. Privileges and Roles</h2>
+    <p>
+        Grant specific privileges to users or roles to control their actions on the database.
+    </p>
+    <code>
+GRANT SELECT, INSERT ON employees TO 'john'@'localhost';
+REVOKE DELETE ON employees FROM 'john'@'localhost';
+    </code>
+
+    <h2>3. Views for Security</h2>
+    <p>
+        Use views to restrict access to sensitive columns or rows.
+    </p>
+    <code>
+CREATE VIEW public_employees AS
+SELECT emp_id, name, department
+FROM employees;
+    </code>
+
+    <h2>4. Encryption</h2>
+    <p>
+        Encrypt sensitive data such as passwords or personal information.
+    </p>
+    <code>
+-- Example: Store password as a hash
+INSERT INTO users(username, password)
+VALUES ('john', SHA2('MyPassword', 256));
+    </code>
+
+    <h2>5. SQL Injection Prevention</h2>
+    <p>
+        Avoid dynamic queries with user input. Use prepared statements and parameterized queries.
+    </p>
+    <code>
+-- Example in MySQL
+PREPARE stmt FROM 'SELECT * FROM users WHERE username=?';
+SET @user='john';
+EXECUTE stmt USING @user;
+    </code>
+
+    <h2>6. Auditing and Logging</h2>
+    <p>
+        Track database operations to detect unauthorized access or suspicious activities.
+    </p>
+    <code>
+CREATE TRIGGER log_insert
+AFTER INSERT ON employees
+FOR EACH ROW
+BEGIN
+    INSERT INTO audit_log(user_id, action, timestamp)
+    VALUES (CURRENT_USER(), 'INSERT', NOW());
+END;
+    </code>
+
+    <h2>Conclusion</h2>
+    <p>
+        SQL security is critical for protecting sensitive data and maintaining trust.
+        Implement user access controls, encryption, and monitoring to safeguard your database.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

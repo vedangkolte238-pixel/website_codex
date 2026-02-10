@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swift Functions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #FA7343;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #FA7343;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Swift Functions</h1>
+    <p>Reusable Blocks of Code in Swift</p>
+</header>
+
+<section>
+
+<h2>What Is a Function?</h2>
+<p>
+A function is a block of reusable code that performs a specific task.
+Functions help make programs modular, readable, and easy to maintain.
+</p>
+
+<h2>Defining a Function</h2>
+<p>
+Functions in Swift are defined using the <strong>func</strong> keyword.
+</p>
+
+<code>
+func greet() {
+    print("Hello, Swift!")
+}
+</code>
+
+<h2>Calling a Function</h2>
+<p>
+Call a function by using its name followed by parentheses.
+</p>
+
+<code>
+greet()
+</code>
+
+<h2>Function with Parameters</h2>
+<p>
+Functions can accept input values called parameters.
+</p>
+
+<code>
+func greetUser(name: String) {
+    print("Hello, \(name)!")
+}
+
+greetUser(name: "Alex")
+</code>
+
+<h2>Function with Return Value</h2>
+<p>
+Functions can return a value using the <strong>return</strong> keyword.
+</p>
+
+<code>
+func add(a: Int, b: Int) -> Int {
+    return a + b
+}
+
+let result = add(a: 5, b: 3)
+</code>
+
+<h2>Multiple Parameters</h2>
+<code>
+func calculateArea(length: Double, width: Double) -> Double {
+    return length * width
+}
+</code>
+
+<h2>Default Parameters</h2>
+<p>
+Swift allows default values for parameters.
+</p>
+
+<code>
+func greetAgain(name: String = "Guest") {
+    print("Welcome, \(name)")
+}
+
+greetAgain()
+greetAgain(name: "Sam")
+</code>
+
+<h2>External and Internal Parameter Names</h2>
+<code>
+func multiply(_ a: Int, by b: Int) -> Int {
+    return a * b
+}
+
+multiply(4, by: 5)
+</code>
+
+<h2>Function Without Return</h2>
+<p>
+Functions that do not return a value have a return type of <strong>Void</strong>.
+</p>
+
+<code>
+func showMessage() {
+    print("No return value")
+}
+</code>
+
+<h2>Nested Functions</h2>
+<p>
+Functions can be defined inside other functions.
+</p>
+
+<code>
+func outerFunction() {
+    func innerFunction() {
+        print("Inside inner function")
+    }
+    innerFunction()
+}
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Functions are essential in Swift for organizing code,
+reducing repetition, and improving clarity.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Swift Learning Website</p>
+</footer>
+
+</body>
+</html>

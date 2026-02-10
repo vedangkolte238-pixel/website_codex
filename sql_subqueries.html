@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Subqueries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.subquery-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SQL Subqueries</h1>
+    <p>Queries inside another query</p>
+</header>
+
+<section>
+
+    <h2>What is a Subquery?</h2>
+    <p>
+        A subquery is a query written inside another SQL query.
+        It is also known as a nested query and is often used with SELECT, INSERT, UPDATE, or DELETE.
+    </p>
+
+    <h2>1. Subquery in SELECT</h2>
+    <p>
+        Used to return a value for each row in the main query.
+    </p>
+    <code>
+SELECT name,
+       (SELECT AVG(salary) FROM employees) AS avg_salary
+FROM employees;
+    </code>
+
+    <h2>2. Subquery in WHERE</h2>
+    <p>
+        Used to filter records based on results of another query.
+    </p>
+    <code>
+SELECT name
+FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);
+    </code>
+
+    <h2>3. Subquery with IN</h2>
+    <p>
+        Used when the subquery returns multiple values.
+    </p>
+    <code>
+SELECT name
+FROM students
+WHERE course_id IN (
+    SELECT course_id
+    FROM courses
+    WHERE duration > 6
+);
+    </code>
+
+    <h2>4. Correlated Subquery</h2>
+    <p>
+        A correlated subquery depends on the outer query.
+    </p>
+    <code>
+SELECT name
+FROM employees e
+WHERE salary > (
+    SELECT AVG(salary)
+    FROM employees
+    WHERE department = e.department
+);
+    </code>
+
+    <h2>5. Subquery with EXISTS</h2>
+    <p>
+        Checks whether the subquery returns any rows.
+    </p>
+    <code>
+SELECT name
+FROM employees e
+WHERE EXISTS (
+    SELECT 1
+    FROM projects p
+    WHERE p.emp_id = e.emp_id
+);
+    </code>
+
+    <h2>Conclusion</h2>
+    <p>
+        SQL subqueries allow you to break complex problems into smaller queries.
+        They are powerful but should be used carefully for performance.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

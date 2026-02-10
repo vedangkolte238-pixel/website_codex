@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript Interfaces</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3178C6;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #3178C6;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>TypeScript Interfaces</h1>
+    <p>Define the Structure of Objects</p>
+</header>
+
+<section>
+
+<h2>What is an Interface?</h2>
+<p>
+An interface in TypeScript is used to define the shape of an object.  
+It describes what properties and methods an object should have, providing type safety.
+</p>
+
+<h2>Basic Interface Example</h2>
+<code>
+interface Person {
+    name: string;
+    age: number;
+}
+
+let user: Person = {
+    name: "Alice",
+    age: 25
+};
+</code>
+
+<h2>Optional Properties</h2>
+<p>Use <code>?</code> to make a property optional.</p>
+<code>
+interface Person {
+    name: string;
+    age?: number;
+}
+
+let user1: Person = { name: "Bob" };
+let user2: Person = { name: "Alice", age: 30 };
+</code>
+
+<h2>Readonly Properties</h2>
+<p>Use <code>readonly</code> to make a property immutable after initialization.</p>
+<code>
+interface Person {
+    readonly id: number;
+    name: string;
+}
+
+let user: Person = { id: 101, name: "Alice" };
+user.name = "Bob";  // allowed
+// user.id = 102;   // Error: Cannot assign to 'id' because it is a read-only property
+</code>
+
+<h2>Methods in Interfaces</h2>
+<code>
+interface Person {
+    name: string;
+    greet(): string;
+}
+
+let user: Person = {
+    name: "Alice",
+    greet() {
+        return `Hello, ${this.name}`;
+    }
+};
+
+console.log(user.greet());
+</code>
+
+<h2>Extending Interfaces</h2>
+<p>Interfaces can extend other interfaces to inherit properties.</p>
+<code>
+interface Person {
+    name: string;
+    age: number;
+}
+
+interface Employee extends Person {
+    employeeId: number;
+}
+
+let emp: Employee = {
+    name: "Bob",
+    age: 28,
+    employeeId: 101
+};
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Interfaces help you enforce consistent object structures in TypeScript.  
+They are especially useful in large applications for type safety and better code maintainability.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 TypeScript Learning Website</p>
+</footer>
+
+</body>
+</html>

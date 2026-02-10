@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swift Classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #FA7343;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #FA7343;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Swift Classes</h1>
+    <p>Blueprints for Creating Objects in Swift</p>
+</header>
+
+<section>
+
+<h2>What Is a Class?</h2>
+<p>
+A class is a blueprint used to create objects.
+It defines properties and methods that describe the behavior of an object.
+</p>
+
+<h2>Defining a Class</h2>
+<p>
+Classes in Swift are defined using the <strong>class</strong> keyword.
+</p>
+
+<code>
+class Person {
+    var name: String
+    var age: Int
+
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+</code>
+
+<h2>Creating an Object</h2>
+<p>
+An object is created using the class name followed by parentheses.
+</p>
+
+<code>
+let person1 = Person(name: "John", age: 25)
+</code>
+
+<h2>Accessing Properties</h2>
+<code>
+print(person1.name)
+print(person1.age)
+</code>
+
+<h2>Class Methods</h2>
+<p>
+Methods define actions that a class can perform.
+</p>
+
+<code>
+class Car {
+    var brand: String
+
+    init(brand: String) {
+        self.brand = brand
+    }
+
+    func start() {
+        print("\(brand) car is starting")
+    }
+}
+
+let car1 = Car(brand: "Tesla")
+car1.start()
+</code>
+
+<h2>Reference Type</h2>
+<p>
+Classes are reference types. Multiple variables can refer to the same object.
+</p>
+
+<code>
+let car2 = car1
+car2.brand = "BMW"
+
+print(car1.brand)  // BMW
+</code>
+
+<h2>Inheritance</h2>
+<p>
+A class can inherit properties and methods from another class.
+</p>
+
+<code>
+class Animal {
+    func sound() {
+        print("Animal makes a sound")
+    }
+}
+
+class Dog: Animal {
+    override func sound() {
+        print("Dog barks")
+    }
+}
+
+let dog = Dog()
+dog.sound()
+</code>
+
+<h2>Deinitialization</h2>
+<p>
+The <strong>deinit</strong> method is called when an object is removed from memory.
+</p>
+
+<code>
+class FileHandler {
+    deinit {
+        print("Object destroyed")
+    }
+}
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Classes are a core part of Swift's object-oriented programming.
+They support inheritance, reference behavior, and complex data modeling.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Swift Learning Website</p>
+</footer>
+
+</body>
+</html>

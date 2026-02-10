@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swift Structs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #FA7343;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #FA7343;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Swift Structs</h1>
+    <p>Value Types for Storing Data in Swift</p>
+</header>
+
+<section>
+
+<h2>What Is a Struct?</h2>
+<p>
+A struct (structure) is a value type in Swift used to store related data and functionality.
+Unlike classes, structs are copied when assigned or passed to functions.
+</p>
+
+<h2>Defining a Struct</h2>
+<p>
+Structs are defined using the <strong>struct</strong> keyword.
+</p>
+
+<code>
+struct Person {
+    var name: String
+    var age: Int
+}
+</code>
+
+<h2>Creating a Struct Instance</h2>
+<code>
+let person1 = Person(name: "Alice", age: 30)
+print(person1.name)  // Alice
+print(person1.age)   // 30
+</code>
+
+<h2>Mutability</h2>
+<p>
+To modify properties of a struct, the instance must be declared as <strong>var</strong>.
+</p>
+
+<code>
+var person2 = Person(name: "Bob", age: 25)
+person2.age = 26
+</code>
+
+<h2>Struct Methods</h2>
+<p>
+Structs can have functions (methods) inside them.
+</p>
+
+<code>
+struct Rectangle {
+    var width: Double
+    var height: Double
+
+    func area() -> Double {
+        return width * height
+    }
+}
+
+let rect = Rectangle(width: 5, height: 10)
+print(rect.area())  // 50
+</code>
+
+<h2>Value Type Behavior</h2>
+<p>
+Structs are copied when assigned to a new variable.
+</p>
+
+<code>
+var original = Person(name: "Charlie", age: 40)
+var copy = original
+copy.age = 41
+
+print(original.age)  // 40
+print(copy.age)      // 41
+</code>
+
+<h2>Structs vs Classes</h2>
+<ul>
+    <li>Structs are value types, classes are reference types</li>
+    <li>Structs don’t support inheritance</li>
+    <li>Structs are simpler and safer for lightweight data</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Structs are ideal for storing small, immutable, or value-based data in Swift.
+They are lightweight, safe, and widely used in Swift programming.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Swift Learning Website</p>
+</footer>
+
+</body>
+</html>

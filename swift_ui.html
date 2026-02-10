@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SwiftUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #FA7343;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #FA7343;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SwiftUI</h1>
+    <p>Building Modern UIs for Apple Platforms</p>
+</header>
+
+<section>
+
+<h2>What Is SwiftUI?</h2>
+<p>
+SwiftUI is Apple's declarative framework for building user interfaces
+across iOS, macOS, watchOS, and tvOS. It allows developers to create
+UI using simple Swift code and live previews.
+</p>
+
+<h2>Getting Started</h2>
+<p>
+To use SwiftUI, create a new SwiftUI project in Xcode.
+SwiftUI works seamlessly with Combine and other Swift features.
+</p>
+
+<h2>Basic SwiftUI View</h2>
+<code>
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        Text("Hello, SwiftUI!")
+            .font(.title)
+            .foregroundColor(.blue)
+            .padding()
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+</code>
+
+<h2>Layout Containers</h2>
+<p>SwiftUI uses stacks and other containers to layout UI elements.</p>
+
+<code>
+VStack {
+    Text("Hello")
+    Text("World")
+}
+
+HStack {
+    Text("Left")
+    Text("Right")
+}
+
+ZStack {
+    Color.gray
+    Text("On Top")
+}
+</code>
+
+<h2>Buttons</h2>
+<code>
+Button(action: {
+    print("Button tapped")
+}) {
+    Text("Tap Me")
+        .padding()
+        .background(Color.orange)
+        .foregroundColor(.white)
+        .cornerRadius(10)
+}
+</code>
+
+<h2>State Management</h2>
+<p>
+Use <strong>@State</strong> to manage mutable data in SwiftUI.
+</p>
+
+<code>
+struct CounterView: View {
+    @State private var count = 0
+
+    var body: some View {
+        VStack {
+            Text("Count: \(count)")
+            Button("Increment") {
+                count += 1
+            }
+        }
+    }
+}
+</code>
+
+<h2>Binding</h2>
+<p>
+Use <strong>@Binding</strong> to share state between views.
+</p>
+
+<code>
+struct ParentView: View {
+    @State private var isOn = false
+
+    var body: some View {
+        ToggleView(isOn: $isOn)
+    }
+}
+
+struct ToggleView: View {
+    @Binding var isOn: Bool
+
+    var body: some View {
+        Toggle("Switch", isOn: $isOn)
+    }
+}
+</code>
+
+<h2>Modifiers</h2>
+<p>
+SwiftUI uses modifiers to change the appearance or behavior of views.
+</p>
+
+<code>
+Text("Hello")
+    .font(.headline)
+    .foregroundColor(.red)
+    .padding()
+    .background(Color.yellow)
+    .cornerRadius(8)
+</code>
+
+<h2>Conclusion</h2>
+<p>
+SwiftUI makes UI development faster, easier, and more interactive.
+Its declarative syntax, live previews, and seamless integration with Swift
+allow developers to build modern apps efficiently.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Swift Learning Website</p>
+</footer>
+
+</body>
+</html>

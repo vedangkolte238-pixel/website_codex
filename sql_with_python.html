@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL with Python</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.python-sql-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SQL with Python</h1>
+    <p>Connecting Python applications to SQL databases</p>
+</header>
+
+<section>
+
+    <h2>1. Installing Required Libraries</h2>
+    <p>
+        Use Python libraries like <strong>sqlite3</strong>, <strong>mysql-connector-python</strong>, or <strong>psycopg2</strong> to interact with databases.
+    </p>
+    <code>
+# Install MySQL connector
+pip install mysql-connector-python
+    </code>
+
+    <h2>2. Connecting to a Database</h2>
+    <p>
+        Establish a connection to your database from Python.
+    </p>
+    <code>
+import mysql.connector
+
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="password",
+    database="testdb"
+)
+
+cursor = conn.cursor()
+    </code>
+
+    <h2>3. Creating Tables</h2>
+    <p>
+        Execute SQL commands using Python to create tables.
+    </p>
+    <code>
+cursor.execute("""
+CREATE TABLE employees (
+    emp_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50)
+)
+""")
+    </code>
+
+    <h2>4. Inserting Data</h2>
+    <p>
+        Insert records using Python with parameterized queries to prevent SQL injection.
+    </p>
+    <code>
+sql = "INSERT INTO employees (name, department) VALUES (%s, %s)"
+values = ("Alice", "HR")
+cursor.execute(sql, values)
+conn.commit()
+    </code>
+
+    <h2>5. Reading Data</h2>
+    <p>
+        Fetch and process data from the database.
+    </p>
+    <code>
+cursor.execute("SELECT * FROM employees")
+rows = cursor.fetchall()
+for row in rows:
+    print(row)
+    </code>
+
+    <h2>6. Updating Data</h2>
+    <p>
+        Modify existing records from Python.
+    </p>
+    <code>
+sql = "UPDATE employees SET department=%s WHERE name=%s"
+values = ("Finance", "Alice")
+cursor.execute(sql, values)
+conn.commit()
+    </code>
+
+    <h2>7. Deleting Data</h2>
+    <p>
+        Remove records programmatically.
+    </p>
+    <code>
+sql = "DELETE FROM employees WHERE name=%s"
+values = ("Alice",)
+cursor.execute(sql, values)
+conn.commit()
+    </code>
+
+    <h2>8. Closing the Connection</h2>
+    <p>
+        Always close the cursor and connection when done.
+    </p>
+    <code>
+cursor.close()
+conn.close()
+    </code>
+
+    <h2>Conclusion</h2>
+    <p>
+        Integrating SQL with Python allows you to build database-driven applications,
+        automate tasks, and perform data analysis efficiently.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

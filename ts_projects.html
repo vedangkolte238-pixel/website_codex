@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3178C6;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #3178C6;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>TypeScript Projects</h1>
+    <p>Practical Projects to Showcase TypeScript Skills</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+This section lists practical TypeScript projects suitable for beginners to intermediate learners.  
+Projects cover DOM manipulation, APIs, classes, and type-safe applications.
+</p>
+
+<h2>1. To-Do List Application</h2>
+<p>Create a type-safe To-Do list with classes and DOM manipulation.</p>
+<code>
+class Task {
+    constructor(public title: string, public done: boolean = false) {}
+}
+
+let tasks: Task[] = [];
+
+function addTask(title: string) {
+    tasks.push(new Task(title));
+    console.log(tasks);
+}
+
+addTask("Learn TypeScript");
+addTask("Build a Project");
+</code>
+
+<h2>2. Simple Calculator</h2>
+<p>Use TypeScript classes and functions to build a calculator.</p>
+<code>
+class Calculator {
+    add(a: number, b: number): number {
+        return a + b;
+    }
+    subtract(a: number, b: number): number {
+        return a - b;
+    }
+}
+
+let calc = new Calculator();
+console.log(calc.add(5, 3));      // 8
+console.log(calc.subtract(10, 4)); // 6
+</code>
+
+<h2>3. Weather App (API)</h2>
+<p>Fetch weather data from a public API and display it.</p>
+<code>
+interface Weather {
+    temp: number;
+    description: string;
+}
+
+async function getWeather(city: string): Promise<void> {
+    const response = await fetch(`https://api.example.com/weather/${city}`);
+    const data: Weather = await response.json();
+    console.log(`Temperature: ${data.temp}, Description: ${data.description}`);
+}
+</code>
+
+<h2>4. Quiz App</h2>
+<p>Create a type-safe quiz application using interfaces and classes.</p>
+<code>
+interface Question {
+    text: string;
+    answer: string;
+}
+
+class Quiz {
+    questions: Question[] = [];
+    
+    addQuestion(q: Question) {
+        this.questions.push(q);
+    }
+}
+
+let quiz = new Quiz();
+quiz.addQuestion({text: "What is TypeScript?", answer: "A superset of JavaScript"});
+console.log(quiz.questions);
+</code>
+
+<h2>5. Shopping Cart</h2>
+<p>Use classes, interfaces, and generics to build a shopping cart system.</p>
+<code>
+interface Product {
+    id: number;
+    name: string;
+    price: number;
+}
+
+class Cart<T extends Product> {
+    items: T[] = [];
+
+    addItem(item: T) {
+        this.items.push(item);
+    }
+
+    total(): number {
+        return this.items.reduce((sum, item) => sum + item.price, 0);
+    }
+}
+
+let cart = new Cart<Product>();
+cart.addItem({id:1, name:"Laptop", price:500});
+cart.addItem({id:2, name:"Mouse", price:50});
+console.log(cart.total()); // 550
+</code>
+
+<h2>Conclusion</h2>
+<p>
+These projects help reinforce TypeScript concepts such as types, interfaces, classes, and async programming.  
+You can showcase these projects with screenshots, code snippets, and live demos to demonstrate your TypeScript skills.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 TypeScript Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript DOM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3178C6;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #3178C6;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>TypeScript DOM</h1>
+    <p>Access and Manipulate HTML Elements Using TypeScript</p>
+</header>
+
+<section>
+
+<h2>What is DOM?</h2>
+<p>
+The Document Object Model (DOM) represents the structure of a web page.  
+TypeScript can interact with the DOM while providing type safety for elements.
+</p>
+
+<h2>Accessing Elements</h2>
+<p>Use <code>document.getElementById</code> or <code>querySelector</code>.</p>
+<code>
+const myButton = document.getElementById("btn") as HTMLButtonElement;
+const myInput = document.querySelector("input") as HTMLInputElement;
+
+console.log(myButton);
+console.log(myInput.value);
+</code>
+
+<h2>Adding Event Listeners</h2>
+<p>Attach events to elements safely.</p>
+<code>
+myButton.addEventListener("click", () => {
+    alert("Button clicked! Input value: " + myInput.value);
+});
+</code>
+
+<h2>Modifying Elements</h2>
+<p>Change text, style, or attributes of elements.</p>
+<code>
+const myParagraph = document.getElementById("para") as HTMLParagraphElement;
+myParagraph.textContent = "This text is updated by TypeScript!";
+myParagraph.style.color = "blue";
+</code>
+
+<h2>Creating Elements</h2>
+<p>Create and append new elements dynamically.</p>
+<code>
+const newDiv = document.createElement("div");
+newDiv.textContent = "Hello from TypeScript!";
+document.body.appendChild(newDiv);
+</code>
+
+<h2>Removing Elements</h2>
+<code>
+const removeDiv = document.getElementById("removeMe");
+if(removeDiv) {
+    removeDiv.remove();
+}
+</code>
+
+<h2>Conclusion</h2>
+<p>
+TypeScript makes DOM manipulation safer by providing type checking for HTML elements.  
+It helps prevent runtime errors when working with web pages.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 TypeScript Learning Website</p>
+</footer>
+
+</body>
+</html>

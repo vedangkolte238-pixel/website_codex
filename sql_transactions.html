@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Transactions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A2540;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0A2540;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+
+        ul.transaction-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SQL Transactions</h1>
+    <p>Ensuring reliable database operations</p>
+</header>
+
+<section>
+
+    <h2>What is a Transaction?</h2>
+    <p>
+        A transaction is a sequence of SQL operations performed as a single unit of work.
+        Either all operations succeed, or none are applied, ensuring data integrity.
+    </p>
+
+    <h2>ACID Properties</h2>
+    <ul class="transaction-list">
+        <li><strong>Atomicity:</strong> All operations succeed or all fail.</li>
+        <li><strong>Consistency:</strong> The database remains in a valid state before and after the transaction.</li>
+        <li><strong>Isolation:</strong> Transactions do not interfere with each other.</li>
+        <li><strong>Durability:</strong> Once committed, changes are permanent.</li>
+    </ul>
+
+    <h2>1. Starting a Transaction</h2>
+    <p>
+        Use <strong>BEGIN TRANSACTION</strong> to start a transaction.
+    </p>
+    <code>
+BEGIN TRANSACTION;
+
+UPDATE accounts
+SET balance = balance - 500
+WHERE account_id = 1;
+
+UPDATE accounts
+SET balance = balance + 500
+WHERE account_id = 2;
+
+COMMIT;
+    </code>
+
+    <h2>2. Commit</h2>
+    <p>
+        Saves all changes made by the transaction permanently.
+    </p>
+    <code>
+COMMIT;
+    </code>
+
+    <h2>3. Rollback</h2>
+    <p>
+        Undoes all changes made in the transaction if an error occurs.
+    </p>
+    <code>
+ROLLBACK;
+    </code>
+
+    <h2>4. Savepoints</h2>
+    <p>
+        Allows partial rollback within a transaction.
+    </p>
+    <code>
+SAVEPOINT sp1;
+
+UPDATE accounts SET balance = balance - 100 WHERE account_id = 1;
+
+ROLLBACK TO sp1;
+    </code>
+
+    <h2>Conclusion</h2>
+    <p>
+        SQL transactions ensure data integrity and consistency.
+        They are essential when performing multiple related operations in a database.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 SQL Learning Website</p>
+</footer>
+
+</body>
+</html>

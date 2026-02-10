@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swift Optionals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #FA7343;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #FA7343;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Swift Optionals</h1>
+    <p>Handling Nil Values Safely in Swift</p>
+</header>
+
+<section>
+
+<h2>What Are Optionals?</h2>
+<p>
+Optionals in Swift represent a variable that may hold a value or may be nil.
+They provide a safe way to handle missing or absent values.
+</p>
+
+<h2>Declaring an Optional</h2>
+
+<code>
+var name: String? = nil
+name = "Alice"
+</code>
+
+<h2>Unwrapping Optionals</h2>
+<p>
+You must safely unwrap an optional to access its value.
+</p>
+
+<h3>1. Using If Let</h3>
+
+<code>
+if let unwrappedName = name {
+    print("Name is \(unwrappedName)")
+} else {
+    print("Name is nil")
+}
+</code>
+
+<h3>2. Using Guard Let</h3>
+
+<code>
+func greet(user: String?) {
+    guard let name = user else {
+        print("No name provided")
+        return
+    }
+    print("Hello, \(name)!")
+}
+
+greet(user: name)
+</code>
+
+<h3>3. Force Unwrapping</h3>
+<p>
+Force unwrap using `!`, but it can crash if the value is nil.
+</p>
+
+<code>
+let forcedName = name!
+print(forcedName)
+</code>
+
+<h2>Optional Chaining</h2>
+<p>
+Access properties or methods safely on optional values.
+</p>
+
+<code>
+struct Person {
+    var name: String
+    var pet: Pet?
+}
+
+struct Pet {
+    var name: String
+}
+
+let person = Person(name: "John", pet: Pet(name: "Buddy"))
+print(person.pet?.name) // Optional("Buddy")
+</code>
+
+<h2>Nil-Coalescing Operator</h2>
+<p>
+Provide a default value if the optional is nil.
+</p>
+
+<code>
+let petName = person.pet?.name ?? "No Pet"
+print(petName)
+</code>
+
+<h2>Implicitly Unwrapped Optionals</h2>
+<p>
+Optionals that are automatically unwrapped when accessed.
+Use with caution.
+</p>
+
+<code>
+var email: String! = "user@example.com"
+print(email)
+</code>
+
+<h2>Optional Enum</h2>
+<p>
+Optionals are implemented as an enum under the hood: <strong>Optional&lt;Wrapped&gt;</strong>
+</p>
+
+<code>
+enum Optional<Wrapped> {
+    case none
+    case some(Wrapped)
+}
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Optionals are a core feature of Swift, allowing you to safely handle
+values that may be missing. Using unwrapping techniques properly
+helps prevent runtime errors and crashes.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Swift Learning Website</p>
+</footer>
+
+</body>
+</html>

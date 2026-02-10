@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swift Data Types</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #FA7343;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #FA7343;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Swift Data Types</h1>
+    <p>Understanding Built-in Data Types in Swift</p>
+</header>
+
+<section>
+
+<h2>What Are Data Types?</h2>
+<p>
+Data types specify the type of data a variable can hold.
+Swift is a strongly typed language, meaning every variable
+has a specific data type.
+</p>
+
+<h2>Integer Types</h2>
+<p>
+Integers store whole numbers.
+</p>
+
+<code>
+let age: Int = 20
+let score = 100
+</code>
+
+<h2>Floating-Point Types</h2>
+<p>
+Used for decimal values.
+</p>
+
+<ul>
+    <li><strong>Float</strong> – 32-bit decimal</li>
+    <li><strong>Double</strong> – 64-bit decimal (preferred)</li>
+</ul>
+
+<code>
+let pi: Double = 3.14
+let temperature: Float = 36.6
+</code>
+
+<h2>Boolean Type</h2>
+<p>
+Stores true or false values.
+</p>
+
+<code>
+let isLoggedIn: Bool = true
+</code>
+
+<h2>String Type</h2>
+<p>
+Strings store text data.
+</p>
+
+<code>
+let name: String = "Swift"
+let message = "Hello, World!"
+</code>
+
+<h2>Character Type</h2>
+<p>
+Stores a single character.
+</p>
+
+<code>
+let letter: Character = "A"
+</code>
+
+<h2>Array Type</h2>
+<p>
+Arrays store ordered collections of values.
+</p>
+
+<code>
+let numbers: [Int] = [1, 2, 3, 4]
+let fruits = ["Apple", "Banana", "Mango"]
+</code>
+
+<h2>Dictionary Type</h2>
+<p>
+Dictionaries store key-value pairs.
+</p>
+
+<code>
+let student: [String: Int] = ["Math": 90, "Science": 85]
+</code>
+
+<h2>Tuple Type</h2>
+<p>
+Tuples group multiple values into a single variable.
+</p>
+
+<code>
+let person = (name: "John", age: 25)
+</code>
+
+<h2>Optional Type</h2>
+<p>
+Optionals allow a variable to hold a value or nil.
+</p>
+
+<code>
+var email: String? = nil
+email = "user@example.com"
+</code>
+
+<h2>Type Inference</h2>
+<p>
+Swift automatically detects data types.
+</p>
+
+<code>
+let city = "New York"
+let year = 2025
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Swift provides powerful and safe data types that help
+prevent errors and improve code reliability.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Swift Learning Website</p>
+</footer>
+
+</body>
+</html>

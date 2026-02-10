@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript Generics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3178C6;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #3178C6;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>TypeScript Generics</h1>
+    <p>Write Reusable and Type-Safe Code</p>
+</header>
+
+<section>
+
+<h2>What are Generics?</h2>
+<p>
+Generics allow you to write functions, classes, or interfaces that work with multiple types while maintaining type safety.
+</p>
+
+<h2>Generic Function</h2>
+<code>
+function identity<T>(value: T): T {
+    return value;
+}
+
+let num = identity<number>(10);
+let str = identity<string>("Hello");
+
+console.log(num); // 10
+console.log(str); // Hello
+</code>
+
+<h2>Generic Array</h2>
+<p>You can define arrays with generics to enforce types.</p>
+<code>
+function getArray<T>(items: T[]): T[] {
+    return new Array().concat(items);
+}
+
+let numberArray = getArray<number>([1, 2, 3]);
+let stringArray = getArray<string>(["A", "B", "C"]);
+</code>
+
+<h2>Generic Interface</h2>
+<code>
+interface KeyValuePair<K, V> {
+    key: K;
+    value: V;
+}
+
+let kvp: KeyValuePair<number, string> = { key: 1, value: "Apple" };
+</code>
+
+<h2>Generic Class</h2>
+<code>
+class GenericNumber<T> {
+    zeroValue: T;
+    add: (x: T, y: T) => T;
+}
+
+let myNumber = new GenericNumber<number>();
+myNumber.zeroValue = 0;
+myNumber.add = (x, y) => x + y;
+
+console.log(myNumber.add(5, 10)); // 15
+</code>
+
+<h2>Constraints in Generics</h2>
+<p>Restrict the types allowed for a generic parameter.</p>
+<code>
+interface Lengthwise {
+    length: number;
+}
+
+function logLength<T extends Lengthwise>(item: T): void {
+    console.log(item.length);
+}
+
+logLength("Hello");    // 5
+logLength([1,2,3]);   // 3
+// logLength(123);     // Error: number has no 'length'
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Generics make your TypeScript code more flexible and reusable while still providing type safety.  
+They are especially useful when working with collections or utility functions.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 TypeScript Learning Website</p>
+</footer>
+
+</body>
+</html>

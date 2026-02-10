@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript Data Types</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3178C6;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #3178C6;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>TypeScript Data Types</h1>
+    <p>Learn About Variables and Their Types</p>
+</header>
+
+<section>
+
+<h2>What are Data Types?</h2>
+<p>
+TypeScript provides types to describe the kind of values a variable can hold.  
+It helps catch errors during development.
+</p>
+
+<h2>Basic Data Types</h2>
+
+<h3>1. Number</h3>
+<p>Represents numeric values (integers and floating points).</p>
+<code>
+let age: number = 25;
+let price: number = 99.99;
+</code>
+
+<h3>2. String</h3>
+<p>Represents text values.</p>
+<code>
+let name: string = "Alice";
+let greeting: string = `Hello, ${name}`;
+</code>
+
+<h3>3. Boolean</h3>
+<p>Represents true or false.</p>
+<code>
+let isStudent: boolean = true;
+let hasLicense: boolean = false;
+</code>
+
+<h3>4. Array</h3>
+<p>Stores multiple values of the same type.</p>
+<code>
+let numbers: number[] = [1, 2, 3, 4];
+let fruits: string[] = ["Apple", "Banana", "Orange"];
+</code>
+
+<h3>5. Tuple</h3>
+<p>Stores a fixed number of elements of different types.</p>
+<code>
+let person: [string, number] = ["Alice", 25];
+</code>
+
+<h3>6. Enum</h3>
+<p>Defines a set of named constants.</p>
+<code>
+enum Color {Red, Green, Blue}
+let favorite: Color = Color.Green;
+</code>
+
+<h3>7. Any</h3>
+<p>Can hold any type of value. Use sparingly.</p>
+<code>
+let data: any = 10;
+data = "Hello";
+data = true;
+</code>
+
+<h3>8. Void</h3>
+<p>Used for functions that do not return a value.</p>
+<code>
+function sayHello(): void {
+    console.log("Hello!");
+}
+</code>
+
+<h3>9. Null and Undefined</h3>
+<code>
+let nothing: null = null;
+let notAssigned: undefined = undefined;
+</code>
+
+<h3>10. Object</h3>
+<p>Represents non-primitive types like objects or arrays.</p>
+<code>
+let user: object = {name: "Alice", age: 25};
+</code>
+
+<h3>11. Never</h3>
+<p>Represents values that never occur (e.g., functions that throw errors).</p>
+<code>
+function error(message: string): never {
+    throw new Error(message);
+}
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Using TypeScript data types makes your code safer and easier to maintain.  
+You can catch mistakes early and write predictable applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 TypeScript Learning Website</p>
+</footer>
+
+</body>
+</html>

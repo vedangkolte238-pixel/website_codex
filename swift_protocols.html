@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swift Protocols</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #FA7343;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #FA7343;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Swift Protocols</h1>
+    <p>Defining Blueprints for Methods and Properties</p>
+</header>
+
+<section>
+
+<h2>What Is a Protocol?</h2>
+<p>
+A protocol defines a blueprint of methods, properties, or other requirements
+that a class, struct, or enum can adopt. Protocols help enforce consistency
+and enable polymorphism.
+</p>
+
+<h2>Defining a Protocol</h2>
+
+<code>
+protocol Vehicle {
+    var name: String { get }
+    func start()
+}
+</code>
+
+<h2>Adopting a Protocol</h2>
+<p>
+A class or struct adopts a protocol and implements its requirements.
+</p>
+
+<code>
+struct Car: Vehicle {
+    var name: String
+
+    func start() {
+        print("\(name) is starting")
+    }
+}
+
+let myCar = Car(name: "Tesla")
+myCar.start()
+</code>
+
+<h2>Protocols with Properties</h2>
+<p>
+Protocols can require properties to be gettable or settable.
+</p>
+
+<code>
+protocol PersonProtocol {
+    var fullName: String { get set }
+}
+
+struct Student: PersonProtocol {
+    var fullName: String
+}
+</code>
+
+<h2>Protocol Inheritance</h2>
+<p>
+A protocol can inherit from one or more other protocols.
+</p>
+
+<code>
+protocol Flying {
+    func fly()
+}
+
+protocol Bird: Flying {
+    func chirp()
+}
+
+struct Sparrow: Bird {
+    func fly() { print("Sparrow is flying") }
+    func chirp() { print("Chirp chirp") }
+}
+</code>
+
+<h2>Protocol as a Type</h2>
+<p>
+Protocols can be used as types for variables, arrays, or function parameters.
+</p>
+
+<code>
+let vehicle: Vehicle = Car(name: "BMW")
+vehicle.start()
+</code>
+
+<h2>Protocol Extensions</h2>
+<p>
+You can provide default implementations of methods using protocol extensions.
+</p>
+
+<code>
+extension Vehicle {
+    func start() {
+        print("\(name) is ready to go")
+    }
+}
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Protocols in Swift provide a flexible way to define interfaces and enforce
+requirements across classes, structs, and enums. They are key to writing
+clean, modular, and reusable code.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Swift Learning Website</p>
+</footer>
+
+</body>
+</html>
