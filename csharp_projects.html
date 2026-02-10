@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C# Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2E1065;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #2E1065;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C# Projects</h1>
+    <p>Example Projects to Practice C# Concepts</p>
+</header>
+
+<section>
+
+<h2>1. Calculator</h2>
+<p>A simple console-based calculator that performs basic arithmetic operations.</p>
+
+<code>
+using System;
+
+class Program {
+    static void Main() {
+        Console.WriteLine("Enter first number:");
+        double num1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Enter second number:");
+        double num2 = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Choose operation (+, -, *, /):");
+        string op = Console.ReadLine();
+
+        double result = 0;
+
+        switch(op) {
+            case "+": result = num1 + num2; break;
+            case "-": result = num1 - num2; break;
+            case "*": result = num1 * num2; break;
+            case "/": result = num2 != 0 ? num1 / num2 : 0; break;
+            default: Console.WriteLine("Invalid operation"); break;
+        }
+
+        Console.WriteLine("Result: " + result);
+    }
+}
+</code>
+
+<h2>2. Student Management System</h2>
+<p>Manage student details using classes, objects, and lists.</p>
+
+<code>
+using System;
+using System.Collections.Generic;
+
+class Student {
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+
+class Program {
+    static void Main() {
+        List&lt;Student&gt; students = new List&lt;Student&gt;();
+
+        students.Add(new Student { Name = "Alice", Age = 20 });
+        students.Add(new Student { Name = "Bob", Age = 22 });
+
+        foreach (var s in students) {
+            Console.WriteLine("Name: " + s.Name + ", Age: " + s.Age);
+        }
+    }
+}
+</code>
+
+<h2>3. Bank Account System</h2>
+<p>Simulate basic banking operations using OOP concepts.</p>
+
+<code>
+using System;
+
+class BankAccount {
+    public string Owner { get; set; }
+    public double Balance { get; private set; }
+
+    public void Deposit(double amount) {
+        Balance += amount;
+        Console.WriteLine("Deposited: " + amount);
+    }
+
+    public void Withdraw(double amount) {
+        if (amount &lt;= Balance) {
+            Balance -= amount;
+            Console.WriteLine("Withdrawn: " + amount);
+        } else {
+            Console.WriteLine("Insufficient balance");
+        }
+    }
+}
+
+class Program {
+    static void Main() {
+        BankAccount account = new BankAccount();
+        account.Owner = "John";
+        account.Deposit(500);
+        account.Withdraw(200);
+        Console.WriteLine("Current Balance: " + account.Balance);
+    }
+}
+</code>
+
+<h2>4. To-Do List Application</h2>
+<p>Manage tasks using a list and simple console interface.</p>
+
+<code>
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main() {
+        List&lt;string&gt; tasks = new List&lt;string>();
+
+        tasks.Add("Learn C#");
+        tasks.Add("Build project");
+
+        Console.WriteLine("Tasks:");
+        foreach(var task in tasks) {
+            Console.WriteLine("- " + task);
+        }
+    }
+}
+</code>
+
+<h2>5. LINQ Example</h2>
+<p>Filter data from a list using LINQ.</p>
+
+<code>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program {
+    static void Main() {
+        List&lt;int&gt; numbers = new List&lt;int&gt; { 1, 2, 3, 4, 5, 6 };
+
+        var evenNumbers = numbers.Where(n =&gt; n % 2 == 0);
+
+        Console.WriteLine("Even Numbers:");
+        foreach(var n in evenNumbers) {
+            Console.WriteLine(n);
+        }
+    }
+}
+</code>
+
+<h2>Conclusion</h2>
+<p>
+These projects help you practice and apply your knowledge of C# concepts, including OOP, collections, exception handling, and LINQ.  
+Start small, and gradually build more complex projects as you gain confidence.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C# Learning Website</p>
+</footer>
+
+</body>
+</html>

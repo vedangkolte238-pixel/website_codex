@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DSA Linked Lists</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0D9488;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0D9488;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>DSA Linked Lists</h1>
+    <p>Understanding Linked Lists in Data Structures & Algorithms</p>
+</header>
+
+<section>
+
+<h2>What Is a Linked List?</h2>
+<p>
+A linked list is a linear data structure where elements are stored in nodes.
+Each node contains data and a reference (or pointer) to the next node.
+Unlike arrays, linked lists do not require contiguous memory.
+</p>
+
+<h2>Types of Linked Lists</h2>
+<ul>
+    <li><strong>Singly Linked List:</strong> Each node points to the next node only.</li>
+    <li><strong>Doubly Linked List:</strong> Each node points to both previous and next nodes.</li>
+    <li><strong>Circular Linked List:</strong> Last node points back to the first node.</li>
+</ul>
+
+<h2>Advantages of Linked Lists</h2>
+<ul>
+    <li>Dynamic size (can grow and shrink)</li>
+    <li>Efficient insertion and deletion (especially at the beginning or middle)</li>
+    <li>No memory wastage due to pre-allocation</li>
+</ul>
+
+<h2>Disadvantages of Linked Lists</h2>
+<ul>
+    <li>Extra memory needed for pointers</li>
+    <li>Accessing elements is slower (no direct indexing)</li>
+    <li>More complex than arrays to implement</li>
+</ul>
+
+<h2>Node Structure</h2>
+<code>
+// C
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// C++
+struct Node {
+    int data;
+    Node* next;
+};
+
+// Java
+class Node {
+    int data;
+    Node next;
+}
+</code>
+
+<h2>Basic Operations</h2>
+<ul>
+    <li><strong>Traversal:</strong> Visit each node sequentially</li>
+    <li><strong>Insertion:</strong> Add a node at the beginning, end, or a specific position</li>
+    <li><strong>Deletion:</strong> Remove a node from beginning, end, or specific position</li>
+    <li><strong>Search:</strong> Find a node with specific value</li>
+</ul>
+
+<h2>Example: Traversal in C</h2>
+<code>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+int main() {
+    struct Node* head = (struct Node*)malloc(sizeof(struct Node));
+    head->data = 10;
+    head->next = NULL;
+
+    struct Node* second = (struct Node*)malloc(sizeof(struct Node));
+    second->data = 20;
+    head->next = second;
+    second->next = NULL;
+
+    struct Node* current = head;
+    while(current != NULL) {
+        printf("%d ", current->data);
+        current = current->next;
+    }
+    return 0;
+}
+</code>
+
+<h2>Applications of Linked Lists</h2>
+<ul>
+    <li>Dynamic memory allocation</li>
+    <li>Implementing stacks, queues, and graphs</li>
+    <li>Undo functionality in editors</li>
+    <li>Navigation in browsers (back and forward)</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Linked lists are essential data structures for dynamic memory management.
+They are used extensively in real-world applications where data size changes frequently
+or frequent insertions and deletions are required.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 DSA Learning Website</p>
+</footer>
+
+</body>
+</html>

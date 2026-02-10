@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go Interfaces</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0027C4;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0027C4;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Go Interfaces</h1>
+    <p>Understanding Interfaces in Go</p>
+</header>
+
+<section>
+
+<h2>What is an Interface?</h2>
+<p>
+An interface in Go defines a set of method signatures.
+Any type that implements those methods automatically satisfies the interface.
+</p>
+
+<h2>Defining an Interface</h2>
+
+<code>
+type Shape interface {
+    Area() float64
+    Perimeter() float64
+}
+</code>
+
+<h2>Implementing an Interface</h2>
+<p>
+A struct implements an interface by defining all its methods.
+</p>
+
+<code>
+type Rectangle struct {
+    Width  float64
+    Height float64
+}
+
+func (r Rectangle) Area() float64 {
+    return r.Width * r.Height
+}
+
+func (r Rectangle) Perimeter() float64 {
+    return 2 * (r.Width + r.Height)
+}
+</code>
+
+<h2>Using an Interface</h2>
+
+<code>
+func printShape(s Shape) {
+    fmt.Println("Area:", s.Area())
+    fmt.Println("Perimeter:", s.Perimeter())
+}
+</code>
+
+<h2>Interface Example</h2>
+
+<code>
+func main() {
+    rect := Rectangle{Width: 10, Height: 5}
+    printShape(rect)
+}
+</code>
+
+<h2>Empty Interface</h2>
+<p>
+The empty interface can hold values of any type.
+</p>
+
+<code>
+var data interface{}
+data = 10
+data = "Hello"
+</code>
+
+<h2>Type Assertion</h2>
+
+<code>
+value, ok := data.(string)
+if ok {
+    fmt.Println(value)
+}
+</code>
+
+<h2>Why Interfaces are Powerful</h2>
+<ul>
+    <li>No explicit implementation required.</li>
+    <li>Promotes loose coupling.</li>
+    <li>Supports polymorphism.</li>
+    <li>Makes code flexible and testable.</li>
+</ul>
+
+<h2>Key Points</h2>
+<ul>
+    <li>Interfaces define behavior, not data.</li>
+    <li>Implementation is implicit in Go.</li>
+    <li>Multiple types can satisfy the same interface.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Interfaces are a cornerstone of Go’s design philosophy.
+They allow you to write flexible, modular, and reusable code.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Go Learning Website</p>
+</footer>
+
+</body>
+</html>

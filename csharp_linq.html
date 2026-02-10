@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C# LINQ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2E1065;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #2E1065;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C# LINQ</h1>
+    <p>Learn Language Integrated Query in C#</p>
+</header>
+
+<section>
+
+<h2>What is LINQ?</h2>
+<p>
+LINQ (Language Integrated Query) is a feature in C# that allows you to query collections of objects, databases, XML, or other data sources using a consistent syntax.  
+It simplifies data access and improves code readability.
+</p>
+
+<h2>Advantages of LINQ</h2>
+<ul>
+    <li>Readable and concise queries</li>
+    <li>Works with arrays, lists, and other collections</li>
+    <li>Compile-time type checking</li>
+    <li>Supports filtering, sorting, and grouping</li>
+</ul>
+
+<h2>LINQ Syntax</h2>
+<p>LINQ provides two syntaxes:</p>
+
+<h3>1. Query Syntax</h3>
+<code>
+using System;
+using System.Linq;
+
+class Program {
+    static void Main() {
+        int[] numbers = { 1, 2, 3, 4, 5, 6 };
+
+        var evenNumbers = from num in numbers
+                          where num % 2 == 0
+                          select num;
+
+        foreach (var n in evenNumbers) {
+            Console.WriteLine(n);
+        }
+    }
+}
+</code>
+
+<h3>2. Method Syntax</h3>
+<code>
+using System;
+using System.Linq;
+
+class Program {
+    static void Main() {
+        int[] numbers = { 1, 2, 3, 4, 5, 6 };
+
+        var evenNumbers = numbers.Where(n => n % 2 == 0);
+
+        foreach (var n in evenNumbers) {
+            Console.WriteLine(n);
+        }
+    }
+}
+</code>
+
+<h2>Common LINQ Methods</h2>
+<ul>
+    <li><strong>Where</strong> – Filters elements based on a condition</li>
+    <li><strong>Select</strong> – Projects each element into a new form</li>
+    <li><strong>OrderBy / OrderByDescending</strong> – Sorts elements</li>
+    <li><strong>GroupBy</strong> – Groups elements by a key</li>
+    <li><strong>First / FirstOrDefault</strong> – Returns the first element</li>
+    <li><strong>Count</strong> – Returns the number of elements</li>
+</ul>
+
+<h2>Example: LINQ with Objects</h2>
+<code>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Student {
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+
+class Program {
+    static void Main() {
+        List&lt;Student&gt; students = new List&lt;Student&gt; {
+            new Student { Name = "Alice", Age = 20 },
+            new Student { Name = "Bob", Age = 22 },
+            new Student { Name = "Charlie", Age = 20 }
+        };
+
+        var age20 = from s in students
+                    where s.Age == 20
+                    select s;
+
+        foreach (var student in age20) {
+            Console.WriteLine(student.Name);
+        }
+    }
+}
+</code>
+
+<h2>Conclusion</h2>
+<p>
+LINQ is a powerful tool in C# for querying and manipulating data.  
+It reduces boilerplate code and improves readability when working with collections and other data sources.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C# Learning Website</p>
+</footer>
+
+</body>
+</html>

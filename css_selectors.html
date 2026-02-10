@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0033FF;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0033FF;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Selectors</h1>
+    <p>Target HTML Elements Using CSS</p>
+</header>
+
+<section>
+
+<h2>What are CSS Selectors?</h2>
+<p>
+CSS selectors are used to select HTML elements that you want to style.
+They tell the browser which elements should receive the CSS rules.
+</p>
+
+<h2>Why CSS Selectors are Important</h2>
+<ul>
+    <li>They control which elements get styled</li>
+    <li>They help apply styles efficiently</li>
+    <li>They make CSS flexible and powerful</li>
+</ul>
+
+<h2>Types of CSS Selectors</h2>
+
+<h3>1. Element Selector</h3>
+<p>Selects all elements of a given type.</p>
+
+<code>
+p {
+    color: blue;
+}
+</code>
+
+<h3>2. Class Selector</h3>
+<p>Selects elements with a specific class.</p>
+
+<code>
+.myClass {
+    font-size: 18px;
+    color: green;
+}
+</code>
+
+<h3>3. ID Selector</h3>
+<p>Selects one unique element with an id.</p>
+
+<code>
+#mainTitle {
+    color: red;
+}
+</code>
+
+<h3>4. Universal Selector</h3>
+<p>Selects all elements on the page.</p>
+
+<code>
+* {
+    margin: 0;
+    padding: 0;
+}
+</code>
+
+<h3>5. Group Selector</h3>
+<p>Applies the same style to multiple elements.</p>
+
+<code>
+h1, h2, p {
+    font-family: Arial;
+}
+</code>
+
+<h3>6. Descendant Selector</h3>
+<p>Selects elements inside another element.</p>
+
+<code>
+div p {
+    color: purple;
+}
+</code>
+
+<h3>7. Child Selector</h3>
+<p>Selects direct child elements only.</p>
+
+<code>
+div > p {
+    color: orange;
+}
+</code>
+
+<h3>8. Attribute Selector</h3>
+<p>Selects elements based on attributes.</p>
+
+<code>
+input[type="text"] {
+    border: 2px solid blue;
+}
+</code>
+
+<h2>CSS Selector Priority</h2>
+<p>
+When multiple selectors target the same element, priority matters.
+</p>
+<ul>
+    <li>ID selector has highest priority</li>
+    <li>Class selector has medium priority</li>
+    <li>Element selector has lowest priority</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+CSS selectors are the foundation of styling in web development.
+Understanding selectors helps you write clean, efficient, and powerful CSS.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 CSS Learning Website</p>
+</footer>
+
+</body>
+</html>

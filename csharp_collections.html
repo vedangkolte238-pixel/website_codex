@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C# Collections</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2E1065;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #2E1065;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C# Collections</h1>
+    <p>Understanding Collections in C#</p>
+</header>
+
+<section>
+
+<h2>What are Collections?</h2>
+<p>
+Collections in C# are classes that store and manage groups of objects.  
+They provide more flexibility than arrays, including dynamic sizing and built-in methods.
+</p>
+
+<h2>Types of Collections</h2>
+
+<h3>1. List</h3>
+<p>
+A List is a dynamic array that can grow or shrink in size. It is part of <strong>System.Collections.Generic</strong>.
+</p>
+
+<code>
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main() {
+        List<string> fruits = new List<string>();
+        fruits.Add("Apple");
+        fruits.Add("Banana");
+        fruits.Add("Orange");
+
+        foreach (var fruit in fruits) {
+            Console.WriteLine(fruit);
+        }
+    }
+}
+</code>
+
+<h3>2. Dictionary</h3>
+<p>
+A Dictionary stores key-value pairs. It allows fast lookup by key.
+</p>
+
+<code>
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main() {
+        Dictionary<int, string> students = new Dictionary<int, string>();
+        students.Add(1, "John");
+        students.Add(2, "Alice");
+
+        Console.WriteLine(students[1]); // Output: John
+    }
+}
+</code>
+
+<h3>3. Queue</h3>
+<p>
+A Queue represents a first-in, first-out (FIFO) collection.
+</p>
+
+<code>
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main() {
+        Queue<string> queue = new Queue<string>();
+        queue.Enqueue("First");
+        queue.Enqueue("Second");
+        Console.WriteLine(queue.Dequeue()); // Output: First
+    }
+}
+</code>
+
+<h3>4. Stack</h3>
+<p>
+A Stack represents a last-in, first-out (LIFO) collection.
+</p>
+
+<code>
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main() {
+        Stack<string> stack = new Stack<string>();
+        stack.Push("One");
+        stack.Push("Two");
+        Console.WriteLine(stack.Pop()); // Output: Two
+    }
+}
+</code>
+
+<h3>5. HashSet</h3>
+<p>
+A HashSet stores unique elements and does not allow duplicates.
+</p>
+
+<code>
+using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main() {
+        HashSet<int> numbers = new HashSet<int>();
+        numbers.Add(1);
+        numbers.Add(2);
+        numbers.Add(2); // Duplicate ignored
+
+        foreach (var num in numbers) {
+            Console.WriteLine(num);
+        }
+    }
+}
+</code>
+
+<h2>Advantages of Collections</h2>
+<ul>
+    <li>Dynamic sizing</li>
+    <li>Built-in methods for adding, removing, searching, and sorting</li>
+    <li>Better performance for complex data operations</li>
+    <li>Type safety with generic collections</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Collections are essential in C# for managing groups of objects efficiently.  
+They are more flexible than arrays and are widely used in real-world applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C# Learning Website</p>
+</footer>
+
+</body>
+</html>

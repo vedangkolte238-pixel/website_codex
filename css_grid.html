@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0033FF;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0033FF;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Grid</h1>
+    <p>Two-Dimensional Layout System in CSS</p>
+</header>
+
+<section>
+
+<h2>What is CSS Grid?</h2>
+<p>
+CSS Grid is a powerful layout system that allows you to create complex web layouts
+using rows and columns.
+It is ideal for two-dimensional layouts.
+</p>
+
+<h2>Grid Container</h2>
+<p>To use Grid, an element must be a grid container.</p>
+
+<code>
+.container {
+    display: grid;
+}
+</code>
+
+<h2>Grid Columns</h2>
+<p>Defines the number and size of columns.</p>
+
+<code>
+.container {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+</code>
+
+<h2>Grid Rows</h2>
+<p>Defines the height of rows.</p>
+
+<code>
+.container {
+    grid-template-rows: 100px auto;
+}
+</code>
+
+<h2>Grid Gap</h2>
+<p>Creates space between rows and columns.</p>
+
+<code>
+.container {
+    gap: 20px;
+}
+</code>
+
+<h2>Grid Areas</h2>
+<p>Names sections of the layout.</p>
+
+<code>
+.container {
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+}
+</code>
+
+<h2>Placing Grid Items</h2>
+<p>Control item placement using line numbers.</p>
+
+<code>
+.item {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+</code>
+
+<h2>Auto-Fill and Auto-Fit</h2>
+<p>Creates responsive grid layouts.</p>
+
+<code>
+.container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+</code>
+
+<h2>Aligning Grid Items</h2>
+
+<h3>Justify Items</h3>
+<code>
+.container {
+    justify-items: center;
+}
+</code>
+
+<h3>Align Items</h3>
+<code>
+.container {
+    align-items: center;
+}
+</code>
+
+<h2>Best Practices</h2>
+<ul>
+    <li>Use Grid for complex layouts</li>
+    <li>Combine Grid with Flexbox</li>
+    <li>Use fractional units for responsiveness</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+CSS Grid makes building complex layouts easier and cleaner.
+It is an essential tool for modern responsive design.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 CSS Learning Website</p>
+</footer>
+
+</body>
+</html>

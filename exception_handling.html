@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Exception Handling – Basics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Exception Handling</h1>
+    <p>Complete Explanation with Examples and Output</p>
+</header>
+
+<section>
+
+<h2>What is Exception Handling?</h2>
+<p>
+Exception handling allows a program to deal with errors gracefully instead of crashing.
+Python uses <code>try</code> and <code>except</code> blocks to handle exceptions.
+</p>
+
+<h2>Basic try-except Block</h2>
+<code>
+try:
+    num = int(input("Enter a number: "))
+    print("Number is:", num)
+except ValueError:
+    print("Invalid input! Please enter a number.")
+</code>
+<div class="output">
+Output (if input is 'abc'):<br>
+Invalid input! Please enter a number.
+</div>
+
+<h2>Handling Multiple Exceptions</h2>
+<code>
+try:
+    x = int(input("Enter first number: "))
+    y = int(input("Enter second number: "))
+    result = x / y
+except ValueError:
+    print("Invalid input!")
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+else:
+    print("Result is:", result)
+</code>
+<div class="output">
+Output (if y=0):<br>
+Cannot divide by zero!
+</div>
+
+<h2>Using finally Block</h2>
+<p>
+The <code>finally</code> block executes whether or not an exception occurs.
+</p>
+<code>
+try:
+    file = open("example.txt", "r")
+    content = file.read()
+except FileNotFoundError:
+    print("File not found!")
+finally:
+    print("Execution completed.")
+</code>
+<div class="output">
+Output (if file does not exist):<br>
+File not found!<br>
+Execution completed.
+</div>
+
+<h2>Raising Exceptions</h2>
+<code>
+def check_age(age):
+    if age < 18:
+        raise ValueError("Age must be at least 18.")
+    else:
+        print("Access granted.")
+
+check_age(15)
+</code>
+<div class="output">
+Output:<br>
+ValueError: Age must be at least 18.
+</div>
+
+<h2>Common Python Exceptions</h2>
+<ul>
+    <li><strong>ValueError</strong> – Invalid value</li>
+    <li><strong>TypeError</strong> – Wrong data type</li>
+    <li><strong>ZeroDivisionError</strong> – Division by zero</li>
+    <li><strong>FileNotFoundError</strong> – File does not exist</li>
+    <li><strong>IndexError</strong> – Index out of range</li>
+    <li><strong>KeyError</strong> – Key not found in dictionary</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Exception handling is essential for building robust programs.
+Using <code>try</code>, <code>except</code>, <code>else</code>, and <code>finally</code> ensures your Python program handles errors gracefully.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

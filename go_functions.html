@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go Functions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0027C4;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0027C4;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Go Functions</h1>
+    <p>Understanding Functions in Go</p>
+</header>
+
+<section>
+
+<h2>What is a Function?</h2>
+<p>
+A function is a block of code that performs a specific task.
+Functions help make code reusable, readable, and easier to maintain.
+</p>
+
+<h2>Defining a Function</h2>
+<p>Basic syntax:</p>
+
+<code>
+func functionName(parameters) returnType {
+    // function body
+}
+</code>
+
+<h2>Example Function</h2>
+
+<code>
+package main
+
+import "fmt"
+
+func greet() {
+    fmt.Println("Welcome to Go Functions")
+}
+
+func main() {
+    greet()
+}
+</code>
+
+<h2>Function with Parameters</h2>
+
+<code>
+func add(a int, b int) int {
+    return a + b
+}
+</code>
+
+<h2>Function with Multiple Return Values</h2>
+<p>
+Go supports returning multiple values from a function.
+</p>
+
+<code>
+func calculate(a int, b int) (int, int) {
+    return a + b, a * b
+}
+</code>
+
+<h2>Named Return Values</h2>
+
+<code>
+func rectangle(length int, width int) (area int, perimeter int) {
+    area = length * width
+    perimeter = 2 * (length + width)
+    return
+}
+</code>
+
+<h2>Anonymous Functions</h2>
+<p>
+Functions without a name are called anonymous functions.
+</p>
+
+<code>
+func() {
+    fmt.Println("Anonymous function in Go")
+}()
+</code>
+
+<h2>Passing Functions as Arguments</h2>
+
+<code>
+func operate(a int, b int, op func(int, int) int) int {
+    return op(a, b)
+}
+</code>
+
+<h2>Key Points</h2>
+<ul>
+    <li>Functions are defined using the <code>func</code> keyword.</li>
+    <li>Go supports multiple return values.</li>
+    <li>Functions can be passed as arguments.</li>
+    <li>Anonymous functions are allowed.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Functions are a core part of Go programming.
+They help you write clean, modular, and efficient code.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Go Learning Website</p>
+</footer>
+
+</body>
+</html>

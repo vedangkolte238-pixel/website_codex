@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Background</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0033FF;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0033FF;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Background</h1>
+    <p>Styling Backgrounds Using CSS</p>
+</header>
+
+<section>
+
+<h2>What is CSS Background?</h2>
+<p>
+CSS background properties are used to define background effects for elements.
+You can set background color, images, position, and more.
+</p>
+
+<h2>Background Color</h2>
+<p>Sets the background color of an element.</p>
+
+<code>
+body {
+    background-color: lightgray;
+}
+</code>
+
+<h2>Background Image</h2>
+<p>Adds an image as the background.</p>
+
+<code>
+div {
+    background-image: url("image.jpg");
+}
+</code>
+
+<h2>Background Repeat</h2>
+<p>Controls whether the background image repeats.</p>
+
+<code>
+div {
+    background-repeat: no-repeat;
+}
+</code>
+
+<h2>Background Position</h2>
+<p>Sets the position of the background image.</p>
+
+<code>
+div {
+    background-position: center;
+}
+</code>
+
+<h2>Background Size</h2>
+<p>Controls the size of the background image.</p>
+
+<code>
+div {
+    background-size: cover;
+}
+</code>
+
+<h2>Background Attachment</h2>
+<p>Specifies whether the background scrolls or stays fixed.</p>
+
+<code>
+div {
+    background-attachment: fixed;
+}
+</code>
+
+<h2>Shorthand Background Property</h2>
+<p>All background properties can be written in one line.</p>
+
+<code>
+div {
+    background: #0033FF url("image.jpg") no-repeat center;
+}
+</code>
+
+<h2>Gradient Background</h2>
+<p>Creates smooth color transitions.</p>
+
+<code>
+div {
+    background: linear-gradient(to right, blue, purple);
+}
+</code>
+
+<h2>Best Practices</h2>
+<ul>
+    <li>Use background images carefully for performance</li>
+    <li>Ensure text is readable over backgrounds</li>
+    <li>Use gradients instead of images when possible</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+CSS background properties help create visually rich designs.
+They are essential for modern web styling.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 CSS Learning Website</p>
+</footer>
+
+</body>
+</html>

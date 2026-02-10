@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Border</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0033FF;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0033FF;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Border</h1>
+    <p>Styling Borders Using CSS</p>
+</header>
+
+<section>
+
+<h2>What is CSS Borders?</h2>
+<p>
+CSS borders are used to create a line around HTML elements.
+They help separate content and improve visual structure.
+</p>
+
+<h2>Border Style</h2>
+<p>Defines the type of border.</p>
+
+<code>
+div {
+    border-style: solid;
+}
+</code>
+
+<h2>Border Width</h2>
+<p>Sets the thickness of the border.</p>
+
+<code>
+div {
+    border-width: 2px;
+}
+</code>
+
+<h2>Border Color</h2>
+<p>Defines the color of the border.</p>
+
+<code>
+div {
+    border-color: blue;
+}
+</code>
+
+<h2>Border Shorthand</h2>
+<p>All border properties can be written in one line.</p>
+
+<code>
+div {
+    border: 2px solid #0033FF;
+}
+</code>
+
+<h2>Individual Borders</h2>
+<p>Apply border to specific sides.</p>
+
+<code>
+div {
+    border-top: 2px solid red;
+    border-right: 2px solid green;
+    border-bottom: 2px solid blue;
+    border-left: 2px solid orange;
+}
+</code>
+
+<h2>Border Radius</h2>
+<p>Creates rounded corners.</p>
+
+<code>
+div {
+    border-radius: 10px;
+}
+</code>
+
+<h2>Border Image</h2>
+<p>Uses an image as a border.</p>
+
+<code>
+div {
+    border-image: url("border.png") 30 round;
+}
+</code>
+
+<h2>Best Practices</h2>
+<ul>
+    <li>Use borders to highlight important sections</li>
+    <li>Avoid too many thick borders</li>
+    <li>Match border colors with the site theme</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+CSS borders enhance layout and visual clarity.
+They are simple yet powerful styling tools.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 CSS Learning Website</p>
+</footer>
+
+</body>
+</html>

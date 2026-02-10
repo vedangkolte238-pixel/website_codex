@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Padding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0033FF;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0033FF;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Padding</h1>
+    <p>Controlling Space Inside Elements</p>
+</header>
+
+<section>
+
+<h2>What is CSS Padding?</h2>
+<p>
+CSS padding is used to create space inside an element, between the content and its border.
+It improves readability and layout appearance.
+</p>
+
+<h2>Padding Properties</h2>
+<ul>
+    <li>padding-top</li>
+    <li>padding-right</li>
+    <li>padding-bottom</li>
+    <li>padding-left</li>
+</ul>
+
+<h2>Padding Example</h2>
+<p>Adding padding inside an element.</p>
+
+<code>
+div {
+    padding: 20px;
+}
+</code>
+
+<h2>Individual Padding Sides</h2>
+<p>Apply padding to specific sides.</p>
+
+<code>
+div {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+</code>
+
+<h2>Padding Shorthand</h2>
+<p>Use shorthand to set all sides at once.</p>
+
+<code>
+div {
+    padding: 10px 20px 10px 20px;
+}
+</code>
+
+<h2>Padding with Percentage</h2>
+<p>Padding can be defined using percentage values.</p>
+
+<code>
+div {
+    padding: 5%;
+}
+</code>
+
+<h2>Padding and Element Size</h2>
+<p>
+Padding increases the total size of an element unless box-sizing is changed.
+</p>
+
+<code>
+div {
+    width: 300px;
+    padding: 20px;
+}
+</code>
+
+<h2>Box Sizing Example</h2>
+<p>Using box-sizing to control element size.</p>
+
+<code>
+div {
+    box-sizing: border-box;
+    padding: 20px;
+}
+</code>
+
+<h2>Best Practices</h2>
+<ul>
+    <li>Use padding for inner spacing</li>
+    <li>Combine padding with margin wisely</li>
+    <li>Use box-sizing for predictable layouts</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+CSS padding is essential for clean and readable designs.
+It helps control the spacing inside elements effectively.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 CSS Learning Website</p>
+</footer>
+
+</body>
+</html>

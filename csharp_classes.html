@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C# Classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2E1065;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #2E1065;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C# Classes</h1>
+    <p>Understanding Classes in C#</p>
+</header>
+
+<section>
+
+<h2>What is a Class?</h2>
+<p>
+A class in C# is a blueprint for creating objects. It defines properties (attributes) and methods (functions) 
+that an object can have.
+</p>
+
+<h2>Defining a Class</h2>
+<p>Syntax to define a class:</p>
+
+<code>
+class ClassName {
+    // Fields (attributes)
+    // Methods (functions)
+}
+</code>
+
+<h2>Example of a Class</h2>
+<p>Creating a simple class called <strong>Car</strong>:</p>
+
+<code>
+using System;
+
+class Car {
+    // Fields
+    public string brand;
+    public string model;
+    public int year;
+
+    // Method
+    public void DisplayInfo() {
+        Console.WriteLine("Brand: " + brand);
+        Console.WriteLine("Model: " + model);
+        Console.WriteLine("Year: " + year);
+    }
+}
+
+class Program {
+    static void Main() {
+        // Creating an object of Car
+        Car myCar = new Car();
+        myCar.brand = "Toyota";
+        myCar.model = "Corolla";
+        myCar.year = 2021;
+
+        myCar.DisplayInfo();
+    }
+}
+</code>
+
+<h2>Key Points</h2>
+<ul>
+    <li>Classes are templates; objects are instances of classes.</li>
+    <li>Fields store data; methods perform actions.</li>
+    <li>Access modifiers like <strong>public</strong>, <strong>private</strong> control visibility.</li>
+</ul>
+
+<h2>Benefits of Using Classes</h2>
+<ul>
+    <li>Encapsulation – keeps data and methods together.</li>
+    <li>Reusability – classes can be reused in multiple programs.</li>
+    <li>Organized code – makes programs easier to maintain.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Classes are the foundation of object-oriented programming in C#.  
+They allow you to model real-world entities and organize your code efficiently.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C# Learning Website</p>
+</footer>
+
+</body>
+</html>

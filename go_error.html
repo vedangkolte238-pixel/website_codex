@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go Error Handling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0027C4;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0027C4;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Go Error Handling</h1>
+    <p>Handling Errors the Go Way</p>
+</header>
+
+<section>
+
+<h2>What is an Error?</h2>
+<p>
+In Go, errors are values.
+Functions usually return an error as the last return value
+to indicate something went wrong.
+</p>
+
+<h2>The error Interface</h2>
+
+<code>
+type error interface {
+    Error() string
+}
+</code>
+
+<h2>Basic Error Handling</h2>
+<p>
+You check errors using an <code>if</code> statement.
+</p>
+
+<code>
+result, err := strconv.Atoi("123")
+if err != nil {
+    fmt.Println("Error:", err)
+} else {
+    fmt.Println("Result:", result)
+}
+</code>
+
+<h2>Creating Errors</h2>
+
+<h3>Using errors.New</h3>
+
+<code>
+err := errors.New("something went wrong")
+</code>
+
+<h3>Using fmt.Errorf</h3>
+
+<code>
+err := fmt.Errorf("invalid value: %d", value)
+</code>
+
+<h2>Custom Errors</h2>
+<p>
+You can define your own error types.
+</p>
+
+<code>
+type MyError struct {
+    Message string
+}
+
+func (e MyError) Error() string {
+    return e.Message
+}
+</code>
+
+<h2>Returning Errors from Functions</h2>
+
+<code>
+func divide(a, b int) (int, error) {
+    if b == 0 {
+        return 0, errors.New("division by zero")
+    }
+    return a / b, nil
+}
+</code>
+
+<h2>Handling Returned Errors</h2>
+
+<code>
+result, err := divide(10, 0)
+if err != nil {
+    fmt.Println("Error:", err)
+    return
+}
+fmt.Println("Result:", result)
+</code>
+
+<h2>Panic and Recover</h2>
+<p>
+Panic is used for unexpected errors.
+Recover can stop a panic.
+</p>
+
+<code>
+func safeFunction() {
+    defer func() {
+        if r := recover(); r != nil {
+            fmt.Println("Recovered:", r)
+        }
+    }()
+    panic("unexpected error")
+}
+</code>
+
+<h2>Best Practices</h2>
+<ul>
+    <li>Always handle errors.</li>
+    <li>Return errors instead of panicking.</li>
+    <li>Add context using fmt.Errorf.</li>
+    <li>Use panic only for unrecoverable situations.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Go encourages explicit and simple error handling.
+By treating errors as values, your programs become
+more reliable and easier to debug.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Go Learning Website</p>
+</footer>
+
+</body>
+</html>

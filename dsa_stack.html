@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DSA Stack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0D9488;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0D9488;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>DSA Stack</h1>
+    <p>Understanding Stack Data Structure in DSA</p>
+</header>
+
+<section>
+
+<h2>What Is a Stack?</h2>
+<p>
+A stack is a linear data structure that follows the <strong>LIFO</strong> (Last In, First Out) principle.
+The last element inserted is the first one to be removed. Think of it like a stack of plates.
+</p>
+
+<h2>Stack Operations</h2>
+<ul>
+    <li><strong>Push:</strong> Add an element to the top of the stack</li>
+    <li><strong>Pop:</strong> Remove the top element from the stack</li>
+    <li><strong>Peek / Top:</strong> Get the top element without removing it</li>
+    <li><strong>isEmpty:</strong> Check if the stack is empty</li>
+</ul>
+
+<h2>Implementing Stack</h2>
+<code>
+// Using array (C++)
+#include &lt;iostream&gt;
+using namespace std;
+
+#define MAX 1000
+
+class Stack {
+    int top;
+    int arr[MAX];
+public:
+    Stack() { top = -1; }
+    bool push(int x) {
+        if(top >= MAX-1) return false;
+        arr[++top] = x;
+        return true;
+    }
+    int pop() {
+        if(top < 0) return -1;
+        return arr[top--];
+    }
+    int peek() {
+        if(top < 0) return -1;
+        return arr[top];
+    }
+    bool isEmpty() { return top < 0; }
+};
+</code>
+
+<h2>Stack Using Linked List</h2>
+<code>
+// C++
+struct Node {
+    int data;
+    Node* next;
+};
+
+class Stack {
+    Node* top;
+public:
+    Stack() { top = NULL; }
+    void push(int x) {
+        Node* newNode = new Node();
+        newNode->data = x;
+        newNode->next = top;
+        top = newNode;
+    }
+    int pop() {
+        if(top == NULL) return -1;
+        int x = top->data;
+        Node* temp = top;
+        top = top->next;
+        delete temp;
+        return x;
+    }
+    int peek() {
+        if(top == NULL) return -1;
+        return top->data;
+    }
+};
+</code>
+
+<h2>Applications of Stack</h2>
+<ul>
+    <li>Expression evaluation (infix, postfix, prefix)</li>
+    <li>Undo/Redo functionality in editors</li>
+    <li>Backtracking algorithms (like maze solving)</li>
+    <li>Parsing expressions in compilers</li>
+    <li>Browser history navigation</li>
+</ul>
+
+<h2>Advantages of Stack</h2>
+<ul>
+    <li>Simple and efficient for LIFO operations</li>
+    <li>Easy to implement using arrays or linked lists</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Stacks are one of the most commonly used data structures in computer science.
+Understanding stack operations and applications is crucial for solving many programming and algorithm problems.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 DSA Learning Website</p>
+</footer>
+
+</body>
+</html>

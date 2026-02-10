@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C# OOPs Concepts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2E1065;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #2E1065;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C# OOPs Concepts</h1>
+    <p>Understanding Object-Oriented Programming in C#</p>
+</header>
+
+<section>
+
+<h2>What is OOP?</h2>
+<p>
+OOP (Object-Oriented Programming) is a programming paradigm that uses objects and classes to design software.  
+It helps in organizing code, reusing components, and modeling real-world problems.
+</p>
+
+<h2>Core OOP Concepts in C#</h2>
+
+<h3>1. Classes and Objects</h3>
+<p>
+A class is a blueprint for creating objects. An object is an instance of a class.
+</p>
+
+<code>
+class Car {
+    public string brand;
+    public void Start() {
+        Console.WriteLine("Car started");
+    }
+}
+
+Car myCar = new Car();
+myCar.brand = "Toyota";
+myCar.Start();
+</code>
+
+<h3>2. Inheritance</h3>
+<p>
+Inheritance allows a class (child) to acquire properties and methods of another class (parent).  
+It promotes code reusability.
+</p>
+
+<code>
+class Vehicle {
+    public void Start() {
+        Console.WriteLine("Vehicle started");
+    }
+}
+
+class Car : Vehicle {
+    public void Honk() {
+        Console.WriteLine("Car honks");
+    }
+}
+</code>
+
+<h3>3. Polymorphism</h3>
+<p>
+Polymorphism allows methods to take many forms. It can be <strong>compile-time</strong> (method overloading) or <strong>run-time</strong> (method overriding).
+</p>
+
+<code>
+// Method Overloading
+class Calculator {
+    public int Add(int a, int b) { return a + b; }
+    public double Add(double a, double b) { return a + b; }
+}
+</code>
+
+<h3>4. Encapsulation</h3>
+<p>
+Encapsulation is the practice of hiding data and providing access through methods (getters and setters).
+</p>
+
+<code>
+class Person {
+    private string name;
+    public void SetName(string n) { name = n; }
+    public string GetName() { return name; }
+}
+</code>
+
+<h3>5. Abstraction</h3>
+<p>
+Abstraction hides the complex implementation and shows only the necessary functionality to the user.  
+It can be achieved using abstract classes or interfaces.
+</p>
+
+<code>
+abstract class Shape {
+    public abstract void Draw();
+}
+
+class Circle : Shape {
+    public override void Draw() {
+        Console.WriteLine("Drawing Circle");
+    }
+}
+</code>
+
+<h2>Conclusion</h2>
+<p>
+OOP is the backbone of modern C# programming.  
+Mastering these concepts helps you write clean, reusable, and maintainable code.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C# Learning Website</p>
+</footer>
+
+</body>
+</html>

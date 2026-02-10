@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DSA Queue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0D9488;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0D9488;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>DSA Queue</h1>
+    <p>Understanding Queue Data Structure in DSA</p>
+</header>
+
+<section>
+
+<h2>What Is a Queue?</h2>
+<p>
+A queue is a linear data structure that follows the <strong>FIFO</strong> (First In, First Out) principle.
+The first element added is the first one to be removed. Think of it like a line at a ticket counter.
+</p>
+
+<h2>Queue Operations</h2>
+<ul>
+    <li><strong>Enqueue:</strong> Add an element to the rear of the queue</li>
+    <li><strong>Dequeue:</strong> Remove an element from the front of the queue</li>
+    <li><strong>Front / Peek:</strong> Get the front element without removing it</li>
+    <li><strong>isEmpty:</strong> Check if the queue is empty</li>
+</ul>
+
+<h2>Types of Queues</h2>
+<ul>
+    <li><strong>Simple Queue:</strong> Linear FIFO structure</li>
+    <li><strong>Circular Queue:</strong> Rear connects to the front to utilize space efficiently</li>
+    <li><strong>Priority Queue:</strong> Elements are dequeued based on priority, not just order</li>
+    <li><strong>Deque (Double-Ended Queue):</strong> Insertions and deletions can be done at both ends</li>
+</ul>
+
+<h2>Queue Implementation</h2>
+<code>
+// Using array (C++)
+#include &lt;iostream&gt;
+using namespace std;
+
+#define SIZE 100
+
+class Queue {
+    int arr[SIZE];
+    int front, rear;
+public:
+    Queue() { front = -1; rear = -1; }
+
+    bool isEmpty() { return front == -1; }
+
+    bool enqueue(int x) {
+        if(rear == SIZE-1) return false;
+        if(front == -1) front = 0;
+        arr[++rear] = x;
+        return true;
+    }
+
+    int dequeue() {
+        if(isEmpty()) return -1;
+        int x = arr[front];
+        if(front == rear) front = rear = -1;
+        else front++;
+        return x;
+    }
+
+    int peek() {
+        if(isEmpty()) return -1;
+        return arr[front];
+    }
+};
+</code>
+
+<h2>Queue Using Linked List</h2>
+<code>
+// C++
+struct Node {
+    int data;
+    Node* next;
+};
+
+class Queue {
+    Node *front, *rear;
+public:
+    Queue() { front = rear = NULL; }
+
+    void enqueue(int x) {
+        Node* newNode = new Node();
+        newNode->data = x;
+        newNode->next = NULL;
+        if(rear == NULL) front = rear = newNode;
+        else {
+            rear->next = newNode;
+            rear = newNode;
+        }
+    }
+
+    int dequeue() {
+        if(front == NULL) return -1;
+        int x = front->data;
+        Node* temp = front;
+        front = front->next;
+        if(front == NULL) rear = NULL;
+        delete temp;
+        return x;
+    }
+
+    int peek() {
+        if(front == NULL) return -1;
+        return front->data;
+    }
+};
+</code>
+
+<h2>Applications of Queue</h2>
+<ul>
+    <li>CPU scheduling</li>
+    <li>Handling requests in web servers</li>
+    <li>Printing tasks in printers</li>
+    <li>Breadth-First Search (BFS) in graphs</li>
+    <li>Order processing systems</li>
+</ul>
+
+<h2>Advantages of Queue</h2>
+<ul>
+    <li>Maintains the order of elements</li>
+    <li>Efficient for sequential processing</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Queues are essential for managing data in order and are widely used in operating systems,
+networking, and algorithms. Mastering queues and their variations is key for solving many DSA problems.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 DSA Learning Website</p>
+</footer>
+
+</body>
+</html>

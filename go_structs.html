@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go Structs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0027C4;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0027C4;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Go Structs</h1>
+    <p>Working with Structs in Go</p>
+</header>
+
+<section>
+
+<h2>What is a Struct?</h2>
+<p>
+A struct in Go is a user-defined data type that groups
+variables of different types into a single unit.
+Structs are commonly used to represent real-world entities.
+</p>
+
+<h2>Defining a Struct</h2>
+
+<code>
+type Person struct {
+    Name string
+    Age  int
+    City string
+}
+</code>
+
+<h2>Creating a Struct Variable</h2>
+
+<code>
+var p1 Person
+p1.Name = "Alice"
+p1.Age = 25
+p1.City = "New York"
+</code>
+
+<h2>Struct Initialization</h2>
+
+<code>
+p2 := Person{
+    Name: "Bob",
+    Age:  30,
+    City: "London",
+}
+</code>
+
+<h2>Accessing Struct Fields</h2>
+
+<code>
+fmt.Println(p2.Name)
+fmt.Println(p2.Age)
+</code>
+
+<h2>Structs with Functions</h2>
+<p>
+Structs can be passed to functions just like other data types.
+</p>
+
+<code>
+func printPerson(p Person) {
+    fmt.Println(p.Name, p.Age, p.City)
+}
+</code>
+
+<h2>Methods on Structs</h2>
+<p>
+A method is a function with a receiver.
+</p>
+
+<code>
+func (p Person) greet() {
+    fmt.Println("Hello, my name is", p.Name)
+}
+</code>
+
+<h2>Pointer to Struct</h2>
+
+<code>
+p := Person{"Charlie", 28, "Berlin"}
+ptr := &p
+fmt.Println(ptr.Name)
+</code>
+
+<h2>Nested Structs</h2>
+
+<code>
+type Address struct {
+    City  string
+    State string
+}
+
+type Employee struct {
+    Name    string
+    Address Address
+}
+</code>
+
+<h2>Key Points</h2>
+<ul>
+    <li>Structs group related data.</li>
+    <li>Fields are accessed using the dot operator.</li>
+    <li>Methods can be defined on structs.</li>
+    <li>Structs support composition.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Structs are one of the most important features in Go.
+They help create clean, structured, and maintainable code.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Go Learning Website</p>
+</footer>
+
+</body>
+</html>

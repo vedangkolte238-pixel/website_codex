@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python File Handling – Basics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python File Handling</h1>
+    <p>Complete Explanation with Examples and Output</p>
+</header>
+
+<section>
+
+<h2>What is File Handling?</h2>
+<p>
+File handling allows you to read from and write to files using Python.
+Python provides built-in functions to work with files efficiently.
+</p>
+
+<h2>Opening a File</h2>
+<p>Use the <code>open()</code> function. Modes include:</p>
+<ul>
+    <li><strong>'r'</strong> – Read (default)</li>
+    <li><strong>'w'</strong> – Write (overwrite if exists)</li>
+    <li><strong>'a'</strong> – Append</li>
+    <li><strong>'x'</strong> – Create (fails if file exists)</li>
+    <li><strong>'b'</strong> – Binary mode</li>
+</ul>
+
+<code>
+file = open("example.txt", "w")
+file.write("Hello, Python File Handling!")
+file.close()
+</code>
+
+<h2>Reading from a File</h2>
+<code>
+file = open("example.txt", "r")
+content = file.read()
+print(content)
+file.close()
+</code>
+<div class="output">
+Output:<br>
+Hello, Python File Handling!
+</div>
+
+<h2>Reading Line by Line</h2>
+<code>
+file = open("example.txt", "r")
+for line in file:
+    print(line)
+file.close()
+</code>
+<div class="output">
+Output:<br>
+Hello, Python File Handling!
+</div>
+
+<h2>Appending to a File</h2>
+<code>
+file = open("example.txt", "a")
+file.write("\nThis is a new line.")
+file.close()
+</code>
+
+<h2>Using with Statement (Recommended)</h2>
+<p>
+Automatically closes the file after usage.
+</p>
+<code>
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+</code>
+<div class="output">
+Output:<br>
+Hello, Python File Handling!<br>
+This is a new line.
+</div>
+
+<h2>File Methods</h2>
+<ul>
+    <li><strong>read()</strong> – Read entire file</li>
+    <li><strong>readline()</strong> – Read a single line</li>
+    <li><strong>readlines()</strong> – Read all lines into a list</li>
+    <li><strong>write()</strong> – Write data to file</li>
+    <li><strong>writelines()</strong> – Write a list of lines</li>
+    <li><strong>close()</strong> – Close the file</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Python file handling is essential for data storage, reading configuration files, logging, and managing text or binary data efficiently.
+Always use <code>with</code> for safe and clean file handling.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

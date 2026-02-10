@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DSA Strings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0D9488;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0D9488;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>DSA Strings</h1>
+    <p>Understanding Strings in Data Structures & Algorithms</p>
+</header>
+
+<section>
+
+<h2>What Is a String?</h2>
+<p>
+A string is a sequence of characters stored together. Strings are used to represent text in programming and are a fundamental part of DSA problems.
+</p>
+
+<h2>Features of Strings</h2>
+<ul>
+    <li>Ordered sequence of characters</li>
+    <li>Can be mutable (changeable) or immutable depending on language</li>
+    <li>Supports operations like concatenation, comparison, and substring extraction</li>
+</ul>
+
+<h2>Declaring Strings</h2>
+
+<code>
+// C
+char str[20] = "Hello";
+
+// C++
+#include &lt;string&gt;
+std::string str = "Hello";
+
+// Java
+String str = "Hello";
+
+// Python
+str = "Hello"
+</code>
+
+<h2>Common String Operations</h2>
+<ul>
+    <li><strong>Length:</strong> Get the number of characters</li>
+    <li><strong>Concatenation:</strong> Join two strings</li>
+    <li><strong>Access:</strong> Access character by index</li>
+    <li><strong>Substring:</strong> Extract part of a string</li>
+    <li><strong>Comparison:</strong> Check equality or order</li>
+    <li><strong>Iteration:</strong> Traverse through each character</li>
+</ul>
+
+<h2>Example: String Traversal in C++</h2>
+
+<code>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    string str = "Hello";
+    for(int i = 0; i &lt; str.length(); i++) {
+        cout &lt;&lt; str[i] &lt;&lt; " ";
+    }
+    return 0;
+}
+</code>
+
+<h2>String as Array of Characters</h2>
+<p>
+Strings can be treated as an array of characters, allowing element-wise access and modification (if mutable).
+</p>
+
+<code>
+char str[] = "World";
+str[0] = 'w'; // Now str = "world"
+</code>
+
+<h2>Applications of Strings</h2>
+<ul>
+    <li>Text processing and manipulation</li>
+    <li>Pattern matching and searching</li>
+    <li>Encoding and decoding problems</li>
+    <li>Data parsing and input handling</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Strings are a fundamental part of programming and DSA. Mastering string operations, manipulation, and algorithms is crucial for solving real-world problems efficiently.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 DSA Learning Website</p>
+</footer>
+
+</body>
+</html>

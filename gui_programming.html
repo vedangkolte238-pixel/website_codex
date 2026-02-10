@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python GUI Programming</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python GUI Programming</h1>
+    <p>Introduction to Tkinter with Examples</p>
+</header>
+
+<section>
+
+<h2>Overview</h2>
+<p>
+Python's Tkinter module allows you to create GUI applications. You can make windows, buttons, labels, input fields, and interact with users.
+</p>
+
+<h2>1. Simple Window</h2>
+<code>
+import tkinter as tk
+
+window = tk.Tk()
+window.title("Simple Window")
+window.geometry("300x150")
+
+label = tk.Label(window, text="Hello, Python GUI!")
+label.pack()
+
+window.mainloop()
+</code>
+<div class="output">
+Output:<br>
+A window opens with text "Hello, Python GUI!" displayed in it.
+</div>
+
+<h2>2. Entry and Button Example</h2>
+<code>
+import tkinter as tk
+
+def greet_user():
+    name = entry.get()
+    label_result.config(text="Hello, " + name)
+
+window = tk.Tk()
+window.title("Greeting App")
+window.geometry("300x200")
+
+entry = tk.Entry(window)
+entry.pack(pady=10)
+
+button = tk.Button(window, text="Greet Me", command=greet_user)
+button.pack(pady=5)
+
+label_result = tk.Label(window, text="")
+label_result.pack(pady=10)
+
+window.mainloop()
+</code>
+<div class="output">
+Output:<br>
+Enter a name in the box → click "Greet Me" → the label shows "Hello, [Name]".
+</div>
+
+<h2>3. Multiple Widgets Example</h2>
+<code>
+import tkinter as tk
+
+window = tk.Tk()
+window.title("Widgets Example")
+window.geometry("400x250")
+
+tk.Label(window, text="Username:").pack()
+username = tk.Entry(window)
+username.pack()
+
+tk.Label(window, text="Password:").pack()
+password = tk.Entry(window, show="*")
+password.pack()
+
+def submit():
+    tk.Label(window, text=f"Welcome, {username.get()}!").pack()
+
+tk.Button(window, text="Login", command=submit).pack(pady=10)
+
+window.mainloop()
+</code>
+<div class="output">
+Output:<br>
+A login-like window with Username and Password fields and a Login button.  
+On clicking Login → shows welcome message with entered username.
+</div>
+
+<h2>Conclusion</h2>
+<p>
+Tkinter is easy to use and comes built-in with Python.  
+It allows rapid development of simple desktop applications. You can combine Tkinter with other Python modules (like SQLite) for more advanced applications.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

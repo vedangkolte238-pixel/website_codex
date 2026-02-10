@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DSA Trees</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0D9488;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0D9488;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>DSA Trees</h1>
+    <p>Understanding Tree Data Structures in DSA</p>
+</header>
+
+<section>
+
+<h2>What Is a Tree?</h2>
+<p>
+A tree is a hierarchical data structure consisting of nodes connected by edges.
+It has a root node, and each node can have zero or more child nodes.
+Trees are widely used to represent hierarchical relationships.
+</p>
+
+<h2>Key Terminology</h2>
+<ul>
+    <li><strong>Root:</strong> The topmost node of a tree</li>
+    <li><strong>Node:</strong> Each element of the tree</li>
+    <li><strong>Edge:</strong> Connection between two nodes</li>
+    <li><strong>Leaf:</strong> A node with no children</li>
+    <li><strong>Parent/Child:</strong> Relationship between connected nodes</li>
+    <li><strong>Height:</strong> Length of the longest path from root to leaf</li>
+</ul>
+
+<h2>Types of Trees</h2>
+<ul>
+    <li><strong>Binary Tree:</strong> Each node has at most two children</li>
+    <li><strong>Binary Search Tree (BST):</strong> Left child &lt; parent &lt; right child</li>
+    <li><strong>AVL Tree:</strong> Self-balancing BST</li>
+    <li><strong>Red-Black Tree:</strong> Balanced BST with color property</li>
+    <li><strong>Heap:</strong> Complete binary tree used in priority queues</li>
+    <li><strong>Trie:</strong> Tree for storing strings efficiently</li>
+</ul>
+
+<h2>Tree Operations</h2>
+<ul>
+    <li><strong>Traversal:</strong> Visiting all nodes (Inorder, Preorder, Postorder, Level-order)</li>
+    <li><strong>Insertion:</strong> Add a node to the tree</li>
+    <li><strong>Deletion:</strong> Remove a node from the tree</li>
+    <li><strong>Searching:</strong> Find a node with a given value</li>
+</ul>
+
+<h2>Example: Binary Tree Node in C++</h2>
+<code>
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+
+    Node(int val) {
+        data = val;
+        left = right = NULL;
+    }
+};
+</code>
+
+<h2>Example: Inorder Traversal</h2>
+<code>
+void inorder(Node* root) {
+    if(root == NULL) return;
+    inorder(root->left);
+    cout &lt;&lt; root->data &lt;&lt; " ";
+    inorder(root->right);
+}
+</code>
+
+<h2>Applications of Trees</h2>
+<ul>
+    <li>Hierarchical data representation (like file systems)</li>
+    <li>Binary Search Trees for fast searching and sorting</li>
+    <li>Expression parsing in compilers</li>
+    <li>Network routing algorithms</li>
+    <li>Priority queues using heaps</li>
+</ul>
+
+<h2>Advantages of Trees</h2>
+<ul>
+    <li>Efficient searching and sorting</li>
+    <li>Hierarchical data representation</li>
+    <li>Dynamic memory usage</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Trees are essential data structures in computer science. They form the basis for
+many advanced structures like heaps, tries, and balanced search trees. Understanding trees is critical for efficient algorithm design.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 DSA Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go Concurrency</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0027C4;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0027C4;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Go Concurrency</h1>
+    <p>Writing Concurrent Programs in Go</p>
+</header>
+
+<section>
+
+<h2>What is Concurrency?</h2>
+<p>
+Concurrency means executing multiple tasks at the same time.
+Go provides built-in support for concurrency, making it easy to write
+fast and efficient programs.
+</p>
+
+<h2>Goroutines</h2>
+<p>
+A goroutine is a lightweight thread managed by the Go runtime.
+You create a goroutine using the <code>go</code> keyword.
+</p>
+
+<code>
+go functionName()
+</code>
+
+<h3>Example</h3>
+
+<code>
+func sayHello() {
+    fmt.Println("Hello from goroutine")
+}
+
+func main() {
+    go sayHello()
+    fmt.Println("Hello from main")
+}
+</code>
+
+<h2>Channels</h2>
+<p>
+Channels are used to communicate between goroutines.
+They help synchronize concurrent tasks.
+</p>
+
+<code>
+ch := make(chan int)
+</code>
+
+<h3>Sending and Receiving Data</h3>
+
+<code>
+ch <- 10      // send
+value := <-ch // receive
+</code>
+
+<h3>Channel Example</h3>
+
+<code>
+func sendData(ch chan int) {
+    ch <- 42
+}
+
+func main() {
+    ch := make(chan int)
+    go sendData(ch)
+    fmt.Println(<-ch)
+}
+</code>
+
+<h2>Buffered Channels</h2>
+<p>
+Buffered channels allow sending data without immediate receiving.
+</p>
+
+<code>
+ch := make(chan int, 3)
+ch <- 1
+ch <- 2
+ch <- 3
+</code>
+
+<h2>Select Statement</h2>
+<p>
+The <code>select</code> statement lets a goroutine wait on multiple channels.
+</p>
+
+<code>
+select {
+case msg := <-ch1:
+    fmt.Println(msg)
+case msg := <-ch2:
+    fmt.Println(msg)
+}
+</code>
+
+<h2>WaitGroup</h2>
+<p>
+WaitGroup is used to wait for multiple goroutines to finish.
+</p>
+
+<code>
+var wg sync.WaitGroup
+
+wg.Add(1)
+go func() {
+    defer wg.Done()
+    fmt.Println("Task done")
+}()
+wg.Wait()
+</code>
+
+<h2>Why Use Go Concurrency?</h2>
+<ul>
+    <li>Simple and readable syntax</li>
+    <li>Efficient use of CPU cores</li>
+    <li>Built-in concurrency support</li>
+    <li>Safe communication using channels</li>
+</ul>
+
+<h2>Key Points</h2>
+<ul>
+    <li>Goroutines are lightweight and fast.</li>
+    <li>Channels enable safe communication.</li>
+    <li>Select helps manage multiple channels.</li>
+    <li>Concurrency is not the same as parallelism.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Go’s concurrency model is one of its strongest features.
+With goroutines and channels, you can write powerful concurrent programs
+with minimal complexity.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Go Learning Website</p>
+</footer>
+
+</body>
+</html>

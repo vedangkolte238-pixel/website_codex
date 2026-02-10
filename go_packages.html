@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go Packages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0027C4;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0027C4;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Go Packages</h1>
+    <p>Organizing Code Using Packages in Go</p>
+</header>
+
+<section>
+
+<h2>What is a Package?</h2>
+<p>
+A package in Go is a collection of related Go source files.
+Packages help organize code, improve readability, and promote reuse.
+</p>
+
+<h2>Main Package</h2>
+<p>
+Every Go program starts execution from the <code>main</code> package.
+</p>
+
+<code>
+package main
+
+func main() {
+    fmt.Println("Hello Go")
+}
+</code>
+
+<h2>Importing Packages</h2>
+<p>
+Packages are imported using the <code>import</code> keyword.
+</p>
+
+<code>
+import "fmt"
+</code>
+
+<h3>Multiple Imports</h3>
+
+<code>
+import (
+    "fmt"
+    "math"
+)
+</code>
+
+<h2>Standard Library Packages</h2>
+<ul>
+    <li><code>fmt</code> – Input and output</li>
+    <li><code>math</code> – Mathematical operations</li>
+    <li><code>time</code> – Date and time</li>
+    <li><code>os</code> – Operating system functions</li>
+</ul>
+
+<h2>Creating Your Own Package</h2>
+
+<code>
+package calculator
+
+func Add(a int, b int) int {
+    return a + b
+}
+</code>
+
+<h2>Using a Custom Package</h2>
+
+<code>
+import "calculator"
+
+func main() {
+    result := calculator.Add(5, 3)
+    fmt.Println(result)
+}
+</code>
+
+<h2>Exported vs Unexported Names</h2>
+<p>
+Identifiers starting with a capital letter are exported
+and accessible outside the package.
+</p>
+
+<code>
+func PublicFunc() {}
+func privateFunc() {}
+</code>
+
+<h2>Package Initialization</h2>
+<p>
+The <code>init()</code> function runs automatically before <code>main()</code>.
+</p>
+
+<code>
+func init() {
+    fmt.Println("Package initialized")
+}
+</code>
+
+<h2>Go Modules</h2>
+<p>
+Go modules manage dependencies in Go projects.
+</p>
+
+<code>
+go mod init myproject
+</code>
+
+<h2>Key Points</h2>
+<ul>
+    <li>Packages organize and structure Go code.</li>
+    <li>The main package is the entry point.</li>
+    <li>Capital letters control visibility.</li>
+    <li>Modules manage dependencies.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Packages are essential for building scalable Go applications.
+They help keep code clean, reusable, and easy to maintain.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Go Learning Website</p>
+</footer>
+
+</body>
+</html>

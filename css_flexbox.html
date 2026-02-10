@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Flexbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0033FF;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0033FF;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Flexbox</h1>
+    <p>Flexible Layout System in CSS</p>
+</header>
+
+<section>
+
+<h2>What is Flexbox?</h2>
+<p>
+CSS Flexbox is a layout model that allows you to design flexible and responsive layouts easily.
+It arranges elements in rows or columns and adjusts space automatically.
+</p>
+
+<h2>Flex Container</h2>
+<p>
+To use Flexbox, an element must be a flex container.
+</p>
+
+<code>
+.container {
+    display: flex;
+}
+</code>
+
+<h2>Flex Direction</h2>
+<p>Defines the direction of items.</p>
+
+<code>
+.container {
+    flex-direction: row;
+}
+</code>
+
+<h2>Justify Content</h2>
+<p>Aligns items horizontally.</p>
+
+<code>
+.container {
+    justify-content: space-between;
+}
+</code>
+
+<h2>Align Items</h2>
+<p>Aligns items vertically.</p>
+
+<code>
+.container {
+    align-items: center;
+}
+</code>
+
+<h2>Flex Wrap</h2>
+<p>Controls wrapping of flex items.</p>
+
+<code>
+.container {
+    flex-wrap: wrap;
+}
+</code>
+
+<h2>Gap</h2>
+<p>Creates space between flex items.</p>
+
+<code>
+.container {
+    gap: 20px;
+}
+</code>
+
+<h2>Flex Items</h2>
+<p>Properties applied to child elements.</p>
+
+<h3>Flex Grow</h3>
+<code>
+.item {
+    flex-grow: 1;
+}
+</code>
+
+<h3>Flex Shrink</h3>
+<code>
+.item {
+    flex-shrink: 0;
+}
+</code>
+
+<h3>Flex Basis</h3>
+<code>
+.item {
+    flex-basis: 200px;
+}
+</code>
+
+<h2>Flex Shorthand</h2>
+<code>
+.item {
+    flex: 1 1 200px;
+}
+</code>
+
+<h2>Centering with Flexbox</h2>
+<p>Perfect centering example.</p>
+
+<code>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</code>
+
+<h2>Best Practices</h2>
+<ul>
+    <li>Use Flexbox for one-dimensional layouts</li>
+    <li>Combine with media queries for responsiveness</li>
+    <li>Use gap instead of margins when possible</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Flexbox makes layout design simple and responsive.
+It is essential for modern web development.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 CSS Learning Website</p>
+</footer>
+
+</body>
+</html>

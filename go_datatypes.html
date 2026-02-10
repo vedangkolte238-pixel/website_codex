@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go Data Types</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0027C4;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0027C4;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Go Data Types</h1>
+    <p>Understand Built-in Data Types in Go</p>
+</header>
+
+<section>
+
+<h2>What are Data Types?</h2>
+<p>
+Data types specify the kind of data a variable can store.
+Go is a statically typed language, which means the type of a variable
+is known at compile time.
+</p>
+
+<h2>Basic Data Types</h2>
+
+<h3>1. Integer Types</h3>
+<p>Used to store whole numbers.</p>
+
+<ul>
+    <li>int</li>
+    <li>int8, int16, int32, int64</li>
+    <li>uint, uint8, uint16, uint32, uint64</li>
+</ul>
+
+<code>
+var a int = 10
+var b int64 = 100
+</code>
+
+<h3>2. Floating Point Types</h3>
+<p>Used to store decimal numbers.</p>
+
+<ul>
+    <li>float32</li>
+    <li>float64</li>
+</ul>
+
+<code>
+var pi float64 = 3.14
+</code>
+
+<h3>3. Boolean Type</h3>
+<p>Stores true or false values.</p>
+
+<code>
+var isActive bool = true
+</code>
+
+<h3>4. String Type</h3>
+<p>Used to store text.</p>
+
+<code>
+var name string = "Go Language"
+</code>
+
+<h2>Derived Data Types</h2>
+
+<h3>1. Array</h3>
+<p>Stores multiple values of the same type.</p>
+
+<code>
+var numbers [3]int = [3]int{1, 2, 3}
+</code>
+
+<h3>2. Slice</h3>
+<p>Dynamic version of arrays.</p>
+
+<code>
+nums := []int{10, 20, 30}
+</code>
+
+<h3>3. Struct</h3>
+<p>Custom data type that groups variables.</p>
+
+<code>
+type Person struct {
+    Name string
+    Age  int
+}
+</code>
+
+<h3>4. Map</h3>
+<p>Stores key-value pairs.</p>
+
+<code>
+ages := map[string]int{
+    "Alice": 25,
+    "Bob": 30,
+}
+</code>
+
+<h2>Special Data Types</h2>
+
+<h3>1. Pointer</h3>
+<p>Stores the memory address of a variable.</p>
+
+<code>
+var x int = 10
+var ptr *int = &x
+</code>
+
+<h3>2. Interface</h3>
+<p>Defines behavior using methods.</p>
+
+<code>
+type Shape interface {
+    Area() float64
+}
+</code>
+
+<h2>Type Inference</h2>
+<p>
+Go can automatically infer data types using the <code>:=</code> operator.
+</p>
+
+<code>
+count := 5
+message := "Hello Go"
+</code>
+
+<h2>Conclusion</h2>
+<p>
+Go provides simple yet powerful data types that help in building
+efficient and scalable applications.
+Understanding data types is the foundation of Go programming.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Go Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DSA Sorting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0D9488;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0D9488;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>DSA Sorting</h1>
+    <p>Understanding Sorting Algorithms in DSA</p>
+</header>
+
+<section>
+
+<h2>What Is Sorting?</h2>
+<p>
+Sorting is the process of arranging data in a particular order (ascending or descending).
+Efficient sorting is important for optimizing search operations and organizing data.
+</p>
+
+<h2>Types of Sorting Algorithms</h2>
+<ul>
+    <li><strong>Bubble Sort:</strong> Repeatedly swaps adjacent elements if they are in the wrong order</li>
+    <li><strong>Selection Sort:</strong> Selects the minimum (or maximum) element and places it at the beginning</li>
+    <li><strong>Insertion Sort:</strong> Builds the sorted array one element at a time</li>
+    <li><strong>Merge Sort:</strong> Divide and conquer approach, merges sorted subarrays</li>
+    <li><strong>Quick Sort:</strong> Partitioning approach, sorts subarrays recursively</li>
+    <li><strong>Heap Sort:</strong> Uses heap data structure to sort elements efficiently</li>
+</ul>
+
+<h2>Example: Bubble Sort in C++</h2>
+<code>
+#include &lt;iostream&gt;
+using namespace std;
+
+void bubbleSort(int arr[], int n) {
+    for(int i = 0; i &lt; n-1; i++) {
+        for(int j = 0; j &lt; n-i-1; j++) {
+            if(arr[j] &gt; arr[j+1]) {
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int arr[] = {64, 25, 12, 22, 11};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    bubbleSort(arr, n);
+
+    for(int i = 0; i &lt; n; i++)
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    return 0;
+}
+</code>
+
+<h2>Time Complexity</h2>
+<ul>
+    <li><strong>Bubble, Selection, Insertion Sort:</strong> O(n<sup>2</sup>) worst case</li>
+    <li><strong>Merge Sort:</strong> O(n log n) guaranteed</li>
+    <li><strong>Quick Sort:</strong> O(n log n) average, O(n<sup>2</sup>) worst case</li>
+    <li><strong>Heap Sort:</strong> O(n log n)</li>
+</ul>
+
+<h2>Applications of Sorting</h2>
+<ul>
+    <li>Efficient searching in databases</li>
+    <li>Organizing data for reporting</li>
+    <li>Scheduling tasks</li>
+    <li>Data compression and encoding</li>
+    <li>Solving computational geometry problems</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Sorting algorithms are fundamental in computer science. Choosing the right sorting method depends on the size of data, memory constraints, and performance requirements.
+Understanding sorting is crucial for efficient algorithm design.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 DSA Learning Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C# Data Types</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2E1065;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #2E1065;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C# Data Types</h1>
+    <p>Understanding Different Data Types in C#</p>
+</header>
+
+<section>
+
+<h2>What are Data Types?</h2>
+<p>
+Data types specify the type of data a variable can hold in C#.  
+They help the compiler allocate memory and perform type checking.
+</p>
+
+<h2>Value Types</h2>
+<p>Value types store the actual data. Common value types in C#:</p>
+
+<ul>
+    <li><strong>int</strong> – Integer numbers (e.g., 5, -10)</li>
+    <li><strong>float</strong> – Floating-point numbers (e.g., 3.14f)</li>
+    <li><strong>double</strong> – Double-precision floating-point numbers (e.g., 3.14159)</li>
+    <li><strong>char</strong> – Single character (e.g., 'A')</li>
+    <li><strong>bool</strong> – Boolean values (true or false)</li>
+    <li><strong>decimal</strong> – High precision decimal numbers (e.g., 99.99m)</li>
+</ul>
+
+<h2>Reference Types</h2>
+<p>Reference types store references (addresses) to the actual data. Examples:</p>
+
+<ul>
+    <li><strong>string</strong> – Sequence of characters (e.g., "Hello, C#")</li>
+    <li><strong>object</strong> – Base type of all types</li>
+    <li><strong>dynamic</strong> – Type determined at runtime</li>
+</ul>
+
+<h2>Example of Data Types</h2>
+<code>
+using System;
+
+class Program {
+    static void Main() {
+        int age = 25;
+        float height = 5.9f;
+        double pi = 3.14159;
+        char grade = 'A';
+        bool isStudent = true;
+        string name = "John Doe";
+
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("Age: " + age);
+        Console.WriteLine("Height: " + height);
+        Console.WriteLine("Grade: " + grade);
+        Console.WriteLine("Is Student: " + isStudent);
+        Console.WriteLine("Pi: " + pi);
+    }
+}
+</code>
+
+<h2>Type Conversion</h2>
+<p>You can convert between data types using casting or built-in methods:</p>
+
+<code>
+int a = 10;
+double b = a;       // Implicit conversion
+
+double x = 9.78;
+int y = (int)x;     // Explicit conversion
+</code>
+
+<h2>Conclusion</h2>
+<p>
+C# data types are essential to define variables and manage memory efficiently.  
+Understanding value and reference types is crucial for writing correct and optimized programs.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C# Learning Website</p>
+</footer>
+
+</body>
+</html>

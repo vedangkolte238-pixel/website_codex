@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C# Interfaces</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2E1065;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #2E1065;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C# Interfaces</h1>
+    <p>Understanding Interfaces in C#</p>
+</header>
+
+<section>
+
+<h2>What is an Interface?</h2>
+<p>
+An interface in C# is a contract that defines a set of methods, properties, or events that a class must implement.  
+It does not contain any implementation itself.
+</p>
+
+<h2>Why Use Interfaces?</h2>
+<ul>
+    <li>Define a contract for classes to follow</li>
+    <li>Achieve abstraction in your code</li>
+    <li>Support multiple inheritance of behavior</li>
+    <li>Promote loose coupling and flexibility</li>
+</ul>
+
+<h2>Defining an Interface</h2>
+<p>Syntax:</p>
+
+<code>
+interface IShape {
+    void Draw();
+    double CalculateArea();
+}
+</code>
+
+<h2>Implementing an Interface</h2>
+<p>Example of a class implementing the interface:</p>
+
+<code>
+using System;
+
+interface IShape {
+    void Draw();
+    double CalculateArea();
+}
+
+class Circle : IShape {
+    public double Radius { get; set; }
+
+    public void Draw() {
+        Console.WriteLine("Drawing Circle");
+    }
+
+    public double CalculateArea() {
+        return 3.14 * Radius * Radius;
+    }
+}
+
+class Program {
+    static void Main() {
+        Circle circle = new Circle();
+        circle.Radius = 5;
+        circle.Draw();
+        Console.WriteLine("Area: " + circle.CalculateArea());
+    }
+}
+</code>
+
+<h2>Key Points</h2>
+<ul>
+    <li>Interfaces cannot contain fields or constructors.</li>
+    <li>All methods in an interface are implicitly public and abstract.</li>
+    <li>A class can implement multiple interfaces.</li>
+</ul>
+
+<h2>Advantages of Interfaces</h2>
+<ul>
+    <li>Facilitates code reusability and flexibility.</li>
+    <li>Supports multiple inheritance in C# without ambiguity.</li>
+    <li>Helps to design loosely coupled systems.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Interfaces are essential in C# for designing clean and maintainable code.  
+They allow you to define contracts and ensure consistent behavior across different classes.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C# Learning Website</p>
+</footer>
+
+</body>
+</html>

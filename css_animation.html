@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0033FF;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0033FF;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Animation</h1>
+    <p>Creating Motion Using CSS Animations</p>
+</header>
+
+<section>
+
+<h2>What is CSS Animation?</h2>
+<p>
+CSS animation allows elements to change style gradually over time.
+Animations can be created without JavaScript.
+</p>
+
+<h2>Keyframes</h2>
+<p>
+Animations are defined using keyframes.
+</p>
+
+<code>
+@keyframes moveBox {
+    from {
+        left: 0;
+    }
+    to {
+        left: 200px;
+    }
+}
+</code>
+
+<h2>Animation Property</h2>
+<p>
+Apply animation to an element.
+</p>
+
+<code>
+.box {
+    position: relative;
+    animation-name: moveBox;
+    animation-duration: 2s;
+}
+</code>
+
+<h2>Animation Duration</h2>
+<p>Controls how long the animation runs.</p>
+
+<code>
+.box {
+    animation-duration: 3s;
+}
+</code>
+
+<h2>Animation Delay</h2>
+<p>Delays the start of the animation.</p>
+
+<code>
+.box {
+    animation-delay: 1s;
+}
+</code>
+
+<h2>Animation Iteration Count</h2>
+<p>Defines how many times the animation runs.</p>
+
+<code>
+.box {
+    animation-iteration-count: infinite;
+}
+</code>
+
+<h2>Animation Direction</h2>
+<p>Controls the direction of the animation.</p>
+
+<code>
+.box {
+    animation-direction: alternate;
+}
+</code>
+
+<h2>Animation Timing Function</h2>
+<p>Controls animation speed curve.</p>
+
+<code>
+.box {
+    animation-timing-function: ease-in-out;
+}
+</code>
+
+<h2>Animation Fill Mode</h2>
+<p>Defines element styles before and after animation.</p>
+
+<code>
+.box {
+    animation-fill-mode: forwards;
+}
+</code>
+
+<h2>Animation Shorthand</h2>
+<p>All animation properties in one line.</p>
+
+<code>
+.box {
+    animation: moveBox 2s ease-in-out infinite alternate;
+}
+</code>
+
+<h2>Best Practices</h2>
+<ul>
+    <li>Keep animations smooth and subtle</li>
+    <li>Avoid excessive animations</li>
+    <li>Use animations to guide attention</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+CSS animations add life to web pages.
+They improve user interaction and visual appeal.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 CSS Learning Website</p>
+</footer>
+
+</body>
+</html>

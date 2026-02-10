@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C# Exception Handling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2E1065;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #2E1065;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C# Exception Handling</h1>
+    <p>Learn How to Handle Errors in C# Programs</p>
+</header>
+
+<section>
+
+<h2>What is Exception Handling?</h2>
+<p>
+Exception handling is a way to handle runtime errors in C# programs.  
+It allows the program to continue execution or gracefully terminate instead of crashing.
+</p>
+
+<h2>Common Exceptions in C#</h2>
+<ul>
+    <li><strong>DivideByZeroException</strong> – Thrown when dividing a number by zero.</li>
+    <li><strong>NullReferenceException</strong> – Thrown when accessing a null object.</li>
+    <li><strong>IndexOutOfRangeException</strong> – Thrown when accessing an invalid index in an array.</li>
+    <li><strong>FileNotFoundException</strong> – Thrown when a file cannot be found.</li>
+</ul>
+
+<h2>Try-Catch Block</h2>
+<p>Use <strong>try-catch</strong> to catch and handle exceptions:</p>
+
+<code>
+using System;
+
+class Program {
+    static void Main() {
+        try {
+            int a = 10;
+            int b = 0;
+            int result = a / b; // This will cause DivideByZeroException
+        }
+        catch (DivideByZeroException ex) {
+            Console.WriteLine("Error: " + ex.Message);
+        }
+
+        Console.WriteLine("Program continues...");
+    }
+}
+</code>
+
+<h2>Try-Catch-Finally</h2>
+<p>The <strong>finally</strong> block executes code regardless of whether an exception occurs or not:</p>
+
+<code>
+try {
+    // Code that may throw exception
+}
+catch (Exception ex) {
+    Console.WriteLine("Exception: " + ex.Message);
+}
+finally {
+    Console.WriteLine("This always executes");
+}
+</code>
+
+<h2>Throwing Exceptions</h2>
+<p>You can manually throw exceptions using <strong>throw</strong> keyword:</p>
+
+<code>
+int age = -5;
+if (age < 0) {
+    throw new ArgumentException("Age cannot be negative");
+}
+</code>
+
+<h2>Advantages of Exception Handling</h2>
+<ul>
+    <li>Prevents program crashes due to runtime errors</li>
+    <li>Allows graceful error handling and user-friendly messages</li>
+    <li>Makes code more robust and maintainable</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Exception handling is essential in C# for building reliable programs.  
+Proper use of try-catch-finally and throwing exceptions ensures better control over errors.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 C# Learning Website</p>
+</footer>
+
+</body>
+</html>

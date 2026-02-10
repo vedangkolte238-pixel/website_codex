@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go Language Installation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0027C4;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0027C4;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Go Language Installation</h1>
+    <p>Step-by-Step Guide to Install Go (Golang)</p>
+</header>
+
+<section>
+
+<h2>System Requirements</h2>
+<ul>
+    <li>Windows, macOS, or Linux</li>
+    <li>64-bit operating system recommended</li>
+    <li>Internet connection</li>
+</ul>
+
+<h2>Step 1: Download Go</h2>
+<p>
+Visit the official Go website and download the installer for your operating system.
+</p>
+
+<code>
+https://go.dev/dl/
+</code>
+
+<h2>Step 2: Install Go</h2>
+
+<h3>Windows</h3>
+<ul>
+    <li>Run the downloaded <strong>.msi</strong> installer</li>
+    <li>Follow the setup wizard</li>
+    <li>Go will be installed in <code>C:\Go</code> by default</li>
+</ul>
+
+<h3>macOS</h3>
+<ul>
+    <li>Open the downloaded <strong>.pkg</strong> file</li>
+    <li>Follow the installation steps</li>
+    <li>Go installs in <code>/usr/local/go</code></li>
+</ul>
+
+<h3>Linux</h3>
+<ul>
+    <li>Extract the archive</li>
+    <li>Move it to <code>/usr/local</code></li>
+</ul>
+
+<code>
+sudo tar -C /usr/local -xzf go1.xx.x.linux-amd64.tar.gz
+</code>
+
+<h2>Step 3: Set Environment Variables</h2>
+
+<h3>Windows</h3>
+<p>Add Go to the PATH variable:</p>
+
+<code>
+C:\Go\bin
+</code>
+
+<h3>macOS / Linux</h3>
+<code>
+export PATH=$PATH:/usr/local/go/bin
+</code>
+
+<h2>Step 4: Verify Installation</h2>
+<p>Check if Go is installed correctly:</p>
+
+<code>
+go version
+</code>
+
+<p>If installed correctly, it will display the Go version.</p>
+
+<h2>Step 5: Write Your First Go Program</h2>
+
+<code>
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Go is installed successfully!")
+}
+</code>
+
+<h2>Conclusion</h2>
+<p>
+You have successfully installed Go on your system.
+You are now ready to start building fast and efficient applications using Go.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Go Learning Website</p>
+</footer>
+
+</body>
+</html>

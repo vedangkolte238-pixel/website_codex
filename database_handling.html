@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Database Handling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #243447;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        h2 {
+            color: #243447;
+            margin-top: 35px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        .output {
+            background-color: #e8f6ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 8px;
+        }
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Python Database Handling</h1>
+    <p>CRUD Operations Using SQLite</p>
+</header>
+
+<section>
+
+<h2>Introduction</h2>
+<p>
+Python can interact with databases to store, retrieve, update, and delete data. SQLite is a lightweight database built into Python.
+</p>
+
+<h2>1. Creating a Database and Table</h2>
+<code>
+import sqlite3
+
+conn = sqlite3.connect("students.db")
+cursor = conn.cursor()
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS students(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    age INTEGER
+)
+""")
+conn.commit()
+conn.close()
+</code>
+<div class="output">
+Output:<br>
+Table created successfully.
+</div>
+
+<h2>2. Inserting Data</h2>
+<code>
+conn = sqlite3.connect("students.db")
+cursor = conn.cursor()
+
+cursor.execute("INSERT INTO students (name, age) VALUES (?, ?)", ("Alice", 25))
+cursor.execute("INSERT INTO students (name, age) VALUES (?, ?)", ("Bob", 30))
+conn.commit()
+conn.close()
+</code>
+<div class="output">
+Output:<br>
+Inserted Alice and Bob.
+</div>
+
+<h2>3. Reading Data</h2>
+<code>
+conn = sqlite3.connect("students.db")
+cursor = conn.cursor()
+
+cursor.execute("SELECT * FROM students")
+rows = cursor.fetchall()
+for row in rows:
+    print(row)
+
+conn.close()
+</code>
+<div class="output">
+Output:<br>
+(1, 'Alice', 25)<br>
+(2, 'Bob', 30)
+</div>
+
+<h2>4. Updating Data</h2>
+<code>
+conn = sqlite3.connect("students.db")
+cursor = conn.cursor()
+
+cursor.execute("UPDATE students SET age = ? WHERE name = ?", (26, "Alice"))
+conn.commit()
+conn.close()
+</code>
+<div class="output">
+Output:<br>
+Alice's age updated to 26.
+</div>
+
+<h2>5. Deleting Data</h2>
+<code>
+conn = sqlite3.connect("students.db")
+cursor = conn.cursor()
+
+cursor.execute("DELETE FROM students WHERE name = ?", ("Bob",))
+conn.commit()
+conn.close()
+</code>
+<div class="output">
+Output:<br>
+Bob deleted from the database.
+</div>
+
+<h2>Conclusion</h2>
+<p>
+Python's SQLite module makes it easy to handle databases for small to medium applications. 
+You can perform **CRUD operations** efficiently and integrate with other Python programs.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 Python Learning Website</p>
+</footer>
+
+</body>
+</html>

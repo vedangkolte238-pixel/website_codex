@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DSA Graphs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0D9488;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0D9488;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        code {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 10px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #eaeaea;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>DSA Graphs</h1>
+    <p>Understanding Graph Data Structures in DSA</p>
+</header>
+
+<section>
+
+<h2>What Is a Graph?</h2>
+<p>
+A graph is a collection of nodes (called vertices) and edges connecting pairs of nodes. Graphs are used to represent relationships between objects.
+</p>
+
+<h2>Key Terminology</h2>
+<ul>
+    <li><strong>Vertex (Node):</strong> A fundamental unit of a graph</li>
+    <li><strong>Edge:</strong> Connection between two vertices</li>
+    <li><strong>Adjacent:</strong> Two vertices connected by an edge</li>
+    <li><strong>Degree:</strong> Number of edges connected to a vertex</li>
+</ul>
+
+<h2>Types of Graphs</h2>
+<ul>
+    <li><strong>Directed Graph (Digraph):</strong> Edges have a direction</li>
+    <li><strong>Undirected Graph:</strong> Edges have no direction</li>
+    <li><strong>Weighted Graph:</strong> Edges carry a weight/value</li>
+    <li><strong>Unweighted Graph:</strong> All edges are equal</li>
+    <li><strong>Cyclic / Acyclic:</strong> Graph contains cycles or not</li>
+</ul>
+
+<h2>Graph Representation</h2>
+<ul>
+    <li><strong>Adjacency Matrix:</strong> 2D array representing connections between vertices</li>
+    <li><strong>Adjacency List:</strong> List of lists to store connected vertices</li>
+</ul>
+
+<h2>Graph Traversal</h2>
+<ul>
+    <li><strong>Breadth-First Search (BFS):</strong> Visits nodes level by level</li>
+    <li><strong>Depth-First Search (DFS):</strong> Visits nodes by exploring as far as possible along each branch</li>
+</ul>
+
+<h2>Example: Adjacency List in C++</h2>
+<code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    int vertices = 5;
+    vector&lt;int&gt; adj[vertices];
+
+    // Adding edges
+    adj[0].push_back(1);
+    adj[0].push_back(2);
+    adj[1].push_back(2);
+    adj[2].push_back(0);
+    adj[2].push_back(3);
+
+    // Print adjacency list
+    for(int i=0; i&lt;vertices; i++) {
+        cout &lt;&lt; i &lt;&lt; " : ";
+        for(int v : adj[i])
+            cout &lt;&lt; v &lt;&lt; " ";
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}
+</code>
+
+<h2>Applications of Graphs</h2>
+<ul>
+    <li>Social networks (friends, followers)</li>
+    <li>Web page linking (PageRank)</li>
+    <li>Computer networks and routing</li>
+    <li>Maps and navigation systems</li>
+    <li>Dependency resolution in tasks and projects</li>
+</ul>
+
+<h2>Advantages of Graphs</h2>
+<ul>
+    <li>Flexible representation of complex relationships</li>
+    <li>Supports many important algorithms (shortest path, MST)</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+Graphs are versatile data structures that can model complex relationships in real-world problems.
+Understanding their types, representations, and traversal algorithms is key for solving advanced DSA problems.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2025 DSA Learning Website</p>
+</footer>
+
+</body>
+</html>
